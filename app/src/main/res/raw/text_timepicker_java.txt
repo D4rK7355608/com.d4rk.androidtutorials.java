@@ -1,0 +1,28 @@
+import android.app.TimePickerDialog;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    private final Calendar calendar = Calendar.getInstance();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        String dateTime = simpleDateFormat.format(calendar.getTime());
+        binding.getTimeTextView().setText(dateTime);
+        binding.getChangeTimeButton().setOnClickListener(v -> {
+            TimePickerDialog.OnTimeSetListener timeSetListener = (view, hourOfDay, minute) -> {
+                calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+                calendar.set(Calendar.MINUTE, minute);
+                binding.getTimeTextView().setText(new SimpleDateFormat("HH:mm", Locale.getDefault()).format(calendar.getTime()));
+            };
+            new TimePickerDialog(MainActivity.this, timeSetListener,
+                    calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true).show();
+        });
+    }
+}

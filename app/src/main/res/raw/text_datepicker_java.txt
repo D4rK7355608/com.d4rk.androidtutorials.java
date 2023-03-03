@@ -1,0 +1,34 @@
+import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    private Calendar calendar = Calendar.getInstance();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String dateText = simpleDateFormat.format(calendar.getTime());
+        binding.dateTextView.setText(dateText);
+        DatePickerDialog.OnDateSetListener dateSetListener = (view, year, monthOfYear, dayOfMonth) -> {
+            calendar.set(Calendar.YEAR, year);
+            calendar.set(Calendar.MONTH, monthOfYear);
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            updateDateInView();
+        };
+        binding.changeDateButton.setOnClickListener(v -> new DatePickerDialog(MainActivity.this, dateSetListener,
+                calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)).show());
+    }
+    private void updateDateInView() {
+        String myFormat = "dd/MM/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        binding.dateTextView.setText(sdf.format(calendar.getTime()));
+    }
+}

@@ -1,0 +1,22 @@
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.button.setOnClickListener(view -> {
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Your title")
+                    .setMessage("This will be the message you will see on screen!")
+                    .setPositiveButton("O.K.", null)
+                    .setNegativeButton("Cancel", null)
+                    .create()
+                    .show();
+        });
+    }
+}

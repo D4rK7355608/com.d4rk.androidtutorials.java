@@ -1,0 +1,5 @@
+<resources>
+    <color name="colorLauncherBackground">#FFFFFF</color>
+    <color name="colorIconShortcutBackground">#C1E8FF</color>
+    <color name="colorIconShortcutForeground">#454749</color>
+</resources>

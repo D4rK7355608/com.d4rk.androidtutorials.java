@@ -1,0 +1,27 @@
+package com.d4rk.androidtutorials.java.ui.android.alerts.toast
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.d4rk.androidtutorials.java.R
+import com.d4rk.androidtutorials.java.databinding.ActivityToastBinding
+class ToastActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityToastBinding
+    @Suppress("DEPRECATION")
+    private val handler = Handler()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityToastBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.button.setOnClickListener {
+            Toast.makeText(this, R.string.toast_this_is_a_toast, Toast.LENGTH_SHORT).show()
+        }
+        binding.floatingButtonShowSyntax.setOnClickListener {
+            startActivity(Intent(this, ToastCodeActivity::class.java))
+        }
+        handler.postDelayed({
+            binding.floatingButtonShowSyntax.shrink()
+        }, 5000)
+    }
+}

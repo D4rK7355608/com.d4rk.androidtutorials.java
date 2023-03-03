@@ -1,0 +1,33 @@
+import android.os.Bundle;
+import android.widget.RatingBar;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+public class RatingBarActivity extends AppCompatActivity {
+    private ActivityRatingBarBinding binding;
+    private float rating = 0f;
+    private String formattedString;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityRatingBarBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        formattedString = String.format(getString(R.string.stars), rating);
+        binding.getTextViewRatingValue().setText(formattedString);
+        binding.getRatingBar().setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                RatingBarActivity.this.rating = rating;
+                updateRatingText();
+            }
+        });
+        binding.getButton().setOnClickListener(v -> showRatingToast());
+    }
+    private void updateRatingText() {
+        formattedString = String.format(getString(R.string.stars), rating);
+        binding.getTextViewRatingValue().setText(formattedString);
+    }
+    private void showRatingToast() {
+        formattedString = String.format(getString(R.string.rating), rating);
+        Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();
+    }
+}
