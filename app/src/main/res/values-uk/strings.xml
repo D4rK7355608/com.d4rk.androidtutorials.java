@@ -335,4 +335,13 @@
     <string name="implementations_tooltip">Реалізація підказок</string>
     <string name="summary_preference_android_studio_in_app_review">Google Play In-App Review API дає змогу пропонувати користувачам надіслати оцінки та відгуки Play Store, не виходячи з програми чи гри.</string>
     <string name="summary_preference_android_studio_tooltip">Спливаюча підказка — це невелике описове повідомлення, яке з’являється біля подання, коли користувачі довго натискають подання або наводять на нього курсор миші. Це корисно, коли ваша програма використовує піктограму для представлення дії або частини інформації, щоб заощадити місце в макеті.</string>
+    <string name="music">Музика</string>
+    <string name="show_code">Показати код</string>
+    <string name="info">Інформація</string>
+    <string name="device_info">Інформація про пристрій</string>
+    <string name="app_build">Збірка додатку: Реліз\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Виробник:</string>
+    <string name="device_model">Модель пристрою:</string>
+    <string name="android_version">Версія Android:</string>
+    <string name="api_level">Рівень API:</string>
 </resources>

@@ -335,4 +335,13 @@
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (nivel de API 33) introduce un gesto de retroceso predictivo para dispositivos Android como teléfonos, pantallas grandes y plegables. Es parte de una versión de varios años; cuando se implemente por completo, esta función permitirá a los usuarios previsualizar el destino u otro resultado de un gesto de retroceso antes de completarlo por completo, lo que les permitirá decidir si continuar o permanecer en la vista actual.</string>
     <string name="summary_preference_android_studio_in_app_review">La API de revisión en la aplicación de Google Play le permite solicitar a los usuarios que envíen calificaciones y reseñas de Play Store sin el inconveniente de abandonar su aplicación o juego.</string>
     <string name="summary_preference_android_studio_tooltip">Una información sobre herramientas es un pequeño mensaje descriptivo que aparece cerca de una vista cuando los usuarios mantienen presionada la vista o pasan el mouse sobre ella. Esto es útil cuando su aplicación usa un ícono para representar una acción o información para ahorrar espacio en el diseño.</string>
+    <string name="music">Música</string>
+    <string name="show_code">Mostrar código</string>
+    <string name="info">Información</string>
+    <string name="device_info">Información del dispositivo</string>
+    <string name="app_build">Construcción de la aplicación: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Fabricante:</string>
+    <string name="device_model">Modelo de dispositivo:</string>
+    <string name="android_version">Versión de Android:</string>
+    <string name="api_level">Nivel de API:</string>
 </resources>

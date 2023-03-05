@@ -22,7 +22,7 @@ This app was initially a school project to show my teacher I can do simple, but 
 Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
 ⚠ Opening Issues!
-Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.androidtutorials/issues
+Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.androidtutorials.java/issues
 
 Create a code/general bug. 🐞
 

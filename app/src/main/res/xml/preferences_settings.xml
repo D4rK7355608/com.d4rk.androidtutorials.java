@@ -39,14 +39,14 @@
             app:title="@string/check_for_updates">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"/>
+                android:data="https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials.java"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_experimental"
             app:title="@string/subscribe_to_beta">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/apps/testing/com.d4rk.androidtutorials"/>
+                android:data="https://play.google.com/apps/testing/com.d4rk.androidtutorials.java"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:key="@string/key_changelog"
@@ -81,7 +81,7 @@
             app:icon="@drawable/ic_permissions"
             app:title="@string/permissions">
             <intent
-                android:targetPackage="com.d4rk.androidtutorials"
+                android:targetPackage="com.d4rk.androidtutorials.java"
                 android:targetClass="com.d4rk.androidtutorials.java.ui.permissions.PermissionsActivity"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -92,7 +92,7 @@
             app:icon="@drawable/ic_faq"
             app:title="@string/faq">
             <intent
-                android:targetPackage="com.d4rk.androidtutorials"
+                android:targetPackage="com.d4rk.androidtutorials.java"
                 android:targetClass="com.d4rk.androidtutorials.java.ui.faq.FaqActivity"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -111,7 +111,7 @@
             app:icon="@drawable/ic_feedback"
             app:title="@string/feedback">
             <intent
-                android:targetPackage="com.d4rk.androidtutorials"
+                android:targetPackage="com.d4rk.androidtutorials.java"
                 android:targetClass="com.d4rk.androidtutorials.java.ui.feedback.FeedbackActivity"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference

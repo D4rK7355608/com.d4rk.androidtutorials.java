@@ -334,4 +334,13 @@
     <string name="summary_second_step">Второй шаг - выбрать тип активности, который подходит для вашего приложения. Вы можете выбрать из нескольких предустановок, которые могут упростить вашу работу. Выберите одну из них и нажмите на кнопку <b>Далее</b>.</string>
     <string name="summary_third_step">Третий и последний шаг - настроить параметры вашего приложения, такие как имя приложения, <b>имя пакета</b>, предпочтительный <b>язык программирования</b> и <b>минимальный SDK</b>. Вы можете узнать больше о них на сайте <a href="https://developer.android.com/">Android Developers</a>.</string><string name="summary_enable_binding">Привязка представлений включается для каждого модуля отдельно. Чтобы включить привязку представлений в модуле, установите параметр viewBinding опции сборки в значение true в файле build.gradle уровня модуля, как показано в следующем примере:</string>
     <string name="summary_preference_android_studio_tooltip">Спливаюча підказка — це невелике описове повідомлення, яке з’являється біля подання, коли користувачі довго натискають подання або наводять на нього курсор миші. Це корисно, коли ваша програма використовує піктограму для представлення дії або частини інформації, щоб заощадити місце в макеті.</string>
+    <string name="music">Музыка</string>
+    <string name="show_code">Показать код</string>
+    <string name="info">Информация</string>
+    <string name="device_info">Информация о устройстве</string>
+    <string name="app_build">Сборка приложения: Релиз\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Производитель:</string>
+    <string name="device_model">Модель устройства:</string>
+    <string name="android_version">Версия Android:</string>
+    <string name="api_level">Уровень API:</string>
 </resources>

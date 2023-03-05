@@ -11,7 +11,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
-import com.d4rk.androidtutorials.BuildConfig
+import com.d4rk.androidtutorials.java.BuildConfig
 import com.d4rk.androidtutorials.java.R
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding
 import com.d4rk.androidtutorials.java.ui.dialogs.RequireRestartDialog
@@ -65,7 +65,8 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                 val textViewQRCodeScanner: MaterialTextView = view.findViewById(R.id.text_view_qr_code_scanner)
                 val textViewLowBrightness: MaterialTextView = view.findViewById(R.id.text_view_low_brightness)
                 val textViewCleaner: MaterialTextView = view.findViewById(R.id.text_view_cleaner)
-                val urls = mapOf(textViewCleaner to "https://play.google.com/store/apps/details?id=com.d4rk.cleaner.plus", textViewMusicSleepTimer to "https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus", textViewEnglishWithLidia to "https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus", textViewQRCodeScanner to "https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus", textViewLowBrightness to "https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness")
+                val textViewAndroidStudioTutorialsKotlin: MaterialTextView = view.findViewById(R.id.text_view_android_studio_tutorials_kotlin)
+                val urls = mapOf(textViewAndroidStudioTutorialsKotlin to "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials", textViewCleaner to "https://play.google.com/store/apps/details?id=com.d4rk.cleaner.plus", textViewMusicSleepTimer to "https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus", textViewEnglishWithLidia to "https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus", textViewQRCodeScanner to "https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus", textViewLowBrightness to "https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness")
                 urls.forEach { (view, url) -> view.setOnClickListener {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 }

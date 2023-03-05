@@ -37,7 +37,7 @@ class FeedbackActivity : AppCompatActivity() {
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/email"
         emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("d4rk7355608@gmail.com"))
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback for Android Studio Tutorials")
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback for Android Studio Tutorials: Java Edition")
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Dear developer, ")
         startActivity(Intent.createChooser(emailIntent, "Send mail to Developer:"))
     }

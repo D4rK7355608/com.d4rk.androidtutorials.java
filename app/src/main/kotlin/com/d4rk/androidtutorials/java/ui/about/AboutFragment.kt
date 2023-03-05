@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.d4rk.androidtutorials.BuildConfig
+import com.d4rk.androidtutorials.java.BuildConfig
 import com.d4rk.androidtutorials.java.R
 import com.d4rk.androidtutorials.java.databinding.FragmentAboutBinding
 import com.d4rk.androidtutorials.java.ui.viewmodel.ViewModel

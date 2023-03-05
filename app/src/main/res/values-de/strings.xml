@@ -335,4 +335,13 @@
     <string name="implementations_tooltip">Implementieren Sie Tooltips</string>
     <string name="summary_preference_android_studio_in_app_review">Mit der Google Play In-App Review API können Sie Benutzer auffordern, Play Store-Bewertungen und -Rezensionen abzugeben, ohne Ihre App oder Ihr Spiel verlassen zu müssen.</string>
     <string name="summary_preference_android_studio_tooltip">Ein Tooltip ist eine kleine beschreibende Meldung, die in der Nähe einer Ansicht angezeigt wird, wenn Benutzer lange auf die Ansicht drücken oder mit der Maus darüber fahren. Dies ist nützlich, wenn Ihre App ein Symbol verwendet, um eine Aktion oder Information darzustellen, um Platz im Layout zu sparen.</string>
+    <string name="music">Musik</string>
+    <string name="show_code">Code anzeigen</string>
+    <string name="info">Info</string>
+    <string name="device_info">Geräteinformationen</string>
+    <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Hersteller:</string>
+    <string name="device_model">Gerätemodell:</string>
+    <string name="android_version">Android-Version:</string>
+    <string name="api_level">API-Ebene:</string>
 </resources>

@@ -335,4 +335,13 @@
     <string name="implementations_tooltip">Implementera verktygstips</string>
     <string name="summary_preference_android_studio_in_app_review">Med Google Play In-App Review API kan du uppmana användare att skicka betyg och recensioner i Play Butik utan att behöva lämna din app eller ditt spel.</string>
     <string name="summary_preference_android_studio_tooltip">Ett verktygstips är ett litet beskrivande meddelande som visas nära en vy när användare länge trycker på vyn eller håller musen över den. Detta är användbart när din app använder en ikon för att representera en åtgärd eller information för att spara utrymme i layouten.</string>
+    <string name="music">Musik</string>
+    <string name="show_code">Visa kod</string>
+    <string name="info">Info</string>
+    <string name="device_info">Enhetens information</string>
+    <string name="app_build">Appbygge: Släpp\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Tillverkare:</string>
+    <string name="device_model">Enhetens modell:</string>
+    <string name="android_version">Android-version:</string>
+    <string name="api_level">API-nivå:</string>
 </resources>

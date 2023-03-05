@@ -8,7 +8,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -18,7 +18,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -28,7 +28,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -38,7 +38,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -48,7 +48,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -58,7 +58,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"/>
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -68,7 +68,7 @@
         app:allowDividerBelow="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials"
+            android:targetPackage="com.d4rk.androidtutorials.java"
             android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"/>
     </androidx.preference.Preference>
 </androidx.preference.PreferenceScreen>

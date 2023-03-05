@@ -335,4 +335,13 @@
     <string name="summary_preference_android_studio_in_app_review">Google Play Uygulama İçi İnceleme API\'sı, uygulamanızdan veya oyununuzdan ayrılma zahmetine girmeden kullanıcılardan Play Store puanları ve incelemeleri göndermelerini istemenize olanak tanır.</string>
     <string name="summary_preference_android_studio_tooltip">Araç ipucu, kullanıcılar görünüme uzun bastıklarında veya farelerini görünümün üzerine getirdiklerinde görünümün yanında görünen küçük, açıklayıcı bir mesajdır. Bu, uygulamanız mizanpajda yer kazanmak için bir eylemi veya bilgi parçasını temsil eden bir simge kullandığında kullanışlıdır.</string>
     <string name="summary_first_step">Android Studio\'da yeni bir proje oluşturmak için ilk adım, görüntüde gösterildiği gibi <b>Yeni proje</b> düğmesine tıklamaktır ve sonraki adıma devam etmektir.</string>
+    <string name="music">Müzik</string>
+    <string name="show_code">Kodu göster</string>
+    <string name="info">Bilgi</string>
+    <string name="device_info">Cihaz Bilgisi</string>
+    <string name="app_build">Uygulama Yapısı: Yayın\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Üretici:</string>
+    <string name="device_model">Cihaz Modeli:</string>
+    <string name="android_version">Android Sürümü:</string>
+    <string name="api_level">API Seviyesi:</string>
 </resources>

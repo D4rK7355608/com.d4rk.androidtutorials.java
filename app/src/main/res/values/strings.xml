@@ -8,6 +8,7 @@
     <string name="home">Home</string>
     <string name="android_studio">Android Studio</string>
     <string name="about">About</string>
+    <string name="android_studio_tutorials_kotlin" translatable="false">Android Studio Tutorials: Kotlin Edition</string>
     <string name="music_sleep_timer" translatable="false">Music Sleep Timer Plus</string>
     <string name="english_with_lidia" translatable="false">English with Lidia Plus</string>
     <string name="qr_code_scanner" translatable="false">QR &amp; Bar Code Scanner Plus</string>

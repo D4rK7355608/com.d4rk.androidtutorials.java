@@ -3,8 +3,8 @@
 </p>
 
 ![Works with Android](https://img.shields.io/badge/Made%20for-Android-lime?style=for-the-badge&logo=android)
-![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.androidtutorials/total?color=green&style=for-the-badge&logo=github)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/D4rK7355608/com.d4rk.androidtutorials/android.yml?style=for-the-badge)
+![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.androidtutorials.java/total?color=green&style=for-the-badge&logo=github)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/D4rK7355608/com.d4rk.androidtutorials.java/android.yml?style=for-the-badge)
 ![GitHub Issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.androidtutorials?style=for-the-badge&logo=github)
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.androidtutorials?style=for-the-badge&logo=github)
 ![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.androidtutorials?style=for-the-badge&logo=github)
@@ -35,7 +35,7 @@ This app was initially a school project to show my teacher I can do simple, but 
 Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
 ## ⚠ Opening Issues!
-Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.androidtutorials/issues).
+Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.androidtutorials.java/issues).
 
 - Create an code/general bug.  🐞
 
@@ -49,7 +49,7 @@ Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.androidtutor
 ⭐️ Fast and lightweight. \
 ⭐️ Free Open source & secure.
 
-## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.androidtutorials/master/CHANGELOG.md)!
+## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.androidtutorials.java/master/CHANGELOG.md)!
 
 ## 🖼️ App preview:
 

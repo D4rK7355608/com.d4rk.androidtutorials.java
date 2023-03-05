@@ -335,4 +335,13 @@
     <string name="predictive_back_gesture">Gest predictiv de revenire</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (nivel API 33) introduce un gest predictiv de revenire pentru dispozitivele Android, cum ar fi telefoanele, ecranele mari și dispozitivele pliabile. Face parte dintr-un set de lansări pe mai mulți ani; când va fi implementată complet, această funcție va permite utilizatorilor să previzualizeze destinația sau alt rezultat al unui gest de revenire înainte de a-l finaliza complet, permițându-le să decidă dacă să continue sau să rămână în vizualizarea curentă.</string>
     <string name="summary_preference_android_studio_tooltip">Un balon explicativ este un mic mesaj descriptiv care apare lângă o vizualizare atunci când utilizatorii apasă lung pe vizualizare sau trec mouse-ul peste ea. Acest lucru este util atunci când aplicația dvs. folosește o pictogramă pentru a reprezenta o acțiune sau o informație pentru a economisi spațiu în aspect.</string>
+    <string name="music">Muzică</string>
+    <string name="show_code">Afișare cod</string>
+    <string name="info">Informații</string>
+    <string name="device_info">Informații despre dispozitiv</string>
+    <string name="app_build">Build aplicație: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">Producător:</string>
+    <string name="device_model">Model dispozitiv:</string>
+    <string name="android_version">Versiune Android:</string>
+    <string name="api_level">Nivel API:</string>
 </resources>
