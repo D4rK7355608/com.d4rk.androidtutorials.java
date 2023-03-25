@@ -2,30 +2,52 @@ import android.os.Bundle;
 import android.widget.RatingBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+// This class extends AppCompatActivity and represents an activity with a RatingBar view
 public class RatingBarActivity extends AppCompatActivity {
+    // Binding object to access views in the layout
     private ActivityRatingBarBinding binding;
+
+    // Float variable to store current rating value
     private float rating = 0f;
+
+    // String variable to store formatted string for displaying rating value
     private String formattedString;
+
+    // This method is called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Inflate the layout and set it as the content view for this activity
         binding = ActivityRatingBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Format string resource with current rating value and set text of textViewRatingValue view in layout to formatted string
         formattedString = String.format(getString(R.string.stars), rating);
         binding.getTextViewRatingValue().setText(formattedString);
+
+        // Set an OnRatingBarChangeListener on ratingBar view in layout using setOnRatingBarChangeListener method and a new OnRatingBarChangeListener object as arguments
         binding.getRatingBar().setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                // Update value of rating variable with new rating value when onRatingChanged method is called (i.e. when user changes the rating)
                 RatingBarActivity.this.rating = rating;
+
+                // Call updateRatingText method to update text of textViewRatingValue view with new rating value
                 updateRatingText();
             }
         });
+
+        // Set a click listener on button view in layout using setOnClickListener method and a lambda expression as argument,
+        // then call showRatingToast method when button is clicked.
         binding.getButton().setOnClickListener(v -> showRatingToast());
     }
+
     private void updateRatingText() {
         formattedString = String.format(getString(R.string.stars), rating);
         binding.getTextViewRatingValue().setText(formattedString);
     }
+
     private void showRatingToast() {
         formattedString = String.format(getString(R.string.rating), rating);
         Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();

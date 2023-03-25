@@ -4,19 +4,35 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+// This class extends AppCompatActivity and represents the main activity of an Android app
 public class MainActivity extends AppCompatActivity {
+    // Binding object to access views in the layout
     private ActivityMainBinding binding;
+
+    // This method is called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Inflate the layout and set it as the content view for this activity
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Call addListenerOnButton method to set up click listener on buttonDisplay view
         addListenerOnButton();
     }
+
+    // Method to set up click listener on buttonDisplay view
     private void addListenerOnButton() {
+        // Set a click listener on buttonDisplay view in layout using binding object
         binding.buttonDisplay.setOnClickListener(v -> {
+            // Get ID of checked radio button in radioGroup view using getCheckedRadioButtonId method
             int selectedId = binding.radioGroup.getCheckedRadioButtonId();
+
+            // Get reference to checked radio button using findViewById method with selectedId as argument
             RadioButton radioButton = findViewById(selectedId);
+
+            // Show a toast message with text from checked radio button when buttonDisplay is clicked
             Toast.makeText(this, radioButton.getText(), Toast.LENGTH_SHORT).show();
         });
     }

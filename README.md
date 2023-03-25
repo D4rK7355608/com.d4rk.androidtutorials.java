@@ -82,4 +82,4 @@ Thank you for choosing Android Studio Tutorials: Java Edition. We hope you enjoy
 __Privacy Policy__ [here](https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy).
 __Terms of Service__ [here](https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service).
 
-![license](https://imgur.com/QQlcEVT.png)# com.d4rk.androidtutorials.java
+![license](https://imgur.com/QQlcEVT.png)

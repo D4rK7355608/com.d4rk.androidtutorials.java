@@ -132,6 +132,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lottie_animation"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-5294151573817700/4974008668"/>
+            ads:adUnitId="ca-app-pub-5294151573817700/3821250346"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>

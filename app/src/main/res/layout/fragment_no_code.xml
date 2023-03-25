@@ -15,7 +15,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/no_kotlin_code_needed"
+            android:text="@string/no_java_code_needed"
             android:layout_margin="24dp"
             android:layout_gravity="center"
             android:textAlignment="center"/>
@@ -29,5 +29,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-5294151573817700/4974008668"/>
+        ads:adUnitId="ca-app-pub-5294151573817700/3821250346"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

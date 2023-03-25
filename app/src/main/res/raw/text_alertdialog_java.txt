@@ -2,21 +2,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+// This class extends AppCompatActivity and represents the main activity of an Android app
 public class MainActivity extends AppCompatActivity {
+    // Binding object to access views in the layout
     private ActivityMainBinding binding;
+
+    // This method is called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Inflate the layout and set it as the content view for this activity
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Set a click listener on the button in the layout
         binding.button.setOnClickListener(view -> {
+            // Create and show an alert dialog using MaterialAlertDialogBuilder
             new MaterialAlertDialogBuilder(this)
-                    .setTitle("Your title")
-                    .setMessage("This will be the message you will see on screen!")
-                    .setPositiveButton("O.K.", null)
-                    .setNegativeButton("Cancel", null)
-                    .create()
-                    .show();
+                    .setTitle("Your title") // Set title of dialog
+                    .setMessage("This will be the message you will see on screen!") // Set message of dialog
+                    .setPositiveButton("O.K.", null) // Set positive button text and click listener (null means no action)
+                    .setNegativeButton("Cancel", null) // Set negative button text and click listener (null means no action)
+                    .create() // Create the dialog
+                    .show(); // Show the dialog on screen
         });
     }
 }
