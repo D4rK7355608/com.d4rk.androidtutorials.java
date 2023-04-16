@@ -1,10 +1,15 @@
 package com.d4rk.androidtutorials.java.ui.android.buttons.buttons.tabs;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentButtonsLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
@@ -17,10 +22,11 @@ import java.util.HashMap;
 import java.util.Map;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 public class ButtonsTabLayoutFragment extends Fragment {
+    private  FragmentButtonsLayoutBinding binding;
     private final Map<Integer, MaterialTextView> buttonXMLResources = new HashMap<>();
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FragmentButtonsLayoutBinding binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
+        binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
@@ -45,17 +51,44 @@ public class ButtonsTabLayoutFragment extends Fragment {
         for (Map.Entry<Integer, MaterialTextView> entry : buttonXMLResources.entrySet()) {
             Integer resourceId = entry.getKey();
             MaterialTextView textView = entry.getValue();
-            try {
-                InputStream inputStream = getResources().openRawResource(resourceId);
+            try (InputStream inputStream = getResources().openRawResource(resourceId)) {
                 byte[] bytes = new byte[inputStream.available()];
-                inputStream.read(bytes);
-                String text = new String(bytes, StandardCharsets.UTF_8);
-                inputStream.close();
-                textView.setText(text);
+                int result = inputStream.read(bytes);
+                if (result != -1) {
+                    String text = new String(bytes, StandardCharsets.UTF_8);
+                    textView.setText(text);
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         return binding.getRoot();
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        boolean preferenceFont = preference.getBoolean(getString(R.string.key_monospace_font), false);
+        if (preferenceFont) {
+            Typeface monospaceFont = ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
+            binding.textViewButtonNormalXml.setTypeface(monospaceFont);
+            binding.textViewButtonOutlinedXml.setTypeface(monospaceFont);
+            binding.textViewButtonElevatedXml.setTypeface(monospaceFont);
+            binding.textViewButtonNormalIconXml.setTypeface(monospaceFont);
+            binding.textViewButtonOutlinedIconXml.setTypeface(monospaceFont);
+            binding.textViewButtonElevatedIconXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonPrimaryXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonSecondaryXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonSurfaceXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonTertiaryXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonPrimaryIconXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonSecondaryIconXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonSurfaceIconXml.setTypeface(monospaceFont);
+            binding.textViewExtendedFloatingButtonTertiaryIconXml.setTypeface(monospaceFont);
+            binding.textViewFloatingButtonPrimaryXml.setTypeface(monospaceFont);
+            binding.textViewFloatingButtonSecondaryXml.setTypeface(monospaceFont);
+            binding.textViewFloatingButtonSurfaceXml.setTypeface(monospaceFont);
+            binding.textViewFloatingButtonTertiaryXml.setTypeface(monospaceFont);
+        }
     }
 }

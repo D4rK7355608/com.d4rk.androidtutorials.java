@@ -16,9 +16,6 @@ public class ToggleActivity extends MonetCompatActivity {
         binding = ActivityToggleBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        setOnClickListeners();
-    }
-    private void setOnClickListeners() {
         binding.switchMonet.setOnClickListener(v -> Toast.makeText(this, R.string.toast_monet_switch, Toast.LENGTH_SHORT).show());
         binding.buttonToggle.setOnClickListener(v -> Toast.makeText(this, R.string.toast_compat_toggle_button, Toast.LENGTH_SHORT).show());
         binding.switchMaterial.setOnClickListener(v -> Toast.makeText(this, R.string.toast_switch_material, Toast.LENGTH_SHORT).show());

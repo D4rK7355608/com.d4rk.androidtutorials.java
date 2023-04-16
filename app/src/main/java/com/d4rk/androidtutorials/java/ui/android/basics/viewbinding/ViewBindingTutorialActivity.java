@@ -1,17 +1,21 @@
 package com.d4rk.androidtutorials.java.ui.android.basics.viewbinding;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.preference.PreferenceManager;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 public class ViewBindingTutorialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,14 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         binding.bindingActivitiesText.setText(readTextFromInputStream(bindingActivity));
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
         binding.bindingFragmentsText.setText(readTextFromInputStream(bindingFragment));
+        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean preferenceFont = preference.getBoolean(getString(R.string.key_monospace_font), false);
+        if (preferenceFont) {
+            Typeface monospaceFont = ResourcesCompat.getFont(this, R.font.font_roboto_mono);
+            binding.bindingText.setTypeface(monospaceFont);
+            binding.bindingActivitiesText.setTypeface(monospaceFont);
+            binding.bindingFragmentsText.setTypeface(monospaceFont);
+        }
     }
     private String readTextFromInputStream(InputStream inputStream) {
         return new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining("\n"));

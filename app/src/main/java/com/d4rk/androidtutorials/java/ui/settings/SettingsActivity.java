@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -80,6 +81,14 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     return true;
                 });
             }
+            ListPreference defaultTab = findPreference(getString(R.string.key_default_tab));
+            if (defaultTab != null) {
+                defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
+                    RequireRestartDialog restartDialog = new RequireRestartDialog();
+                    restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
+                    return true;
+                });
+            }
             Preference moreApps = findPreference(getString(R.string.key_more_apps));
             if (moreApps != null) {
                 moreApps.setOnPreferenceClickListener(preference -> {
@@ -131,6 +140,20 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 ossPreference.setOnPreferenceClickListener(preference -> {
                     startActivity(new Intent(getActivity(), OssLicensesMenuActivity.class));
                     return true;
+                });
+            }
+            Preference notificationsSettings = findPreference(getString(R.string.key_notifications_settings));
+            if (notificationsSettings != null) {
+                notificationsSettings.setOnPreferenceClickListener(preference -> {
+                    Context context = getContext();
+                    if (context != null) {
+                        Intent intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+                        intent.putExtra(Settings.EXTRA_APP_PACKAGE, context.getPackageName());
+                        startActivity(intent);
+                        return true;
+                    } else {
+                        return false;
+                    }
                 });
             }
             Preference sharePreference = findPreference(getString(R.string.key_share));

@@ -20,7 +20,6 @@ public class RadioButtonsActivity extends AppCompatActivity {
             RadioButton radioButton = findViewById(selectedId);
             Toast.makeText(this, radioButton.getText(), Toast.LENGTH_SHORT).show();
         });
-
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 }

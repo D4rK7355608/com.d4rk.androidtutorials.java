@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -37,11 +37,11 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-
 import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     private AppUpdateManager appUpdateManager;
     private final int requestUpdateCode = 1;
+    NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,19 +87,39 @@ public class MainActivity extends AppCompatActivity {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
         }
         binding.navView.setLabelVisibilityMode(visibilityMode);
+
+        String defaultTabKey = getString(R.string.key_default_tab);
+        String defaultTabValue = getString(R.string.default_value_tab);
+        String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
+        String startFragmentIdValue = sharedPreferences.getString(defaultTabKey, defaultTabValue);
+        int startFragmentId;
+        if (startFragmentIdValue.equals(defaultTabValues[0])) {
+            startFragmentId = R.id.navigation_home;
+        } else if (startFragmentIdValue.equals(defaultTabValues[1])) {
+            startFragmentId = R.id.navigation_android_studio;
+        } else if (startFragmentIdValue.equals(defaultTabValues[2])) {
+            startFragmentId = R.id.navigation_about;
+        } else {
+            startFragmentId = R.id.navigation_home;
+        }
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
         if (navHostFragment != null) {
-            NavController navController = navHostFragment.getNavController();
+            navController = navHostFragment.getNavController();
+            NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
+            navGraph.setStartDestination(startFragmentId);
+            navController.setGraph(navGraph, savedInstanceState);
             NavigationUI.setupWithNavController(binding.navView, navController);
-            Toolbar toolbar = binding.toolbar;
-            setSupportActionBar(toolbar);
-            ActionBar actionBar = getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
-                NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-            }
         }
+        Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
+            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        }
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         SharedPreferences appUsagePrefs = getSharedPreferences("app_usage", MODE_PRIVATE);
         long lastUsedTimestamp = appUsagePrefs.getLong("last_used", 0);
         long currentTimestamp = System.currentTimeMillis();
@@ -109,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             NotificationChannel channel = new NotificationChannel(channelId, "App Usage Notifications", NotificationManager.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
-                    .setSmallIcon(R.drawable.ic_notification)
+                    .setSmallIcon(R.drawable.ic_notification_important)
                     .setContentTitle(getString(R.string.notification_last_time_used_title))
                     .setContentText(getString(R.string.summary_notification_last_time_used))
                     .setAutoCancel(true);
@@ -138,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.settings) {
