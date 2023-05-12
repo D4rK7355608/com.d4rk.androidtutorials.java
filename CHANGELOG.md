@@ -1,3 +1,6 @@
+# Version 3.1_r1:
+- Added missing translations.
+
 # Version 3.0_r1:
 - Added ability to choose from a variety of fonts for your code display.
 - Added a new lesson on using Linear Layout.
