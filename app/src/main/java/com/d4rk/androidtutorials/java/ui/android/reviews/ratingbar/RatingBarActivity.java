@@ -23,8 +23,7 @@ public class RatingBarActivity extends AppCompatActivity {
             updateRatingText();
         });
         binding.button.setOnClickListener(v -> showRatingToast());
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(RatingBarActivity.this,
-                RatingBarCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(RatingBarActivity.this, RatingBarCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
     private void updateRatingText() {

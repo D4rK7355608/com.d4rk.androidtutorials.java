@@ -44,11 +44,15 @@ public class DatePickerTabCodeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        boolean preferenceFont = preference.getBoolean(getString(R.string.key_monospace_font), false);
-        if (preferenceFont) {
-            Typeface monospaceFont = ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
-            binding.textView.setTypeface(monospaceFont);
-        }
+        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
+            case "1" -> ResourcesCompat.getFont(requireContext(), R.font.font_fira_code);
+            case "2" -> ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono);
+            case "3" -> ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono);
+            case "4" -> ResourcesCompat.getFont(requireContext(), R.font.font_poppins);
+            case "5" -> ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
+            default -> ResourcesCompat.getFont(requireContext(), R.font.font_audiowide);
+        };
+        binding.textView.setTypeface(monospaceFont);
     }
 }

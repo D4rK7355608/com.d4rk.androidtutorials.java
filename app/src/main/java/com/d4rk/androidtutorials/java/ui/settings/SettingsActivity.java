@@ -4,18 +4,17 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -25,9 +24,6 @@ import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
 import com.d4rk.androidtutorials.java.ui.dialogs.RequireRestartDialog;
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.textview.MaterialTextView;
-import java.util.HashMap;
-import java.util.Map;
 public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.SummaryProvider<androidx.preference.ListPreference> {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,6 +63,8 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     recreate();
                 }
             }
+            String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
+            AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
         }
     }
     public static class SettingsFragment extends PreferenceFragmentCompat {
@@ -86,40 +84,6 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
                     RequireRestartDialog restartDialog = new RequireRestartDialog();
                     restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
-                    return true;
-                });
-            }
-            Preference moreApps = findPreference(getString(R.string.key_more_apps));
-            if (moreApps != null) {
-                moreApps.setOnPreferenceClickListener(preference -> {
-                    View view = getLayoutInflater().inflate(R.layout.dialog_more_apps, null);
-                    new MaterialAlertDialogBuilder(requireContext())
-                            .setTitle(R.string.more_apps)
-                            .setIcon(R.drawable.ic_shop)
-                            .setNegativeButton(android.R.string.cancel, null)
-                            .setView(view)
-                            .create()
-                            .show();
-                    MaterialTextView textViewMusicSleepTimer = view.findViewById(R.id.text_view_music_sleep_timer);
-                    MaterialTextView textViewEnglishWithLidia = view.findViewById(R.id.text_view_english_with_lidia);
-                    MaterialTextView textViewQRCodeScanner = view.findViewById(R.id.text_view_qr_code_scanner);
-                    MaterialTextView textViewLowBrightness = view.findViewById(R.id.text_view_low_brightness);
-                    MaterialTextView textViewCleaner = view.findViewById(R.id.text_view_cleaner);
-                    MaterialTextView textViewCartCalculator = view.findViewById(R.id.text_view_cart_calculator);
-                    MaterialTextView textViewAndroidStudioTutorialsKotlin = view.findViewById(R.id.text_view_android_studio_tutorials_kotlin);
-                    Map<MaterialTextView, String> urls = new HashMap<>();
-                    urls.put(textViewAndroidStudioTutorialsKotlin, "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials");
-                    urls.put(textViewCleaner, "https://play.google.com/store/apps/details?id=com.d4rk.cleaner.plus");
-                    urls.put(textViewMusicSleepTimer, "https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus");
-                    urls.put(textViewEnglishWithLidia, "https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus");
-                    urls.put(textViewQRCodeScanner, "https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus");
-                    urls.put(textViewLowBrightness, "https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness");
-                    urls.put(textViewCartCalculator, "https://play.google.com/store/apps/details?id=com.d4rk.cartcalculator");
-                    for (Map.Entry<MaterialTextView, String> entry : urls.entrySet()) {
-                        MaterialTextView textView = entry.getKey();
-                        String url = entry.getValue();
-                        textView.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))));
-                    }
                     return true;
                 });
             }

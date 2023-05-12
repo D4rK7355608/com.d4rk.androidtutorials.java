@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
@@ -87,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
         }
         binding.navView.setLabelVisibilityMode(visibilityMode);
-
+        String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
         String defaultTabKey = getString(R.string.key_default_tab);
         String defaultTabValue = getString(R.string.default_value_tab);
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
@@ -126,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (currentTimestamp - lastUsedTimestamp > TimeUnit.DAYS.toMillis(3)) {
             String channelId = "app_usage_channel";
-            NotificationChannel channel = new NotificationChannel(channelId, "App Usage Notifications", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel channel = new NotificationChannel(channelId, getString(R.string.app_usage_notifications), NotificationManager.IMPORTANCE_HIGH);
             notificationManager.createNotificationChannel(channel);
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
                     .setSmallIcon(R.drawable.ic_notification_important)
@@ -141,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                 String updateChannelId = "update_channel";
-                NotificationChannel updateChannel = new NotificationChannel(updateChannelId, "Update Notifications", NotificationManager.IMPORTANCE_HIGH);
+                NotificationChannel updateChannel = new NotificationChannel(updateChannelId, getString(R.string.update_notifications), NotificationManager.IMPORTANCE_HIGH);
                 notificationManager.createNotificationChannel(updateChannel);
                 NotificationCompat.Builder updateBuilder = new NotificationCompat.Builder(this, updateChannelId)
                         .setSmallIcon(R.drawable.ic_notification_update)

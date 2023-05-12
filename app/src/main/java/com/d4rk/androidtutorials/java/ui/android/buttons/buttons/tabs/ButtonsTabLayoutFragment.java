@@ -67,28 +67,32 @@ public class ButtonsTabLayoutFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        boolean preferenceFont = preference.getBoolean(getString(R.string.key_monospace_font), false);
-        if (preferenceFont) {
-            Typeface monospaceFont = ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
-            binding.textViewButtonNormalXml.setTypeface(monospaceFont);
-            binding.textViewButtonOutlinedXml.setTypeface(monospaceFont);
-            binding.textViewButtonElevatedXml.setTypeface(monospaceFont);
-            binding.textViewButtonNormalIconXml.setTypeface(monospaceFont);
-            binding.textViewButtonOutlinedIconXml.setTypeface(monospaceFont);
-            binding.textViewButtonElevatedIconXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonPrimaryXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonSecondaryXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonSurfaceXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonTertiaryXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonPrimaryIconXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonSecondaryIconXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonSurfaceIconXml.setTypeface(monospaceFont);
-            binding.textViewExtendedFloatingButtonTertiaryIconXml.setTypeface(monospaceFont);
-            binding.textViewFloatingButtonPrimaryXml.setTypeface(monospaceFont);
-            binding.textViewFloatingButtonSecondaryXml.setTypeface(monospaceFont);
-            binding.textViewFloatingButtonSurfaceXml.setTypeface(monospaceFont);
-            binding.textViewFloatingButtonTertiaryXml.setTypeface(monospaceFont);
-        }
+        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
+            case "1" -> ResourcesCompat.getFont(requireContext(), R.font.font_fira_code);
+            case "2" -> ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono);
+            case "3" -> ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono);
+            case "4" -> ResourcesCompat.getFont(requireContext(), R.font.font_poppins);
+            case "5" -> ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
+            default -> ResourcesCompat.getFont(requireContext(), R.font.font_audiowide);
+        };
+        binding.textViewButtonNormalXml.setTypeface(monospaceFont);
+        binding.textViewButtonOutlinedXml.setTypeface(monospaceFont);
+        binding.textViewButtonElevatedXml.setTypeface(monospaceFont);
+        binding.textViewButtonNormalIconXml.setTypeface(monospaceFont);
+        binding.textViewButtonOutlinedIconXml.setTypeface(monospaceFont);
+        binding.textViewButtonElevatedIconXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonPrimaryXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonSecondaryXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonSurfaceXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonTertiaryXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonPrimaryIconXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonSecondaryIconXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonSurfaceIconXml.setTypeface(monospaceFont);
+        binding.textViewExtendedFloatingButtonTertiaryIconXml.setTypeface(monospaceFont);
+        binding.textViewFloatingButtonPrimaryXml.setTypeface(monospaceFont);
+        binding.textViewFloatingButtonSecondaryXml.setTypeface(monospaceFont);
+        binding.textViewFloatingButtonSurfaceXml.setTypeface(monospaceFont);
+        binding.textViewFloatingButtonTertiaryXml.setTypeface(monospaceFont);
     }
 }

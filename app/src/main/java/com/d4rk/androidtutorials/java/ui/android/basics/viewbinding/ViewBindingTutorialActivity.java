@@ -32,14 +32,18 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         binding.bindingActivitiesText.setText(readTextFromInputStream(bindingActivity));
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
         binding.bindingFragmentsText.setText(readTextFromInputStream(bindingFragment));
-        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean preferenceFont = preference.getBoolean(getString(R.string.key_monospace_font), false);
-        if (preferenceFont) {
-            Typeface monospaceFont = ResourcesCompat.getFont(this, R.font.font_roboto_mono);
-            binding.bindingText.setTypeface(monospaceFont);
-            binding.bindingActivitiesText.setTypeface(monospaceFont);
-            binding.bindingFragmentsText.setTypeface(monospaceFont);
-        }
+        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(this);
+        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
+            case "1" -> ResourcesCompat.getFont(this, R.font.font_fira_code);
+            case "2" -> ResourcesCompat.getFont(this, R.font.font_jetbrains_mono);
+            case "3" -> ResourcesCompat.getFont(this, R.font.font_noto_sans_mono);
+            case "4" -> ResourcesCompat.getFont(this, R.font.font_poppins);
+            case "5" -> ResourcesCompat.getFont(this, R.font.font_roboto_mono);
+            default -> ResourcesCompat.getFont(this, R.font.font_audiowide);
+        };
+        binding.bindingText.setTypeface(monospaceFont);
+        binding.bindingActivitiesText.setTypeface(monospaceFont);
+        binding.bindingFragmentsText.setTypeface(monospaceFont);
     }
     private String readTextFromInputStream(InputStream inputStream) {
         return new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining("\n"));

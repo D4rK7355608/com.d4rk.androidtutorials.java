@@ -1138,6 +1138,38 @@
                         android:padding="4dp"
                         android:text="2022"/>
                 </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="?attr/colorAccent"
+                    android:showDividers="middle">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:gravity="center"
+                        tools:ignore="HardcodedText,TextContrastCheck"
+                        android:textSize="11sp"
+                        android:padding="4dp"
+                        android:text="14"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        tools:ignore="HardcodedText,TextContrastCheck"
+                        android:textSize="11sp"
+                        android:padding="4dp"
+                        android:text="34"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        tools:ignore="HardcodedText,TextContrastCheck"
+                        android:textSize="11sp"
+                        android:padding="4dp"
+                        android:text="U"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        tools:ignore="HardcodedText,TextContrastCheck"
+                        android:textSize="11sp"
+                        android:padding="4dp"
+                        android:text="Upside Down Cake"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        tools:ignore="HardcodedText,TextContrastCheck"
+                        android:textSize="11sp"
+                        android:padding="4dp"
+                        android:text="2023"/>
+                </TableRow>
             </TableLayout>
         </com.google.android.material.card.MaterialCardView>
         <com.google.android.gms.ads.AdView
@@ -1149,6 +1181,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_view_table_layout"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-5294151573817700/3821250346"/>
+            ads:adUnitId="ca-app-pub-5294151573817700/4974008668"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>
