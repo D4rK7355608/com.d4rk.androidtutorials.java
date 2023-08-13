@@ -46,7 +46,7 @@ public class AboutFragment extends Fragment {
             ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
             clipboard.setPrimaryClip(ClipData.newPlainText("Label", binding.textViewAppVersion.getText()));
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
-                Toast.makeText(getContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.snack_copied_to_clipboard, Toast.LENGTH_SHORT).show();
             }
             return true;
         });

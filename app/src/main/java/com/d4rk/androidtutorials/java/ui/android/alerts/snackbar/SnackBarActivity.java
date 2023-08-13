@@ -15,7 +15,7 @@ public class SnackBarActivity extends AppCompatActivity {
         binding = ActivitySnackBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.button.setOnClickListener(v -> {
-            Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.this_is_a_snackbar, Snackbar.LENGTH_INDEFINITE);
+            Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.snack_this_is_a_snackbar, Snackbar.LENGTH_INDEFINITE);
             snackbar.setAction(android.R.string.ok, v1 -> snackbar.dismiss());
             snackbar.show();
         });

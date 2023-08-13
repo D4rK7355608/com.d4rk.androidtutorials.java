@@ -15,8 +15,8 @@ public class RequireRestartDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new MaterialAlertDialogBuilder(requireContext())
-                .setTitle(R.string.require_restart)
-                .setMessage(R.string.summary_require_restart)
+                .setTitle(R.string.alert_dialog_require_restart)
+                .setMessage(R.string.summary_alert_dialog_require_restart)
                 .setPositiveButton(android.R.string.ok, (dialogInterface, i) -> {
                     if (getActivity() != null) {
                         getActivity().recreate();

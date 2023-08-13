@@ -1,3 +1,4 @@
+// Import the necessary classes and libraries
 import android.os.Bundle;
 import android.widget.RatingBar;
 import android.widget.Toast;
@@ -5,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 // This class extends AppCompatActivity and represents an activity with a RatingBar view
 public class RatingBarActivity extends AppCompatActivity {
-    // Binding object to access views in the layout
+
+    // Declare a private lateinit variable for binding the layout with this activity
     private ActivityRatingBarBinding binding;
 
     // Float variable to store current rating value
@@ -18,6 +20,7 @@ public class RatingBarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Inflate the layout and set it as the content view for this activity
         binding = ActivityRatingBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

@@ -3,9 +3,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.RadioButton;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
+import com.google.android.material.snackbar.Snackbar;
 public class RadioButtonsActivity extends AppCompatActivity {
     private ActivityRadioButtonsBinding binding;
     private final Handler handler = new Handler();
@@ -18,7 +18,7 @@ public class RadioButtonsActivity extends AppCompatActivity {
         binding.buttonDisplay.setOnClickListener(v -> {
             int selectedId = binding.radioGroup.getCheckedRadioButtonId();
             RadioButton radioButton = findViewById(selectedId);
-            Toast.makeText(this, radioButton.getText(), Toast.LENGTH_SHORT).show();
+            Snackbar.make(binding.getRoot(), radioButton.getText(), Snackbar.LENGTH_SHORT).show();
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }

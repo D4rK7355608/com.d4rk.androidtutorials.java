@@ -13,6 +13,7 @@ public class AndroidHistory extends AppCompatActivity {
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
         binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
     }
 }

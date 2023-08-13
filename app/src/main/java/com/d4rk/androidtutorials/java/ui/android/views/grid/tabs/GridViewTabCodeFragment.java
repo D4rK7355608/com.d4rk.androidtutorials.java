@@ -29,7 +29,7 @@ public class GridViewTabCodeFragment extends Fragment {
         MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
         StringBuilder builder = new StringBuilder();
-        InputStream inputStream = getResources().openRawResource(R.raw.text_grid_view_kotlin);
+        InputStream inputStream = getResources().openRawResource(R.raw.text_grid_view_java);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             while ((line = reader.readLine()) != null) {

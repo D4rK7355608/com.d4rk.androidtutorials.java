@@ -140,7 +140,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     ClipData clip = ClipData.newPlainText("text", version);
                     clipboard.setPrimaryClip(clip);
                     if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
-                        Toast.makeText(getContext(), R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), R.string.snack_copied_to_clipboard, Toast.LENGTH_SHORT).show();
                     }
                     return true;
                 });

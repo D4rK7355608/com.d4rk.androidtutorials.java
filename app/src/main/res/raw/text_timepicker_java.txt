@@ -1,3 +1,4 @@
+// Import the necessary classes and libraries
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,7 +8,8 @@ import java.util.Locale;
 
 // This class extends AppCompatActivity and represents the main activity of an Android app
 public class MainActivity extends AppCompatActivity {
-    // Binding object to access views in the layout
+
+    // Declare a private lateinit variable for binding the layout with this activity
     private ActivityMainBinding binding;
 
     // Calendar instance to keep track of time
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Inflate the layout and set it as the content view for this activity
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

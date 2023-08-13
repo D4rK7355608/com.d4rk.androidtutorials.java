@@ -1,3 +1,18 @@
+# Version 4.0_r1:
+- Added a new lesson on using Per-app language preferences.
+- Added a new lesson on using Progress Bar.
+- Added a new lesson on using Chronometer.
+- Added a new lesson on using Simple Notifications.
+- Added a new lesson on using Inbox Style Notifications.
+- Added a new support page to show appreciation and gratitude to the developer.
+- Added snack bars instead of toasts for all notifications.
+- Added a new GDPR message to comply with Google Play policy.
+- Added a new help center, with more comprehensive documentation and support options.
+- Added tooltips to help users understand what is happening in the app.
+- Redesigned the Buttons, Switches, Images, Image Buttons and Linear Layout lessons to make them more user-friendly.
+- Made various project structure enhancements for better readability and maintainability.
+- Made various under-the-hood improvements for a better overall app experience.
+
 # Version 3.1_r1:
 - Added missing translations.
 
@@ -11,7 +26,7 @@
 - Added language support for Hungarian.
 - Reworked language system, making it more accurate and user-friendly.
 - Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.
-- Made various under-the-hood improvements for a better overall app experience
+- Made various under-the-hood improvements for a better overall app experience.
 
 # Version 2.1_r1:
 - Added a new setting to let user choose the home page.

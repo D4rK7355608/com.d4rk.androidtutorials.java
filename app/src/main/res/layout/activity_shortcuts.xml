@@ -7,7 +7,7 @@
     <FrameLayout
         android:id="@+id/frame_layout_shortcuts"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button_more"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:text="@string/more_about_shortcuts"
+        android:tooltipText="@string/more_about_shortcuts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

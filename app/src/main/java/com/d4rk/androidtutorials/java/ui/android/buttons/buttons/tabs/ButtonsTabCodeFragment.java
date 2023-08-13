@@ -38,7 +38,7 @@ public class ButtonsTabCodeFragment extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        binding.textViewWarning.setText(R.string.same_binding_buttons);
+        binding.textViewWarning.setText(R.string.same_code_buttons);
         return binding.getRoot();
     }
     @Override

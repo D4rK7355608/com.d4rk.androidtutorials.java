@@ -31,7 +31,7 @@ public class RatingBarActivity extends AppCompatActivity {
         binding.textViewRatingValue.setText(formattedString);
     }
     private void showRatingToast() {
-        formattedString = String.format(getString(R.string.rating), rating);
+        formattedString = String.format(getString(R.string.snack_rating), rating);
         Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();
     }
 }

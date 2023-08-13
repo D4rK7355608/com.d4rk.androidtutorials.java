@@ -2,16 +2,16 @@ package com.d4rk.androidtutorials.java.ui.android.textboxes.textbox;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.d4rk.androidtutorials.java.databinding.ActivityTextboxBinding;
+import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
+import com.google.android.material.snackbar.Snackbar;
 public class TextboxActivity extends AppCompatActivity {
-    private ActivityTextboxBinding binding;
+    private ActivityTextBoxBinding binding;
     private final Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityTextboxBinding.inflate(getLayoutInflater());
+        binding = ActivityTextBoxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         bindListeners();
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
@@ -22,8 +22,11 @@ public class TextboxActivity extends AppCompatActivity {
         addKeyListener();
     }
     private void addKeyListener() {
-        binding.buttonPrintEdit.setOnClickListener(v -> Toast.makeText(TextboxActivity.this,
-                binding.editText.getText(),
-                Toast.LENGTH_LONG).show());
+        binding.buttonPrintEdit.setOnClickListener(v -> {
+            CharSequence text = binding.editText.getText();
+            if (text != null) {
+                Snackbar.make(binding.getRoot(), text, Snackbar.LENGTH_LONG).show();
+            }
+        });
     }
 }

@@ -121,11 +121,11 @@
             app:title="@string/oss_license_title"
             app:icon="@drawable/ic_libraries"/>
         <androidx.preference.Preference
-            app:icon="@drawable/ic_faq"
-            app:title="@string/faq">
+            app:icon="@drawable/ic_help"
+            app:title="@string/help_and_feedback">
             <intent
                 android:targetPackage="com.d4rk.androidtutorials.java"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.faq.FaqActivity"/>
+                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity"/>
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_license"
@@ -140,13 +140,6 @@
         app:title="@string/more"
         app:icon="@drawable/ic_more">
         <androidx.preference.Preference
-            app:icon="@drawable/ic_feedback"
-            app:title="@string/feedback">
-            <intent
-                android:targetPackage="com.d4rk.androidtutorials.java"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.feedback.FeedbackActivity"/>
-        </androidx.preference.Preference>
-        <androidx.preference.Preference
             app:key="@string/key_share"
             app:icon="@drawable/ic_share"
             app:title="@string/share"/>
@@ -159,11 +152,11 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_support"
-            app:title="@string/support_me"
-            app:summary="@string/summary_preference_settings_support_me">
+            app:title="@string/support_the_developer"
+            app:summary="@string/summary_preference_settings_support_developer">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://bit.ly/3p8bpjj"/>
+                android:targetPackage="com.d4rk.androidtutorials.java"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity"/>
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory

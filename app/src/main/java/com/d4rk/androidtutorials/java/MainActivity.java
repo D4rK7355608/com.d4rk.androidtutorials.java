@@ -1,21 +1,21 @@
 package com.d4rk.androidtutorials.java;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.NotificationCompat;
+import androidx.core.content.pm.ShortcutInfoCompat;
+import androidx.core.content.pm.ShortcutManagerCompat;
+import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.navigation.NavController;
@@ -25,12 +25,16 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
+import com.d4rk.androidtutorials.java.notifications.AppUpdateNotificationsManager;
+import com.d4rk.androidtutorials.java.notifications.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.settings.SettingsActivity;
+import com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity;
 import com.d4rk.androidtutorials.java.ui.startup.StartupActivity;
-import com.google.android.gms.tasks.Task;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.ActivityResult;
@@ -38,16 +42,54 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    NavController navController;
     private AppUpdateManager appUpdateManager;
     private final int requestUpdateCode = 1;
-    NavController navController;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager;
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private final long snackbarInterval = 60L * 24 * 60 * 60 * 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SplashScreen.installSplashScreen(this);
-        com.d4rk.androidtutorials.java.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        launcherShortcuts();
+        applySettings();
+        setContentView(binding.getRoot());
+        MobileAds.initialize(this);
+        binding.adView.loadAd(new AdRequest.Builder().build());
+        appUpdateManager = AppUpdateManagerFactory.create(this);
+        appUpdateManager = AppUpdateManagerFactory.create(this);
+        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
+        handler.postDelayed(this::showSnackbar, snackbarInterval);
+    }
+    private void launcherShortcuts() {
+        ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(this, "shortcut_id")
+                .setShortLabel(getString(R.string.shortcut_kotlin_edition_short))
+                .setLongLabel(getString(R.string.shortcut_kotlin_edition_long))
+                .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
+                .setIntent(new Intent(Intent.ACTION_MAIN) {{
+                    if (isAppInstalled(getPackageManager())) {
+                        setClassName("com.d4rk.androidtutorials", "com.d4rk.androidtutorials.MainActivity");
+                    } else {
+                        setData(Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"));
+                    }
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                }})
+                .build();
+        ShortcutManagerCompat.pushDynamicShortcut(this, shortcut);
+    }
+    private boolean isAppInstalled(PackageManager packageManager) {
+        try {
+            packageManager.getPackageInfo("com.d4rk.androidtutorials.java", 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+    private void applySettings() {
         String[] darkModeValues = getResources().getStringArray(R.array.preference_theme_values);
         String preference = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.key_theme), getString(R.string.default_value_theme));
         int defaultNightMode = AppCompatDelegate.getDefaultNightMode();
@@ -72,8 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 recreate();
             }
         }
-        setContentView(binding.getRoot());
-        appUpdateManager = AppUpdateManagerFactory.create(this);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String labelKey = getString(R.string.key_bottom_navigation_bar_labels);
         String[] bottomNavigationBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
@@ -88,8 +128,6 @@ public class MainActivity extends AppCompatActivity {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
         }
         binding.navView.setLabelVisibilityMode(visibilityMode);
-        String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
-        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
         String defaultTabKey = getString(R.string.key_default_tab);
         String defaultTabValue = getString(R.string.default_value_tab);
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
@@ -109,11 +147,10 @@ public class MainActivity extends AppCompatActivity {
             navController = navHostFragment.getNavController();
             NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
             navGraph.setStartDestination(startFragmentId);
-            navController.setGraph(navGraph, savedInstanceState);
+            navController.setGraph(navGraph);
             NavigationUI.setupWithNavController(binding.navView, navController);
         }
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
+        setSupportActionBar(binding.toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -122,38 +159,12 @@ public class MainActivity extends AppCompatActivity {
         }
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        SharedPreferences appUsagePrefs = getSharedPreferences("app_usage", MODE_PRIVATE);
-        long lastUsedTimestamp = appUsagePrefs.getLong("last_used", 0);
-        long currentTimestamp = System.currentTimeMillis();
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        if (currentTimestamp - lastUsedTimestamp > TimeUnit.DAYS.toMillis(3)) {
-            String channelId = "app_usage_channel";
-            NotificationChannel channel = new NotificationChannel(channelId, getString(R.string.app_usage_notifications), NotificationManager.IMPORTANCE_HIGH);
-            notificationManager.createNotificationChannel(channel);
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
-                    .setSmallIcon(R.drawable.ic_notification_important)
-                    .setContentTitle(getString(R.string.notification_last_time_used_title))
-                    .setContentText(getString(R.string.summary_notification_last_time_used))
-                    .setAutoCancel(true);
-            notificationManager.notify(0, builder.build());
-        }
-        appUsagePrefs.edit().putLong("last_used", currentTimestamp).apply();
-        AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
-        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
-        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
-            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                String updateChannelId = "update_channel";
-                NotificationChannel updateChannel = new NotificationChannel(updateChannelId, getString(R.string.update_notifications), NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(updateChannel);
-                NotificationCompat.Builder updateBuilder = new NotificationCompat.Builder(this, updateChannelId)
-                        .setSmallIcon(R.drawable.ic_notification_update)
-                        .setContentTitle(getString(R.string.notification_update_title))
-                        .setContentText(getString(R.string.summary_notification_update))
-                        .setAutoCancel(true)
-                        .setContentIntent(PendingIntent.getActivity(this, 0, new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())), PendingIntent.FLAG_IMMUTABLE));
-                notificationManager.notify(0, updateBuilder.build());
-            }
-        });
+        String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
+    }
+    private void showSnackbar() {
+        Snackbar.make(binding.getRoot(), getString(R.string.snack_support), Snackbar.LENGTH_LONG).setAction(getString(android.R.string.ok), view -> startActivity(new Intent(view.getContext(), SupportActivity.class))).show();
+        handler.postDelayed(this::showSnackbar, snackbarInterval);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -169,17 +180,33 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
     }
+    @Deprecated
+    @Override
+    public void onBackPressed() {
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.alert_dialog_close)
+                .setMessage(R.string.summary_alert_dialog_close)
+                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                    MainActivity.super.onBackPressed();
+                    moveTaskToBack(true);
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .show();
+    }
+    @SuppressWarnings("deprecation")
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean preferenceFirebase = prefs.getBoolean(getString(R.string.key_firebase), true);
-        FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(preferenceFirebase);
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(preferenceFirebase);
-        if (prefs.getBoolean("value", true)) {
-            prefs.edit().putBoolean("value", false).apply();
-            startActivity(new Intent(this, StartupActivity.class));
+        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_firebase), true)) {
+            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(false);
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false);
+        } else {
+            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true);
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         }
+        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
+        appUsageNotificationsManager.checkAndSendAppUsageNotification();
+        appUpdateNotificationsManager.checkAndSendUpdateNotification();
         appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                 try {
@@ -189,6 +216,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        startupScreen();
+    }
+    private void startupScreen() {
+        SharedPreferences startupPreference = getSharedPreferences("startup", MODE_PRIVATE);
+        if (startupPreference.getBoolean("value", true)) {
+            startupPreference.edit().putBoolean("value", false).apply();
+            startActivity(new Intent(this, StartupActivity.class));
+        }
     }
     @Deprecated
     @Override
@@ -202,18 +237,5 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-    }
-    @Deprecated
-    @Override
-    public void onBackPressed() {
-        new MaterialAlertDialogBuilder(this)
-                .setTitle(R.string.close)
-                .setMessage(R.string.summary_close)
-                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
-                    MainActivity.super.onBackPressed();
-                    moveTaskToBack(true);
-                })
-                .setNegativeButton(android.R.string.no, null)
-                .show();
     }
 }

@@ -21,8 +21,8 @@ public class AlertDialogActivity extends AppCompatActivity {
     }
     private MaterialAlertDialogBuilder createAlertDialog() {
         return new MaterialAlertDialogBuilder(this)
-                .setTitle(R.string.title_alert_dialog)
-                .setMessage(R.string.alert_dialog_message)
+                .setTitle(R.string.your_title)
+                .setMessage(R.string.summary_alert_dialog_message)
                 .setIcon(R.drawable.ic_shop)
                 .setPositiveButton(android.R.string.ok, null)
                 .setNegativeButton(android.R.string.cancel, null);

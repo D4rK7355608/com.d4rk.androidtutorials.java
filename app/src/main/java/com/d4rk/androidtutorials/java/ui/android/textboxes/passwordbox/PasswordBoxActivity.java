@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
+import com.google.android.material.snackbar.Snackbar;
 public class PasswordBoxActivity extends AppCompatActivity {
     private ActivityPasswordBoxBinding binding;
     private final Handler handler = new Handler();
@@ -48,6 +48,6 @@ public class PasswordBoxActivity extends AppCompatActivity {
     }
     private void addKeyListener() {
         binding.buttonShowPassword.setOnClickListener(v ->
-                Toast.makeText(this, binding.editText.getText(), Toast.LENGTH_LONG).show());
+                Snackbar.make(binding.getRoot(), binding.editText.getText(), Snackbar.LENGTH_LONG).show());
     }
 }
