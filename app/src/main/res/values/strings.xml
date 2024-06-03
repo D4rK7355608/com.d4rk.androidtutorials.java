@@ -238,6 +238,9 @@
     <string name="license">License</string>
     <string name="more">More</string>
     <string name="share">Share</string>
+    <string name="summary_share_message">Check out this amazing app that I\'m using! It has some really cool features that you might find interesting. You can download it from the Play Store at: %1$s</string>
+
+    <string name="updates">Updates</string>
     <string name="share_subject">Try it now!!!</string>
     <string name="share_using">Share using…</string>
     <string name="more_apps">More apps…</string>
@@ -366,4 +369,6 @@
 
     <string name="snack_network_error">Network error occurred while checking for updates</string>
     <string name="snack_general_error">An error occurred while checking for updates</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

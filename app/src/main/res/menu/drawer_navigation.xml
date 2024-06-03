@@ -1,0 +1,23 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/group_support_and_settings">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"/>
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/help_and_feedback"/>
+        <item
+            android:id="@+id/nav_updates"
+            android:icon="@drawable/ic_event_note"
+            android:title="@string/updates"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share"/>
+    </group>
+</menu>
