@@ -1,0 +1,48 @@
+// Import the necessary classes and libraries
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+// This class extends AppCompatActivity and represents the main activity of an Android app
+public class MainActivity extends AppCompatActivity {
+
+    private final String notificationChannelId = "simple_notification";
+    private final int notificationId = 1;
+
+    // Declare a private lateinit variable for binding the layout with this activity
+    private ActivityMainBinding binding;
+
+    // This method is called when the activity is first created
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Inflate the layout and set it as the content view for this activity
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.button.setOnClickListener(view -> {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
+            }
+
+            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(MainActivity.this);
+
+            NotificationChannel channel = new NotificationChannel(notificationChannelId, "Simple Notifications", NotificationManager.IMPORTANCE_HIGH);
+
+            notificationManager.createNotificationChannel(channel);
+
+            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(MainActivity.this, notificationChannelId)
+                    .setSmallIcon(R.drawable.ic_my_notification_icon)
+                    .setContentTitle("Title")
+                    .setContentText("Look! You've added notifications to your app!")
+                    .setAutoCancel(true);
+
+            notificationManager.notify(notificationId, notificationBuilder.build());
+        });
+    }
+}

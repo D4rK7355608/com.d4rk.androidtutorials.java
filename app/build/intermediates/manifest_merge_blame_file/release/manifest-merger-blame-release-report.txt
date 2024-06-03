@@ -1,0 +1,1339 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.d4rk.androidtutorials.java"
+4    android:installLocation="auto"
+5    android:versionCode="20"
+6    android:versionName="4.0_r1" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="26"
+10        android:targetSdkVersion="34" />
+11
+12    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+12-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:5:5-78
+12-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:6:5-66
+13-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:6:22-64
+14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+14-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:7:5-76
+14-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:7:22-74
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:8:5-78
+15-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:8:22-76
+16    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+16-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:9:5-84
+16-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:9:22-82
+17    <uses-permission android:name="com.android.vending.BILLING" />
+17-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:10:5-66
+17-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:10:22-64
+18    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+18-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:11:5-72
+18-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:11:22-70
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+19-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:12:5-76
+19-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:12:22-74
+20
+21    <queries>
+21-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:13:5-18:15
+22        <intent>
+22-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:14:9-17:18
+23            <action android:name="android.intent.action.VIEW" />
+23-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:13-64
+23-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:21-62
+24
+25            <data android:scheme="https" />
+25-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:16:13-43
+25-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:16:19-41
+26        </intent>
+27        <intent>
+27-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:13:9-15:18
+28            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+28-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:14:13-91
+28-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:14:21-88
+29        </intent> <!-- For browser content -->
+30        <intent>
+30-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:35:9-41:18
+31            <action android:name="android.intent.action.VIEW" />
+31-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:13-64
+31-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:21-62
+32
+33            <category android:name="android.intent.category.BROWSABLE" />
+33-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:38:13-74
+33-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:38:23-71
+34
+35            <data android:scheme="https" />
+35-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:16:13-43
+35-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:16:19-41
+36        </intent> <!-- End of browser content -->
+37        <!-- For CustomTabsService -->
+38        <intent>
+38-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:44:9-46:18
+39            <action android:name="android.support.customtabs.action.CustomTabsService" />
+39-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:45:13-90
+39-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:45:21-87
+40        </intent>
+41    </queries>
+42
+43    <uses-permission android:name="android.permission.WAKE_LOCK" />
+43-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:25:5-68
+43-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:25:22-65
+44    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+44-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:26:5-110
+44-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:26:22-107
+45
+46    <permission
+46-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+47        android:name="com.d4rk.androidtutorials.java.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+47-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+48        android:protectionLevel="signature" />
+48-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+49
+50    <uses-permission android:name="com.d4rk.androidtutorials.java.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+50-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+50-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+51
+52    <application
+52-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:19:5-390:19
+53        android:name="com.d4rk.androidtutorials.java.ads.managers.AppOpenAd"
+53-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:20:9-47
+54        android:appCategory="productivity"
+54-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:21:9-43
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.10.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d28bcea36c9235c200ed0952cca5024f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+56        android:description="@string/app_description"
+56-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:22:9-54
+57        android:enableOnBackInvokedCallback="true"
+57-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:23:9-51
+58        android:extractNativeLibs="false"
+59        android:icon="@mipmap/ic_launcher"
+59-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:24:9-43
+60        android:label="@string/app_name"
+60-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:25:9-41
+61        android:localeConfig="@xml/config_locales"
+61-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:26:9-51
+62        android:logo="@drawable/ic_launcher_foreground"
+62-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:27:9-56
+63        android:resizeableActivity="true"
+63-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:28:9-42
+64        android:roundIcon="@mipmap/ic_launcher"
+64-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:29:9-48
+65        android:supportsRtl="true"
+65-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:30:9-35
+66        android:theme="@style/AppThemeActionBar" >
+66-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:31:9-49
+67        <activity
+67-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:33:9-45:20
+68            android:name="com.d4rk.androidtutorials.java.MainActivity"
+68-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:34:13-41
+69            android:exported="true"
+69-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:35:13-36
+70            android:theme="@style/SplashScreenTheme" >
+70-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:36:13-53
+71            <intent-filter>
+71-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:37:13-41:29
+72                <action android:name="android.intent.action.VIEW" />
+72-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:13-64
+72-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:15:21-62
+73                <action android:name="android.intent.action.MAIN" />
+73-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:39:17-68
+73-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:39:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:40:17-76
+75-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:40:27-74
+76            </intent-filter>
+77
+78            <meta-data
+78-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:42:13-44:52
+79                android:name="android.app.shortcuts"
+79-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:43:17-53
+80                android:resource="@xml/shortcuts" />
+80-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:44:17-50
+81        </activity>
+82        <activity
+82-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:46:9-48:46
+83            android:name="com.d4rk.androidtutorials.java.ui.startup.StartupActivity"
+83-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:47:13-55
+84            android:theme="@style/AppTheme" />
+84-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:48:13-44
+85        <activity
+85-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:49:9-53:91
+86            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchCodeActivity"
+86-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:50:13-75
+87            android:exported="false"
+87-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:51:13-37
+88            android:label="@string/switches"
+88-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:52:13-45
+89            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchCodeActivity" />
+89-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:53:13-89
+90        <activity
+90-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:54:9-58:90
+91            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsActivity"
+91-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:55:13-74
+92            android:exported="false"
+92-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:56:13-37
+93            android:label="@string/radio_buttons"
+93-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:57:13-50
+94            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsActivity" />
+94-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:58:13-88
+95        <activity
+95-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:59:9-63:94
+96            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsCodeActivity"
+96-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:60:13-78
+97            android:exported="false"
+97-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:61:13-37
+98            android:label="@string/radio_buttons"
+98-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:62:13-50
+99            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsCodeActivity" />
+99-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:63:13-92
+100        <activity
+100-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:64:9-68:82
+101            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastActivity"
+101-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:65:13-66
+102            android:exported="false"
+102-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:66:13-37
+103            android:label="@string/toast"
+103-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:67:13-42
+104            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastActivity" />
+104-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:68:13-80
+105        <activity
+105-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:69:9-73:86
+106            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastCodeActivity"
+106-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:70:13-70
+107            android:exported="false"
+107-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:71:13-37
+108            android:label="@string/toast"
+108-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:72:13-42
+109            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastCodeActivity" />
+109-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:73:13-84
+110        <activity
+110-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:74:9-78:90
+111            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsActivity"
+111-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:75:13-74
+112            android:exported="false"
+112-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:76:13-37
+113            android:label="@string/image_buttons"
+113-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:77:13-50
+114            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsActivity" />
+114-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:78:13-88
+115        <activity
+115-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:79:9-83:94
+116            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsCodeActivity"
+116-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:80:13-78
+117            android:exported="false"
+117-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:81:13-37
+118            android:label="@string/image_buttons"
+118-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:82:13-50
+119            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsCodeActivity" />
+119-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:83:13-92
+120        <activity
+120-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:84:9-88:83
+121            android:name="com.d4rk.androidtutorials.java.ui.android.views.images.ImagesActivity"
+121-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:85:13-67
+122            android:exported="false"
+122-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:86:13-37
+123            android:label="@string/image_view"
+123-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:87:13-47
+124            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.images.ImagesActivity" />
+124-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:88:13-81
+125        <activity
+125-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:89:9-93:87
+126            android:name="com.d4rk.androidtutorials.java.ui.android.views.images.ImagesCodeActivity"
+126-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:90:13-71
+127            android:exported="false"
+127-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:91:13-37
+128            android:label="@string/image_view"
+128-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:92:13-47
+129            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.images.ImagesCodeActivity" />
+129-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:93:13-85
+130        <activity
+130-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:94:9-98:88
+131            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarActivity"
+131-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:95:13-72
+132            android:exported="false"
+132-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:96:13-37
+133            android:label="@string/snack_bar"
+133-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:97:13-46
+134            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarActivity" />
+134-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:98:13-86
+135        <activity
+135-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:99:9-103:92
+136            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarCodeActivity"
+136-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:100:13-76
+137            android:exported="false"
+137-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:101:13-37
+138            android:label="@string/snack_bar"
+138-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:102:13-46
+139            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarCodeActivity" />
+139-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:103:13-90
+140        <activity
+140-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:104:9-108:86
+141            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockCodeActivity"
+141-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:105:13-70
+142            android:exported="false"
+142-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:106:13-37
+143            android:label="@string/clocks"
+143-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:107:13-43
+144            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockCodeActivity" />
+144-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:108:13-84
+145        <activity
+145-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:109:9-113:82
+146            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockActivity"
+146-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:110:13-66
+147            android:exported="false"
+147-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:111:13-37
+148            android:label="@string/clocks"
+148-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:112:13-43
+149            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockActivity" />
+149-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:113:13-80
+150        <activity
+150-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:114:9-118:96
+151            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerCodeActivity"
+151-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:115:13-80
+152            android:exported="false"
+152-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:116:13-37
+153            android:label="@string/timepicker"
+153-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:117:13-47
+154            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerCodeActivity" />
+154-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:118:13-94
+155        <activity
+155-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:119:9-123:92
+156            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerActivity"
+156-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:120:13-76
+157            android:exported="false"
+157-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:121:13-37
+158            android:label="@string/timepicker"
+158-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:122:13-47
+159            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerActivity" />
+159-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:123:13-90
+160        <activity
+160-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:124:9-128:81
+161            android:name="com.d4rk.androidtutorials.java.ui.android.views.web.WebViewActivity"
+161-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:125:13-65
+162            android:exported="false"
+162-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:126:13-37
+163            android:label="@string/web_view"
+163-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:127:13-45
+164            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.web.WebViewActivity" />
+164-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:128:13-79
+165        <activity
+165-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:129:9-133:85
+166            android:name="com.d4rk.androidtutorials.java.ui.android.views.web.WebViewCodeActivity"
+166-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:130:13-69
+167            android:exported="false"
+167-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:131:13-37
+168            android:label="@string/web_view"
+168-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:132:13-45
+169            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.web.WebViewCodeActivity" />
+169-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:133:13-83
+170        <activity
+170-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:134:9-138:96
+171            android:name="com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarActivity"
+171-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:135:13-80
+172            android:exported="false"
+172-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:136:13-37
+173            android:label="@string/progress_bar"
+173-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:137:13-49
+174            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarActivity" />
+174-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:138:13-94
+175        <activity
+175-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:139:9-143:100
+176            android:name="com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarCodeActivity"
+176-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:140:13-84
+177            android:exported="false"
+177-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:141:13-37
+178            android:label="@string/progress_bar"
+178-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:142:13-49
+179            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarCodeActivity" />
+179-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:143:13-98
+180        <activity
+180-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:144:9-148:103
+181            android:name="com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationActivity"
+181-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:145:13-87
+182            android:exported="false"
+182-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:146:13-37
+183            android:label="@string/simple_notifications"
+183-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:147:13-57
+184            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationActivity" />
+184-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:148:13-101
+185        <activity
+185-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:149:9-153:107
+186            android:name="com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationCodeActivity"
+186-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:150:13-91
+187            android:exported="false"
+187-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:151:13-37
+188            android:label="@string/simple_notifications"
+188-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:152:13-57
+189            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationCodeActivity" />
+189-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:153:13-105
+190        <activity
+190-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:154:9-158:101
+191            android:name="com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationActivity"
+191-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:155:13-85
+192            android:exported="false"
+192-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:156:13-37
+193            android:label="@string/inbox_notifications"
+193-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:157:13-56
+194            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationActivity" />
+194-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:158:13-99
+195        <activity
+195-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:159:9-163:105
+196            android:name="com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationCodeActivity"
+196-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:160:13-89
+197            android:exported="false"
+197-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:161:13-37
+198            android:label="@string/inbox_notifications"
+198-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:162:13-56
+199            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationCodeActivity" />
+199-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:163:13-103
+200        <activity
+200-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:164:9-169:57
+201            android:name="com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxActivity"
+201-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:165:13-81
+202            android:exported="false"
+202-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:166:13-37
+203            android:label="@string/password_box"
+203-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:167:13-49
+204            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxActivity"
+204-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:168:13-95
+205            android:windowSoftInputMode="adjustResize" />
+205-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:169:13-55
+206        <activity
+206-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:170:9-174:101
+207            android:name="com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxCodeActivity"
+207-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:171:13-85
+208            android:exported="false"
+208-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:172:13-37
+209            android:label="@string/password_box"
+209-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:173:13-49
+210            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxCodeActivity" />
+210-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:174:13-99
+211        <activity
+211-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:175:9-179:96
+212            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerCodeActivity"
+212-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:176:13-80
+213            android:exported="false"
+213-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:177:13-37
+214            android:label="@string/datepicker"
+214-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:178:13-47
+215            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerCodeActivity" />
+215-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:179:13-94
+216        <activity
+216-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:180:9-184:92
+217            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerActivity"
+217-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:181:13-76
+218            android:exported="false"
+218-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:182:13-37
+219            android:label="@string/datepicker"
+219-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:183:13-47
+220            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerActivity" />
+220-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:184:13-90
+221        <activity
+221-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:185:9-190:57
+222            android:name="com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxActivity"
+222-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:186:13-73
+223            android:exported="false"
+223-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:187:13-37
+224            android:label="@string/textbox"
+224-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:188:13-44
+225            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxActivity"
+225-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:189:13-87
+226            android:windowSoftInputMode="adjustResize" />
+226-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:190:13-55
+227        <activity
+227-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:191:9-195:93
+228            android:name="com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxCodeActivity"
+228-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:192:13-77
+229            android:exported="false"
+229-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:193:13-37
+230            android:label="@string/textbox"
+230-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:194:13-44
+231            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxCodeActivity" />
+231-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:195:13-91
+232        <activity
+232-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:196:9-200:94
+233            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogActivity"
+233-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:197:13-78
+234            android:exported="false"
+234-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:198:13-37
+235            android:label="@string/alert_dialog"
+235-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:199:13-49
+236            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogActivity" />
+236-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:200:13-92
+237        <activity
+237-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:201:9-205:98
+238            android:name="com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogCodeActivity"
+238-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:202:13-82
+239            android:exported="false"
+239-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:203:13-37
+240            android:label="@string/alert_dialog"
+240-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:204:13-49
+241            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogCodeActivity" />
+241-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:205:13-96
+242        <activity
+242-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:206:9-210:88
+243            android:name="com.d4rk.androidtutorials.java.ui.settings.permissions.PermissionsActivity"
+243-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:207:13-72
+244            android:exported="false"
+244-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:208:13-37
+245            android:label="@string/permissions"
+245-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:209:13-48
+246            android:parentActivityName="com.d4rk.androidtutorials.java.ui.settings.permissions.PermissionsActivity" />
+246-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:210:13-86
+247        <activity
+247-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:211:9-215:90
+248            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.ShortcutsActivity"
+248-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:212:13-74
+249            android:exported="false"
+249-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:213:13-37
+250            android:label="@string/shortcuts"
+250-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:214:13-46
+251            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.ShortcutsActivity" />
+251-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:215:13-88
+252        <activity
+252-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:216:9-220:99
+253            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"
+253-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:217:13-83
+254            android:exported="false"
+254-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:218:13-37
+255            android:label="@string/writing_code"
+255-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:219:13-49
+256            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity" />
+256-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:220:13-97
+257        <activity
+257-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:221:9-225:102
+258            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"
+258-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:222:13-86
+259            android:exported="false"
+259-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:223:13-37
+260            android:label="@string/general"
+260-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:224:13-44
+261            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity" />
+261-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:225:13-100
+262        <activity
+262-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:226:9-230:106
+263            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"
+263-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:227:13-90
+264            android:exported="false"
+264-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:228:13-37
+265            android:label="@string/refactoring"
+265-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:229:13-48
+266            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity" />
+266-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:230:13-104
+267        <activity
+267-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:231:9-235:100
+268            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"
+268-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:232:13-84
+269            android:exported="false"
+269-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:233:13-37
+270            android:label="@string/build_and_run"
+270-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:234:13-50
+271            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity" />
+271-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:235:13-98
+272        <activity
+272-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:236:9-240:94
+273            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerActivity"
+273-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:237:13-78
+274            android:exported="false"
+274-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:238:13-37
+275            android:label="@string/chronometer"
+275-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:239:13-48
+276            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerActivity" />
+276-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:240:13-92
+277        <activity
+277-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:241:9-245:98
+278            android:name="com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerCodeActivity"
+278-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:242:13-82
+279            android:exported="false"
+279-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:243:13-37
+280            android:label="@string/chronometer"
+280-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:244:13-48
+281            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerCodeActivity" />
+281-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:245:13-96
+282        <activity
+282-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:246:9-250:104
+283            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"
+283-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:247:13-88
+284            android:exported="false"
+284-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:248:13-37
+285            android:label="@string/debugging"
+285-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:249:13-46
+286            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity" />
+286-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:250:13-102
+287        <activity
+287-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:251:9-255:117
+288            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
+288-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:252:13-101
+289            android:exported="false"
+289-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:253:13-37
+290            android:label="@string/navigation_and_searching"
+290-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:254:13-61
+291            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity" />
+291-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:255:13-115
+292        <activity
+292-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:256:9-260:109
+293            android:name="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"
+293-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:257:13-93
+294            android:exported="false"
+294-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:258:13-37
+295            android:label="@string/version_control"
+295-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:259:13-52
+296            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity" />
+296-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:260:13-107
+297        <activity
+297-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:261:9-265:85
+298            android:name="com.d4rk.androidtutorials.java.ui.android.basics.history.AndroidHistory"
+298-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:262:13-69
+299            android:exported="false"
+299-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:264:13-37
+300            android:label="@string/history_of_android"
+300-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:263:13-55
+301            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.history.AndroidHistory" />
+301-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:265:13-83
+302        <activity
+302-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:266:9-270:91
+303            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsCodeActivity"
+303-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:267:13-75
+304            android:exported="false"
+304-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:268:13-37
+305            android:label="@string/buttons"
+305-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:269:13-44
+306            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsCodeActivity" />
+306-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:270:13-89
+307        <activity
+307-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:271:9-275:91
+308            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutActivity"
+308-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:272:13-75
+309            android:exported="false"
+309-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:273:13-37
+310            android:label="@string/linear_layout"
+310-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:274:13-50
+311            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutActivity" />
+311-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:275:13-89
+312        <activity
+312-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:276:9-280:95
+313            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutCodeActivity"
+313-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:277:13-79
+314            android:exported="false"
+314-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:278:13-37
+315            android:label="@string/linear_layout"
+315-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:279:13-50
+316            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutCodeActivity" />
+316-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:280:13-93
+317        <activity
+317-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:281:9-285:95
+318            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutActivity"
+318-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:282:13-79
+319            android:exported="false"
+319-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:283:13-37
+320            android:label="@string/relative_layout"
+320-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:284:13-52
+321            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutActivity" />
+321-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:285:13-93
+322        <activity
+322-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:286:9-290:99
+323            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutCodeActivity"
+323-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:287:13-83
+324            android:exported="false"
+324-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:288:13-37
+325            android:label="@string/relative_layout"
+325-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:289:13-52
+326            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutCodeActivity" />
+326-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:290:13-97
+327        <activity
+327-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:291:9-295:89
+328            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutActivity"
+328-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:292:13-73
+329            android:exported="false"
+329-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:293:13-37
+330            android:label="@string/table_layout"
+330-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:294:13-49
+331            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutActivity" />
+331-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:295:13-87
+332        <activity
+332-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:296:9-300:93
+333            android:name="com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutCodeActivity"
+333-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:297:13-77
+334            android:exported="false"
+334-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:298:13-37
+335            android:label="@string/table_layout"
+335-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:299:13-49
+336            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutCodeActivity" />
+336-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:300:13-91
+337        <activity
+337-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:301:9-305:83
+338            android:name="com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewActivity"
+338-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:302:13-67
+339            android:exported="false"
+339-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:303:13-37
+340            android:label="@string/grid_view"
+340-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:304:13-46
+341            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewActivity" />
+341-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:305:13-81
+342        <activity
+342-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:306:9-310:87
+343            android:name="com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewCodeActivity"
+343-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:307:13-71
+344            android:exported="false"
+344-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:308:13-37
+345            android:label="@string/grid_view"
+345-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:309:13-46
+346            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewCodeActivity" />
+346-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:310:13-85
+347        <activity
+347-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:311:9-319:20
+348            android:name="com.d4rk.androidtutorials.java.ui.settings.SettingsActivity"
+348-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:312:13-57
+349            android:exported="false"
+349-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:313:13-37
+350            android:label="@string/settings"
+350-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:314:13-45
+351            android:parentActivityName="com.d4rk.androidtutorials.java.ui.settings.SettingsActivity" >
+351-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:315:13-71
+352            <intent-filter>
+352-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:316:13-318:29
+353                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+353-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:317:17-87
+353-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:317:25-85
+354            </intent-filter>
+355        </activity>
+356        <activity
+356-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:320:9-324:74
+357            android:name="com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity"
+357-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:321:13-58
+358            android:exported="false"
+358-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:322:13-37
+359            android:label="@string/help"
+359-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:323:13-41
+360            android:parentActivityName="com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity" />
+360-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:324:13-72
+361        <activity
+361-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:325:9-329:87
+362            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchActivity"
+362-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:326:13-71
+363            android:exported="false"
+363-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:327:13-37
+364            android:label="@string/switches"
+364-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:328:13-45
+365            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchActivity" />
+365-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:329:13-85
+366        <activity
+366-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:330:9-334:80
+367            android:name="com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity"
+367-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:331:13-64
+368            android:exported="false"
+368-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:332:13-37
+369            android:label="@string/support_us"
+369-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:333:13-47
+370            android:parentActivityName="com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity" />
+370-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:334:13-78
+371        <activity
+371-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:335:9-339:87
+372            android:name="com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsActivity"
+372-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:336:13-71
+373            android:exported="false"
+373-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:337:13-37
+374            android:label="@string/buttons"
+374-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:338:13-44
+375            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsActivity" />
+375-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:339:13-85
+376        <activity
+376-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:340:9-344:89
+377            android:name="com.d4rk.androidtutorials.java.ui.android.start.AndroidStartProjectActivity"
+377-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:341:13-73
+378            android:exported="false"
+378-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:342:13-37
+379            android:label="@string/android_start"
+379-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:343:13-50
+380            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.start.AndroidStartProjectActivity" />
+380-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:344:13-87
+381        <activity
+381-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:345:9-349:77
+382            android:name="com.d4rk.androidtutorials.java.ui.android.basics.sdk.AndroidSDK"
+382-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:346:13-61
+383            android:exported="false"
+383-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:347:13-37
+384            android:label="@string/android_sdk"
+384-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:348:13-48
+385            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.sdk.AndroidSDK" />
+385-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:349:13-75
+386        <activity
+386-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:350:9-354:102
+387            android:name="com.d4rk.androidtutorials.java.ui.android.basics.viewbinding.ViewBindingTutorialActivity"
+387-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:351:13-86
+388            android:exported="false"
+388-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:352:13-37
+389            android:label="@string/view_binding"
+389-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:353:13-49
+390            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.viewbinding.ViewBindingTutorialActivity" />
+390-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:354:13-100
+391        <activity
+391-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:355:9-359:102
+392            android:name="com.d4rk.androidtutorials.java.ui.android.basics.permissions.PermissionsTutorialActivity"
+392-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:356:13-86
+393            android:exported="false"
+393-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:357:13-37
+394            android:label="@string/permissions"
+394-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:358:13-48
+395            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.basics.permissions.PermissionsTutorialActivity" />
+395-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:359:13-100
+396        <activity
+396-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:360:9-364:91
+397            android:name="com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarActivity"
+397-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:361:13-75
+398            android:exported="false"
+398-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:362:13-37
+399            android:label="@string/rating_bar"
+399-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:363:13-47
+400            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarActivity" />
+400-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:364:13-89
+401        <activity
+401-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:365:9-369:95
+402            android:name="com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarCodeActivity"
+402-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:366:13-79
+403            android:exported="false"
+403-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:367:13-37
+404            android:label="@string/rating_bar"
+404-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:368:13-47
+405            android:parentActivityName="com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarCodeActivity" />
+405-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:369:13-93
+406
+407        <service
+407-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:370:9-377:19
+408            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+408-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:371:13-82
+409            android:enabled="false"
+409-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:372:13-36
+410            android:exported="false" >
+410-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:373:13-37
+411            <meta-data
+411-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:374:13-376:39
+412                android:name="autoStoreLocales"
+412-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:375:17-48
+413                android:value="true" />
+413-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:376:17-37
+414        </service>
+415
+416        <meta-data
+416-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:378:9-380:35
+417            android:name="firebase_performance_logcat_enabled"
+417-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:379:13-63
+418            android:value="true" />
+418-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:380:13-33
+419        <meta-data
+419-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:381:9-383:68
+420            android:name="com.google.android.gms.version"
+420-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:382:13-58
+421            android:value="@integer/google_play_services_version" />
+421-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:383:13-66
+422        <meta-data
+422-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:384:9-386:69
+423            android:name="com.google.android.gms.ads.APPLICATION_ID"
+423-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:385:13-69
+424            android:value="ca-app-pub-5294151573817700~1436412543" />
+424-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:386:13-67
+425        <meta-data
+425-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:387:9-389:35
+426            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+426-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:388:13-69
+427            android:value="true" />
+427-->C:\Users\d4rk7\AndroidStudioProjects\com.d4rk.androidtutorials.java\app\src\main\AndroidManifest.xml:389:13-33
+428
+429        <activity
+429-->[com.google.android.gms:play-services-oss-licenses:17.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\53e681b5324e3dc20f7ade9e7bcccaf8\transformed\play-services-oss-licenses-17.0.1\AndroidManifest.xml:23:9-25:57
+430            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+430-->[com.google.android.gms:play-services-oss-licenses:17.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\53e681b5324e3dc20f7ade9e7bcccaf8\transformed\play-services-oss-licenses-17.0.1\AndroidManifest.xml:24:13-87
+431            android:label="@string/oss_license_title" />
+431-->[com.google.android.gms:play-services-oss-licenses:17.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\53e681b5324e3dc20f7ade9e7bcccaf8\transformed\play-services-oss-licenses-17.0.1\AndroidManifest.xml:25:13-54
+432        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity" />
+432-->[com.google.android.gms:play-services-oss-licenses:17.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\53e681b5324e3dc20f7ade9e7bcccaf8\transformed\play-services-oss-licenses-17.0.1\AndroidManifest.xml:26:9-92
+432-->[com.google.android.gms:play-services-oss-licenses:17.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\53e681b5324e3dc20f7ade9e7bcccaf8\transformed\play-services-oss-licenses-17.0.1\AndroidManifest.xml:26:19-89
+433
+434        <service
+434-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:14:9-20:19
+435            android:name="com.google.firebase.components.ComponentDiscoveryService"
+435-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:15:13-84
+436            android:directBootAware="true"
+436-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+437            android:exported="false" >
+437-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:16:13-37
+438            <meta-data
+438-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:17:13-19:85
+439                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+439-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:18:17-115
+440                android:value="com.google.firebase.components.ComponentRegistrar" />
+440-->[com.google.firebase:firebase-crashlytics:18.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\071de90d42a109b24355ca7713d4f038\transformed\firebase-crashlytics-18.4.0\AndroidManifest.xml:19:17-82
+441            <meta-data
+441-->[com.google.firebase:firebase-perf:20.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea5f7154e02c55272eb06e6c6e322e30\transformed\firebase-perf-20.4.0\AndroidManifest.xml:16:13-18:85
+442                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+442-->[com.google.firebase:firebase-perf:20.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea5f7154e02c55272eb06e6c6e322e30\transformed\firebase-perf-20.4.0\AndroidManifest.xml:17:17-109
+443                android:value="com.google.firebase.components.ComponentRegistrar" />
+443-->[com.google.firebase:firebase-perf:20.4.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea5f7154e02c55272eb06e6c6e322e30\transformed\firebase-perf-20.4.0\AndroidManifest.xml:18:17-82
+444            <meta-data
+444-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\965a1b9dd1c14c0b24f0e8922d338438\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:31:13-33:85
+445                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+445-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\965a1b9dd1c14c0b24f0e8922d338438\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:32:17-139
+446                android:value="com.google.firebase.components.ComponentRegistrar" />
+446-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\965a1b9dd1c14c0b24f0e8922d338438\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:33:17-82
+447            <meta-data
+447-->[com.google.firebase:firebase-sessions:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\0d98ded386f7f780532717abf0837629\transformed\firebase-sessions-1.0.0\AndroidManifest.xml:27:13-29:85
+448                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+448-->[com.google.firebase:firebase-sessions:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\0d98ded386f7f780532717abf0837629\transformed\firebase-sessions-1.0.0\AndroidManifest.xml:28:17-117
+449                android:value="com.google.firebase.components.ComponentRegistrar" />
+449-->[com.google.firebase:firebase-sessions:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\0d98ded386f7f780532717abf0837629\transformed\firebase-sessions-1.0.0\AndroidManifest.xml:29:17-82
+450            <meta-data
+450-->[com.google.firebase:firebase-config:21.2.1] C:\Users\d4rk7\.gradle\caches\transforms-3\fa60c849ed7b27bbffb7853695e4c09f\transformed\firebase-config-21.2.1\AndroidManifest.xml:31:13-33:85
+451                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+451-->[com.google.firebase:firebase-config:21.2.1] C:\Users\d4rk7\.gradle\caches\transforms-3\fa60c849ed7b27bbffb7853695e4c09f\transformed\firebase-config-21.2.1\AndroidManifest.xml:32:17-117
+452                android:value="com.google.firebase.components.ComponentRegistrar" />
+452-->[com.google.firebase:firebase-config:21.2.1] C:\Users\d4rk7\.gradle\caches\transforms-3\fa60c849ed7b27bbffb7853695e4c09f\transformed\firebase-config-21.2.1\AndroidManifest.xml:33:17-82
+453            <meta-data
+453-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bf3e9c34dfff2297d8032f9fbafde077\transformed\firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+454                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+454-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bf3e9c34dfff2297d8032f9fbafde077\transformed\firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+455                android:value="com.google.firebase.components.ComponentRegistrar" />
+455-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bf3e9c34dfff2297d8032f9fbafde077\transformed\firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+456            <meta-data
+456-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\d4rk7\.gradle\caches\transforms-3\25b3245469b5ae5cf5adf38d949e5bdc\transformed\firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
+457                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+457-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\d4rk7\.gradle\caches\transforms-3\25b3245469b5ae5cf5adf38d949e5bdc\transformed\firebase-datatransport-18.1.8\AndroidManifest.xml:28:17-115
+458                android:value="com.google.firebase.components.ComponentRegistrar" />
+458-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\d4rk7\.gradle\caches\transforms-3\25b3245469b5ae5cf5adf38d949e5bdc\transformed\firebase-datatransport-18.1.8\AndroidManifest.xml:29:17-82
+459            <meta-data
+459-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\2853aff7578d2786d310985a9f7a80eb\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:14:13-16:85
+460                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+460-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\2853aff7578d2786d310985a9f7a80eb\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:15:17-113
+461                android:value="com.google.firebase.components.ComponentRegistrar" />
+461-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\2853aff7578d2786d310985a9f7a80eb\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:16:17-82
+462            <meta-data
+462-->[com.google.firebase:firebase-abt:21.1.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea4ee1bc51bce74d2ecffdc82ebb3068\transformed\firebase-abt-21.1.0\AndroidManifest.xml:12:13-14:85
+463                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+463-->[com.google.firebase:firebase-abt:21.1.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea4ee1bc51bce74d2ecffdc82ebb3068\transformed\firebase-abt-21.1.0\AndroidManifest.xml:13:17-109
+464                android:value="com.google.firebase.components.ComponentRegistrar" />
+464-->[com.google.firebase:firebase-abt:21.1.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ea4ee1bc51bce74d2ecffdc82ebb3068\transformed\firebase-abt-21.1.0\AndroidManifest.xml:14:17-82
+465        </service>
+466
+467        <meta-data
+467-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:19:9-21:37
+468            android:name="com.google.android.play.billingclient.version"
+468-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:20:13-73
+469            android:value="6.0.1" />
+469-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:21:13-34
+470
+471        <activity
+471-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:23:9-27:75
+472            android:name="com.android.billingclient.api.ProxyBillingActivity"
+472-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:24:13-78
+473            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+473-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:25:13-96
+474            android:exported="false"
+474-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:26:13-37
+475            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+475-->[com.android.billingclient:billing:6.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d39f9c5fefb92b274c31aa642ff37016\transformed\billing-6.0.1\AndroidManifest.xml:27:13-72
+476
+477        <receiver
+477-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:29:9-33:20
+478            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+478-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:30:13-85
+479            android:enabled="true"
+479-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:31:13-35
+480            android:exported="false" >
+480-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:32:13-37
+481        </receiver>
+482
+483        <service
+483-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:35:9-38:40
+484            android:name="com.google.android.gms.measurement.AppMeasurementService"
+484-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:36:13-84
+485            android:enabled="true"
+485-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:37:13-35
+486            android:exported="false" />
+486-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:38:13-37
+487        <service
+487-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:39:9-43:72
+488            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+488-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:40:13-87
+489            android:enabled="true"
+489-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:41:13-35
+490            android:exported="false"
+490-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:42:13-37
+491            android:permission="android.permission.BIND_JOB_SERVICE" />
+491-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\7015423bdaf51095f9a1409213f46b87\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:43:13-69
+492
+493        <activity
+493-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\633e29515d5e119883f436239a40d477\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+494            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+494-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\633e29515d5e119883f436239a40d477\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+495            android:exported="false"
+495-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\633e29515d5e119883f436239a40d477\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+496            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+496-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\d4rk7\.gradle\caches\transforms-3\633e29515d5e119883f436239a40d477\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+497        <activity
+497-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:53:9-58:43
+498            android:name="com.google.android.gms.ads.AdActivity"
+498-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:54:13-65
+499            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+499-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:55:13-122
+500            android:exported="false"
+500-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:56:13-37
+501            android:theme="@android:style/Theme.Translucent" />
+501-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:57:13-61
+502
+503        <provider
+503-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:60:9-65:43
+504            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+504-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:61:13-76
+505            android:authorities="com.d4rk.androidtutorials.java.mobileadsinitprovider"
+505-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:62:13-73
+506            android:exported="false"
+506-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:63:13-37
+507            android:initOrder="100" />
+507-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:64:13-36
+508
+509        <service
+509-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:67:9-71:43
+510            android:name="com.google.android.gms.ads.AdService"
+510-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:68:13-64
+511            android:enabled="true"
+511-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:69:13-35
+512            android:exported="false" />
+512-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:70:13-37
+513
+514        <activity
+514-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:73:9-77:43
+515            android:name="com.google.android.gms.ads.OutOfContextTestingActivity"
+515-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:74:13-82
+516            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+516-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:75:13-122
+517            android:exported="false" />
+517-->[com.google.android.gms:play-services-ads-lite:22.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\8318642fd0de8b53e3e7e3d2f248bd89\transformed\play-services-ads-lite-22.2.0\AndroidManifest.xml:76:13-37
+518
+519        <provider
+519-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+520            android:name="com.google.firebase.provider.FirebaseInitProvider"
+520-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+521            android:authorities="com.d4rk.androidtutorials.java.firebaseinitprovider"
+521-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+522            android:directBootAware="true"
+522-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+523            android:exported="false"
+523-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+524            android:initOrder="100" />
+524-->[com.google.firebase:firebase-common:20.3.3] C:\Users\d4rk7\.gradle\caches\transforms-3\8e64e4bedfad47b2e7f93c20a04c6403\transformed\firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+525        <provider
+525-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:31:9-39:20
+526            android:name="androidx.startup.InitializationProvider"
+526-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:32:13-67
+527            android:authorities="com.d4rk.androidtutorials.java.androidx-startup"
+527-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:33:13-68
+528            android:exported="false" >
+528-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:34:13-37
+529            <meta-data
+529-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:36:13-38:52
+530                android:name="androidx.work.WorkManagerInitializer"
+530-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:37:17-68
+531                android:value="androidx.startup" />
+531-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:38:17-49
+532            <meta-data
+532-->[androidx.emoji2:emoji2:1.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\17131a6f0e8f7a8060c3cee9380a1000\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+533                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+533-->[androidx.emoji2:emoji2:1.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\17131a6f0e8f7a8060c3cee9380a1000\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+534                android:value="androidx.startup" />
+534-->[androidx.emoji2:emoji2:1.2.0] C:\Users\d4rk7\.gradle\caches\transforms-3\17131a6f0e8f7a8060c3cee9380a1000\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+535            <meta-data
+535-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d34cb9a0e4ec45dfdeeae8a0df028128\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+536                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+536-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d34cb9a0e4ec45dfdeeae8a0df028128\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+537                android:value="androidx.startup" />
+537-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\d4rk7\.gradle\caches\transforms-3\d34cb9a0e4ec45dfdeeae8a0df028128\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+538            <meta-data
+538-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+539                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+539-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+540                android:value="androidx.startup" />
+540-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+541        </provider>
+542
+543        <service
+543-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:41:9-46:35
+544            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+544-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:42:13-88
+545            android:directBootAware="false"
+545-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:43:13-44
+546            android:enabled="@bool/enable_system_alarm_service_default"
+546-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:44:13-72
+547            android:exported="false" />
+547-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:45:13-37
+548        <service
+548-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:47:9-53:35
+549            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+549-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:48:13-84
+550            android:directBootAware="false"
+550-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:49:13-44
+551            android:enabled="@bool/enable_system_job_service_default"
+551-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:50:13-70
+552            android:exported="true"
+552-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:51:13-36
+553            android:permission="android.permission.BIND_JOB_SERVICE" />
+553-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:52:13-69
+554        <service
+554-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:54:9-59:35
+555            android:name="androidx.work.impl.foreground.SystemForegroundService"
+555-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:55:13-81
+556            android:directBootAware="false"
+556-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:56:13-44
+557            android:enabled="@bool/enable_system_foreground_service_default"
+557-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:57:13-77
+558            android:exported="false" />
+558-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:58:13-37
+559
+560        <receiver
+560-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:61:9-66:35
+561            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+561-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:62:13-88
+562            android:directBootAware="false"
+562-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:63:13-44
+563            android:enabled="true"
+563-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:64:13-35
+564            android:exported="false" />
+564-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:65:13-37
+565        <receiver
+565-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:67:9-77:20
+566            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+566-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:68:13-106
+567            android:directBootAware="false"
+567-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:69:13-44
+568            android:enabled="false"
+568-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:70:13-36
+569            android:exported="false" >
+569-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:71:13-37
+570            <intent-filter>
+570-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:73:13-76:29
+571                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+571-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:17-87
+571-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:25-84
+572                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+572-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:17-90
+572-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:25-87
+573            </intent-filter>
+574        </receiver>
+575        <receiver
+575-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:78:9-88:20
+576            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+576-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:79:13-104
+577            android:directBootAware="false"
+577-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:80:13-44
+578            android:enabled="false"
+578-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:81:13-36
+579            android:exported="false" >
+579-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:82:13-37
+580            <intent-filter>
+580-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:84:13-87:29
+581                <action android:name="android.intent.action.BATTERY_OKAY" />
+581-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:17-77
+581-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:25-74
+582                <action android:name="android.intent.action.BATTERY_LOW" />
+582-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:17-76
+582-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:25-73
+583            </intent-filter>
+584        </receiver>
+585        <receiver
+585-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:89:9-99:20
+586            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+586-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:90:13-104
+587            android:directBootAware="false"
+587-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:91:13-44
+588            android:enabled="false"
+588-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:92:13-36
+589            android:exported="false" >
+589-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:93:13-37
+590            <intent-filter>
+590-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:95:13-98:29
+591                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+591-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:17-83
+591-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:25-80
+592                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+592-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:17-82
+592-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:25-79
+593            </intent-filter>
+594        </receiver>
+595        <receiver
+595-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:100:9-109:20
+596            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+596-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:101:13-103
+597            android:directBootAware="false"
+597-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:102:13-44
+598            android:enabled="false"
+598-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:103:13-36
+599            android:exported="false" >
+599-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:104:13-37
+600            <intent-filter>
+600-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:106:13-108:29
+601                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+601-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:17-79
+601-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:25-76
+602            </intent-filter>
+603        </receiver>
+604        <receiver
+604-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:110:9-121:20
+605            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+605-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:111:13-88
+606            android:directBootAware="false"
+606-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:112:13-44
+607            android:enabled="false"
+607-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:113:13-36
+608            android:exported="false" >
+608-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:114:13-37
+609            <intent-filter>
+609-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:116:13-120:29
+610                <action android:name="android.intent.action.BOOT_COMPLETED" />
+610-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:17-79
+610-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:25-76
+611                <action android:name="android.intent.action.TIME_SET" />
+611-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:17-73
+611-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:25-70
+612                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+612-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:17-81
+612-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:25-78
+613            </intent-filter>
+614        </receiver>
+615        <receiver
+615-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:122:9-131:20
+616            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+616-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:123:13-99
+617            android:directBootAware="false"
+617-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:124:13-44
+618            android:enabled="@bool/enable_system_alarm_service_default"
+618-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:125:13-72
+619            android:exported="false" >
+619-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:126:13-37
+620            <intent-filter>
+620-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:128:13-130:29
+621                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+621-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:17-98
+621-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:25-95
+622            </intent-filter>
+623        </receiver>
+624        <receiver
+624-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:132:9-142:20
+625            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+625-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:133:13-78
+626            android:directBootAware="false"
+626-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:134:13-44
+627            android:enabled="true"
+627-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:135:13-35
+628            android:exported="true"
+628-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:136:13-36
+629            android:permission="android.permission.DUMP" >
+629-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:137:13-57
+630            <intent-filter>
+630-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:139:13-141:29
+631                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+631-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:17-88
+631-->[androidx.work:work-runtime:2.7.0] C:\Users\d4rk7\.gradle\caches\transforms-3\ec45e592131017e9ac7fb35d5be85f78\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:25-85
+632            </intent-filter>
+633        </receiver>
+634
+635        <uses-library
+635-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+636            android:name="androidx.window.extensions"
+636-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+637            android:required="false" />
+637-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+638        <uses-library
+638-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+639            android:name="androidx.window.sidecar"
+639-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+640            android:required="false" />
+640-->[androidx.window:window:1.0.0] C:\Users\d4rk7\.gradle\caches\transforms-3\09a448425ee3f20a1d09a7791d3a7c8f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+641
+642        <service
+642-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+643            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+643-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+644            android:exported="false" >
+644-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+645            <meta-data
+645-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+646                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+646-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+647                android:value="cct" />
+647-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\cc0d78b8d63db9279515fe8f343da62b\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+648        </service>
+649        <service
+649-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+650            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+650-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+651            android:exported="false"
+651-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+652            android:permission="android.permission.BIND_JOB_SERVICE" >
+652-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+653        </service>
+654
+655        <receiver
+655-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+656            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+656-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+657            android:exported="false" />
+657-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\d4rk7\.gradle\caches\transforms-3\5551366232a05dd4a14d5bc3bde27000\transformed\transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+658
+659        <service
+659-->[androidx.room:room-runtime:2.2.5] C:\Users\d4rk7\.gradle\caches\transforms-3\342bfd49e36567ed4c1960c506fe22b7\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+660            android:name="androidx.room.MultiInstanceInvalidationService"
+660-->[androidx.room:room-runtime:2.2.5] C:\Users\d4rk7\.gradle\caches\transforms-3\342bfd49e36567ed4c1960c506fe22b7\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+661            android:directBootAware="true"
+661-->[androidx.room:room-runtime:2.2.5] C:\Users\d4rk7\.gradle\caches\transforms-3\342bfd49e36567ed4c1960c506fe22b7\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+662            android:exported="false" />
+662-->[androidx.room:room-runtime:2.2.5] C:\Users\d4rk7\.gradle\caches\transforms-3\342bfd49e36567ed4c1960c506fe22b7\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+663
+664        <receiver
+664-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+665            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+665-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+666            android:directBootAware="false"
+666-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+667            android:enabled="true"
+667-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+668            android:exported="true"
+668-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+669            android:permission="android.permission.DUMP" >
+669-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+670            <intent-filter>
+670-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+671                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+671-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+671-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+672            </intent-filter>
+673            <intent-filter>
+673-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+674                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+674-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+674-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+675            </intent-filter>
+676            <intent-filter>
+676-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+677                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+677-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+677-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+678            </intent-filter>
+679            <intent-filter>
+679-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+680                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+680-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+680-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\d4rk7\.gradle\caches\transforms-3\6e29983b3eb74710830ef29043a65ec8\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+681            </intent-filter>
+682        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+683        <activity
+683-->[com.google.android.play:core-common:2.0.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bdef6d76de0c06c07db33404d99a4c25\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+684            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+684-->[com.google.android.play:core-common:2.0.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bdef6d76de0c06c07db33404d99a4c25\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93
+685            android:exported="false"
+685-->[com.google.android.play:core-common:2.0.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bdef6d76de0c06c07db33404d99a4c25\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+686            android:stateNotNeeded="true"
+686-->[com.google.android.play:core-common:2.0.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bdef6d76de0c06c07db33404d99a4c25\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+687            android:theme="@style/Theme.PlayCore.Transparent" />
+687-->[com.google.android.play:core-common:2.0.3] C:\Users\d4rk7\.gradle\caches\transforms-3\bdef6d76de0c06c07db33404d99a4c25\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+688    </application>
+689
+690</manifest>

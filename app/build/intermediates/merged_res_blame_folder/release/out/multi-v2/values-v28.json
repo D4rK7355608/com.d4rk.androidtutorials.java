@@ -1,0 +1,66 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.d4rk.androidtutorials.java.app-mergeReleaseResources-63:/values-v28/values-v28.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app\\src\\main\\res\\values-v28\\themes.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endLines": "17",
+                        "endColumns": "12",
+                        "endOffsets": "1318"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "1141",
+                        "endLines": "30",
+                        "endColumns": "12",
+                        "endOffsets": "2426"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\d4rk7\\.gradle\\caches\\transforms-3\\2bcaaea3b7a95e195b2ca1a10ee20f0f\\transformed\\material-1.9.0\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,248,343,441,529,617,705,793,880,967,1054,1141",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,17",
+                        "endColumns": "97,94,94,97,87,87,87,87,86,86,86,86,10",
+                        "endOffsets": "148,243,338,436,524,612,700,788,875,962,1049,1136,1423"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,248,343,441,529,617,705,793,880,967,1054,2965",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,44",
+                        "endColumns": "97,94,94,97,87,87,87,87,86,86,86,86,10",
+                        "endOffsets": "148,243,338,436,524,612,700,788,875,962,1049,1136,3247"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\d4rk7\\.gradle\\caches\\transforms-3\\7354d815bfe9c3d3ae3aee878a76722e\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    },
+                    "to": {
+                        "startLines": "31,32,33,37",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2431,2506,2593,2773",
+                        "endLines": "31,32,36,40",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "2501,2588,2768,2960"
+                    }
+                }
+            ]
+        }
+    ]
+}

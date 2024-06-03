@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.d4rk.androidtutorials.java.app-mergeReleaseResources-63:/values-night-v31/values-night-v31.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app\\src\\main\\res\\values-night-v31\\colors.xml",
+                    "from": {
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "17,107",
+                        "endColumns": "88,87",
+                        "endOffsets": "101,190"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,144",
+                        "endColumns": "88,87",
+                        "endOffsets": "139,227"
+                    }
+                }
+            ]
+        }
+    ]
+}

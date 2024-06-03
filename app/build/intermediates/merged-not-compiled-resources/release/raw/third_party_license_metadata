@@ -1,0 +1,182 @@
+0:47 play-services-measurement
+49:1096 Animal Sniffer
+1147:1892 Checker Framework Annotations
+3041:11357 Error Prone
+14400:11357 Firebase
+25759:11358 Google Auto
+25759:11358 Guava JDK5
+37119:11362 Guava JDK7
+48483:81008 J2ObjC
+25759:11358 JSR 250
+129493:1602 JSR 305
+131097:11365 JSR 330
+25759:11358 JSpecify
+142464:11307 JsInterop Annotations
+153773:105133 Kotlin
+3041:11357 Kotlin coroutines
+258908:1732 Protocol Buffers for Java
+25759:11358 SafeParcelable library
+260642:10695 apksig
+271339:1125 checker_framework_util
+25759:11358 gsfclient
+272466:11356 kotlinx_atomicfu
+283824:46 Android Support Library Custom View
+283824:46 firebase-installations-interop
+283824:46 SplashScreen
+0:47 play-services-ads-base
+283824:46 Navigation Runtime
+283824:46 Android Lifecycle ViewModel
+283824:46 Android Support Custom Tabs
+283824:46 Android Preferences DataStore
+283824:46 Android Transition Support Library
+0:47 play-services-measurement-impl
+283824:46 MaterialRatingBar Library
+283824:46 Navigation Common
+283824:46 IntelliJ IDEA Annotations
+283824:46 Android Support Library Local Broadcast Manager
+283824:46 androidx.databinding:viewbinding
+283824:46 Android Support Library Annotations
+0:47 play-services-ads-identifier
+283872:10694 AndroidX lifecycle common library
+283872:10694 AndroidX lifecycle livedatacore library
+283872:10694 AndroidX lifecycle runtime library
+271339:1125 Checker Framework Utilities
+283824:46 javax.inject
+283824:46 Android Support AnimatedVectorDrawable
+283824:46 Android Arch-Runtime
+283824:46 Android App Startup Runtime
+283824:46 Android Support Library Sliding Pane Layout
+283824:46 com.google.android.datatransport:transport-backend-cct
+0:47 play-services-oss-licenses
+283824:46 com.google.android.datatransport:transport-runtime
+283824:46 Android Support Library core UI
+294568:47 kotlinx-coroutines-bom
+283824:46 Android Room-Common
+283824:46 Android Support Library Document File
+283824:46 Saved State
+283824:46 Android Support Library Annotations
+283824:46 com.google.firebase:firebase-perf
+283824:46 Fragment Kotlin Extensions
+283824:46 com.google.firebase:firebase-sessions
+283824:46 Android Support Library Interpolators
+283824:46 Kotlin Stdlib Common
+283824:46 transport-api
+283824:46 Android ConstraintLayout Core
+283824:46 Android Support Library fragment
+283824:46 androidx.profileinstaller:profileinstaller
+294617:52 review
+0:47 play-services-base
+283824:46 Android Support SQLite - Framework Implementation
+283824:46 Core Kotlin Extensions
+294568:47 kotlinx-coroutines-play-services
+283824:46 Android DB
+283824:46 Android Support Library Async Layout Inflater
+0:47 user-messaging-platform
+283824:46 AndroidX Futures
+283824:46 firebase-annotations
+283824:46 Android Lifecycle Service
+0:47 firebase-measurement-connector
+294671:10691 AndroidX annotation experimental library
+283872:10694 AndroidX tracing library
+305364:11342 FlatBuffers
+283824:46 com.google.firebase:firebase-encoders-json
+283824:46 firebase-encoders-proto
+0:47 play-services-appset
+283872:10694 AndroidX architecture core common library
+283872:10694 AndroidX architecture core runtime library
+283824:46 Android AppCompat Library
+283824:46 SavedState Kotlin Extensions
+283824:46 Android Room-Runtime
+283824:46 Android DataStore Core
+283824:46 Android Lifecycle LiveData Core
+283824:46 AndroidFastScroll Library
+283824:46 Android Support Library loader
+283824:46 Android Support Library Drawer Layout
+0:47 firebase-analytics
+316708:43 Lottie
+283824:46 Android Lifecycle Kotlin Extensions
+283824:46 Android Arch-Common
+283824:46 androidx.customview:poolingcontainer
+283824:46 Android Support Library Cursor Adapter
+283824:46 com.google.firebase:firebase-installations
+0:47 play-services-stats
+283824:46 Navigation UI
+283824:46 Activity
+283824:46 firebase-abt
+283824:46 Android Support CardView v7
+283824:46 Android Tracing
+283824:46 firebase-components
+283824:46 firebase-encoders
+283824:46 Android Lifecycle Runtime
+283824:46 error-prone annotations
+283824:46 protolite-well-known-types
+283824:46 Android Support Library Coordinator Layout
+283824:46 Jetpack WindowManager Library
+283824:46 Android Lifecycle LiveData
+283824:46 Android Support Library Custom View
+0:47 play-services-measurement-base
+294568:47 kotlinx-coroutines-core
+283824:46 Android Support VectorDrawable
+283824:46 Android Lifecycle-Common for Java 8 Language
+283824:46 ViewPager2
+283824:46 com.google.firebase:firebase-datatransport
+0:47 play-services-tasks
+283824:46 com.google.firebase:firebase-common
+283824:46 Android Multi-Dex Library
+0:47 billing
+283824:46 Activity Kotlin Extensions
+283824:46 Android Emoji2 Compat
+283824:46 Android Lifecycle ViewModel with SavedState
+283824:46 VersionedParcelable
+283824:46 Android Support Library collections
+294617:52 app-update
+283824:46 com.google.firebase:firebase-crashlytics
+316753:11361 Tape
+283824:46 Kotlin Stdlib
+283824:46 Android Support Library compat
+0:47 play-services-measurement-sdk
+283824:46 Material Components for Android
+283824:46 Android Support DynamicAnimation
+283824:46 LiveData Core Kotlin Extensions
+294617:52 core-common
+283824:46 Navigation Fragment
+283824:46 com.google.firebase:firebase-common-ktx
+283824:46 Kotlin Stdlib Jdk7
+283824:46 Android DataStore
+283824:46 firebase-config
+283824:46 Kotlin Stdlib Jdk8
+283824:46 Android Support Grid Layout
+283824:46 Android WorkManager Runtime
+283824:46 Android Support Library View Pager
+0:47 play-services-ads
+25759:11358 Conscrypt
+25759:11358 Dagger
+328116:12539 ExoPlayer
+25759:11358 Gson
+25759:11358 Tink
+25759:11358 Volley
+25759:11358 android_build
+340657:10141 customtabsclient
+350800:12834 mp4parser
+363636:9217 p2putils
+0:47 play-services-measurement-sdk-api
+283824:46 Android Support Library Print
+283824:46 Android Preferences DataStore Core
+283824:46 Collections Kotlin Extensions
+0:47 play-services-measurement-api
+283824:46 Android Support Library core utils
+283824:46 Android Support RecyclerView
+283824:46 Android Resources Library
+294568:47 kotlinx-coroutines-android
+283824:46 AndroidX Preference
+294568:47 kotlinx-coroutines-core
+283824:46 Android Lifecycle ViewModel Kotlin Extensions
+0:47 play-services-ads-lite
+283824:46 Experimental annotation
+294568:47 Dagger
+283824:46 Android Lifecycle-Common
+283824:46 Android Resource Inspection - Annotations
+283824:46 Android ConstraintLayout
+283824:46 Android Lifecycle Process
+0:47 play-services-basement
+283824:46 Android Emoji2 Compat view helpers

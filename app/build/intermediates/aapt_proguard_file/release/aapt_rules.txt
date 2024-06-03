@@ -1,0 +1,263 @@
+-keep class androidx.appcompat.app.AppLocalesMetadataHolderService { <init>(); }
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
+-keep class androidx.room.MultiInstanceInvalidationService { <init>(); }
+-keep class androidx.startup.InitializationProvider { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.RescheduleReceiver { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.SystemAlarmService { <init>(); }
+-keep class androidx.work.impl.background.systemjob.SystemJobService { <init>(); }
+-keep class androidx.work.impl.diagnostics.DiagnosticsReceiver { <init>(); }
+-keep class androidx.work.impl.foreground.SystemForegroundService { <init>(); }
+-keep class androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver { <init>(); }
+-keep class com.android.billingclient.api.ProxyBillingActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.MainActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ads.managers.AppOpenAd { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.history.AndroidHistory { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.permissions.PermissionsTutorialActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.sdk.AndroidSDK { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.ShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.basics.viewbinding.ViewBindingTutorialActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.start.AndroidStartProjectActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.images.ImagesActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.images.ImagesCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.web.WebViewActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.android.views.web.WebViewCodeActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.settings.SettingsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.settings.permissions.PermissionsActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity { <init>(); }
+-keep class com.d4rk.androidtutorials.java.ui.startup.StartupActivity { <init>(); }
+-keep class com.google.android.datatransport.runtime.backends.TransportBackendDiscovery { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService { <init>(); }
+-keep class com.google.android.gms.ads.AdActivity { <init>(); }
+-keep class com.google.android.gms.ads.AdService { <init>(); }
+-keep class com.google.android.gms.ads.MobileAdsInitProvider { <init>(); }
+-keep class com.google.android.gms.ads.OutOfContextTestingActivity { <init>(); }
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementJobService { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+-keep class com.google.android.gms.oss.licenses.OssLicensesActivity { <init>(); }
+-keep class com.google.android.gms.oss.licenses.OssLicensesMenuActivity { <init>(); }
+-keep class com.google.android.play.core.common.PlayCoreDialogWrapperActivity { <init>(); }
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+-keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatImageButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatToggleButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.DialogTitle { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.LinearLayoutCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SwitchCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.Toolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.browser.browseractions.BrowserActionsFallbackMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.cardview.widget.CardView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.helper.widget.Flow { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.Barrier { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.ConstraintLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.coordinatorlayout.widget.CoordinatorLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.ContentLoadingProgressBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.fragment.app.FragmentContainerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.gridlayout.widget.GridLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.navigation.fragment.NavHostFragment { <init>(); }
+
+-keep class androidx.preference.ListPreference { <init>(...); }
+
+-keep class androidx.preference.Preference { <init>(...); }
+
+-keep class androidx.preference.PreferenceCategory { <init>(...); }
+
+-keep class androidx.preference.PreferenceScreen { <init>(...); }
+
+-keep class androidx.preference.SwitchPreferenceCompat { <init>(...); }
+
+-keep class androidx.preference.UnPressableLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.preference.internal.PreferenceImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.recyclerview.widget.RecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.viewpager.widget.ViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.airbnb.lottie.LottieAnimationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.d4rk.androidtutorials.java.ui.about.AboutFragment { <init>(...); }
+
+-keep class com.d4rk.androidtutorials.java.ui.android.AndroidStudioFragment { <init>(...); }
+
+-keep class com.d4rk.androidtutorials.java.ui.home.HomeFragment { <init>(...); }
+
+-keep class com.google.android.gms.ads.AdView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.appbar.AppBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.appbar.MaterialToolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.bottomnavigation.BottomNavigationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButtonToggleGroup { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.card.MaterialCardView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.chip.Chip { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.datepicker.MaterialCalendarGridView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.divider.MaterialDivider { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.floatingactionbutton.FloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.BaselineLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.CheckableImageButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.ClippableRoundedCornerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.TouchObserverFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.materialswitch.MaterialSwitch { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.radiobutton.MaterialRadioButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.Snackbar$SnackbarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.SnackbarContentLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.switchmaterial.SwitchMaterial { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.tabs.TabLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputEditText { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textview.MaterialTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ChipTextInputComboView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockFaceView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockHandView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.TimePickerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class me.zhanghai.android.fastscroll.FastScrollScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class me.zhanghai.android.fastscroll.FastScrollWebView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class me.zhanghai.android.materialratingbar.MaterialRatingBar { <init>(android.content.Context, android.util.AttributeSet); }
+
