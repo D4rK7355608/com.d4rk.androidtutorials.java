@@ -1,8 +1,0 @@
-private ResultProfileBinding binding;
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    binding = ResultProfileBinding.inflate(getLayoutInflater());
-    View view = binding.getRoot();
-    setContentView(view);
-}

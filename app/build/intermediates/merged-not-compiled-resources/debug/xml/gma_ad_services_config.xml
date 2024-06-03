@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ad-services-config>
-  <!-- Attribution API -->
-  <attribution allowAllToAccess="true" />
-
-  <!-- Topics API -->
-  <topics allowAllToAccess="true" />
-</ad-services-config>
