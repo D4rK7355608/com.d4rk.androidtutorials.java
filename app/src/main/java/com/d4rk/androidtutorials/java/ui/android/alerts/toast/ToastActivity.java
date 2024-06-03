@@ -1,14 +1,19 @@
 package com.d4rk.androidtutorials.java.ui.android.alerts.toast;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityToastBinding;
+
 public class ToastActivity extends AppCompatActivity {
-    private ActivityToastBinding binding;
     private final Handler handler = new Handler();
+    private ActivityToastBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

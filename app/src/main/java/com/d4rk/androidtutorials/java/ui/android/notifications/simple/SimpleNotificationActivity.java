@@ -8,15 +8,19 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
+
 public class SimpleNotificationActivity extends AppCompatActivity {
     private final String simpleChannelId = "simple_notification";
     private final int simpleNotificationId = 1;
-    private ActivityNotificationBinding binding;
     private final Handler handler = new Handler();
+    private ActivityNotificationBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

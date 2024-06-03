@@ -1,74 +1,73 @@
-<androidx.preference.PreferenceScreen
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.preference.Preference
-        app:title="@string/general"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/general">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/refactoring"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/refactoring">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/build_and_run"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/build_and_run">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/debugging"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/debugging">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/navigation_and_searching"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/navigation_and_searching">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/writing_code"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/writing_code">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
-        app:title="@string/version_control"
-        app:icon="@drawable/ic_shortcut"
         app:allowDividerAbove="true"
-        app:allowDividerBelow="true">
+        app:allowDividerBelow="true"
+        app:icon="@drawable/ic_shortcut"
+        app:title="@string/version_control">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.d4rk.androidtutorials.java"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"/>
+            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"
+            android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
 </androidx.preference.PreferenceScreen>

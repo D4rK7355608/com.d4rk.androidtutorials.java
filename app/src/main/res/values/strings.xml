@@ -332,7 +332,8 @@
     <string name="summary_view_binding">View binding is a feature that allows you to more easily write code that interacts with views. Once view binding is enabled in a module, it generates a binding class for each XML layout file present in that module. An instance of a binding class contains direct references to all views that have an ID in the corresponding layout.</string>
     <string name="summary_first_step">The first step to create a new project in Android Studio is to click on the <b>New project</b> button as shown in the image and continue to the next step.</string>
     <string name="summary_second_step">The second step is to select the activity type that suits your app. You can choose from some presets that can simplify your work. Select one of them and click on the <b>next</b> button.</string>
-    <string name="summary_third_step">The third and final step is to configure your app settings, such as the app name, <b>package name</b>, preferred <b>programming language</b> and <b>minimum SDK</b>. You can learn more about them on <a href="https://developer.android.com/">Android Developers</a>.</string><string name="summary_enable_binding">View binding is enabled on a module by module basis. To enable view binding in a module, set the viewBinding build option to true in the module-level build.gradle file, as shown in the following example:</string>
+    <string name="summary_third_step">The third and final step is to configure your app settings, such as the app name, <b>package name</b>, preferred <b>programming language</b> and <b>minimum SDK</b>. You can learn more about them on <a href="https://developer.android.com/">Android Developers</a>.</string>
+    <string name="summary_enable_binding">View binding is enabled on a module by module basis. To enable view binding in a module, set the viewBinding build option to true in the module-level build.gradle file, as shown in the following example:</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
     <string name="summary_toggle">You can add a basic toggle button to your layout with the ToggleButton object. Android 4.0 (API level 14) introduces another kind of toggle button called a switch that provides a slider control, which you can add with a Switch object. SwitchCompat is a version of the Switch widget which runs on devices back to API 7.</string>
     <string name="summary_clocks">Important Note: Digital clock is deprecated in version API 17. From API level 17 you can use TextClock instead of digital clock. Below is the description of Text clock in android.</string>
@@ -362,4 +363,7 @@
     <string name="tooltip_open_me">Open me 🌐</string>
     <string name="hint_type">Type here…</string>
     <string name="hint_password">Enter your password…</string>
+
+    <string name="snack_network_error">Network error occurred while checking for updates</string>
+    <string name="snack_general_error">An error occurred while checking for updates</string>
 </resources>

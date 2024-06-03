@@ -1,9 +1,9 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/androidStudioAnimation"
         android:layout_width="92dp"
@@ -15,7 +15,8 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/anim_android_studio"
-        tools:ignore="ImageContrastCheck"/>
+        tools:ignore="ImageContrastCheck" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/learningAnimation"
         android:layout_width="379dp"
@@ -28,7 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/anim_learning"/>
+        app:lottie_rawRes="@raw/anim_learning" />
+
     <com.google.android.material.card.MaterialCardView
         style="@style/Widget.Material3.CardView.Elevated"
         android:layout_width="0dp"
@@ -39,6 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardView">
+
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/helloWorldAnimation"
             android:layout_width="match_parent"
@@ -50,6 +53,6 @@
             app:lottie_loop="false"
             app:lottie_rawRes="@raw/anim_hello_world"
             app:lottie_speed="0.5"
-            tools:ignore="ImageContrastCheck"/>
+            tools:ignore="ImageContrastCheck" />
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

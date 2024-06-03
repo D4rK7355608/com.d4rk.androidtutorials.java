@@ -1,11 +1,16 @@
 package com.d4rk.androidtutorials.java.ui.android.start;
+
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+
 public class AndroidStartProjectActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

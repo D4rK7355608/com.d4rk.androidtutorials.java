@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.about;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -10,20 +11,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentAboutBinding;
 import com.d4rk.androidtutorials.java.ui.viewmodel.FragmentViewModel;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+
 public class AboutFragment extends Fragment {
     private FragmentAboutBinding binding;
     private final Calendar calendar = Calendar.getInstance();

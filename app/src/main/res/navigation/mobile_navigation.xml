@@ -1,5 +1,4 @@
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
@@ -8,14 +7,14 @@
         android:id="@+id/navigation_home"
         android:name="com.d4rk.androidtutorials.java.ui.home.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_android_studio"
         android:name="com.d4rk.androidtutorials.java.ui.android.AndroidStudioFragment"
-        android:label="@string/android_studio"/>
+        android:label="@string/android_studio" />
     <fragment
         android:id="@+id/navigation_about"
         android:name="com.d4rk.androidtutorials.java.ui.about.AboutFragment"
         android:label="@string/about"
-        tools:layout="@layout/fragment_about"/>
+        tools:layout="@layout/fragment_about" />
 </navigation>

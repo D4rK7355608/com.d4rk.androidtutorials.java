@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.android.basics.shortcuts;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -6,8 +7,10 @@ import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBinding;
+
 public class ShortcutsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class ShortcutsActivity extends AppCompatActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         binding.buttonMore.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/studio/intro/keyboard-shortcuts"))));
     }
+
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

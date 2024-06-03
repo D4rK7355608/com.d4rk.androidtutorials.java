@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.dialogs;
+
 import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -6,10 +7,13 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Process;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
+
 import com.d4rk.androidtutorials.java.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 public class RequireRestartDialog extends DialogFragment {
     @NonNull
     @Override

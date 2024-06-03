@@ -1,0 +1,64 @@
+// Import the necessary classes and libraries
+import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
+// This class extends AppCompatActivity and represents the main activity of an Android app
+public class MainActivity extends AppCompatActivity {
+
+    // Declare a private lateinit variable for binding the layout with this activity
+    private ActivityMainBinding binding;
+
+    // Calendar object to store selected date
+    private Calendar calendar = Calendar.getInstance();
+
+    // This method is called when the activity is first created
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Inflate the layout and set it as the content view for this activity
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        // Create SimpleDateFormat object with desired date format and locale
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+
+        // Format current date using simpleDateFormat object and set text of dateTextView view in layout to formatted date string
+        String dateText = simpleDateFormat.format(calendar.getTime());
+        binding.dateTextView.setText(dateText);
+
+        // Create OnDateSetListener object to handle selection of a date in DatePickerDialog
+        DatePickerDialog.OnDateSetListener dateSetListener = (view, year, monthOfYear, dayOfMonth) -> {
+            // Set selected year, month and day in calendar object when a date is selected in DatePickerDialog
+            calendar.set(Calendar.YEAR, year);
+            calendar.set(Calendar.MONTH, monthOfYear);
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+            // Call updateDateInView method to update text of dateTextView view with selected date
+            updateDateInView();
+        };
+
+        // Set a click listener on changeDateButton view in layout using binding object
+        binding.changeDateButton.setOnClickListener(v -> {
+            // Create a new DatePickerDialog with current activity context,
+            // previously created OnDateSetListener object,
+            // and current year, month and day from calendar object as arguments,
+            // then show dialog when changeDateButton is clicked.
+            new DatePickerDialog(MainActivity.this, dateSetListener,
+                    calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)).show();
+        });
+    }
+
+    // Method to update text of dateTextView view with selected date from calendar object using desired format and locale.
+    private void updateDateInView() {
+        String myFormat = "dd/MM/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        binding.dateTextView.setText(sdf.format(calendar.getTime()));
+    }
+}

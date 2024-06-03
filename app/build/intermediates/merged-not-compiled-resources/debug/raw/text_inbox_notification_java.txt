@@ -1,0 +1,71 @@
+// Import the necessary classes and libraries
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.app.Person;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.IconCompat;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+// This class extends AppCompatActivity and represents the main activity of an Android app
+public class MainActivity extends AppCompatActivity {
+
+    // Declare a private constant named 'notificationChannelId' of type 'String' and assign it the value "inbox_notification"
+    private final String notificationChannelId = "simple_notification";
+
+    // Declare a private constant named 'notificationId' of type 'Int' and assign it the value 1
+    private final int notificationId = 1;
+
+    // Declare a private lateinit variable for binding the layout with this activity
+    private ActivityMainBinding binding;
+
+    // This method is called when the activity is first created
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Inflate the layout and set it as the content view for this activity
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+
+        // Set the content view to the root view of the inflated layout
+        setContentView(binding.getRoot());
+
+        // Set a click listener on the button to display the dialog when clicked
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Check if the Android device's operating system version is greater than Android 13
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    // Request permission from the user to post notifications
+                    requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
+                }
+                // Get an instance of the NotificationManager service
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.from(MainActivity.this);
+
+                // Create a new notification channel with the specified ID, name, and importance level
+                NotificationChannel channel = new NotificationChannel(notificationChannelId, "Simple Notifications", NotificationManager.IMPORTANCE_HIGH);
+
+                // Register the notification channel with the system
+                notificationManager.createNotificationChannel(channel);
+
+                // Create a new notification builder and set its properties
+                NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(MainActivity.this, notificationChannelId)
+                        .setSmallIcon(R.drawable.ic_my_notification_icon)
+                        .setContentTitle("5 new messages")
+                        .setStyle(new NotificationCompat.InboxStyle()
+                                .addLine("Message 1")
+                                .addLine("Message 2")
+                                .setSummaryText("+3 more"))
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                        .setAutoCancel(true);
+
+                // Display the notification using the NotificationManager service
+                notificationManager.notify(notificationId, notificationBuilder.build());
+            }
+        });
+    }
+}

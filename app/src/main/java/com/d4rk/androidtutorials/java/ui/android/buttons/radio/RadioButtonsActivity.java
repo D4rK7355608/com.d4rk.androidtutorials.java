@@ -1,14 +1,19 @@
 package com.d4rk.androidtutorials.java.ui.android.buttons.radio;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.RadioButton;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
 import com.google.android.material.snackbar.Snackbar;
+
 public class RadioButtonsActivity extends AppCompatActivity {
-    private ActivityRadioButtonsBinding binding;
     private final Handler handler = new Handler();
+    private ActivityRadioButtonsBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

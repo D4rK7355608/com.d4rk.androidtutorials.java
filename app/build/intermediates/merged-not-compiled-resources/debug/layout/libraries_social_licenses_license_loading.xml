@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <TextView
+      android:id="@+id/no_licenses_text"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:paddingTop="16dp"
+      android:paddingBottom="16dp"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:scrollbarStyle="outsideOverlay"
+      android:text="@string/license_is_loading"
+      android:clipToPadding="false"
+      android:drawSelectorOnTop="false"
+      android:cacheColorHint="@android:color/transparent"/>
+
+</LinearLayout>

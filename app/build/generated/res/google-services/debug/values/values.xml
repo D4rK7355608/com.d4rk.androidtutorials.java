@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">289497233341</string>
+    <string name="google_api_key" translatable="false">AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ</string>
+    <string name="google_app_id" translatable="false">1:289497233341:android:75b687bb4a06c7a82c84d4</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ</string>
+    <string name="google_storage_bucket" translatable="false">d4rk-apps.appspot.com</string>
+    <string name="project_id" translatable="false">d4rk-apps</string>
+</resources>

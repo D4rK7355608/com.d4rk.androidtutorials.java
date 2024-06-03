@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java;
+
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -9,13 +10,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
-import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.navigation.NavController;
@@ -24,11 +25,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
+
+import com.android.volley.NoConnectionError;
+import com.android.volley.TimeoutError;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
-import com.d4rk.androidtutorials.java.notifications.AppUpdateNotificationsManager;
-import com.d4rk.androidtutorials.java.notifications.AppUsageNotificationsManager;
+import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
+import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.settings.SettingsActivity;
-import com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity;
 import com.d4rk.androidtutorials.java.ui.startup.StartupActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -40,36 +43,35 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.ActivityResult;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
+
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     NavController navController;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     private AppUpdateManager appUpdateManager;
-    private final int requestUpdateCode = 1;
-    private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private final long snackbarInterval = 60L * 24 * 60 * 60 * 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SplashScreen.installSplashScreen(this);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         launcherShortcuts();
+        startupScreen();
+        setupUpdateNotifications();
         applySettings();
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
         binding.adView.loadAd(new AdRequest.Builder().build());
-        appUpdateManager = AppUpdateManagerFactory.create(this);
-        appUpdateManager = AppUpdateManagerFactory.create(this);
-        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
+        long snackbarInterval = 60L * 24 * 60 * 60 * 1000;
         handler.postDelayed(this::showSnackbar, snackbarInterval);
     }
+
     private void launcherShortcuts() {
         ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(this, "shortcut_id")
                 .setShortLabel(getString(R.string.shortcut_kotlin_edition_short))
                 .setLongLabel(getString(R.string.shortcut_kotlin_edition_long))
-                .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
+                //.setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
                 .setIntent(new Intent(Intent.ACTION_MAIN) {{
                     if (isAppInstalled(getPackageManager())) {
                         setClassName("com.d4rk.androidtutorials", "com.d4rk.androidtutorials.MainActivity");
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         ShortcutManagerCompat.pushDynamicShortcut(this, shortcut);
     }
+
     private boolean isAppInstalled(PackageManager packageManager) {
         try {
             packageManager.getPackageInfo("com.d4rk.androidtutorials.java", 0);
@@ -89,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
+
     private void applySettings() {
+
+        // Theme
         String[] darkModeValues = getResources().getStringArray(R.array.preference_theme_values);
         String preference = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.key_theme), getString(R.string.default_value_theme));
         int defaultNightMode = AppCompatDelegate.getDefaultNightMode();
@@ -115,11 +121,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        // Bottom Navigation Bar Label Visibility
         String labelKey = getString(R.string.key_bottom_navigation_bar_labels);
         String[] bottomNavigationBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
         String labelDefaultValue = getString(R.string.default_value_bottom_navigation_bar_labels);
         String labelVisibility = sharedPreferences.getString(labelKey, labelDefaultValue);
-        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO;
+        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO; // FIXME: It's possible to extract method returning 'visibilityMode' from a long surrounding method
         if (labelVisibility.equals(bottomNavigationBarLabelsValues[0])) {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED;
         } else if (labelVisibility.equals(bottomNavigationBarLabelsValues[1])) {
@@ -128,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
         }
         binding.navView.setLabelVisibilityMode(visibilityMode);
+
+        // Bottom Navigation Bar Default Tab
         String defaultTabKey = getString(R.string.key_default_tab);
         String defaultTabValue = getString(R.string.default_value_tab);
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
@@ -150,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
             navController.setGraph(navGraph);
             NavigationUI.setupWithNavController(binding.navView, navController);
         }
+
+        // Toolbar
         setSupportActionBar(binding.toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -159,18 +171,35 @@ public class MainActivity extends AppCompatActivity {
         }
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        // Language
         String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
     }
+
     private void showSnackbar() {
-        Snackbar.make(binding.getRoot(), getString(R.string.snack_support), Snackbar.LENGTH_LONG).setAction(getString(android.R.string.ok), view -> startActivity(new Intent(view.getContext(), SupportActivity.class))).show();
-        handler.postDelayed(this::showSnackbar, snackbarInterval);
+
     }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * Inflates the options menu, adding items to the action bar if present.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * Handles item selections in the options menu.
+     * <p>
+     * This implementation handles the "Settings" option by starting the
+     * {@link SettingsActivity}.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.settings) {
@@ -180,55 +209,153 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
     }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @deprecated This method provides a custom back button behavior which is deprecated.
+     * The current implementation shows a confirmation dialog before closing the
+     * activity. This behavior might be removed or changed in the future.
+     */
     @Deprecated
     @Override
     public void onBackPressed() {
-        new MaterialAlertDialogBuilder(this)
+        new MaterialAlertDialogBuilder(this) // FIXME: Overrides deprecated method in 'androidx.activity.ComponentActivity'
                 .setTitle(R.string.alert_dialog_close)
                 .setMessage(R.string.summary_alert_dialog_close)
-                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
-                    MainActivity.super.onBackPressed();
-                    moveTaskToBack(true);
-                })
+                .setPositiveButton(android.R.string.yes,
+                        (dialog, which) -> {
+                            //noinspection deprecation
+                            MainActivity.super.onBackPressed();
+                            moveTaskToBack(true);
+                        })
                 .setNegativeButton(android.R.string.no, null)
                 .show();
     }
-    @SuppressWarnings("deprecation")
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * This method is called when the activity resumes from a paused state. It schedules
+     * app usage checks, initiates an app update check from the Google Play Store,
+     * and checks for flexible updates.
+     */
     @Override
     protected void onResume() {
         super.onResume();
-        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_firebase), true)) {
-            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(false);
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false);
-        } else {
-            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true);
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
-        }
-        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
-        appUsageNotificationsManager.checkAndSendAppUsageNotification();
+        AppUsageNotificationsManager appUsageNotificationsManager =
+                new AppUsageNotificationsManager(this);
+        appUsageNotificationsManager.scheduleAppUsageCheck();
         appUpdateNotificationsManager.checkAndSendUpdateNotification();
-        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
-            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                try {
-                    appUpdateManager.startUpdateFlowForResult(appUpdateInfo, AppUpdateType.FLEXIBLE, this, requestUpdateCode);
-                } catch (IntentSender.SendIntentException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        startupScreen();
+        checkForFlexibleUpdate();
     }
+
+    /**
+     * Checks for the availability of updates from the Google Play Store and triggers the
+     * appropriate update flow if certain conditions are met.
+     * <p>
+     * This method uses the Google Play Core library to asynchronously check for available
+     * updates. If an update is available and meets specific conditions based on the update
+     * type (IMMEDIATE or FLEXIBLE) and the client version staleness, it initiates the
+     * update flow.
+     * <p>
+     * The method ensures that no developer-triggered update is already in progress before
+     * initiating a new update. If an error occurs during the update check, and the app
+     * is not in debug mode, a snackbar message is displayed to inform the user.
+     */
+    private void checkForFlexibleUpdate() {
+        appUpdateManager.getAppUpdateInfo()
+                .addOnSuccessListener(appUpdateInfo -> {
+                    if (appUpdateInfo.updateAvailability() ==
+                            UpdateAvailability.UPDATE_AVAILABLE
+                            && appUpdateInfo.updateAvailability() !=
+                            UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+
+                        if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                            Integer stalenessDays =
+                                    appUpdateInfo.clientVersionStalenessDays();
+                            if (stalenessDays != null && stalenessDays > 90) {
+                                try {
+                                    appUpdateManager.startUpdateFlowForResult( // FIXME; 'startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int)' is deprecated
+                                            appUpdateInfo, AppUpdateType.IMMEDIATE,
+                                            this, 1
+                                    );
+                                } catch (IntentSender.SendIntentException e) {
+                                    e.printStackTrace(); // FIXME: Call to 'printStackTrace()' should probably be replaced with more robust logging
+                                }
+                            }
+                        }
+
+                        if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                            Integer stalenessDays =
+                                    appUpdateInfo.clientVersionStalenessDays();
+                            if (stalenessDays != null && stalenessDays < 90) {
+                                try {
+                                    appUpdateManager.startUpdateFlowForResult( // FIXME: 'startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int)' is deprecated
+                                            appUpdateInfo, AppUpdateType.FLEXIBLE,
+                                            this, 1
+                                    );
+                                } catch (IntentSender.SendIntentException e) {
+                                    e.printStackTrace(); // FIXME: Call to 'printStackTrace()' should probably be replaced with more robust logging
+                                }
+                            }
+                        }
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    if (!BuildConfig.DEBUG) {
+                        String message;
+                        if (e instanceof NoConnectionError || e instanceof TimeoutError) {
+                            message = getString(R.string.snack_network_error);
+                        } else {
+                            message = getString(R.string.snack_general_error);
+                        }
+                        Snackbar.make(findViewById(android.R.id.content),
+                                message, Snackbar.LENGTH_LONG).show();
+                    }
+                });
+    }
+
+    /**
+     * Initializes components related to app update notifications from the Google Play Store.
+     * <p>
+     * This method initializes the {@link AppUpdateManager} for managing app updates
+     * and the {@link AppUpdateNotificationsManager} for handling update notifications.
+     */
+    private void setupUpdateNotifications() {
+        appUpdateManager = AppUpdateManagerFactory.create(this);
+        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
+    }
+
+    /**
+     * Displays the startup screen if the app is being launched for the first time after
+     * installation or a fresh install.
+     * <p>
+     * This method checks a shared preference to determine if the app has been launched
+     * before. If not, it launches the {@link StartupActivity} and sets the preference
+     * to prevent the startup screen from showing on subsequent launches.
+     */
     private void startupScreen() {
-        SharedPreferences startupPreference = getSharedPreferences("startup", MODE_PRIVATE);
+        SharedPreferences startupPreference = getSharedPreferences("startup",
+                MODE_PRIVATE);
         if (startupPreference.getBoolean("value", true)) {
             startupPreference.edit().putBoolean("value", false).apply();
             startActivity(new Intent(this, StartupActivity.class));
         }
     }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @deprecated This method is deprecated and should no longer be used. It currently handles
+     * result codes from in-app update requests, but this functionality is deprecated and
+     * may be removed in the future.
+     */
     @Deprecated
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        int requestUpdateCode = 1;
         if (requestCode == requestUpdateCode) {
             switch (resultCode) {
                 case RESULT_OK:

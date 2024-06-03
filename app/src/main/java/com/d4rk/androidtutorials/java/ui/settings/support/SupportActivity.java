@@ -1,9 +1,12 @@
 package com.d4rk.androidtutorials.java.ui.settings.support;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
@@ -12,22 +15,27 @@ import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-/** @noinspection deprecation*/
+
+/**
+ * @noinspection deprecation
+ */
 public class SupportActivity extends AppCompatActivity {
+    private final Map<String, SkuDetails> skuDetailsMap = new HashMap<>();
     private ActivitySupportBinding binding;
     private RewardedAd rewardedAd;
     private BillingClient billingClient;
-    private final Map<String, SkuDetails> skuDetailsMap = new HashMap<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +50,7 @@ public class SupportActivity extends AppCompatActivity {
         loadRewardedAd();
         binding.buttonWatchAd.setOnClickListener(v -> showRewardedVideo());
         billingClient = BillingClient.newBuilder(this).setListener((billingResult, purchases) -> {
-                }).enablePendingPurchases().build();
+        }).enablePendingPurchases().build();
         billingClient.startConnection(new BillingClientStateListener() {
             @Override
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
@@ -50,6 +58,7 @@ public class SupportActivity extends AppCompatActivity {
                     querySkuDetails();
                 }
             }
+
             @Override
             public void onBillingServiceDisconnected() {
             }
@@ -59,6 +68,7 @@ public class SupportActivity extends AppCompatActivity {
         binding.buttonHighDonation.setOnClickListener(v -> initiatePurchase("high_donation"));
         binding.buttonExtremeDonation.setOnClickListener(v -> initiatePurchase("extreme_donation"));
     }
+
     private void loadRewardedAd() {
         if (rewardedAd == null) {
             AdRequest adRequest = new AdRequest.Builder().build();
@@ -68,6 +78,7 @@ public class SupportActivity extends AppCompatActivity {
                 public void onAdFailedToLoad(@NonNull LoadAdError adError) {
                     rewardedAd = null;
                 }
+
                 @Override
                 public void onAdLoaded(@NonNull RewardedAd ad) {
                     rewardedAd = ad;
@@ -76,6 +87,7 @@ public class SupportActivity extends AppCompatActivity {
 
         }
     }
+
     private void showRewardedVideo() {
         if (rewardedAd == null) {
             return;
@@ -84,10 +96,12 @@ public class SupportActivity extends AppCompatActivity {
             @Override
             public void onAdShowedFullScreenContent() {
             }
+
             @Override
             public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
                 rewardedAd = null;
             }
+
             @Override
             public void onAdDismissedFullScreenContent() {
                 rewardedAd = null;
@@ -97,6 +111,7 @@ public class SupportActivity extends AppCompatActivity {
         rewardedAd.show(this, rewardItem -> {
         });
     }
+
     private void querySkuDetails() {
         List<String> skuList = List.of("low_donation", "normal_donation", "high_donation", "extreme_donation");
         SkuDetailsParams params = SkuDetailsParams.newBuilder().setSkusList(skuList).setType(BillingClient.SkuType.INAPP).build();
@@ -118,6 +133,7 @@ public class SupportActivity extends AppCompatActivity {
             }
         });
     }
+
     private void initiatePurchase(String sku) {
         SkuDetails skuDetails = skuDetailsMap.get(sku);
         if (skuDetails != null) {

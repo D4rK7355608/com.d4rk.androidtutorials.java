@@ -1,14 +1,19 @@
 package com.d4rk.androidtutorials.java.ui.android.alerts.snackbar;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
 import com.google.android.material.snackbar.Snackbar;
+
 public class SnackBarActivity extends AppCompatActivity {
-    private ActivitySnackBarBinding binding;
     private final Handler handler = new Handler();
+    private ActivitySnackBarBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,15 +1,21 @@
 package com.d4rk.androidtutorials.java.ui.android.buttons.image;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityImageButtonsBinding;
 import com.google.android.material.snackbar.Snackbar;
+
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+
 public class ImageButtonsActivity extends AppCompatActivity {
-    private ActivityImageButtonsBinding binding;
     private final Handler handler = new Handler();
+    private ActivityImageButtonsBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

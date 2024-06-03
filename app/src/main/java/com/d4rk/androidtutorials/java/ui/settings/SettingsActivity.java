@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.settings;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -10,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,12 +20,14 @@ import androidx.core.os.LocaleListCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
 import com.d4rk.androidtutorials.java.ui.dialogs.RequireRestartDialog;
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 public class SettingsActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.SummaryProvider<androidx.preference.ListPreference> {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
     }
+
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(getString(R.string.key_theme))) {
@@ -67,6 +72,22 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
             AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
         }
     }
+
+    @Override
+    public CharSequence provideSummary(ListPreference preference) {
+        String key = preference.getKey();
+        if (key != null)
+            if (key.equals(getString(R.string.dark_mode)))
+                return preference.getEntry();
+        return null;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
+    }
+
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -146,18 +167,5 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 });
             }
         }
-    }
-    @Override
-    public CharSequence provideSummary(ListPreference preference) {
-        String key = preference.getKey();
-        if (key != null)
-            if (key.equals(getString(R.string.dark_mode)))
-                return preference.getEntry();
-        return null;
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
     }
 }

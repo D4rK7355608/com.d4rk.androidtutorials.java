@@ -1,14 +1,19 @@
 package com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityAlertDialogBinding;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 public class AlertDialogActivity extends AppCompatActivity {
-    private ActivityAlertDialogBinding binding;
     private final Handler handler = new Handler();
+    private ActivityAlertDialogBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +24,7 @@ public class AlertDialogActivity extends AppCompatActivity {
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(this, AlertDialogCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
+
     private MaterialAlertDialogBuilder createAlertDialog() {
         return new MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.your_title)

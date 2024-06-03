@@ -1,0 +1,7 @@
+#Mon Jun 03 16:04:54 EEST 2024
+base.0=C\:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app\\build\\intermediates\\dex\\debug\\minifyDebugWithR8\\classes.dex
+base.1=C\:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app\\build\\intermediates\\dex\\debug\\minifyDebugWithR8\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
