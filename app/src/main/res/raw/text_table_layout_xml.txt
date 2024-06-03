@@ -24,7 +24,7 @@
                     android:layout_width="1dp"
                     android:layout_margin="2dp"
                     android:layout_height="match_parent"
-                    android:background="?attr/colorAccent" />
+                    android:background="?attr/colorAccent"/>
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="48dp"
                     android:layout_height="24dp"/>

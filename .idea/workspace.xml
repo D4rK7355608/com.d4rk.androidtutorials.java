@@ -12,160 +12,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="Update 3.1_r1">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="Update 4.0_r1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ads/Ads.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/about/AboutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/about/AboutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/alerts/alertdialog/AlertDialogActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/alerts/alertdialog/AlertDialogActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/alerts/snackbar/SnackBarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/alerts/snackbar/SnackBarActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/basics/history/AndroidHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/basics/history/AndroidHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/buttons/ButtonsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/buttons/ButtonsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/buttons/tabs/ButtonsTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/buttons/tabs/ButtonsTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/image/ImageButtonsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/image/ImageButtonsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/radio/RadioButtonsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/radio/RadioButtonsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/toggle/ToggleActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/toggle/ToggleCodeActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/toggle/tabs/ToggleTabCodeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/buttons/toggle/tabs/ToggleTabLayoutFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/clocks/clock/ClockActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/clocks/clock/ClockActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/images/ImagesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/images/ImagesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/images/ImagesCodeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/images/ImagesCodeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/images/tabs/ImagesTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/images/tabs/ImagesTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/images/tabs/ImagesTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/images/tabs/ImagesTabLayoutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/linear/LinearLayoutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/linear/LinearLayoutActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/relative/RelativeLayoutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/relative/RelativeLayoutActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/table/TableLayoutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/layouts/table/TableLayoutActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/reviews/ratingbar/RatingBarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/reviews/ratingbar/RatingBarActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/textboxes/passwordbox/PasswordBoxActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/textboxes/passwordbox/PasswordBoxActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/textboxes/textbox/TextboxActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/textboxes/textbox/TextboxActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/grid/tabs/GridViewTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/grid/tabs/GridViewTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/webview/WebViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/web/WebViewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/webview/WebViewCodeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/web/WebViewCodeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/webview/tabs/WebViewTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/web/tabs/WebViewTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/webview/tabs/WebViewTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/android/views/web/tabs/WebViewTabLayoutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/dialogs/RequireRestartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/dialogs/RequireRestartDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/faq/FaqActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/feedback/FeedbackActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/startup/StartupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/startup/StartupActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/play/listings/en-US/full-description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/play/listings/en-US/full-description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_category_images_tinted.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_category_web_tinted.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_faq.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/il_feedback_card.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_sdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_sdk.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_start_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_start_project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_buttons.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_faq.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_feedback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_buttons.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_linear_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_linear_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_password_box.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_password_box.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_permissions_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_permissions_tutorial.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_debugging.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_debugging.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_general.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_navigation_and_searching.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_navigation_and_searching.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_refractoring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_refractoring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_version_control.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts_version_control.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_textbox.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_text_box.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_toggle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_switch.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buttons_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buttons_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_clock_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_clock_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_linear_layout_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_linear_layout_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_no_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_no_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_same_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_same_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_feedback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_feedback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/anim_feedback.lottie" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_alertdialog_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_alertdialog_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_buttons_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_buttons_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_datepicker_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_datepicker_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_grid_view_kotlin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_grid_view_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_image_buttons_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_image_buttons_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_password_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_password_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_radio_buttons_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_radio_buttons_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_rating_bar_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_rating_bar_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_snack_bar_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_snack_bar_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_textbox_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_textbox_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_timepicker_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_timepicker_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_toast_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_toast_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_toggle_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_toggle_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_webview_java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_webview_java.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-bg/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hu/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-in/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ja/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v27/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v27/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pl/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ro/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sv/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-uk/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v28/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v28/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/keys.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/keys.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/preferences_android_studio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/preferences_android_studio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/preferences_permissions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/preferences_permissions.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/preferences_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/preferences_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_table_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_table_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/text_table_layout_xml.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/text_table_layout_xml.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +81,7 @@
     <option name="KEY_STORE_PATH" value="C:\Users\d4rk7\Documents\Google\Google Play Console\Apps\Keys\com.d4rk.androidtutorials.java.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -390,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683911157979</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update 4.0_r1">
+      <created>1691941043028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691941043028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,6 +270,7 @@
     <MESSAGE value="Update 2.1_r1" />
     <MESSAGE value="Update 3.0_r1" />
     <MESSAGE value="Update 3.1_r1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 3.1_r1" />
+    <MESSAGE value="Update 4.0_r1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 4.0_r1" />
   </component>
 </project>

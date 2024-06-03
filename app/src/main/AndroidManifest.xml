@@ -15,6 +15,7 @@
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="https"/>
         </intent>
+        <package android:name="com.d4rk.androidtutorials"/>
     </queries>
     <application
         android:name=".ads.managers.AppOpenAd"
