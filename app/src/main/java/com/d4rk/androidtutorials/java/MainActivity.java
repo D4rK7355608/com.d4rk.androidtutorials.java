@@ -4,27 +4,21 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
-import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
 import androidx.navigation.fragment.NavHostFragment;
@@ -38,27 +32,21 @@ import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.settings.SettingsActivity;
-import com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity;
 import com.d4rk.androidtutorials.java.ui.startup.StartupActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.ActivityResult;
 import com.google.android.play.core.install.model.AppUpdateType;
-import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
-
-import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     NavController navController;
-    private AppBarConfiguration appBarConfiguration;
     private AppUpdateNotificationsManager appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     private AppUpdateManager appUpdateManager;
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -68,12 +56,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SplashScreen.installSplashScreen(this);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        safeDrawingPadding();
         launcherShortcuts();
         startupScreen();
         setupUpdateNotifications();
         applySettings();
-        setupNavigationDrawer();
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
         binding.adView.loadAd(new AdRequest.Builder().build());
@@ -85,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(this, "shortcut_id")
                 .setShortLabel(getString(R.string.shortcut_kotlin_edition_short))
                 .setLongLabel(getString(R.string.shortcut_kotlin_edition_long))
-                .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
+                //.setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
                 .setIntent(new Intent(Intent.ACTION_MAIN) {{
                     if (isAppInstalled(getPackageManager())) {
                         setClassName("com.d4rk.androidtutorials", "com.d4rk.androidtutorials.MainActivity");
@@ -104,69 +90,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
-        }
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            binding.drawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        } else {
-            return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
-        }
-    }
-
-    private void setupNavigationDrawer() {
-        DrawerLayout drawerLayout = binding.drawerLayout;
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.setDrawerIndicatorEnabled(true);
-        toggle.syncState();
-
-        NavigationView navView = binding.navDrawer;
-        appBarConfiguration = new AppBarConfiguration.Builder(new HashSet<>())
-                .setOpenableLayout(drawerLayout)
-                .build();
-
-        NavigationUI.setupWithNavController(navView, navController);
-        navController.setGraph(R.navigation.mobile_navigation);
-        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, GravityCompat.END);
-        navView.setNavigationItemSelectedListener(menuItem -> {
-            int itemId = menuItem.getItemId();
-            if (itemId == R.id.nav_settings) {
-                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(settingsIntent);
-            } else if (itemId == R.id.nav_help) {
-                Intent helpIntent = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(helpIntent);
-            } else if (itemId == R.id.nav_updates) {
-                String url = "https://www.example.com/updates";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            } else if (itemId == R.id.nav_share) {
-                Intent shareIntent = new Intent();
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.summary_share_message, "https://play.google.com/store/apps/details?id=" + getPackageName()));
-                shareIntent.setType("text/plain");
-                startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_email_using)));
-            }
-            drawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        });
-    }
-
-    private void safeDrawingPadding() {
-        EdgeToEdge.enable(this);
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_VISIBLE |
-                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
-        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-        } else {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
     }
 
@@ -204,8 +127,15 @@ public class MainActivity extends AppCompatActivity {
         String[] bottomNavigationBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
         String labelDefaultValue = getString(R.string.default_value_bottom_navigation_bar_labels);
         String labelVisibility = sharedPreferences.getString(labelKey, labelDefaultValue);
-        int visibilityMode = getVisibilityMode(labelVisibility, bottomNavigationBarLabelsValues);
-        binding.bottomNavView.setLabelVisibilityMode(visibilityMode);
+        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO; // FIXME: It's possible to extract method returning 'visibilityMode' from a long surrounding method
+        if (labelVisibility.equals(bottomNavigationBarLabelsValues[0])) {
+            visibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED;
+        } else if (labelVisibility.equals(bottomNavigationBarLabelsValues[1])) {
+            visibilityMode = NavigationBarView.LABEL_VISIBILITY_SELECTED;
+        } else if (labelVisibility.equals(bottomNavigationBarLabelsValues[2])) {
+            visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
+        }
+        binding.navView.setLabelVisibilityMode(visibilityMode);
 
         // Bottom Navigation Bar Default Tab
         String defaultTabKey = getString(R.string.key_default_tab);
@@ -222,30 +152,29 @@ public class MainActivity extends AppCompatActivity {
         } else {
             startFragmentId = R.id.navigation_home;
         }
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_content_main);
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
             NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
             navGraph.setStartDestination(startFragmentId);
             navController.setGraph(navGraph);
-            NavigationUI.setupWithNavController(binding.bottomNavView, navController);
+            NavigationUI.setupWithNavController(binding.navView, navController);
         }
+
+        // Toolbar
+        setSupportActionBar(binding.toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
+            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        }
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_android_studio, R.id.navigation_about).build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         // Language
         String languageCode = sharedPreferences.getString(getString(R.string.key_language), getString(R.string.default_value_language));
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
-    }
-
-    private static int getVisibilityMode(String labelVisibility, String[] bottomNavigationBarLabelsValues) {
-        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO; // FIXME: It's possible to extract method returning 'visibilityMode' from a long surrounding method
-        if (labelVisibility.equals(bottomNavigationBarLabelsValues[0])) {
-            visibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED;
-        } else if (labelVisibility.equals(bottomNavigationBarLabelsValues[1])) {
-            visibilityMode = NavigationBarView.LABEL_VISIBILITY_SELECTED;
-        } else if (labelVisibility.equals(bottomNavigationBarLabelsValues[2])) {
-            visibilityMode = NavigationBarView.LABEL_VISIBILITY_UNLABELED;
-        }
-        return visibilityMode;
     }
 
     private void showSnackbar() {
@@ -284,7 +213,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * {@inheritDoc}
      *
-     * @noinspection deprecation
      * @deprecated This method provides a custom back button behavior which is deprecated.
      * The current implementation shows a confirmation dialog before closing the
      * activity. This behavior might be removed or changed in the future.
@@ -292,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
     @Deprecated
     @Override
     public void onBackPressed() {
-        new MaterialAlertDialogBuilder(this)
+        new MaterialAlertDialogBuilder(this) // FIXME: Overrides deprecated method in 'androidx.activity.ComponentActivity'
                 .setTitle(R.string.alert_dialog_close)
                 .setMessage(R.string.summary_alert_dialog_close)
                 .setPositiveButton(android.R.string.yes,
@@ -338,27 +266,40 @@ public class MainActivity extends AppCompatActivity {
     private void checkForFlexibleUpdate() {
         appUpdateManager.getAppUpdateInfo()
                 .addOnSuccessListener(appUpdateInfo -> {
-                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                            && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                        Integer stalenessDays = appUpdateInfo.clientVersionStalenessDays();
-                        if (stalenessDays != null && stalenessDays < 90) {
-                            try {
-                                //noinspection deprecation
-                                appUpdateManager.startUpdateFlowForResult(
-                                        appUpdateInfo,
-                                        AppUpdateType.FLEXIBLE,
-                                        this,
-                                        1);
-                            } catch (IntentSender.SendIntentException ignored) {
+                    if (appUpdateInfo.updateAvailability() ==
+                            UpdateAvailability.UPDATE_AVAILABLE
+                            && appUpdateInfo.updateAvailability() !=
+                            UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+
+                        if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                            Integer stalenessDays =
+                                    appUpdateInfo.clientVersionStalenessDays();
+                            if (stalenessDays != null && stalenessDays > 90) {
+                                try {
+                                    appUpdateManager.startUpdateFlowForResult( // FIXME; 'startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int)' is deprecated
+                                            appUpdateInfo, AppUpdateType.IMMEDIATE,
+                                            this, 1
+                                    );
+                                } catch (IntentSender.SendIntentException e) {
+                                    e.printStackTrace(); // FIXME: Call to 'printStackTrace()' should probably be replaced with more robust logging
+                                }
                             }
                         }
-                    } else if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
-                        // If the update is already downloaded, show a notification
-                        // or prompt the user to install it
-                        Snackbar.make(findViewById(android.R.id.content),
-                                        "An update is ready to install", Snackbar.LENGTH_INDEFINITE)
-                                .setAction("INSTALL", view -> appUpdateManager.completeUpdate())
-                                .show();
+
+                        if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                            Integer stalenessDays =
+                                    appUpdateInfo.clientVersionStalenessDays();
+                            if (stalenessDays != null && stalenessDays < 90) {
+                                try {
+                                    appUpdateManager.startUpdateFlowForResult( // FIXME: 'startUpdateFlowForResult(com.google.android.play.core.appupdate.AppUpdateInfo, int, android.app.Activity, int)' is deprecated
+                                            appUpdateInfo, AppUpdateType.FLEXIBLE,
+                                            this, 1
+                                    );
+                                } catch (IntentSender.SendIntentException e) {
+                                    e.printStackTrace(); // FIXME: Call to 'printStackTrace()' should probably be replaced with more robust logging
+                                }
+                            }
+                        }
                     }
                 })
                 .addOnFailureListener(e -> {
