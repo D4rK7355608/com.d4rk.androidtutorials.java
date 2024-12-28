@@ -45,6 +45,7 @@ public class HelpActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout_faq, new FaqFragment())
                 .commit();
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout_feedback, new FeedbackFragment())
                 .commit();

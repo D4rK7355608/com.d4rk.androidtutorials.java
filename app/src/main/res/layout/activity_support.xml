@@ -1,7 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/container">
 
     <me.zhanghai.android.fastscroll.FastScrollScrollView
         android:id="@+id/scroll_view"
@@ -104,39 +105,19 @@
                 android:layout_marginTop="24dp"
                 android:text="@string/non_paid_support" />
 
-            <androidx.gridlayout.widget.GridLayout
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_web_ad"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:gravity="center"
-                app:columnCount="2"
-                app:rowCount="1">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button_web_ad"
-                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:text="@string/web_ad"
-                    app:icon="@drawable/ic_language"
-                    app:iconGravity="textStart"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button_watch_ad"
-                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:text="@string/watch_ad"
-                    app:icon="@drawable/ic_play"
-                    app:iconGravity="textStart"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-            </androidx.gridlayout.widget.GridLayout>
+                android:text="@string/web_ad"
+                app:icon="@drawable/ic_language"
+                app:iconGravity="textStart"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

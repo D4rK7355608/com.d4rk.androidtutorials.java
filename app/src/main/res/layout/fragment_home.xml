@@ -166,6 +166,7 @@
                 android:id="@+id/small_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_alignParentBottom="true"
                 app:adSize="BANNER"
                 app:adUnitId="@string/ad_banner_unit_id" />
