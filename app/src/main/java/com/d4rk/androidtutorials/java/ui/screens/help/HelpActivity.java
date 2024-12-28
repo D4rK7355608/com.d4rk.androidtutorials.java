@@ -112,9 +112,7 @@ public class HelpActivity extends AppCompatActivity {
         }
 
         private void launchGooglePlayReviews() {
-            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id="
-                    + requireActivity().getPackageName()
-                    + "&showAllReviews=true");
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + requireActivity().getPackageName() + "&showAllReviews=true");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             try {

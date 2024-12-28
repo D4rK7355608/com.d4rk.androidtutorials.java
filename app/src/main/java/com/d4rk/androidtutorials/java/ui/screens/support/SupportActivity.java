@@ -38,12 +38,12 @@ public class SupportActivity extends AppCompatActivity {
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
-        supportViewModel.initMobileAds();
+        supportViewModel.initMobileAds(binding);
 
         binding.buttonWebAd.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))));
 
-        supportViewModel.initBillingClient(this, this::querySkuDetails);
+        supportViewModel.initBillingClient(this::querySkuDetails);
 
         binding.buttonLowDonation.setOnClickListener(v -> initiatePurchase("low_donation"));
         binding.buttonNormalDonation.setOnClickListener(v -> initiatePurchase("normal_donation"));

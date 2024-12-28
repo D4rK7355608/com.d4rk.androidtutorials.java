@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityAlertDialogBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class AlertDialogActivity extends AppCompatActivity {
@@ -19,6 +20,10 @@ public class AlertDialogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAlertDialogBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         MaterialAlertDialogBuilder alertDialog = createAlertDialog();
         binding.button.setOnClickListener(v -> alertDialog.show());
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(this, AlertDialogCodeActivity.class)));

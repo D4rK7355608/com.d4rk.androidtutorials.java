@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackBarActivity extends AppCompatActivity {
@@ -19,6 +20,10 @@ public class SnackBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySnackBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         binding.button.setOnClickListener(v -> {
             Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.snack_this_is_a_snackbar, Snackbar.LENGTH_INDEFINITE);
             snackbar.setAction(android.R.string.ok, v1 -> snackbar.dismiss());

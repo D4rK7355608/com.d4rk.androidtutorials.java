@@ -11,6 +11,7 @@ import androidx.preference.ListPreference;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 /**
  * Settings screen that delegates preference change logic to a ViewModel/Repository.
@@ -24,12 +25,12 @@ public class SettingsActivity extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Setup view binding
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain ViewModel
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
 
         // Insert the Fragment

@@ -1,11 +1,15 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
-import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.IntentSenderRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.pm.ShortcutInfoCompat;
@@ -30,21 +34,37 @@ import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateOptions;
+import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityMainBinding mBinding;
     private MainViewModel mainViewModel;
     private NavController navController;
+
     private AppUpdateNotificationsManager appUpdateNotificationsManager;
+    private AppUpdateManager appUpdateManager;
+    private InstallStateUpdatedListener installStateUpdatedListener;
+
+    private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =
+            registerForActivityResult(
+                    new ActivityResultContracts.StartIntentSenderForResult(),
+                    result -> {
+                        if (result.getResultCode() != Activity.RESULT_OK) {
+                            Log.d("MainActivity", "In-app update flow failed! " + result.getResultCode());
+                        }
+                    }
+            );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
-
         super.onCreate(savedInstanceState);
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
@@ -57,9 +77,12 @@ public class MainActivity extends AppCompatActivity {
         setupActionBar();
         observeViewModel();
 
+        Handler handler = new Handler(Looper.getMainLooper());
         long snackbarInterval = 60L * 24 * 60 * 60 * 1000;
         handler.postDelayed(this::showSnackbar, snackbarInterval);
+
         setupUpdateNotifications();
+
         mainViewModel.applySettings();
         if (mainViewModel.shouldShowStartupScreen()) {
             mainViewModel.markStartupScreenShown();
@@ -67,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         launcherShortcuts();
+
+        this.appUpdateManager = mainViewModel.getAppUpdateManager();
+
+        registerInstallStateListener();
     }
 
     private void setupActionBar() {
@@ -82,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
             NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         }
-
     }
 
     private void launcherShortcuts() {
@@ -99,10 +125,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void observeViewModel() {
-        mainViewModel.getBottomNavVisibility().observe(this, visibilityMode -> mBinding.navView.setLabelVisibilityMode(visibilityMode));
+        mainViewModel.getBottomNavVisibility().observe(this, visibilityMode ->
+                mBinding.navView.setLabelVisibilityMode(visibilityMode)
+        );
+
         mainViewModel.getDefaultNavDestination().observe(this, startFragmentId -> {
-            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                    .findFragmentById(R.id.nav_host_fragment_activity_main);
+            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
             if (navHostFragment != null) {
                 navController = navHostFragment.getNavController();
                 NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
@@ -118,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
         mainViewModel.getThemeChanged().observe(this, changed -> {
             if (Boolean.TRUE.equals(changed)) {
                 recreate();
@@ -148,7 +177,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressLint("DeprecatedApi")
+    /**
+     * @noinspection deprecation
+     */
     @Deprecated
     @Override
     public void onBackPressed() {
@@ -166,30 +197,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        AppUsageNotificationsManager appUsageNotificationsManager =
-                new AppUsageNotificationsManager(this);
+        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
         appUsageNotificationsManager.scheduleAppUsageCheck();
         appUpdateNotificationsManager.checkAndSendUpdateNotification();
-        checkForFlexibleUpdate();
+        checkForFlexibleOrImmediateUpdate();
     }
 
-    private void checkForFlexibleUpdate() {
-        mainViewModel.getAppUpdateManager()
-                .getAppUpdateInfo()
-                .addOnSuccessListener(appUpdateInfo -> {
-                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.updatePriority() >= 3) {
-
-                        if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-                            try {
-                                mainViewModel.getAppUpdateManager().startUpdateFlowForResult(appUpdateInfo, AppUpdateType.IMMEDIATE, this, 1);
-                            } catch (Exception e) {
-                                // handle error
-                            }
+    /**
+     * If your code wants to decide between immediate or flexible updates:
+     */
+    private void checkForFlexibleOrImmediateUpdate() {
+        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
+                    boolean updateAvailable = appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
+                    if (updateAvailable) {
+                        int priority = appUpdateInfo.updatePriority();
+                        if (priority >= 3 && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                            startImmediateUpdate(appUpdateInfo);
                         } else if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                            try {
-                                mainViewModel.getAppUpdateManager().startUpdateFlowForResult(appUpdateInfo, AppUpdateType.FLEXIBLE, this, 1);
-                            } catch (Exception ignored) {
-                            }
+                            startFlexibleUpdate(appUpdateInfo);
                         }
                     }
                 })
@@ -202,5 +227,51 @@ public class MainActivity extends AppCompatActivity {
                         ).show();
                     }
                 });
+    }
+
+    private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
+        appUpdateManager.startUpdateFlowForResult(
+                appUpdateInfo,
+                updateActivityResultLauncher,
+                AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+        );
+    }
+
+    private void startFlexibleUpdate(AppUpdateInfo appUpdateInfo) {
+        appUpdateManager.startUpdateFlowForResult(
+                appUpdateInfo,
+                updateActivityResultLauncher,
+                AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build()
+        );
+    }
+
+    /**
+     * Only needed for FLEXIBLE updates:
+     */
+    private void registerInstallStateListener() {
+        installStateUpdatedListener = state -> {
+            if (state.installStatus() == InstallStatus.DOWNLOADED) {
+                popupSnackbarForCompleteUpdate();
+            }
+        };
+        appUpdateManager.registerListener(installStateUpdatedListener);
+    }
+
+    private void popupSnackbarForCompleteUpdate() {
+        Snackbar.make(
+                        mBinding.getRoot(),
+                        getString(R.string.update_downloaded),
+                        Snackbar.LENGTH_INDEFINITE
+                )
+                .setAction(getString(R.string.alert_dialog_require_restart), v -> appUpdateManager.completeUpdate())
+                .show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (installStateUpdatedListener != null && appUpdateManager != null) {
+            appUpdateManager.unregisterListener(installStateUpdatedListener);
+        }
+        super.onDestroy();
     }
 }

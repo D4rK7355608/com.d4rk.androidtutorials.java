@@ -7,13 +7,18 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPermissionsBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class PermissionsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.d4rk.androidtutorials.java.databinding.ActivityPermissionsBinding binding = ActivityPermissionsBinding.inflate(getLayoutInflater());
+        ActivityPermissionsBinding binding = ActivityPermissionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_permissions, new SettingsFragment()).commit();
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

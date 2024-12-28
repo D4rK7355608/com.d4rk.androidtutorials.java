@@ -20,9 +20,7 @@ public class EdgeToEdgeDelegate {
         WindowCompat.setDecorFitsSystemWindows(activity.getWindow(), false);
 
         ViewCompat.setOnApplyWindowInsetsListener(container, (v, insets) -> {
-            Insets bars = insets.getInsets(
-                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout()
-            );
+            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
             return WindowInsetsCompat.CONSUMED;
         });

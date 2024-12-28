@@ -6,6 +6,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
+import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.ui.screens.support.repository.SupportRepository;
 
 import java.util.List;
@@ -19,10 +20,8 @@ public class SupportViewModel extends AndroidViewModel {
         repository = new SupportRepository(application);
     }
 
-    // 1) Billing logic
-
-    public void initBillingClient(Activity activity, Runnable onConnected) {
-        repository.initBillingClient(activity, onConnected);
+    public void initBillingClient(Runnable onConnected) {
+        repository.initBillingClient(onConnected);
     }
 
     public void querySkuDetails(List<String> skuList,
@@ -34,19 +33,7 @@ public class SupportViewModel extends AndroidViewModel {
         repository.initiatePurchase(activity, sku);
     }
 
-    // 2) Rewarded Ads logic
-
-    public void initMobileAds() {
-        repository.initMobileAds();
-    }
-
-    public void loadRewardedAd(String adUnitId,
-                               SupportRepository.OnRewardedAdListener onLoaded,
-                               Runnable onFailed) {
-        repository.loadRewardedAd(adUnitId, onLoaded, onFailed);
-    }
-
-    public void showRewardedAd(Activity activity, Runnable onAdDismiss) {
-        repository.showRewardedAd(activity, onAdDismiss);
+    public void initMobileAds(ActivitySupportBinding binding) {
+        repository.initMobileAds(binding);
     }
 }

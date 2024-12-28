@@ -15,11 +15,9 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ui.components.dialogs.RequireRestartDialog;
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
@@ -38,18 +36,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
                 RequireRestartDialog restartDialog = new RequireRestartDialog();
                 restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
-                return true;
-            });
-        }
-        Preference changelogPreference = findPreference(getString(R.string.key_changelog));
-        if (changelogPreference != null) {
-            changelogPreference.setOnPreferenceClickListener(preference -> {
-                new MaterialAlertDialogBuilder(requireContext())
-                        .setTitle(requireContext().getString(R.string.changelog_title, BuildConfig.VERSION_NAME))
-                        .setIcon(R.drawable.ic_changelog)
-                        .setMessage(R.string.changes)
-                        .setNegativeButton(android.R.string.cancel, null)
-                        .show();
                 return true;
             });
         }
@@ -80,17 +66,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 } else {
                     return false;
                 }
-            });
-        }
-        Preference sharePreference = findPreference(getString(R.string.key_share));
-        if (sharePreference != null) {
-            sharePreference.setOnPreferenceClickListener(preference -> {
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
-                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.share_subject));
-                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
-                return true;
             });
         }
         Preference deviceInfoPreference = findPreference(getString(R.string.key_device_info));

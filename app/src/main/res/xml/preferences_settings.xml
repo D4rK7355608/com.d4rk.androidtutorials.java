@@ -79,10 +79,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://play.google.com/apps/testing/com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_changelog"
-            app:key="@string/key_changelog"
-            app:title="@string/changelog" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_safety_check_tinted"
@@ -120,42 +116,12 @@
             app:key="open_source_licenses"
             app:title="@string/oss_license_title" />
         <androidx.preference.Preference
-            app:icon="@drawable/ic_help"
-            app:title="@string/help_and_feedback">
-            <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.help.HelpActivity"
-                android:targetPackage="com.d4rk.androidtutorials.java" />
-        </androidx.preference.Preference>
-        <androidx.preference.Preference
             app:icon="@drawable/ic_license"
             app:summary="@string/summary_preference_settings_license"
             app:title="@string/license">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://www.gnu.org/licenses/gpl-3.0" />
-        </androidx.preference.Preference>
-    </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_more"
-        app:title="@string/more">
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_share"
-            app:key="@string/key_share"
-            app:title="@string/share" />
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_shop"
-            app:title="@string/more_apps">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/dev?id=5390214922640123642" />
-        </androidx.preference.Preference>
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_support"
-            app:summary="@string/summary_preference_settings_support_developer"
-            app:title="@string/support_the_developer">
-            <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity"
-                android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory

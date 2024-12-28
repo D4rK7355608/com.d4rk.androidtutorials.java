@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidHistoryBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -17,6 +18,10 @@ public class AndroidHistory extends AppCompatActivity {
         com.d4rk.androidtutorials.java.databinding.ActivityAndroidHistoryBinding binding = ActivityAndroidHistoryBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
+
         binding.adView.loadAd(new AdRequest.Builder().build());
         binding.adViewBottom.loadAd(new AdRequest.Builder().build());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
