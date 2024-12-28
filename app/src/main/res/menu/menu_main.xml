@@ -1,8 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/settings"
+        android:id="@+id/support"
+        android:icon="@drawable/ic_support"
+        android:title="@string/support_us"
         app:showAsAction="ifRoom" />
 </menu>

@@ -1,4 +1,5 @@
 package com.d4rk.androidtutorials.java.ads.managers;
+
 import android.app.Activity;
 import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
@@ -20,53 +21,76 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
 import java.util.Date;
+
 @SuppressWarnings("ALL")
 public class AppOpenAd extends Application implements ActivityLifecycleCallbacks, LifecycleObserver {
     private AppOpenAdManager appOpenAdManager;
     private Activity currentActivity;
+
     @Override
     public void onCreate() {
         super.onCreate();
         this.registerActivityLifecycleCallbacks(this);
-        MobileAds.initialize(this, initializationStatus -> {});
+        MobileAds.initialize(this, initializationStatus -> {
+        });
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager();
     }
+
     @OnLifecycleEvent(Event.ON_START)
     protected void onMoveToForeground() {
         appOpenAdManager.showAdIfAvailable(currentActivity);
     }
+
     @Override
-    public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {}
+    public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
+    }
+
     @Override
     public void onActivityStarted(@NonNull Activity activity) {
         if (!appOpenAdManager.isShowingAd) {
             currentActivity = activity;
         }
     }
+
     @Override
-    public void onActivityResumed(@NonNull Activity activity) {}
+    public void onActivityResumed(@NonNull Activity activity) {
+    }
+
     @Override
-    public void onActivityPaused(@NonNull Activity activity) {}
+    public void onActivityPaused(@NonNull Activity activity) {
+    }
+
     @Override
-    public void onActivityStopped(@NonNull Activity activity) {}
+    public void onActivityStopped(@NonNull Activity activity) {
+    }
+
     @Override
-    public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {}
+    public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
+    }
+
     @Override
-    public void onActivityDestroyed(@NonNull Activity activity) {}
+    public void onActivityDestroyed(@NonNull Activity activity) {
+    }
+
     public void showAdIfAvailable(@NonNull Activity activity, @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
         appOpenAdManager.showAdIfAvailable(activity, onShowAdCompleteListener);
     }
+
     public interface OnShowAdCompleteListener {
         void onShowAdComplete();
     }
+
     private static class AppOpenAdManager {
         private static final String AD_UNIT_ID = "\n" + "ca-app-pub-5294151573817700/9123330876";
         private com.google.android.gms.ads.appopen.AppOpenAd appOpenAd = null;
         private boolean isLoadingAd = false;
         private boolean isShowingAd = false;
         private long loadTime = 0;
-        public AppOpenAdManager() {}
+
+        public AppOpenAdManager() {
+        }
+
         private void loadAd(Context context) {
             if (isLoadingAd || isAdAvailable()) {
                 return;
@@ -80,26 +104,31 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
                     isLoadingAd = false;
                     loadTime = (new Date()).getTime();
                 }
+
                 @Override
                 public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                     isLoadingAd = false;
                 }
             });
         }
+
         private boolean wasLoadTimeLessThanNHoursAgo(long numHours) {
             long dateDifference = (new Date()).getTime() - loadTime;
             long numMilliSecondsPerHour = 3600000;
             return (dateDifference < (numMilliSecondsPerHour * numHours));
         }
+
         private boolean isAdAvailable() {
             return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
         }
+
         private void showAdIfAvailable(@NonNull final Activity activity) {
             showAdIfAvailable(
                     activity,
                     () -> {
                     });
         }
+
         private void showAdIfAvailable(
                 @NonNull final Activity activity,
                 @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
@@ -120,6 +149,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
                             onShowAdCompleteListener.onShowAdComplete();
                             loadAd(activity);
                         }
+
                         @Override
                         public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
                             appOpenAd = null;
@@ -127,6 +157,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
                             onShowAdCompleteListener.onShowAdComplete();
                             loadAd(activity);
                         }
+
                         @Override
                         public void onAdShowedFullScreenContent() {
                         }

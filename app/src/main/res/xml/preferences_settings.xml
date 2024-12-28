@@ -112,7 +112,7 @@
             app:icon="@drawable/ic_permissions"
             app:title="@string/permissions">
             <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.permissions.PermissionsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.screens.permissions.PermissionsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -123,7 +123,7 @@
             app:icon="@drawable/ic_help"
             app:title="@string/help_and_feedback">
             <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.help.HelpActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.help.HelpActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -154,7 +154,7 @@
             app:summary="@string/summary_preference_settings_support_developer"
             app:title="@string/support_the_developer">
             <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.support.SupportActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>

@@ -33,7 +33,7 @@
         android:theme="@style/AppThemeActionBar"
         tools:targetApi="33">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.screens.main.MainActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
@@ -47,7 +47,7 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".ui.startup.StartupActivity"
+            android:name=".ui.screens.startup.StartupActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.android.buttons.switches.SwitchCodeActivity"
@@ -207,10 +207,10 @@
             android:label="@string/alert_dialog"
             android:parentActivityName=".ui.android.alerts.alertdialog.AlertDialogCodeActivity" />
         <activity
-            android:name=".ui.settings.permissions.PermissionsActivity"
+            android:name=".ui.settings.screens.permissions.PermissionsActivity"
             android:exported="false"
             android:label="@string/permissions"
-            android:parentActivityName=".ui.settings.permissions.PermissionsActivity" />
+            android:parentActivityName=".ui.settings.screens.permissions.PermissionsActivity" />
         <activity
             android:name=".ui.android.basics.shortcuts.ShortcutsActivity"
             android:exported="false"
@@ -321,20 +321,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.settings.help.HelpActivity"
+            android:name=".ui.screens.help.HelpActivity"
             android:exported="false"
             android:label="@string/help"
-            android:parentActivityName=".ui.settings.help.HelpActivity" />
+            android:parentActivityName=".ui.screens.help.HelpActivity" />
         <activity
             android:name=".ui.android.buttons.switches.SwitchActivity"
             android:exported="false"
             android:label="@string/switches"
             android:parentActivityName=".ui.android.buttons.switches.SwitchActivity" />
         <activity
-            android:name=".ui.settings.support.SupportActivity"
+            android:name=".ui.screens.support.SupportActivity"
             android:exported="false"
             android:label="@string/support_us"
-            android:parentActivityName=".ui.settings.support.SupportActivity" />
+            android:parentActivityName=".ui.screens.support.SupportActivity" />
         <activity
             android:name=".ui.android.buttons.buttons.ButtonsActivity"
             android:exported="false"
@@ -383,14 +383,25 @@
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5294151573817700~1436412543" />
+
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
             android:value="true" />
 
         <property

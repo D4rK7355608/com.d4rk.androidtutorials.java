@@ -5,7 +5,7 @@
     app:startDestination="@+id/navigation_home">
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.d4rk.androidtutorials.java.ui.home.HomeFragment"
+        android:name="com.d4rk.androidtutorials.java.ui.screens.home.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
     <fragment

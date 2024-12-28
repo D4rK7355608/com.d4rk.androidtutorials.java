@@ -1,4 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="announcement_title">A New App Is Here!</string>
+    <string name="announcement_subtitle">Check out the latest Android Studio Tutorials app.</string>
+    <string name="main_card_title">Discover Android Studio Tutorials</string>
+    <string name="main_card_subtitle">Featuring Kotlin and Java Editions</string>
+    <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development!</string>
+    <string name="get_on_google_play">Get it on Google Play</string>
+
+
     <string name="app_description">Learn how to make simple apps in Android Studio. 📱</string>
     <string name="app_usage_notifications">App Usage Notifications</string>
     <string name="update_notifications">Update Notifications</string>

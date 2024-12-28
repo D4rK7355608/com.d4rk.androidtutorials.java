@@ -23,8 +23,8 @@
             tools:ignore="VisualLintLongText" />
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.Material3.HeadlineLarge"
             android:id="@+id/text_view_android"
+            style="@style/TextAppearance.Material3.HeadlineLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="24dp"
@@ -1402,7 +1402,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 ads:adSize="FULL_BANNER"
-                ads:adUnitId="ca-app-pub-5294151573817700/3821250346" />
+                ads:adUnitId="@string/ad_banner_unit_id" />
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>

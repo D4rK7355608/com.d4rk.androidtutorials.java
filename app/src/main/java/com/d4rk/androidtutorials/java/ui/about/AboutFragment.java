@@ -31,8 +31,8 @@ import java.util.Locale;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class AboutFragment extends Fragment {
-    private FragmentAboutBinding binding;
     private final Calendar calendar = Calendar.getInstance();
+    private FragmentAboutBinding binding;
 
     @Nullable
     @Override

@@ -51,4 +51,8 @@
         • Made various project structure enhancements for better readability and maintainability.\n\n
         • Made various under-the-hood improvements for a better overall app experience.
     </string>
+    
+    
+    
+    <string name="ad_banner_unit_id">ca-app-pub-5294151573817700/3821250346</string>
 </resources>
