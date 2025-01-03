@@ -3,6 +3,7 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'com.google.android.gms.oss-licenses-plugin'
+    id 'com.mikepenz.aboutlibraries.plugin'
 }
 
 android {
@@ -12,7 +13,7 @@ android {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
         targetSdk 35
-        versionCode 27
+        versionCode 28
         versionName '5.0.0'
         archivesBaseName = "${applicationId}-v${versionName}"
         vectorDrawables.useSupportLibrary = true
@@ -55,44 +56,43 @@ android {
 dependencies {
 
     // Google
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'com.google.android.gms:play-services-ads:23.6.0'
-    implementation 'com.google.android.gms:play-services-oss-licenses:17.1.0'
-    implementation 'com.google.android.play:review:2.0.2'
-    implementation 'com.google.android.play:app-update:2.1.0'
-    implementation 'com.android.volley:volley:1.2.1'
+    implementation libs.material
+    implementation libs.play.services.ads
+    implementation libs.play.services.oss.licenses
+    implementation libs.review
+    implementation libs.app.update
+    implementation libs.volley
 
     // Firebase
-    implementation platform('com.google.firebase:firebase-bom:33.7.0')
-    implementation 'com.google.firebase:firebase-crashlytics'
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-perf'
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.crashlytics
+    implementation libs.firebase.analytics
+    implementation libs.google.firebase.perf
 
     // Android
-    implementation 'com.android.billingclient:billing:7.1.1'
+    implementation libs.billing
 
     // AndroidX
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
-    implementation 'androidx.core:core:1.15.0'
-    implementation 'androidx.core:core-splashscreen:1.0.1'
-    implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment:2.8.5'
-    implementation 'androidx.navigation:navigation-ui:2.8.5'
-    implementation 'androidx.preference:preference:1.2.1'
-    implementation 'androidx.lifecycle:lifecycle-runtime:2.8.7'
-    implementation 'androidx.lifecycle:lifecycle-process:2.8.7'
-    implementation 'androidx.lifecycle:lifecycle-common-java8:2.8.7'
-    implementation 'androidx.lifecycle:lifecycle-livedata:2.8.7'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.7'
-    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.core
+    implementation libs.androidx.core.splashscreen
+    implementation libs.androidx.gridlayout
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation libs.androidx.preference
+    implementation libs.androidx.lifecycle.runtime
+    implementation libs.androidx.lifecycle.process
+    implementation libs.androidx.lifecycle.livedata
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.multidex
 
-    implementation'org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3'
+    implementation libs.kotlinx.serialization.json
 
-    implementation 'com.airbnb.android:lottie:6.6.0'
-    implementation 'me.zhanghai.android.fastscroll:library:1.3.0'
-    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation libs.aboutlibraries
+    implementation libs.core
+
+    implementation libs.lottie
+    implementation libs.library
+    implementation libs.materialratingbar.library
 }

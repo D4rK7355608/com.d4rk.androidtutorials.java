@@ -56,8 +56,7 @@ public class SupportActivity extends AppCompatActivity {
         supportViewModel.querySkuDetails(skuList, skuDetailsList -> {
             for (SkuDetails skuDetails : skuDetailsList) {
                 switch (skuDetails.getSku()) {
-                    case "low_donation" ->
-                            binding.buttonLowDonation.setText(skuDetails.getPrice());
+                    case "low_donation" -> binding.buttonLowDonation.setText(skuDetails.getPrice());
                     case "normal_donation" ->
                             binding.buttonNormalDonation.setText(skuDetails.getPrice());
                     case "high_donation" ->

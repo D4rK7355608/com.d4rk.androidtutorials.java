@@ -323,58 +323,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/home/HomeFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/main/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/startup/StartupActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/dependabot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/dependabot.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_6_2024_3_29_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_6_2024_3_29_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ads/managers/AppOpenAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ads/managers/AppOpenAd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/notifications/workers/AppUsageNotificationWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/notifications/workers/AppUsageNotificationWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/about/AboutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/about/AboutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/dialogs/RequireRestartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/components/dialogs/RequireRestartDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/home/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/help/HelpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/help/HelpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/permissions/PermissionsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/screens/permissions/PermissionsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/settings/support/SupportActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/support/SupportActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/startup/StartupActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_sdk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_android_sdk.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_shortcut_kotlin_edition.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_shortcut_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v27/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v27/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night-v28/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v27/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v28/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v28/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v31/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v31/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/preferences_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/preferences_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits.">
+      <change afterPath="$PROJECT_DIR$/app/release/com.d4rk.androidtutorials.java-v5.0.0-release.aab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -677,7 +627,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735329052686</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor: App architecture rework, UI improvements, and dependency updates (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Improved code stability by addressing the Help screen entry crash. &#10;Redesigned the app home and main screens for a better user experience. &#10;Added edge-to-edge compatibility to select screens. &#10;Updated all dependencies to the latest versions. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits.">
+      <option name="closed" value="true" />
+      <created>1735382101200</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735382101200</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: App architecture rework, UI improvements, and dependency updates (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Improved code stability by addressing the Help screen entry crash. &#10;Redesigned the app home and main screens for a better user experience. &#10;Added edge-to-edge compatibility to select screens. &#10;Updated all dependencies to the latest versions. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits.">
+      <option name="closed" value="true" />
+      <created>1735386222256</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1735386222256</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits.">
+      <option name="closed" value="true" />
+      <created>1735417666699</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1735417666699</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,6 +675,8 @@
     <MESSAGE value="Updated funding" />
     <MESSAGE value="Added the new nav drawer" />
     <MESSAGE value="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont" />
+    <MESSAGE value="refactor: App architecture rework, UI improvements, and dependency updates (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Improved code stability by addressing the Help screen entry crash. &#10;Redesigned the app home and main screens for a better user experience. &#10;Added edge-to-edge compatibility to select screens. &#10;Updated all dependencies to the latest versions. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
+    <MESSAGE value="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
   </component>
 </project>

@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.BottomSheetMenuBinding;
-import com.d4rk.androidtutorials.java.ui.settings.SettingsActivity;
+import com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetMenuFragment extends BottomSheetDialogFragment {

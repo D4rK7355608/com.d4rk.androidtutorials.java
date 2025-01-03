@@ -44,14 +44,6 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding mBinding;
-    private MainViewModel mainViewModel;
-    private NavController navController;
-
-    private AppUpdateNotificationsManager appUpdateNotificationsManager;
-    private AppUpdateManager appUpdateManager;
-    private InstallStateUpdatedListener installStateUpdatedListener;
-
     private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =
             registerForActivityResult(
                     new ActivityResultContracts.StartIntentSenderForResult(),
@@ -61,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
             );
+    private ActivityMainBinding mBinding;
+    private MainViewModel mainViewModel;
+    private NavController navController;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager;
+    private AppUpdateManager appUpdateManager;
+    private InstallStateUpdatedListener installStateUpdatedListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

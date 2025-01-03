@@ -47,6 +47,7 @@ public class HelpRepository {
      */
     public interface OnReviewInfoListener {
         void onSuccess(ReviewInfo info);
+
         void onFailure(Exception e);
     }
 }

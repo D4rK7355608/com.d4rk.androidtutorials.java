@@ -26,7 +26,7 @@ public class HelpViewModel extends AndroidViewModel {
      */
     public void requestReviewFlow(Activity activity, HelpRepository.OnReviewInfoListener listener) {
         HelpRepository repository = new HelpRepository(activity);
-        repository.requestReviewFlow( listener);
+        repository.requestReviewFlow(listener);
     }
 
     /**

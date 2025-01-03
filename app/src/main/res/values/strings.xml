@@ -6,8 +6,14 @@
     <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development!</string>
     <string name="get_on_google_play">Get it on Google Play</string>
     <string name="update_downloaded">Update downloaded</string>
+    <string name="view_in_google_play">View in Google Play Store</string>
+    <string name="version_info">Version info</string>
+    <string name="beta_program">Beta program</string>
+    <string name="open_source_licenses">Open source licenses</string>
+    <string name="version">Version %1$s</string>
 
-    <string name="app_description">Learn how to make simple apps in Android Studio. 📱</string>
+
+    <string name="app_short_description">Learn how to make simple apps in Android Studio. 📱</string>
     <string name="app_usage_notifications">App Usage Notifications</string>
     <string name="update_notifications">Update Notifications</string>
     <string name="welcome">Welcome</string>
@@ -223,7 +229,6 @@
     <string name="app_updates">App updates</string>
     <string name="check_for_updates">Check for updates…</string>
     <string name="subscribe_to_beta">Subscribe to beta updates</string>
-    <string name="changelog">Changelog</string>
     <string name="privacy_and_security">Privacy and security</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="terms_of_service">Terms of service</string>
@@ -266,7 +271,6 @@
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="music">Music</string>
     <string name="made_in">Made with ❤ in Romania!</string>
-    <string name="copyright">© Copyright %1$s, made by D4rK!</string>
     <string name="alert_dialog_close">Close?</string>
     <string name="alert_dialog_require_restart">Require restart!</string>
     <string name="notification_last_time_used_title">It\'s been a while!</string>

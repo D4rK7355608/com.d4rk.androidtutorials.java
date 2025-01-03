@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="SplashScreenTheme" parent="Theme.SplashScreen">
@@ -7,19 +8,22 @@
         <item name="postSplashScreenTheme">@style/MainTheme</item>
     </style>
 
-    <style name="AppTheme" parent="@style/AppThemeActionBar">
+    <style name="AppTheme" parent="Theme.Material3.DynamicColors.DayNight">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="MainTheme" parent="@style/AppThemeActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="aboutLibrariesStyle">@style/AppTheme</item>
         <item name="android:navigationBarColor">?attr/colorSurfaceContainer</item>
     </style>
 
     <style name="AppThemeActionBar" parent="Theme.Material3.DynamicColors.DayNight">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="aboutLibrariesStyle">@style/AppTheme</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">?attr/colorSurface</item>

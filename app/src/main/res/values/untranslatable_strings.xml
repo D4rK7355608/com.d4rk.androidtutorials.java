@@ -31,28 +31,20 @@
     <string name="poppins" translatable="false">Poppins</string>
     <string name="roboto_mono" translatable="false">Roboto Mono</string>
     <string name="arch" translatable="false">Arch:</string>
+    <string name="copyright" translatable="false">Copyright ©2023-2025, D4rK</string>
     <string name="summary_preference_settings_license" translatable="false">General Public License-3.0</string>
     <string name="feedback_for" translatable="false">Feedback for </string>
     <string name="dear_developer" translatable="false">Dear developer, </string>
     <string name="send_email_using" translatable="false">Send mail using:</string>
     <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
-    <string name="changes" translatable="false">\n
-        • Added a new lesson on using Per-app language preferences.\n\n
-        • Added a new lesson on using Progress Bar.\n\n
-        • Added a new lesson on using Chronometer.\n\n
-        • Added a new lesson on using Simple Notifications.\n\n
-        • Added a new lesson on using Inbox Style Notifications.\n\n
-        • Added a new support page to show appreciation and gratitude to the developer.\n\n
-        • Added snack bars instead of toasts for all notifications.\n\n
-        • Added a new GDPR message to comply with Google Play policy.\n\n
-        • Added a new help center, with more comprehensive documentation and support options.\n\n
-        • Added tooltips to help users understand what is happening in the app.\n\n
-        • Redesigned the Buttons, Switches, Images, Image Buttons and Linear Layout lessons to make them more user-friendly.\n\n
-        • Made various project structure enhancements for better readability and maintainability.\n\n
-        • Made various under-the-hood improvements for a better overall app experience.
-    </string>
-    
-    
-    
+
+
+    <string name="eula_title" translatable="false">EULA</string>
+    <string name="changelog">CHANGELOG</string>
+    <string name="loading_eula">Loading EULA</string>
+    <string name="error_loading_eula">Error loading EULA</string>
+    <string name="loading_changelog">Loading changelog</string>
+    <string name="error_loading_changelog">Error loading changelog</string>
+
     <string name="ad_banner_unit_id">ca-app-pub-5294151573817700/3821250346</string>
 </resources>

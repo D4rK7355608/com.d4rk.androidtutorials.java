@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.help;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,17 +10,22 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
+import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
+import com.mikepenz.aboutlibraries.LibsBuilder;
 
 public class HelpActivity extends AppCompatActivity {
 
@@ -63,16 +69,82 @@ public class HelpActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.dev_mail) {
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            emailIntent.setType("text/email");
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"d4rk7355608@gmail.com"});
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback_for) + getString(R.string.app_name));
-            emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.dear_developer));
-            startActivity(Intent.createChooser(emailIntent, getString(R.string.send_email_using)));
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.view_in_google_play) {
+            openGooglePlayListing();
             return true;
+        } else if (itemId == R.id.version_info) {
+            showVersionInfoDialog();
+            return true;
+        } else if (itemId == R.id.beta_program) {
+            openLink("https://play.google.com/apps/testing/" + getPackageName());
+            return true;
+        } else if (itemId == R.id.terms_of_service) {
+            openLink("https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service");
+            return true;
+        } else if (itemId == R.id.privacy_policy) {
+            openLink("https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy");
+            return true;
+        } else if (itemId == R.id.oss) {
+            OpenSourceLicensesUtils.loadHtmlData(this, (changelogHtml, eulaHtml) -> openLicensesScreen(this, eulaHtml, changelogHtml));
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+    }
+
+    private void openLicensesScreen(Context context, String eulaHtmlString, String changelogHtmlString) {
+        new LibsBuilder()
+                .withActivityTitle(context.getString(R.string.open_source_licenses))
+                .withEdgeToEdge(true)
+                .withShowLoadingProgress(true)
+                .withSearchEnabled(true)
+                .withAboutIconShown(true)
+                .withAboutAppName(context.getString(R.string.app_name))
+                .withVersionShown(true)
+                .withAboutVersionString(BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")")
+                .withLicenseShown(true)
+                .withAboutVersionShown(true)
+                .withAboutSpecial1(context.getString(R.string.eula_title))
+                .withAboutSpecial1Description(
+                        eulaHtmlString != null ? eulaHtmlString : context.getString(R.string.loading_eula)
+                )
+                .withAboutSpecial2(context.getString(R.string.changelog))
+                .withAboutSpecial2Description(
+                        changelogHtmlString != null ? changelogHtmlString : context.getString(R.string.loading_changelog)
+                )
+                .withAboutDescription(context.getString(R.string.app_short_description))
+                .start(context);
+    }
+
+
+    private void showVersionInfoDialog() {
+        DialogVersionInfoBinding binding = DialogVersionInfoBinding.inflate(getLayoutInflater());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(binding.getRoot());
+
+        binding.appIcon.setImageResource(R.mipmap.ic_launcher);
+        binding.appName.setText(getString(R.string.app_name));
+        binding.appVersion.setText(getString(R.string.version, BuildConfig.VERSION_NAME));
+        binding.appCopyright.setText(getString(R.string.copyright));
+
+        builder.setPositiveButton(android.R.string.ok, (dialog, which) -> dialog.dismiss());
+        builder.show();
+    }
+
+    private void openGooglePlayListing() {
+        final String appPackageName = getPackageName();
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+        }
+    }
+
+    private void openLink(String url) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
     }
 
     public static class FaqFragment extends PreferenceFragmentCompat {

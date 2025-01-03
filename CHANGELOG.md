@@ -1,3 +1,15 @@
+# Version 5.0.0:
+
+- Added a new About Libraries screen with detailed information about the used open-source libraries.
+- Implemented the EULA (End-User License Agreement) for enhanced user transparency.
+- Reworked the home screen for a more modern and user-friendly look and feel.
+- Fixed critical bugs and crashes that were affecting app stability.
+- Added support for edge-to-edge displays for a more immersive user experience.
+- Reworked the app structure for improved maintainability and scalability.
+- Updated all dependencies to the latest versions for enhanced performance and security.
+- Removed unused dependencies to streamline the project.
+- Added a `libs.versions.toml` file to manage and track library versions efficiently.
+
 # Version 4.0_r1:
 
 - Added a new lesson on using Per-app language preferences.

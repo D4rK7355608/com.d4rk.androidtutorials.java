@@ -19,12 +19,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/** @noinspection deprecation*/
+/**
+ * @noinspection deprecation
+ */
 public class SupportRepository {
 
     private final Context context;
-    private BillingClient billingClient;
     private final Map<String, SkuDetails> skuDetailsMap = new HashMap<>();
+    private BillingClient billingClient;
 
     public SupportRepository(Context context) {
         this.context = context.getApplicationContext();
@@ -32,6 +34,7 @@ public class SupportRepository {
 
     /**
      * Initialize the billing client and start the connection.
+     *
      * @param onConnected Callback once the billing service is connected.
      */
     public void initBillingClient(Runnable onConnected) {
@@ -51,6 +54,7 @@ public class SupportRepository {
                     }
                 }
             }
+
             @Override
             public void onBillingServiceDisconnected() {
                 // Attempt reconnection or handle gracefully

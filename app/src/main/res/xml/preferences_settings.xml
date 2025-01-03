@@ -63,24 +63,6 @@
             app:title="@string/firebase" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_play_store_tinted"
-        app:title="@string/app_updates">
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_update"
-            app:title="@string/check_for_updates">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials.java" />
-        </androidx.preference.Preference>
-        <androidx.preference.Preference
-            app:icon="@drawable/ic_experimental"
-            app:title="@string/subscribe_to_beta">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/apps/testing/com.d4rk.androidtutorials.java" />
-        </androidx.preference.Preference>
-    </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_safety_check_tinted"
         app:title="@string/privacy_and_security">
         <androidx.preference.Preference
@@ -108,7 +90,7 @@
             app:icon="@drawable/ic_permissions"
             app:title="@string/permissions">
             <intent
-                android:targetClass="com.d4rk.androidtutorials.java.ui.settings.screens.permissions.PermissionsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.settings.screens.permissions.PermissionsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
