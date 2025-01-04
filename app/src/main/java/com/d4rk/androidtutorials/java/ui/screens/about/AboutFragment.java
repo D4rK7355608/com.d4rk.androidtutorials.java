@@ -44,11 +44,6 @@ public class AboutFragment extends Fragment {
         String version = aboutViewModel.getVersionString();
         binding.textViewAppVersion.setText(version);
 
-        String dateText = aboutViewModel.getCurrentYear();
-        String copyright =
-                requireContext().getString(R.string.copyright, dateText);
-        binding.textViewCopyright.setText(copyright);
-
         binding.textViewAppVersion.setOnLongClickListener(v -> {
             ClipboardManager clipboard = (ClipboardManager)
                     requireContext().getSystemService(Context.CLIPBOARD_SERVICE);

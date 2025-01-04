@@ -6,7 +6,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.d4rk.androidtutorials.java.R;
@@ -41,6 +43,7 @@ public class AppUpdateNotificationsManager {
      * to update the app via the Play Store. The notification includes a deep link to the app's
      * Play Store listing.
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void checkAndSendUpdateNotification() {
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
