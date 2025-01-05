@@ -4,17 +4,7 @@ import com.d4rk.androidtutorials.java.R;
 
 public class LessonRepository {
 
-    public static class Lesson {
-        public final int titleResId;
-        public final int codeResId;
-        public final int layoutResId;
-
-        public Lesson(int titleResId, int codeResId, int layoutResId) {
-            this.titleResId = titleResId;
-            this.codeResId = codeResId;
-            this.layoutResId = layoutResId;
-        }
-    }
+    public record Lesson(int titleResId, int codeResId, int layoutResId) { }
 
     public Lesson getLesson(String lessonName) {
         return switch (lessonName) {
@@ -46,6 +36,10 @@ public class LessonRepository {
                     new Lesson(R.string.password_box, R.raw.text_password_java, R.raw.text_password_java);
             case "TextBox" ->
                     new Lesson(R.string.textbox, R.raw.text_textbox_java, R.raw.text_textbox_xml);
+            case "GridView" ->
+                    new Lesson(R.string.grid_view, R.raw.text_grid_view_java, R.raw.text_grid_view_xml);
+            case "WebView" ->
+                    new Lesson(R.string.web_view, R.raw.text_webview_java, R.raw.text_webview_xml);
             default -> throw new IllegalArgumentException("Unknown lesson: " + lessonName);
         };
     }

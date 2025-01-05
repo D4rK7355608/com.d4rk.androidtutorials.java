@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,12 +25,10 @@ import java.io.InputStreamReader;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-// CodeFragment.java
 public class CodeFragment extends Fragment {
     private FragmentCodeBinding binding;
     private int codeResId;
 
-    // Factory method to create a new instance with the code resource ID
     public static CodeFragment newInstance(int codeResId) {
         CodeFragment fragment = new CodeFragment();
         Bundle args = new Bundle();
@@ -75,7 +74,7 @@ public class CodeFragment extends Fragment {
             }
             binding.textView.setText(builder.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("Android Code Fragment", "Error loading code from resource ID: " + codeResId, e);
             binding.textView.setText(R.string.error_loading_code);
         }
     }

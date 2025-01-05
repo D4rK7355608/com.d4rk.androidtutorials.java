@@ -24,7 +24,8 @@ public class PermissionsTutorialActivity extends AppCompatActivity {
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
+        binding.adViewLarge.loadAd(new AdRequest.Builder().build());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.buttonMore.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/guide/topics/permissions/overview"))));
     }

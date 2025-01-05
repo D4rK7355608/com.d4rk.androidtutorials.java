@@ -38,7 +38,7 @@ public class CodeActivity extends AppCompatActivity {
 
         viewModel.getLesson().observe(this, lesson -> {
             setupViewPager(lesson);
-            setTitle(getString(lesson.titleResId));
+            setTitle(getString(lesson.titleResId()));
         });
     }
 
@@ -69,8 +69,8 @@ public class CodeActivity extends AppCompatActivity {
         @Override
         public Fragment createFragment(int position) {
             return position == 0
-                    ? CodeFragment.newInstance(lesson.codeResId)
-                    : LayoutFragment.newInstance(lesson.layoutResId);
+                    ? CodeFragment.newInstance(lesson.codeResId())
+                    : LayoutFragment.newInstance(lesson.layoutResId());
         }
 
         @Override

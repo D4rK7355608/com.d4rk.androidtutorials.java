@@ -12,7 +12,7 @@ android {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
         targetSdk 35
-        versionCode 29
+        versionCode 30
         versionName '5.0.0'
         archivesBaseName = "${applicationId}-v${versionName}"
         vectorDrawables.useSupportLibrary = true

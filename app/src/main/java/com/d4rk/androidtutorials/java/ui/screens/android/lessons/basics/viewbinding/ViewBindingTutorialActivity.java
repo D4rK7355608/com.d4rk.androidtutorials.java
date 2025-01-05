@@ -35,6 +35,7 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
+        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
         binding.adView.loadAd(new AdRequest.Builder().build());
         binding.moreAboutViewBindingButton.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
         InputStream bindingGradle = getResources().openRawResource(R.raw.text_binding_gradle);

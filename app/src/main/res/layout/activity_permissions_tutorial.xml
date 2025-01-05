@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <me.zhanghai.android.fastscroll.FastScrollScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
@@ -18,6 +17,15 @@
             android:text="@string/summary_permissions"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:adSize="LARGE_BANNER"
+            app:adUnitId="@string/ad_banner_unit_id"
+            app:layout_constraintTop_toBottomOf="@id/text_view_permissions_beginning" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_view_permissions_dialog"
             style="@style/TextAppearance.Material3.TitleLarge"
@@ -25,8 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:text="@string/permission_dialog_example"
-
-            app:layout_constraintTop_toBottomOf="@id/text_view_permissions_beginning" />
+            app:layout_constraintTop_toBottomOf="@id/ad_view_large" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view_lottie_animation"
@@ -65,28 +72,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_view_lottie_animation" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linear_layout_view_ad"
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_more">
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_view_ad"
-                style="@style/Widget.Material3.CardView.Outlined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="24dp">
-
-                <com.google.android.gms.ads.AdView
-                    android:id="@+id/ad_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    ads:adSize="FULL_BANNER"
-                    ads:adUnitId="@string/ad_banner_unit_id" />
-            </com.google.android.material.card.MaterialCardView>
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_margin="24dp"
+            app:adSize="FULL_BANNER"
+            app:adUnitId="@string/ad_banner_unit_id"
+            app:layout_constraintTop_toBottomOf="@id/button_more" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>

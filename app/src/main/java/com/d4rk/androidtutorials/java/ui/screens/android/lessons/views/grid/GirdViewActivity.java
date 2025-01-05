@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
+import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
 public class GirdViewActivity extends AppCompatActivity {
 
@@ -28,7 +29,11 @@ public class GirdViewActivity extends AppCompatActivity {
             final TextView textView = view.findViewById(android.R.id.text1);
             Toast.makeText(this, textView.getText(), Toast.LENGTH_SHORT).show();
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(this, GirdViewCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CodeActivity.class);
+            intent.putExtra("lesson_name", "GridView");
+            startActivity(intent);
+        });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 }

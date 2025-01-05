@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityWebviewBinding;
+import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -36,7 +37,11 @@ public class WebViewActivity extends AppCompatActivity {
     }
 
     private void setupFloatingButton() {
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(WebViewActivity.this, WebViewCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CodeActivity.class);
+            intent.putExtra("lesson_name", "WebView");
+            startActivity(intent);
+        });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 }
