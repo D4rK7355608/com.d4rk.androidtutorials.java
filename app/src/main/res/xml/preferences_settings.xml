@@ -97,7 +97,7 @@
         <androidx.preference.Preference
             app:icon="@drawable/ic_libraries"
             app:key="open_source_licenses"
-            app:title="@string/oss_license_title" />
+            app:title="@string/open_source_licenses" />
         <androidx.preference.Preference
             app:icon="@drawable/ic_license"
             app:summary="@string/summary_preference_settings_license"

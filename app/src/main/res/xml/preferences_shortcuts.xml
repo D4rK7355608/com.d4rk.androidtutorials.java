@@ -8,7 +8,7 @@
         app:title="@string/general">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.GeneralShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -18,7 +18,7 @@
         app:title="@string/refactoring">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.RefactoringShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -28,7 +28,7 @@
         app:title="@string/build_and_run">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.BuildShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -38,7 +38,7 @@
         app:title="@string/debugging">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.DebuggingShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -48,7 +48,7 @@
         app:title="@string/navigation_and_searching">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -58,7 +58,7 @@
         app:title="@string/writing_code">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.CodeShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
     <androidx.preference.Preference
@@ -68,7 +68,7 @@
         app:title="@string/version_control">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.VersionControlShortcutsActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </androidx.preference.Preference>
 </androidx.preference.PreferenceScreen>

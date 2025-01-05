@@ -12,6 +12,8 @@
     <string name="beta_program">Beta program</string>
     <string name="open_source_licenses">Open source licenses</string>
     <string name="version">Version %1$s</string>
+    <string name="error_loading_layout">Error loading layout</string>
+    <string name="error_loading_code">Error loading code</string>
 
 
     <string name="app_short_description">Learn how to make simple apps in Android Studio. 📱</string>

@@ -118,7 +118,6 @@ public class HelpActivity extends AppCompatActivity {
                 .start(context);
     }
 
-
     private void showVersionInfoDialog() {
         DialogVersionInfoBinding binding = DialogVersionInfoBinding.inflate(getLayoutInflater());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

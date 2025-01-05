@@ -10,7 +10,7 @@
             app:title="@string/android_start">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.start.AndroidStartProjectActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.start.AndroidStartProjectActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -23,7 +23,7 @@
             app:title="@string/shortcuts">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.shortcuts.ShortcutsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -32,7 +32,7 @@
             app:title="@string/history_of_android">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.history.AndroidHistory"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.history.AndroidHistory"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -41,7 +41,7 @@
             app:title="@string/android_sdk">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.sdk.AndroidSDK"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.sdk.AndroidSDK"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -50,7 +50,7 @@
             app:title="@string/view_binding">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.viewbinding.ViewBindingTutorialActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.viewbinding.ViewBindingTutorialActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -59,7 +59,7 @@
             app:title="@string/permissions">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.basics.permissions.PermissionsTutorialActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.permissions.PermissionsTutorialActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -88,7 +88,7 @@
             app:title="@string/linear_layout">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.layouts.linear.LinearLayoutActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.LinearLayoutActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -97,7 +97,7 @@
             app:title="@string/relative_layout">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.layouts.relative.RelativeLayoutActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relative.RelativeLayoutActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -106,7 +106,7 @@
             app:title="@string/table_layout">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.layouts.table.TableLayoutActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.table.TableLayoutActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -115,7 +115,7 @@
             app:title="@string/grid_view">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.views.grid.GirdViewActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.grid.GirdViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -124,7 +124,7 @@
             app:title="@string/image_view">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.views.images.ImagesActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.ImagesActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -133,7 +133,7 @@
             app:title="@string/web_view">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.webviews.WebViewActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.webviews.WebViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -146,7 +146,7 @@
             app:title="@string/buttons">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.buttons.buttons.ButtonsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.ButtonsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -155,7 +155,7 @@
             app:title="@string/radio_buttons">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.buttons.radio.RadioButtonsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.radio.RadioButtonsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -164,7 +164,7 @@
             app:title="@string/image_buttons">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.buttons.image.ImageButtonsActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.image.ImageButtonsActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -173,7 +173,7 @@
             app:title="@string/switches">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.buttons.switches.SwitchActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.switches.SwitchActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -186,7 +186,7 @@
             app:title="@string/clocks">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.clocks.clock.ClockActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.ClockActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -195,7 +195,7 @@
             app:title="@string/timepicker">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.clocks.timepicker.TimePickerActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.timepicker.TimePickerActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -204,7 +204,7 @@
             app:title="@string/datepicker">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.clocks.datepicker.DatePickerActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.datepicker.DatePickerActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -213,7 +213,7 @@
             app:title="@string/chronometer">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.clocks.chronometer.ChronometerActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.chronometer.ChronometerActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -226,7 +226,7 @@
             app:title="@string/textbox">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.textboxes.textbox.TextboxActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.textboxes.textbox.TextboxActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -235,7 +235,7 @@
             app:title="@string/password_box">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.textboxes.passwordbox.PasswordBoxActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.textboxes.passwordbox.PasswordBoxActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -248,7 +248,7 @@
             app:title="@string/alert_dialog">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.alerts.alertdialog.AlertDialogActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.alerts.alertdialog.AlertDialogActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -257,7 +257,7 @@
             app:title="@string/snack_bar">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.alerts.snackbar.SnackBarActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.alerts.snackbar.SnackBarActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -266,7 +266,7 @@
             app:title="@string/toast">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.alerts.toast.ToastActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.alerts.toast.ToastActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -287,7 +287,7 @@
             app:title="@string/rating_bar">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.reviews.ratingbar.RatingBarActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.reviews.ratingbar.RatingBarActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -308,7 +308,7 @@
             app:title="@string/progress_bar">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.progress.progressbar.ProgressBarActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.ProgressBarActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
@@ -321,7 +321,7 @@
             app:title="@string/simple_notifications">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.notifications.simple.SimpleNotificationActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.notifications.simple.SimpleNotificationActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -330,7 +330,7 @@
             app:title="@string/inbox_notifications">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.android.notifications.inbox.InboxNotificationActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.notifications.inbox.InboxNotificationActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>

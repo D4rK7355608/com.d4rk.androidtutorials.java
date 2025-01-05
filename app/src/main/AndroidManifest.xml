@@ -18,6 +18,7 @@
         </intent>
         <package android:name="com.d4rk.androidtutorials" />
     </queries>
+
     <application
         android:name=".ads.managers.AppOpenAd"
         android:appCategory="productivity"
@@ -32,6 +33,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeActionBar"
         tools:targetApi="33">
+
+        <activity
+            android:name=".ui.screens.startup.StartupActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+
         <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="true"
@@ -46,10 +53,6 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity
-            android:name=".ui.screens.startup.StartupActivity"
-            android:noHistory="true"
-            android:theme="@style/AppTheme" />
 
         <activity
             android:name="com.mikepenz.aboutlibraries.ui.LibsActivity"
@@ -57,267 +60,208 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".ui.android.buttons.switches.SwitchCodeActivity"
+            android:name=".ui.screens.android.CodeActivity"
             android:exported="false"
-            android:label="@string/switches"
-            android:parentActivityName=".ui.android.buttons.switches.SwitchCodeActivity" />
+            android:parentActivityName=".ui.screens.android.CodeActivity" />
+
         <activity
-            android:name=".ui.android.buttons.radio.RadioButtonsActivity"
+            android:name=".ui.screens.android.lessons.buttons.radio.RadioButtonsActivity"
             android:exported="false"
             android:label="@string/radio_buttons"
-            android:parentActivityName=".ui.android.buttons.radio.RadioButtonsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.buttons.radio.RadioButtonsActivity" />
+
         <activity
-            android:name=".ui.android.buttons.radio.RadioButtonsCodeActivity"
-            android:exported="false"
-            android:label="@string/radio_buttons"
-            android:parentActivityName=".ui.android.buttons.radio.RadioButtonsCodeActivity" />
-        <activity
-            android:name=".ui.android.alerts.toast.ToastActivity"
+            android:name=".ui.screens.android.lessons.alerts.toast.ToastActivity"
             android:exported="false"
             android:label="@string/toast"
-            android:parentActivityName=".ui.android.alerts.toast.ToastActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.alerts.toast.ToastActivity" />
         <activity
-            android:name=".ui.android.alerts.toast.ToastCodeActivity"
-            android:exported="false"
-            android:label="@string/toast"
-            android:parentActivityName=".ui.android.alerts.toast.ToastCodeActivity" />
-        <activity
-            android:name=".ui.android.buttons.image.ImageButtonsActivity"
+            android:name=".ui.screens.android.lessons.buttons.image.ImageButtonsActivity"
             android:exported="false"
             android:label="@string/image_buttons"
-            android:parentActivityName=".ui.android.buttons.image.ImageButtonsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.buttons.image.ImageButtonsActivity" />
         <activity
-            android:name=".ui.android.buttons.image.ImageButtonsCodeActivity"
-            android:exported="false"
-            android:label="@string/image_buttons"
-            android:parentActivityName=".ui.android.buttons.image.ImageButtonsCodeActivity" />
-        <activity
-            android:name=".ui.android.views.images.ImagesActivity"
+            android:name=".ui.screens.android.lessons.views.images.ImagesActivity"
             android:exported="false"
             android:label="@string/image_view"
-            android:parentActivityName=".ui.android.views.images.ImagesActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.images.ImagesActivity" />
         <activity
-            android:name=".ui.android.views.images.ImagesCodeActivity"
+            android:name=".ui.screens.android.lessons.views.images.ImagesCodeActivity"
             android:exported="false"
             android:label="@string/image_view"
-            android:parentActivityName=".ui.android.views.images.ImagesCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.images.ImagesCodeActivity" />
         <activity
-            android:name=".ui.android.alerts.snackbar.SnackBarActivity"
+            android:name=".ui.screens.android.lessons.alerts.snackbar.SnackBarActivity"
             android:exported="false"
             android:label="@string/snack_bar"
-            android:parentActivityName=".ui.android.alerts.snackbar.SnackBarActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.alerts.snackbar.SnackBarActivity" />
         <activity
-            android:name=".ui.android.alerts.snackbar.SnackBarCodeActivity"
-            android:exported="false"
-            android:label="@string/snack_bar"
-            android:parentActivityName=".ui.android.alerts.snackbar.SnackBarCodeActivity" />
-        <activity
-            android:name=".ui.android.clocks.clock.ClockCodeActivity"
+            android:name=".ui.screens.android.lessons.clocks.clock.ClockCodeActivity"
             android:exported="false"
             android:label="@string/clocks"
-            android:parentActivityName=".ui.android.clocks.clock.ClockCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.clocks.clock.ClockCodeActivity" />
         <activity
-            android:name=".ui.android.clocks.clock.ClockActivity"
+            android:name=".ui.screens.android.lessons.clocks.clock.ClockActivity"
             android:exported="false"
             android:label="@string/clocks"
-            android:parentActivityName=".ui.android.clocks.clock.ClockActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.clocks.clock.ClockActivity" />
         <activity
-            android:name=".ui.android.clocks.timepicker.TimePickerCodeActivity"
+            android:name=".ui.screens.android.lessons.clocks.timepicker.TimePickerActivity"
             android:exported="false"
             android:label="@string/timepicker"
-            android:parentActivityName=".ui.android.clocks.timepicker.TimePickerCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.clocks.timepicker.TimePickerActivity" />
         <activity
-            android:name=".ui.android.clocks.timepicker.TimePickerActivity"
-            android:exported="false"
-            android:label="@string/timepicker"
-            android:parentActivityName=".ui.android.clocks.timepicker.TimePickerActivity" />
-        <activity
-            android:name=".ui.android.views.web.WebViewActivity"
+            android:name=".ui.screens.android.lessons.views.web.WebViewActivity"
             android:exported="false"
             android:label="@string/web_view"
-            android:parentActivityName=".ui.android.views.web.WebViewActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.web.WebViewActivity" />
         <activity
-            android:name=".ui.android.views.web.WebViewCodeActivity"
+            android:name=".ui.screens.android.lessons.views.web.WebViewCodeActivity"
             android:exported="false"
             android:label="@string/web_view"
-            android:parentActivityName=".ui.android.views.web.WebViewCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.web.WebViewCodeActivity" />
         <activity
-            android:name=".ui.android.progress.progressbar.ProgressBarActivity"
+            android:name=".ui.screens.android.lessons.progress.progressbar.ProgressBarActivity"
             android:exported="false"
             android:label="@string/progress_bar"
-            android:parentActivityName=".ui.android.progress.progressbar.ProgressBarActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.progress.progressbar.ProgressBarActivity" />
         <activity
-            android:name=".ui.android.progress.progressbar.ProgressBarCodeActivity"
+            android:name=".ui.screens.android.lessons.progress.progressbar.ProgressBarCodeActivity"
             android:exported="false"
             android:label="@string/progress_bar"
-            android:parentActivityName=".ui.android.progress.progressbar.ProgressBarCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.progress.progressbar.ProgressBarCodeActivity" />
         <activity
-            android:name=".ui.android.notifications.simple.SimpleNotificationActivity"
+            android:name=".ui.screens.android.lessons.notifications.simple.SimpleNotificationActivity"
             android:exported="false"
             android:label="@string/simple_notifications"
-            android:parentActivityName=".ui.android.notifications.simple.SimpleNotificationActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.notifications.simple.SimpleNotificationActivity" />
         <activity
-            android:name=".ui.android.notifications.simple.SimpleNotificationCodeActivity"
-            android:exported="false"
-            android:label="@string/simple_notifications"
-            android:parentActivityName=".ui.android.notifications.simple.SimpleNotificationCodeActivity" />
-        <activity
-            android:name=".ui.android.notifications.inbox.InboxNotificationActivity"
+            android:name=".ui.screens.android.lessons.notifications.inbox.InboxNotificationActivity"
             android:exported="false"
             android:label="@string/inbox_notifications"
-            android:parentActivityName=".ui.android.notifications.inbox.InboxNotificationActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.notifications.inbox.InboxNotificationActivity" />
         <activity
-            android:name=".ui.android.notifications.inbox.InboxNotificationCodeActivity"
-            android:exported="false"
-            android:label="@string/inbox_notifications"
-            android:parentActivityName=".ui.android.notifications.inbox.InboxNotificationCodeActivity" />
-        <activity
-            android:name=".ui.android.textboxes.passwordbox.PasswordBoxActivity"
+            android:name=".ui.screens.android.lessons.textboxes.passwordbox.PasswordBoxActivity"
             android:exported="false"
             android:label="@string/password_box"
-            android:parentActivityName=".ui.android.textboxes.passwordbox.PasswordBoxActivity"
+            android:parentActivityName=".ui.screens.android.lessons.textboxes.passwordbox.PasswordBoxActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.android.textboxes.passwordbox.PasswordBoxCodeActivity"
-            android:exported="false"
-            android:label="@string/password_box"
-            android:parentActivityName=".ui.android.textboxes.passwordbox.PasswordBoxCodeActivity" />
-        <activity
-            android:name=".ui.android.clocks.datepicker.DatePickerCodeActivity"
+            android:name=".ui.screens.android.lessons.clocks.datepicker.DatePickerActivity"
             android:exported="false"
             android:label="@string/datepicker"
-            android:parentActivityName=".ui.android.clocks.datepicker.DatePickerCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.clocks.datepicker.DatePickerActivity" />
         <activity
-            android:name=".ui.android.clocks.datepicker.DatePickerActivity"
-            android:exported="false"
-            android:label="@string/datepicker"
-            android:parentActivityName=".ui.android.clocks.datepicker.DatePickerActivity" />
-        <activity
-            android:name=".ui.android.textboxes.textbox.TextboxActivity"
+            android:name=".ui.screens.android.lessons.textboxes.textbox.TextboxActivity"
             android:exported="false"
             android:label="@string/textbox"
-            android:parentActivityName=".ui.android.textboxes.textbox.TextboxActivity"
+            android:parentActivityName=".ui.screens.android.lessons.textboxes.textbox.TextboxActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.android.textboxes.textbox.TextboxCodeActivity"
-            android:exported="false"
-            android:label="@string/textbox"
-            android:parentActivityName=".ui.android.textboxes.textbox.TextboxCodeActivity" />
-        <activity
-            android:name=".ui.android.alerts.alertdialog.AlertDialogActivity"
+            android:name=".ui.screens.android.lessons.alerts.alertdialog.AlertDialogActivity"
             android:exported="false"
             android:label="@string/alert_dialog"
-            android:parentActivityName=".ui.android.alerts.alertdialog.AlertDialogActivity" />
-        <activity
-            android:name=".ui.android.alerts.alertdialog.AlertDialogCodeActivity"
-            android:exported="false"
-            android:label="@string/alert_dialog"
-            android:parentActivityName=".ui.android.alerts.alertdialog.AlertDialogCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.alerts.alertdialog.AlertDialogActivity" />
         <activity
             android:name=".ui.screens.settings.screens.permissions.PermissionsActivity"
             android:exported="false"
             android:label="@string/permissions"
             android:parentActivityName=".ui.screens.settings.screens.permissions.PermissionsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.ShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity"
             android:exported="false"
             android:label="@string/shortcuts"
-            android:parentActivityName=".ui.android.basics.shortcuts.ShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.CodeShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.CodeShortcutsActivity"
             android:exported="false"
             android:label="@string/writing_code"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.CodeShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.CodeShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.GeneralShortcutsActivity"
             android:exported="false"
             android:label="@string/general"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.GeneralShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.GeneralShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.RefactoringShortcutsActivity"
             android:exported="false"
             android:label="@string/refactoring"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.RefactoringShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.RefactoringShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.BuildShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.BuildShortcutsActivity"
             android:exported="false"
             android:label="@string/build_and_run"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.BuildShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.BuildShortcutsActivity" />
         <activity
-            android:name=".ui.android.clocks.chronometer.ChronometerActivity"
+            android:name=".ui.screens.android.lessons.clocks.chronometer.ChronometerActivity"
             android:exported="false"
             android:label="@string/chronometer"
-            android:parentActivityName=".ui.android.clocks.chronometer.ChronometerActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.clocks.chronometer.ChronometerActivity" />
         <activity
-            android:name=".ui.android.clocks.chronometer.ChronometerCodeActivity"
-            android:exported="false"
-            android:label="@string/chronometer"
-            android:parentActivityName=".ui.android.clocks.chronometer.ChronometerCodeActivity" />
-        <activity
-            android:name=".ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.DebuggingShortcutsActivity"
             android:exported="false"
             android:label="@string/debugging"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.DebuggingShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.DebuggingShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
             android:exported="false"
             android:label="@string/navigation_and_searching"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.VersionControlShortcutsActivity"
             android:exported="false"
             android:label="@string/version_control"
-            android:parentActivityName=".ui.android.basics.shortcuts.tabs.VersionControlShortcutsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.tabs.VersionControlShortcutsActivity" />
         <activity
-            android:name=".ui.android.basics.history.AndroidHistory"
+            android:name=".ui.screens.android.lessons.basics.history.AndroidHistory"
             android:exported="false"
             android:label="@string/history_of_android"
-            android:parentActivityName=".ui.android.basics.history.AndroidHistory" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.history.AndroidHistory" />
         <activity
-            android:name=".ui.android.buttons.buttons.ButtonsCodeActivity"
+            android:name=".ui.screens.android.lessons.buttons.buttons.ButtonsCodeActivity"
             android:exported="false"
             android:label="@string/buttons"
-            android:parentActivityName=".ui.android.buttons.buttons.ButtonsCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.buttons.buttons.ButtonsCodeActivity" />
         <activity
-            android:name=".ui.android.layouts.linear.LinearLayoutActivity"
+            android:name=".ui.screens.android.lessons.layouts.linear.LinearLayoutActivity"
             android:exported="false"
             android:label="@string/linear_layout"
-            android:parentActivityName=".ui.android.layouts.linear.LinearLayoutActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.linear.LinearLayoutActivity" />
         <activity
-            android:name=".ui.android.layouts.linear.LinearLayoutCodeActivity"
+            android:name=".ui.screens.android.lessons.layouts.linear.LinearLayoutCodeActivity"
             android:exported="false"
             android:label="@string/linear_layout"
-            android:parentActivityName=".ui.android.layouts.linear.LinearLayoutCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.linear.LinearLayoutCodeActivity" />
         <activity
-            android:name=".ui.android.layouts.relative.RelativeLayoutActivity"
+            android:name=".ui.screens.android.lessons.layouts.relative.RelativeLayoutActivity"
             android:exported="false"
             android:label="@string/relative_layout"
-            android:parentActivityName=".ui.android.layouts.relative.RelativeLayoutActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.relative.RelativeLayoutActivity" />
         <activity
-            android:name=".ui.android.layouts.relative.RelativeLayoutCodeActivity"
+            android:name=".ui.screens.android.lessons.layouts.relative.RelativeLayoutCodeActivity"
             android:exported="false"
             android:label="@string/relative_layout"
-            android:parentActivityName=".ui.android.layouts.relative.RelativeLayoutCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.relative.RelativeLayoutCodeActivity" />
         <activity
-            android:name=".ui.android.layouts.table.TableLayoutActivity"
+            android:name=".ui.screens.android.lessons.layouts.table.TableLayoutActivity"
             android:exported="false"
             android:label="@string/table_layout"
-            android:parentActivityName=".ui.android.layouts.table.TableLayoutActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.table.TableLayoutActivity" />
         <activity
-            android:name=".ui.android.layouts.table.TableLayoutCodeActivity"
+            android:name=".ui.screens.android.lessons.layouts.table.TableLayoutCodeActivity"
             android:exported="false"
             android:label="@string/table_layout"
-            android:parentActivityName=".ui.android.layouts.table.TableLayoutCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.layouts.table.TableLayoutCodeActivity" />
         <activity
-            android:name=".ui.android.views.grid.GirdViewActivity"
+            android:name=".ui.screens.android.lessons.views.grid.GirdViewActivity"
             android:exported="false"
             android:label="@string/grid_view"
-            android:parentActivityName=".ui.android.views.grid.GirdViewActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.grid.GirdViewActivity" />
         <activity
-            android:name=".ui.android.views.grid.GirdViewCodeActivity"
+            android:name=".ui.screens.android.lessons.views.grid.GirdViewCodeActivity"
             android:exported="false"
             android:label="@string/grid_view"
-            android:parentActivityName=".ui.android.views.grid.GirdViewCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.views.grid.GirdViewCodeActivity" />
         <activity
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="false"
@@ -333,50 +277,45 @@
             android:label="@string/help"
             android:parentActivityName=".ui.screens.help.HelpActivity" />
         <activity
-            android:name=".ui.android.buttons.switches.SwitchActivity"
+            android:name=".ui.screens.android.lessons.buttons.switches.SwitchActivity"
             android:exported="false"
             android:label="@string/switches"
-            android:parentActivityName=".ui.android.buttons.switches.SwitchActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.buttons.switches.SwitchActivity" />
         <activity
             android:name=".ui.screens.support.SupportActivity"
             android:exported="false"
             android:label="@string/support_us"
             android:parentActivityName=".ui.screens.support.SupportActivity" />
         <activity
-            android:name=".ui.android.buttons.buttons.ButtonsActivity"
+            android:name=".ui.screens.android.lessons.buttons.buttons.ButtonsActivity"
             android:exported="false"
             android:label="@string/buttons"
-            android:parentActivityName=".ui.android.buttons.buttons.ButtonsActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.buttons.buttons.ButtonsActivity" />
         <activity
-            android:name=".ui.android.start.AndroidStartProjectActivity"
+            android:name=".ui.screens.android.lessons.start.AndroidStartProjectActivity"
             android:exported="false"
             android:label="@string/android_start"
-            android:parentActivityName=".ui.android.start.AndroidStartProjectActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.start.AndroidStartProjectActivity" />
         <activity
-            android:name=".ui.android.basics.sdk.AndroidSDK"
+            android:name=".ui.screens.android.lessons.basics.sdk.AndroidSDK"
             android:exported="false"
             android:label="@string/android_sdk"
-            android:parentActivityName=".ui.android.basics.sdk.AndroidSDK" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.sdk.AndroidSDK" />
         <activity
-            android:name=".ui.android.basics.viewbinding.ViewBindingTutorialActivity"
+            android:name=".ui.screens.android.lessons.basics.viewbinding.ViewBindingTutorialActivity"
             android:exported="false"
             android:label="@string/view_binding"
-            android:parentActivityName=".ui.android.basics.viewbinding.ViewBindingTutorialActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.viewbinding.ViewBindingTutorialActivity" />
         <activity
-            android:name=".ui.android.basics.permissions.PermissionsTutorialActivity"
+            android:name=".ui.screens.android.lessons.basics.permissions.PermissionsTutorialActivity"
             android:exported="false"
             android:label="@string/permissions"
-            android:parentActivityName=".ui.android.basics.permissions.PermissionsTutorialActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.basics.permissions.PermissionsTutorialActivity" />
         <activity
-            android:name=".ui.android.reviews.ratingbar.RatingBarActivity"
+            android:name=".ui.screens.android.lessons.reviews.ratingbar.RatingBarActivity"
             android:exported="false"
             android:label="@string/rating_bar"
-            android:parentActivityName=".ui.android.reviews.ratingbar.RatingBarActivity" />
-        <activity
-            android:name=".ui.android.reviews.ratingbar.RatingBarCodeActivity"
-            android:exported="false"
-            android:label="@string/rating_bar"
-            android:parentActivityName=".ui.android.reviews.ratingbar.RatingBarCodeActivity" />
+            android:parentActivityName=".ui.screens.android.lessons.reviews.ratingbar.RatingBarActivity" />
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
