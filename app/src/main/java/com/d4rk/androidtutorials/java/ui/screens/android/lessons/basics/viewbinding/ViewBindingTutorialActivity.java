@@ -17,18 +17,21 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.stream.Collectors;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ViewBindingTutorialActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding binding = ActivityViewBindingTutorialBinding.inflate(getLayoutInflater());
+        com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding binding =
+                ActivityViewBindingTutorialBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         MobileAds.initialize(this);
 
@@ -37,13 +40,18 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
 
         binding.adViewBottom.loadAd(new AdRequest.Builder().build());
         binding.adView.loadAd(new AdRequest.Builder().build());
-        binding.moreAboutViewBindingButton.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
+        binding.moreAboutViewBindingButton.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
+
         InputStream bindingGradle = getResources().openRawResource(R.raw.text_binding_gradle);
         binding.bindingText.setText(readTextFromInputStream(bindingGradle));
+
         InputStream bindingActivity = getResources().openRawResource(R.raw.text_binding_activity);
         binding.bindingActivitiesText.setText(readTextFromInputStream(bindingActivity));
+
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
         binding.bindingFragmentsText.setText(readTextFromInputStream(bindingFragment));
+
         SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(this);
         Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
             case "1" -> ResourcesCompat.getFont(this, R.font.font_fira_code);
@@ -59,6 +67,15 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
     }
 
     private String readTextFromInputStream(InputStream inputStream) {
-        return new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining("\n"));
+        StringBuilder builder = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                builder.append(line).append('\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return builder.toString();
     }
 }

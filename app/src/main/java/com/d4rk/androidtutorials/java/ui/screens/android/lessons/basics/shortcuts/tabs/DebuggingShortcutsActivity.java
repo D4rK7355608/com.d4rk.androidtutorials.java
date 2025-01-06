@@ -17,11 +17,12 @@ public class DebuggingShortcutsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         com.d4rk.androidtutorials.java.databinding.ActivityShortcutsDebuggingBinding binding = ActivityShortcutsDebuggingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        MobileAds.initialize(this);
+
 
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
+        MobileAds.initialize(this);
         binding.adView.loadAd(new AdRequest.Builder().build());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
     }

@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,6 +11,7 @@ import android.util.Log;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.pm.ShortcutInfoCompat;
@@ -32,7 +34,9 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFr
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.navigationrail.NavigationRailView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -98,14 +102,13 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+            new AppBarConfiguration.Builder(
                     R.id.navigation_home,
                     R.id.navigation_android_studio,
                     R.id.navigation_about
-            ).build();
+            );
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         }
     }
 
@@ -123,19 +126,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void observeViewModel() {
-        mainViewModel.getBottomNavVisibility().observe(this, visibilityMode ->
-                mBinding.navView.setLabelVisibilityMode(visibilityMode)
-        );
+        mainViewModel.getBottomNavVisibility().observe(this, visibilityMode -> {
+            if (mBinding.navView instanceof BottomNavigationView) {
+                ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(visibilityMode);
+            }
+        });
 
         mainViewModel.getDefaultNavDestination().observe(this, startFragmentId -> {
-            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+            NavHostFragment navHostFragment = (NavHostFragment)
+                    getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
             if (navHostFragment != null) {
                 navController = navHostFragment.getNavController();
                 NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
                 navGraph.setStartDestination(R.id.navigation_home);
                 navController.setGraph(navGraph);
 
-                NavigationUI.setupWithNavController(mBinding.navView, navController);
+                if (mBinding.navView instanceof BottomNavigationView bottomNav) {
+                    NavigationUI.setupWithNavController(bottomNav, navController);
+                } else if (mBinding.navView instanceof NavigationRailView railView) {
+                    NavigationUI.setupWithNavController(railView, navController);
+                }
+
                 setSupportActionBar(mBinding.toolbar);
 
                 mBinding.toolbar.setNavigationOnClickListener(v -> {
@@ -192,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onResume() {
         super.onResume();
@@ -201,9 +213,6 @@ public class MainActivity extends AppCompatActivity {
         checkForFlexibleOrImmediateUpdate();
     }
 
-    /**
-     * If your code wants to decide between immediate or flexible updates:
-     */
     private void checkForFlexibleOrImmediateUpdate() {
         appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
                     boolean updateAvailable = appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
@@ -243,9 +252,6 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    /**
-     * Only needed for FLEXIBLE updates:
-     */
     private void registerInstallStateListener() {
         installStateUpdatedListener = state -> {
             if (state.installStatus() == InstallStatus.DOWNLOADED) {

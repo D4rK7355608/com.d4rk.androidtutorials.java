@@ -11,6 +11,8 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 
 public class ShortcutsActivity extends AppCompatActivity {
     @Override
@@ -21,6 +23,9 @@ public class ShortcutsActivity extends AppCompatActivity {
 
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
+        MobileAds.initialize(this);
+        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_shortcuts, new SettingsFragment()).commit();
         ActionBar supportActionBar = getSupportActionBar();

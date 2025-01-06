@@ -6,55 +6,52 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.tabs.LinearLayoutTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.tabs.LinearLayoutTabLayoutFragment;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LinearLayoutCodeActivity extends AppCompatActivity {
-    private ViewPager viewPager;
+    private ViewPager2 viewPager2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_layout);
+
         TabLayout tabLayout = findViewById(R.id.tabs);
-        viewPager = findViewById(R.id.viewpager);
+        viewPager2 = findViewById(R.id.viewpager);
+
         setupViewPager();
-        tabLayout.setupWithViewPager(viewPager);
+
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
+            ViewPagerAdapter adapter = (ViewPagerAdapter) viewPager2.getAdapter();
+            if (adapter != null) {
+                tab.setText(adapter.getPageTitle(position));
+            }
+        }).attach();
     }
 
     private void setupViewPager() {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         adapter.addFragment(new LinearLayoutTabCodeFragment(), getString(R.string.code_java));
         adapter.addFragment(new LinearLayoutTabLayoutFragment(), getString(R.string.layout_xml));
-        viewPager.setAdapter(adapter);
+        viewPager2.setAdapter(adapter);
     }
 
-    @SuppressWarnings("deprecation")
-    private static class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final ArrayList<Fragment> fragmentList = new ArrayList<>();
-        private final ArrayList<String> fragmentTitleList = new ArrayList<>();
+    private static class ViewPagerAdapter extends FragmentStateAdapter {
+        private final List<Fragment> fragmentList = new ArrayList<>();
+        private final List<String> fragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(@NonNull FragmentManager fragmentManager) {
-            super(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int position) {
-            return fragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return fragmentList.size();
+        public ViewPagerAdapter(@NonNull AppCompatActivity fragmentActivity) {
+            super(fragmentActivity);
         }
 
         public void addFragment(@NonNull Fragment fragment, @NonNull String title) {
@@ -62,8 +59,17 @@ public class LinearLayoutCodeActivity extends AppCompatActivity {
             fragmentTitleList.add(title);
         }
 
-        @Nullable
+        @NonNull
         @Override
+        public Fragment createFragment(int position) {
+            return fragmentList.get(position);
+        }
+
+        @Override
+        public int getItemCount() {
+            return fragmentList.size();
+        }
+
         public CharSequence getPageTitle(int position) {
             return fragmentTitleList.get(position);
         }

@@ -11,6 +11,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
+import com.d4rk.androidtutorials.java.ui.screens.android.tabs.CodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.tabs.LayoutFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.tabs.NoCodeFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -68,9 +71,19 @@ public class CodeActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-            return position == 0
-                    ? CodeFragment.newInstance(lesson.codeResId())
-                    : LayoutFragment.newInstance(lesson.layoutResId());
+            if (position == 0) {
+                if (lesson.codeResId() == 0) {
+                    return NoCodeFragment.newInstance("No Java code available for this lesson.");
+                } else {
+                    return CodeFragment.newInstance(lesson.codeResId());
+                }
+            } else {
+                if (lesson.layoutResId() == 0) {
+                    return NoCodeFragment.newInstance("No XML layout available for this lesson.");
+                } else {
+                    return LayoutFragment.newInstance(lesson.layoutResId());
+                }
+            }
         }
 
         @Override
@@ -78,4 +91,5 @@ public class CodeActivity extends AppCompatActivity {
             return 2;
         }
     }
+
 }

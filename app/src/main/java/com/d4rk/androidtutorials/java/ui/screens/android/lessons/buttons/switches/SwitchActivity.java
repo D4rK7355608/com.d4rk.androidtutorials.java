@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySwitchBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -22,6 +23,10 @@ public class SwitchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySwitchBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         setOnClickListeners();
     }

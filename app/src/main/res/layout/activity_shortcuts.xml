@@ -23,6 +23,15 @@
         android:layout_margin="24dp"
         android:text="@string/more_about_shortcuts"
         android:tooltipText="@string/more_about_shortcuts"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ad_view_bottom"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="@string/ad_banner_unit_id"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -133,7 +133,7 @@
             app:title="@string/web_view">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.webviews.WebViewActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.web.WebViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>

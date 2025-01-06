@@ -116,11 +116,6 @@
             android:label="@string/web_view"
             android:parentActivityName=".ui.screens.android.lessons.views.web.WebViewActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.views.web.WebViewCodeActivity"
-            android:exported="false"
-            android:label="@string/web_view"
-            android:parentActivityName=".ui.screens.android.lessons.views.web.WebViewCodeActivity" />
-        <activity
             android:name=".ui.screens.android.lessons.progress.progressbar.ProgressBarActivity"
             android:exported="false"
             android:label="@string/progress_bar"
@@ -257,11 +252,6 @@
             android:exported="false"
             android:label="@string/grid_view"
             android:parentActivityName=".ui.screens.android.lessons.views.grid.GirdViewActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.views.grid.GirdViewCodeActivity"
-            android:exported="false"
-            android:label="@string/grid_view"
-            android:parentActivityName=".ui.screens.android.lessons.views.grid.GirdViewCodeActivity" />
         <activity
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="false"
