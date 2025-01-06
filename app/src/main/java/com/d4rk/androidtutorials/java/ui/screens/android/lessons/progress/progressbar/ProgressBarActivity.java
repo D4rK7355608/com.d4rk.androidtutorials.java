@@ -7,6 +7,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityProgressBarBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -19,6 +20,10 @@ public class ProgressBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityProgressBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.progressBar.hide();
         binding.buttonDownloadHorizontal.setOnClickListener(v -> {

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityButtonsBinding;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -21,6 +22,10 @@ public class ButtonsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.constraintLayout);
+
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.buttonNormal.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.button_normal) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.buttonOutlined.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.button_outlined) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());

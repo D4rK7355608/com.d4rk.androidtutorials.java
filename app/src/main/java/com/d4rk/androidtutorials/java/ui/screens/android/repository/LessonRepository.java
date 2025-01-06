@@ -15,7 +15,7 @@ public class LessonRepository {
             case "Toast" ->
                     new Lesson(R.string.toast, R.raw.text_toast_java, R.raw.text_center_button_xml);
             case "ImageButtons" ->
-                    new Lesson(R.string.image_buttons, R.raw.text_image_buttons_java, R.raw.text_center_button_xml);
+                    new Lesson(R.string.image_buttons, R.raw.text_image_buttons_java, R.raw.text_image_buttons_xml);
             case "RadioButtons" ->
                     new Lesson(R.string.radio_buttons, R.raw.text_radio_buttons_java, R.raw.text_radio_buttons_xml);
             case "Switch" ->
@@ -33,7 +33,7 @@ public class LessonRepository {
             case "RatingBar" ->
                     new Lesson(R.string.rating_bar, R.raw.text_rating_bar_java, R.raw.text_rating_bar_xml);
             case "PasswordBox" ->
-                    new Lesson(R.string.password_box, R.raw.text_password_java, R.raw.text_password_java);
+                    new Lesson(R.string.password_box, R.raw.text_password_java, R.raw.text_password_xml);
             case "TextBox" ->
                     new Lesson(R.string.textbox, R.raw.text_textbox_java, R.raw.text_textbox_xml);
             case "GridView" ->

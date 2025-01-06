@@ -18,7 +18,6 @@ lifecycleViewmodel = "2.8.7"
 lottie = "6.6.0"
 navigationFragment = "2.8.5"
 navigationUi = "2.8.5"
-playServicesOssLicenses = "17.1.0"
 preference = "1.2.1"
 review = "2.0.2"
 volley = "1.2.1"
@@ -56,5 +55,4 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 materialratingbar-library = { module = "me.zhanghai.android.materialratingbar:library", version.ref = "libraryVersion" }
 play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
 review = { module = "com.google.android.play:review", version.ref = "review" }
-play-services-oss-licenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref = "playServicesOssLicenses" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }

@@ -7,31 +7,33 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabLayoutFragment;
-import com.google.android.material.tabs.TabLayout;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class ProgressBarCodeActivity extends AppCompatActivity {
-    private ViewPager2 viewPager2;
+    private ActivityTabLayoutBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_layout);
 
-        TabLayout tabLayout = findViewById(R.id.tabs);
-        viewPager2 = findViewById(R.id.viewpager);
+        binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.tabLayout);
 
         setupViewPager();
 
-        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
-            ViewPagerAdapter adapter = (ViewPagerAdapter) viewPager2.getAdapter();
+        new TabLayoutMediator(binding.tabs, binding.viewpager, (tab, position) -> {
+            ViewPagerAdapter adapter = (ViewPagerAdapter) binding.viewpager.getAdapter();
             if (adapter != null) {
                 tab.setText(adapter.getPageTitle(position));
             }
@@ -42,7 +44,7 @@ public class ProgressBarCodeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         adapter.addFragment(new ProgressBarTabCodeFragment(), getString(R.string.code_java));
         adapter.addFragment(new ProgressBarTabLayoutFragment(), getString(R.string.layout_xml));
-        viewPager2.setAdapter(adapter);
+        binding.viewpager.setAdapter(adapter);
     }
 
     private static class ViewPagerAdapter extends FragmentStateAdapter {

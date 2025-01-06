@@ -25,4 +25,18 @@ public class EdgeToEdgeDelegate {
             return WindowInsetsCompat.CONSUMED;
         });
     }
+
+    public void applyEdgeToEdgeBottomBar(View container, View bottomNavigationView) {
+        WindowCompat.setDecorFitsSystemWindows(activity.getWindow(), false);
+
+        ViewCompat.setOnApplyWindowInsetsListener(container, (v, insets) -> {
+            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            v.setPadding(bars.left, bars.top, bars.right, 0);
+
+            if (bottomNavigationView != null) {
+                bottomNavigationView.setPadding(0, 0, 0, bars.bottom);
+            }
+            return WindowInsetsCompat.CONSUMED;
+        });
+    }
 }

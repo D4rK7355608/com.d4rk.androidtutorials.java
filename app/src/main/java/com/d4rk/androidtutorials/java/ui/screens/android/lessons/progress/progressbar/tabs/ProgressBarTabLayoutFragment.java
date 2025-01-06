@@ -34,7 +34,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
         MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
         StringBuilder verticalBuilder = new StringBuilder();
-        try (BufferedReader readerVertical = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_center_button_xml)))) {
+        try (BufferedReader readerVertical = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_progress_bar_xml)))) {
             String line;
             while ((line = readerVertical.readLine()) != null) {
                 verticalBuilder.append(line).append('\n');

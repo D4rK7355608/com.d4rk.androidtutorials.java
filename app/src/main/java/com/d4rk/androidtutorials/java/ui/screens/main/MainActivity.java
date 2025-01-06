@@ -34,6 +34,8 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFr
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigationrail.NavigationRailView;
@@ -70,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
-
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
@@ -127,8 +126,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void observeViewModel() {
         mainViewModel.getBottomNavVisibility().observe(this, visibilityMode -> {
+            EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
             if (mBinding.navView instanceof BottomNavigationView) {
+
+                edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, mBinding.navView);
+
                 ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(visibilityMode);
+                if (mBinding.adView != null) {
+                    MobileAds.initialize(this);
+                    mBinding.adView.loadAd(new AdRequest.Builder().build());
+                }
+            } else {
+                edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
             }
         });
 

@@ -84,11 +84,11 @@ public class AndroidSDK extends AppCompatActivity {
         for (AndroidVersion version : androidVersions) {
             TableRow row = new TableRow(this);
 
-            row.addView(createCell(version.version));
-            row.addView(createCell(version.api));
-            row.addView(createCell(version.codeName));
-            row.addView(createCell(version.codenameLiteral));
-            row.addView(createCell(version.year));
+            row.addView(createCell(version.version()));
+            row.addView(createCell(version.api()));
+            row.addView(createCell(version.codeName()));
+            row.addView(createCell(version.codenameLiteral()));
+            row.addView(createCell(version.year()));
 
             tableLayout.addView(row);
         }

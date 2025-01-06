@@ -6,55 +6,53 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabLayoutFragment;
-import com.google.android.material.tabs.TabLayout;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class ImagesCodeActivity extends AppCompatActivity {
-    private ViewPager viewPager;
+    private ActivityTabLayoutBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_layout);
-        TabLayout tabLayout = findViewById(R.id.tabs);
-        viewPager = findViewById(R.id.viewpager);
+
+        binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.tabLayout);
+
         setupViewPager();
-        tabLayout.setupWithViewPager(viewPager);
+
+        new TabLayoutMediator(binding.tabs, binding.viewpager, (tab, position) -> {
+            ViewPagerAdapter adapter = (ViewPagerAdapter) binding.viewpager.getAdapter();
+            if (adapter != null) {
+                tab.setText(adapter.getPageTitle(position));
+            }
+        }).attach();
     }
 
     private void setupViewPager() {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         adapter.addFragment(new ImagesTabCodeFragment(), getString(R.string.code_java));
         adapter.addFragment(new ImagesTabLayoutFragment(), getString(R.string.layout_xml));
-        viewPager.setAdapter(adapter);
+        binding.viewpager.setAdapter(adapter);
     }
 
-    @SuppressWarnings("deprecation")
-    private static class ViewPagerAdapter extends FragmentPagerAdapter {
+    private static class ViewPagerAdapter extends FragmentStateAdapter {
         private final ArrayList<Fragment> fragmentList = new ArrayList<>();
         private final ArrayList<String> fragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(@NonNull FragmentManager fragmentManager) {
-            super(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int position) {
-            return fragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return fragmentList.size();
+        public ViewPagerAdapter(@NonNull AppCompatActivity activity) {
+            super(activity);
         }
 
         public void addFragment(@NonNull Fragment fragment, @NonNull String title) {
@@ -62,8 +60,17 @@ public class ImagesCodeActivity extends AppCompatActivity {
             fragmentTitleList.add(title);
         }
 
-        @Nullable
+        @NonNull
         @Override
+        public Fragment createFragment(int position) {
+            return fragmentList.get(position);
+        }
+
+        @Override
+        public int getItemCount() {
+            return fragmentList.size();
+        }
+
         public CharSequence getPageTitle(int position) {
             return fragmentTitleList.get(position);
         }

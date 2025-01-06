@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class GirdViewActivity extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class GirdViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityGridViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, numbers);
         binding.gridView.setAdapter(adapter);
         binding.gridView.setOnItemClickListener((adapterView, view, i, l) -> {
