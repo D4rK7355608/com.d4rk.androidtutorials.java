@@ -1,3 +1,9 @@
+# Version 5.0.1:
+
+- Core components and services are now on their latest versions for improved security and compatibility.
+- Updated ad handling and anonymous data collection for a better app experience.
+- Added translations to new languages.
+
 # Version 5.0.0:
 
 - Added a new About Libraries screen with detailed information about the used open-source libraries.

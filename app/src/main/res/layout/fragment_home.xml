@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                app:adSize="LARGE_BANNER"
+                app:adSize="MEDIUM_RECTANGLE"
                 app:adUnitId="@string/ad_banner_unit_id" />
 
             <com.airbnb.lottie.LottieAnimationView
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="16dp"
-                app:adSize="BANNER"
+                app:adSize="MEDIUM_RECTANGLE"
                 app:adUnitId="@string/ad_banner_unit_id" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>

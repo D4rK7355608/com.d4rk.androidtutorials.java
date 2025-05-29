@@ -12,8 +12,8 @@ android {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
         targetSdk 35
-        versionCode 34
-        versionName '5.0.0'
+        versionCode 35
+        versionName '5.0.1'
         archivesBaseName = "${applicationId}-v${versionName}"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

@@ -1,127 +1,29 @@
 {
   "project_info": {
-    "project_number": "289497233341",
-    "project_id": "d4rk-apps",
-    "storage_bucket": "d4rk-apps.appspot.com"
+    "project_number": "619744127636",
+    "project_id": "android-studio-tutorials-java",
+    "storage_bucket": "android-studio-tutorials-java.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:289497233341:android:5cbed291f762d0772c84d4",
-        "android_client_info": {
-          "package_name": "com.d4rk.adorealerts"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:289497233341:android:22b03d8c9ef12bd02c84d4",
-        "android_client_info": {
-          "package_name": "com.d4rk.androidtutorials"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      },
-      "admob_app_id": "ca-app-pub-5294151573817700~4228267194"
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:289497233341:android:75b687bb4a06c7a82c84d4",
+        "mobilesdk_app_id": "1:619744127636:android:d88448ec429e32bd52a281",
         "android_client_info": {
           "package_name": "com.d4rk.androidtutorials.java"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ"
+          "current_key": "AIzaSyAXwCem1wszP-t3viSxkH9ioMQY_Y1gNOE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:289497233341:android:4d85e23dca60f0192c84d4",
-        "android_client_info": {
-          "package_name": "com.d4rk.lowbrightness"
+          "other_platform_oauth_client": []
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB4pDjHrxVmwSpSjuYc6Qi2MOxb6IsCtIQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "289497233341-33ic66r4d80qg7f793jgve1gvrlanrkk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      },
-      "admob_app_id": "ca-app-pub-5294151573817700~8302025955"
+      "admob_app_id": "ca-app-pub-5294151573817700~1436412543"
     }
   ],
   "configuration_version": "1"

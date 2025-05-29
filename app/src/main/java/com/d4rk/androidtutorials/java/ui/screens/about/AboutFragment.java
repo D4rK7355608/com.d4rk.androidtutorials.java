@@ -59,7 +59,7 @@ public class AboutFragment extends Fragment {
         });
 
         binding.imageViewAppIcon.setOnClickListener(
-                v -> openUrl("https://sites.google.com/view/d4rk7355608"));
+                v -> openUrl("https://d4rk7355608.github.io/home/"));
         binding.chipGoogleDev.setOnClickListener(
                 v -> openUrl("https://g.dev/D4rK7355608"));
         binding.chipYoutube.setOnClickListener(
@@ -71,7 +71,7 @@ public class AboutFragment extends Fragment {
         binding.chipXda.setOnClickListener(
                 v -> openUrl("https://forum.xda-developers.com/m/d4rk7355608.10095012"));
         binding.chipMusic.setOnClickListener(
-                v -> openUrl("https://sites.google.com/view/d4rk7355608/tracks"));
+                v -> openUrl("https://linktr.ee/D4rKRekords"));
 
         return binding.getRoot();
     }

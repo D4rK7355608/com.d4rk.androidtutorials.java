@@ -97,7 +97,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
             }
             isLoadingAd = true;
             AdRequest request = new AdRequest.Builder().build();
-            com.google.android.gms.ads.appopen.AppOpenAd.load(context, AD_UNIT_ID, request, com.google.android.gms.ads.appopen.AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, new AppOpenAdLoadCallback() {
+            com.google.android.gms.ads.appopen.AppOpenAd.load(context, AD_UNIT_ID, request, new AppOpenAdLoadCallback() {
                 @Override
                 public void onAdLoaded(@NonNull com.google.android.gms.ads.appopen.AppOpenAd ad) {
                     appOpenAd = ad;
