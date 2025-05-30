@@ -8,13 +8,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ui.screens.home.repository.HomeRepository;
 
 
-/**
- * ViewModel for the Home screen. It interacts with HomeRepository
- * to retrieve data/logic and exposes it to the HomeFragment.
- */
 public class HomeViewModel extends AndroidViewModel {
 
     private final HomeRepository homeRepository;
@@ -25,8 +22,9 @@ public class HomeViewModel extends AndroidViewModel {
     public HomeViewModel(@NonNull Application application) {
         super(application);
         homeRepository = new HomeRepository(application);
-        announcementTitle.setValue("Android Dev Tips!");
-        announcementSubtitle.setValue("Learn Jetpack Compose, Material 3, and more.");
+
+        announcementTitle.setValue(application.getString(R.string.announcement_title));
+        announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
     }
 
     /**
