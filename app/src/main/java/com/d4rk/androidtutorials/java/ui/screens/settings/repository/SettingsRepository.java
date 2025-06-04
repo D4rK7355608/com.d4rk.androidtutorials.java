@@ -73,6 +73,8 @@ public class SettingsRepository {
         if (key == null) return;
 
         if (key.equals(context.getString(R.string.key_theme))) {
+            applyTheme();
+        } else if (key.equals(context.getString(R.string.key_language))) {
             applyLanguage();
         }
     }

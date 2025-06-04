@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentButtonsLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import android.util.Log;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.io.IOException;
@@ -35,7 +35,6 @@ public class ButtonsTabLayoutFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
         buttonXMLResources.put(R.raw.text_button_normal_xml, binding.textViewButtonNormalXml);
         buttonXMLResources.put(R.raw.text_button_outlined_xml, binding.textViewButtonOutlinedXml);
@@ -66,7 +65,7 @@ public class ButtonsTabLayoutFragment extends Fragment {
                     textView.setText(text);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e("ButtonsTab", "Error reading button resource", e);
             }
         }
         return binding.getRoot();
@@ -75,15 +74,8 @@ public class ButtonsTabLayoutFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
-            case "1" -> ResourcesCompat.getFont(requireContext(), R.font.font_fira_code);
-            case "2" -> ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono);
-            case "3" -> ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono);
-            case "4" -> ResourcesCompat.getFont(requireContext(), R.font.font_poppins);
-            case "5" -> ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
-            default -> ResourcesCompat.getFont(requireContext(), R.font.font_audiowide);
-        };
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
         binding.textViewButtonNormalXml.setTypeface(monospaceFont);
         binding.textViewButtonOutlinedXml.setTypeface(monospaceFont);
         binding.textViewButtonElevatedXml.setTypeface(monospaceFont);

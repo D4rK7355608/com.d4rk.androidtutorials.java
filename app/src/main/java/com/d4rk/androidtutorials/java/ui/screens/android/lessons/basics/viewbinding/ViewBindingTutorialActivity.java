@@ -7,14 +7,14 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +33,6 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        MobileAds.initialize(this);
 
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
@@ -52,15 +51,8 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
         binding.bindingFragmentsText.setText(readTextFromInputStream(bindingFragment));
 
-        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(this);
-        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
-            case "1" -> ResourcesCompat.getFont(this, R.font.font_fira_code);
-            case "2" -> ResourcesCompat.getFont(this, R.font.font_jetbrains_mono);
-            case "3" -> ResourcesCompat.getFont(this, R.font.font_noto_sans_mono);
-            case "4" -> ResourcesCompat.getFont(this, R.font.font_poppins);
-            case "5" -> ResourcesCompat.getFont(this, R.font.font_roboto_mono);
-            default -> ResourcesCompat.getFont(this, R.font.font_audiowide);
-        };
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Typeface monospaceFont = FontManager.getMonospaceFont(this, prefs);
         binding.bindingText.setTypeface(monospaceFont);
         binding.bindingActivitiesText.setTypeface(monospaceFont);
         binding.bindingFragmentsText.setTypeface(monospaceFont);
@@ -74,7 +66,7 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
                 builder.append(line).append('\n');
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("ViewBindingActivity", "Error reading file", e);
         }
         return builder.toString();
     }

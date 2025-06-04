@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLinearLayoutLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,6 @@ public class ProgressBarTabLayoutFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentLinearLayoutLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
         StringBuilder verticalBuilder = new StringBuilder();
         try (BufferedReader readerVertical = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_progress_bar_xml)))) {
@@ -41,7 +40,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             }
             binding.textViewVerticalXml.setText(verticalBuilder.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("ProgressBarTabLayout", "Error reading progress xml", e);
         }
         StringBuilder horizontalBuilder = new StringBuilder();
         try (BufferedReader readerHorizontal = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_linear_layout_horizontal_xml)))) {
@@ -51,7 +50,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             }
             binding.textViewHorizontalXml.setText(horizontalBuilder.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("ProgressBarTabLayout", "Error reading linear layout xml", e);
         }
         return binding.getRoot();
     }
@@ -59,15 +58,8 @@ public class ProgressBarTabLayoutFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SharedPreferences preferenceManager = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = switch (preferenceManager.getString(getString(R.string.key_monospace_font), "0")) {
-            case "1" -> ResourcesCompat.getFont(requireContext(), R.font.font_fira_code);
-            case "2" -> ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono);
-            case "3" -> ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono);
-            case "4" -> ResourcesCompat.getFont(requireContext(), R.font.font_poppins);
-            case "5" -> ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono);
-            default -> ResourcesCompat.getFont(requireContext(), R.font.font_audiowide);
-        };
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
         binding.textViewVerticalXml.setTypeface(monospaceFont);
         binding.textViewHorizontalXml.setTypeface(monospaceFont);
     }

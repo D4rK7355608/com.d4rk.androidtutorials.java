@@ -14,7 +14,7 @@ import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
-import com.d4rk.androidtutorials.java.utils.TypefaceUtils;
+import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -55,11 +55,10 @@ public class LayoutFragment extends Fragment {
 
     private void setupUI() {
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        MobileAds.initialize(requireContext());
         binding.adView.loadAd(new AdRequest.Builder().build());
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = TypefaceUtils.getMonospaceFont(requireContext(), prefs);
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
         binding.textView.setTypeface(monospaceFont);
     }
 
@@ -73,7 +72,7 @@ public class LayoutFragment extends Fragment {
             }
             binding.textView.setText(builder.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e("LayoutFragment", "Error loading layout", e);
             binding.textView.setText(R.string.error_loading_layout);
         }
     }

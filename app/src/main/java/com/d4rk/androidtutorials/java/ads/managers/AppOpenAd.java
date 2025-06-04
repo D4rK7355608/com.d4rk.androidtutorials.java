@@ -82,7 +82,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
     }
 
     private static class AppOpenAdManager {
-        private static final String AD_UNIT_ID = "\n" + "ca-app-pub-5294151573817700/9123330876";
+        private static final String AD_UNIT_ID = "ca-app-pub-5294151573817700/9123330876";
         private com.google.android.gms.ads.appopen.AppOpenAd appOpenAd = null;
         private boolean isLoadingAd = false;
         private boolean isShowingAd = false;
