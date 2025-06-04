@@ -8,7 +8,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.d4rk.androidtutorials.java.R;
 
-public class TypefaceUtils {
+public class FontManager {
 
     public static Typeface getMonospaceFont(Context context, SharedPreferences prefs) {
         return switch (prefs.getString(context.getString(R.string.key_monospace_font), "0")) {

@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.home.repository;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import com.d4rk.androidtutorials.java.BuildConfig;
 
 /**
  * Repository for Home screen data/logic.
@@ -19,7 +20,7 @@ public class HomeRepository {
      * You can change the package name or URL as needed.
      */
     public Intent getPlayStoreIntent() {
-        String playStoreUrl = "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials";
+        String playStoreUrl = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl));
         intent.setPackage("com.android.vending");
         return intent;
