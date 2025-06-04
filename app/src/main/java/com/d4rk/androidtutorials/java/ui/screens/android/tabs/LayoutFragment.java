@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.tabs;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,6 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
 
 import java.io.BufferedReader;
 import java.io.IOException;
