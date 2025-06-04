@@ -32,6 +32,7 @@ import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificati
 import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
+import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
@@ -47,6 +48,9 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.ConsentRequestParameters;
+import com.google.android.ump.UserMessagingPlatform;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
             );
     private ActivityMainBinding mBinding;
     private MainViewModel mainViewModel;
+    private StartupViewModel startupViewModel;
+    private ConsentInformation consentInformation;
     private NavController navController;
     private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private AppUpdateManager appUpdateManager;
@@ -74,6 +80,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        startupViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
+        consentInformation = UserMessagingPlatform.getConsentInformation(this);
+        ConsentRequestParameters params = new ConsentRequestParameters.Builder()
+                .setTagForUnderAgeOfConsent(false)
+                .build();
+        startupViewModel.requestConsentInfoUpdate(
+                this,
+                params,
+                () -> {
+                    if (consentInformation.isConsentFormAvailable()) {
+                        startupViewModel.loadConsentForm(this, null);
+                    }
+                },
+                null
+        );
 
         setupActionBar();
         observeViewModel();

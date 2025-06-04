@@ -15,6 +15,7 @@ import com.google.android.ump.ConsentInformation;
 import com.google.android.ump.ConsentRequestParameters;
 import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -39,26 +40,20 @@ public class StartupActivity extends AppCompatActivity {
                 .setTagForUnderAgeOfConsent(false)
                 .build();
 
-        consentInformation.requestConsentInfoUpdate(
+        startupViewModel.requestConsentInfoUpdate(
                 this,
                 params,
                 () -> {
                     if (consentInformation.isConsentFormAvailable()) {
                         startupViewModel.loadConsentForm(
                                 this,
-                                formError -> {
-                                    updateFirebaseConsent(false);
-                                    proceedToMainActivity();
-                                }
+                                formError -> updateFirebaseConsent(false, false, false, false)
                         );
-                    } else {
-                        if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.OBTAINED) {
-                            updateFirebaseConsent(true);
-                        }
-                        proceedToMainActivity();
+                    } else if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.OBTAINED) {
+                        updateFirebaseConsent(true, true, true, true);
                     }
                 },
-                formError -> proceedToMainActivity()
+                formError -> {}
         );
 
         new FastScrollerBuilder(binding.scrollView)
@@ -70,7 +65,14 @@ public class StartupActivity extends AppCompatActivity {
                         Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy")))
         );
 
-        binding.floatingButtonAgree.setOnClickListener(v -> proceedToMainActivity());
+        binding.floatingButtonAgree.setOnClickListener(v -> {
+            ConsentDialogFragment dialog = new ConsentDialogFragment();
+            dialog.setConsentListener((analytics, adStorage, adUserData, adPersonalization) -> {
+                updateFirebaseConsent(analytics, adStorage, adUserData, adPersonalization);
+                proceedToMainActivity();
+            });
+            dialog.show(getSupportFragmentManager(), "consent_dialog");
+        });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
@@ -82,12 +84,15 @@ public class StartupActivity extends AppCompatActivity {
         finish();
     }
 
-    private void updateFirebaseConsent(boolean granted) {
+    private void updateFirebaseConsent(boolean analytics,
+                                       boolean adStorage,
+                                       boolean adUserData,
+                                       boolean adPersonalization) {
         Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> consentMap = new EnumMap<>(FirebaseAnalytics.ConsentType.class);
-        consentMap.put(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE, granted ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
-        consentMap.put(FirebaseAnalytics.ConsentType.AD_STORAGE, granted ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
-        consentMap.put(FirebaseAnalytics.ConsentType.AD_USER_DATA, granted ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
-        consentMap.put(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION, granted ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        consentMap.put(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE, analytics ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        consentMap.put(FirebaseAnalytics.ConsentType.AD_STORAGE, adStorage ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        consentMap.put(FirebaseAnalytics.ConsentType.AD_USER_DATA, adUserData ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        consentMap.put(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION, adPersonalization ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
 
         FirebaseAnalytics.getInstance(this).setConsent(consentMap);
     }

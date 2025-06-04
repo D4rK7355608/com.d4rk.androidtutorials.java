@@ -391,4 +391,9 @@
     <string name="error_loading_layout">Error loading layout</string>
     <string name="error_loading_code">Error loading code</string>
     <string name="snack_general_error">An error occurred while checking for updates</string>
+    <string name="consent_dialog_title">Data &amp; Ads Consent</string>
+    <string name="analytics_storage">Analytics storage</string>
+    <string name="ad_storage">Ad storage</string>
+    <string name="ad_user_data">Ad user data</string>
+    <string name="ad_personalization">Ad personalization</string>
 </resources>
