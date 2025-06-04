@@ -332,9 +332,9 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
-        <meta-data android:name="google_analytics_default_allow_analytics_storage" android:value="false" />
-        <meta-data android:name="google_analytics_default_allow_ad_storage" android:value="false" />
-        <meta-data android:name="google_analytics_default_allow_ad_user_data" android:value="false" />
-        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false" />
+        <meta-data android:name="google_analytics_default_allow_analytics_storage" android:value="${analyticsStorage}" />
+        <meta-data android:name="google_analytics_default_allow_ad_storage" android:value="${adStorage}" />
+        <meta-data android:name="google_analytics_default_allow_ad_user_data" android:value="${adUserData}" />
+        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="${adPersonalization}" />
     </application>
 </manifest>
