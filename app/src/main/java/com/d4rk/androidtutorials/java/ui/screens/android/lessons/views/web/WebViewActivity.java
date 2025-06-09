@@ -36,7 +36,7 @@ public class WebViewActivity extends AppCompatActivity {
     @SuppressLint("SetJavaScriptEnabled")
     private void setupWebView() {
         WebView webView = binding.webView;
-        webView.loadUrl("https://sites.google.com/view/d4rk7355608/home");
+        webView.loadUrl("https://d4rk7355608.github.io/profile/#home");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }

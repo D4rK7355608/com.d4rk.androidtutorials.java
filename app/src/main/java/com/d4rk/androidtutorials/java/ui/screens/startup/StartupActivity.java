@@ -62,7 +62,7 @@ public class StartupActivity extends AppCompatActivity {
 
         binding.buttonBrowsePrivacyPolicyAndTermsOfService.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy")))
+                        Uri.parse("https://d4rk7355608.github.io/profile/#privacy-policy-apps")))
         );
 
         binding.floatingButtonAgree.setOnClickListener(v -> {

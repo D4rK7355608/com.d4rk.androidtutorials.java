@@ -81,10 +81,10 @@ public class HelpActivity extends AppCompatActivity {
             openLink("https://play.google.com/apps/testing/" + getPackageName());
             return true;
         } else if (itemId == R.id.terms_of_service) {
-            openLink("https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service");
+            openLink("https://d4rk7355608.github.io/profile/#terms-of-service-apps");
             return true;
         } else if (itemId == R.id.privacy_policy) {
-            openLink("https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy");
+            openLink("https://d4rk7355608.github.io/profile/#privacy-policy-apps");
             return true;
         } else if (itemId == R.id.oss) {
             OpenSourceLicensesUtils.loadHtmlData(this, (changelogHtml, eulaHtml) -> openLicensesScreen(this, eulaHtml, changelogHtml));

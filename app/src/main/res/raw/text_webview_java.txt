@@ -19,6 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         // Load a URL in the web view in the layout
-        binding.webView.loadUrl("https://sites.google.com/view/d4rk7355608/home");
+        binding.webView.loadUrl("https://d4rk7355608.github.io/profile/#home");
     }
 }

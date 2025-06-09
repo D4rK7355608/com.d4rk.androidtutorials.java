@@ -102,7 +102,7 @@ much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you a
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90">](https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials.java)
 
-__Privacy Policy__ [here](https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy).
-__Terms of Service__ [here](https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service).
+__Privacy Policy__ [here](https://d4rk7355608.github.io/profile/#privacy-policy-apps).
+__Terms of Service__ [here](https://d4rk7355608.github.io/profile/#terms-of-service-apps).
 
 ![license](https://imgur.com/QQlcEVT.png)
