@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import com.d4rk.androidtutorials.java.BuildConfig;
+import com.d4rk.androidtutorials.java.R;
 
 /**
  * Repository for Home screen data/logic.
@@ -11,8 +12,10 @@ import com.d4rk.androidtutorials.java.BuildConfig;
  */
 public class HomeRepository {
 
+    private final Context context;
+
     public HomeRepository(Context context) {
-        context.getApplicationContext();
+        this.context = context.getApplicationContext();
     }
 
     /**
@@ -24,5 +27,15 @@ public class HomeRepository {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl));
         intent.setPackage("com.android.vending");
         return intent;
+    }
+
+    /**
+     * Returns a daily tip based on the current date.
+     */
+    public String getDailyTip() {
+        String[] tips = context.getResources().getStringArray(R.array.daily_tips);
+        long daysSinceEpoch = System.currentTimeMillis() / (24L * 60 * 60 * 1000);
+        int index = (int) (daysSinceEpoch % tips.length);
+        return tips[index];
     }
 }
