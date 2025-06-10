@@ -317,24 +317,43 @@
         </service>
 
         <meta-data
-            android:name="firebase_performance_logcat_enabled"
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
             android:value="true" />
 
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5294151573817700~1436412543" />
 
         <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:name="firebase_performance_logcat_enabled"
             android:value="true" />
 
-        <meta-data android:name="google_analytics_default_allow_analytics_storage" android:value="${analyticsStorage}" />
-        <meta-data android:name="google_analytics_default_allow_ad_storage" android:value="${adStorage}" />
-        <meta-data android:name="google_analytics_default_allow_ad_user_data" android:value="${adUserData}" />
-        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="${adPersonalization}" />
+        <meta-data android:name="google_analytics_automatic_screen_reporting_enabled"
+            android:value="true" />
+
+        <meta-data
+            android:name="google_analytics_default_allow_analytics_storage"
+            android:value="true" />
+        <meta-data
+            android:name="google_analytics_default_allow_ad_storage"
+            android:value="true" />
+        <meta-data
+            android:name="google_analytics_default_allow_ad_user_data"
+            android:value="eu_consent_policy" />
+        <meta-data
+            android:name="google_analytics_default_allow_ad_personalization_signals"
+            android:value="eu_consent_policy" />
     </application>
 </manifest>

@@ -11,19 +11,13 @@ android {
     defaultConfig {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
-        targetSdk 35
+        targetSdk 36
         versionCode 35
         versionName '5.0.1'
         archivesBaseName = "${applicationId}-v${versionName}"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         resourceConfigurations += ['en', 'de', 'es', 'fr', 'hi', 'hu', 'in', 'it', 'ja', 'ro', 'ru', 'tr', 'sv', 'bg', 'pl', 'uk']
-        manifestPlaceholders = [
-                analyticsStorage: true,
-                adStorage: true,
-                adUserData: true,
-                adPersonalization: true
-        ]
     }
 
     buildTypes {
@@ -33,23 +27,11 @@ android {
             shrinkResources true
             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [
-                    analyticsStorage: true,
-                    adStorage: true,
-                    adUserData: true,
-                    adPersonalization: true
-            ]
         }
         debug {
             multiDexEnabled true
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [
-                    analyticsStorage: false,
-                    adStorage: false,
-                    adUserData: false,
-                    adPersonalization: false
-            ]
         }
     }
 
