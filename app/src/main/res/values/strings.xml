@@ -396,4 +396,12 @@
     <string name="ad_storage">Ad storage</string>
     <string name="ad_user_data">Ad user data</string>
     <string name="ad_personalization">Ad personalization</string>
+    <string name="tip_of_the_day">Tip of the Day</string>
+    <string-array name="daily_tips">
+        <item>Use ConstraintLayout to create responsive UIs.</item>
+        <item>Leverage ViewBinding for safer UI code.</item>
+        <item>Implement RecyclerView for smooth scrolling lists.</item>
+        <item>Use Material Design 3 components for a modern look.</item>
+        <item>Profile your app regularly to track performance.</item>
+    </string-array>
 </resources>

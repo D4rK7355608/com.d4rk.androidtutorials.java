@@ -34,6 +34,10 @@ public class HomeFragment extends Fragment {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         homeViewModel.getAnnouncementTitle().observe(getViewLifecycleOwner(), title -> binding.announcementTitle.setText(title));
         homeViewModel.getAnnouncementSubtitle().observe(getViewLifecycleOwner(), subtitle -> binding.announcementSubtitle.setText(subtitle));
+        homeViewModel.getDailyTip().observe(getViewLifecycleOwner(), tip -> {
+            binding.tipText.setText(tip);
+            binding.shareTipButton.setOnClickListener(v -> shareTip(tip));
+        });
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
@@ -50,5 +54,12 @@ public class HomeFragment extends Fragment {
         MobileAds.initialize(requireContext());
         binding.smallBannerAd.loadAd(new AdRequest.Builder().build());
         binding.largeBannerAd.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void shareTip(String tip) {
+        android.content.Intent shareIntent = new android.content.Intent(android.content.Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, tip);
+        startActivity(android.content.Intent.createChooser(shareIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
     }
 }

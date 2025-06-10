@@ -18,6 +18,7 @@ public class HomeViewModel extends AndroidViewModel {
 
     private final MutableLiveData<String> announcementTitle = new MutableLiveData<>();
     private final MutableLiveData<String> announcementSubtitle = new MutableLiveData<>();
+    private final MutableLiveData<String> dailyTip = new MutableLiveData<>();
 
     public HomeViewModel(@NonNull Application application) {
         super(application);
@@ -25,6 +26,7 @@ public class HomeViewModel extends AndroidViewModel {
 
         announcementTitle.setValue(application.getString(R.string.announcement_title));
         announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
+        dailyTip.setValue(homeRepository.getDailyTip());
     }
 
     /**
@@ -39,6 +41,13 @@ public class HomeViewModel extends AndroidViewModel {
      */
     public LiveData<String> getAnnouncementSubtitle() {
         return announcementSubtitle;
+    }
+
+    /**
+     * Provides a LiveData for the tip of the day text.
+     */
+    public LiveData<String> getDailyTip() {
+        return dailyTip;
     }
 
     /**
