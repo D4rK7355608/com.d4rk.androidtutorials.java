@@ -147,6 +147,7 @@
                     android:id="@+id/other_apps_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/other_apps_title"
                     android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
