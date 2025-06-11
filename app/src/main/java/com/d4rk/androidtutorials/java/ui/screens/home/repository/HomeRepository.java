@@ -87,9 +87,13 @@ public class HomeRepository {
                         JSONArray apps = response.getJSONObject("data").getJSONArray("apps");
                         for (int i = 0; i < apps.length(); i++) {
                             JSONObject obj = apps.getJSONObject(i);
+                            String pkg = obj.getString("packageName");
+                            if (BuildConfig.APPLICATION_ID.equals(pkg)) {
+                                continue;
+                            }
                             result.add(new PromotedApp(
                                     obj.getString("name"),
-                                    obj.getString("packageName"),
+                                    pkg,
                                     obj.getString("iconLogo")
                             ));
                         }
