@@ -2,7 +2,6 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_appearance_tinted"
         app:title="@string/appearance">
         <androidx.preference.ListPreference
             app:defaultValue="@string/default_value_theme"
@@ -46,7 +45,6 @@
             app:title="@string/language" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_notifications_tinted"
         app:title="@string/notifications">
         <androidx.preference.Preference
             app:icon="@drawable/ic_edit_notifications"
@@ -54,29 +52,27 @@
             app:title="@string/notification_settings" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_firebase"
         app:title="@string/firebase">
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
-            app:icon="@drawable/ic_crashlytics"
+            app:icon="@drawable/ic_firebase"
             app:key="@string/key_firebase_crashlytics"
             app:summary="@string/summary_preference_settings_firebase_crashlytics"
             app:title="@string/firebase_crashlytics" />
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
-            app:icon="@drawable/ic_analytics"
+            app:icon="@drawable/ic_signal_cellular"
             app:key="@string/key_firebase_analytics"
             app:summary="@string/summary_preference_settings_firebase_analytics"
             app:title="@string/firebase_analytics" />
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
-            app:icon="@drawable/ic_performance"
+            app:icon="@drawable/ic_swap_driving_apps_wheel"
             app:key="@string/key_firebase_performance"
             app:summary="@string/summary_preference_settings_firebase_performance"
             app:title="@string/firebase_performance" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_safety_check_tinted"
         app:title="@string/privacy_and_security">
         <androidx.preference.Preference
             app:icon="@drawable/ic_privacy_policy"
@@ -122,32 +118,31 @@
             app:title="@string/consent_settings">
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
-                app:icon="@drawable/ic_analytics"
+                app:icon="@drawable/ic_data_thresholding"
                 app:key="@string/key_consent_analytics"
                 app:summary="@string/summary_consent_analytics_storage"
                 app:title="@string/analytics_storage" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
-                app:icon="@drawable/ic_ad_storage"
+                app:icon="@drawable/ic_ad_units"
                 app:key="@string/key_consent_ad_storage"
                 app:summary="@string/summary_consent_ad_storage"
                 app:title="@string/ad_storage" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
-                app:icon="@drawable/ic_user_data"
+                app:icon="@drawable/ic_account_circle"
                 app:key="@string/key_consent_ad_user_data"
                 app:summary="@string/summary_consent_ad_user_data"
                 app:title="@string/ad_user_data" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
-                app:icon="@drawable/ic_personalization"
+                app:icon="@drawable/ic_ad_group"
                 app:key="@string/key_consent_ad_personalization"
                 app:summary="@string/summary_consent_ad_personalization"
                 app:title="@string/ad_personalization" />
         </androidx.preference.PreferenceCategory>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
-        app:icon="@drawable/ic_about"
         app:title="@string/info">
         <androidx.preference.Preference
             app:icon="@drawable/ic_perm_device_information"
