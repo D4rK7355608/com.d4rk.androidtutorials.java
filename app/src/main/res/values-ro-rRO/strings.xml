@@ -225,7 +225,6 @@
     <string name="language">Limbă</string>
     <string name="notifications">Notificări</string>
     <string name="notification_settings">Setări notificări</string>
-    <string name="advanced">Avansat</string>
     <string name="firebase">Firebase</string>
     <string name="privacy_and_security">Confidențialitate și securitate</string>
     <string name="privacy_policy">Politica de confidențialitate</string>
@@ -296,7 +295,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificări a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim plan, acordându-le prioritate față de alte procese din fundal și îmbunătățind performanța și fiabilitatea.</string>
     <string name="summary_preference_settings_language">Setați limba aplicației.</string>
-    <string name="summary_preference_settings_firebase">Acest lucru ne permite să colectăm informații despre performanța aplicației și jurnalele de erori.</string>
     <string name="summary_preference_android_studio_start">Află elementele de bază despre cum să începi un nou proiect Android Studio, cum să configurezi, cum să setezi pachetul, nivelurile API și multe altele…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio include comenzi rapide de la tastatură pentru multe acțiuni comune. Rețineți că, deoarece Android Studio se bazează pe IntelliJ IDEA, puteți găsi comenzi rapide suplimentare în documentația de referință a hărții tastaturii IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Află despre istoria Android, de la lansarea sa beta în 2007 până la a deveni cel mai popular sistem de operare mobil din lume. Descoperă funcționalitățile care fac Android unic și beneficiile utilizării Android Studio pentru a-ți dezvolta aplicațiile cu Java.</string>

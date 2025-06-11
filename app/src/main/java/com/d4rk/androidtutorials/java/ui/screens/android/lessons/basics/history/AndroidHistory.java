@@ -15,7 +15,7 @@ public class AndroidHistory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.d4rk.androidtutorials.java.databinding.ActivityAndroidHistoryBinding binding = ActivityAndroidHistoryBinding.inflate(getLayoutInflater());
+        ActivityAndroidHistoryBinding binding = ActivityAndroidHistoryBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
 

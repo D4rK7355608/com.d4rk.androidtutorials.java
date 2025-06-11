@@ -225,7 +225,6 @@
     <string name="language">Bahasa</string>
     <string name="notifications">Notifikasi</string>
     <string name="notification_settings">Pengaturan notifikasi</string>
-    <string name="advanced">Lanjutan</string>
     <string name="firebase">Firebase</string>
     <string name="privacy_and_security">Privasi dan keamanan</string>
     <string name="privacy_policy">Kebijakan privasi</string>
@@ -296,7 +295,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan memodifikasi kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi kustom.</string>
     <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja serta keandalan.</string>
     <string name="summary_preference_settings_language">Atur bahasa aplikasi.</string>
-    <string name="summary_preference_settings_firebase">Ini memungkinkan kami mengumpulkan informasi tentang kinerja aplikasi dan log crash.</string>
     <string name="summary_preference_android_studio_start">Pelajari dasar-dasar cara memulai proyek Android Studio baru, cara mengonfigurasi, cara mengatur paket, level API, dan banyak lagi…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio menyertakan pintasan keyboard untuk banyak tindakan umum. Ingatlah, karena Android Studio didasarkan pada IntelliJ IDEA, Anda dapat menemukan pintasan tambahan dalam dokumentasi referensi keymap IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Pelajari tentang sejarah Android, dari rilis beta pada tahun 2007 hingga menjadi sistem operasi seluler paling populer di dunia. Temukan fitur-fitur yang membuat Android unik dan manfaat menggunakan Android Studio untuk mengembangkan aplikasi Anda dengan Java.</string>

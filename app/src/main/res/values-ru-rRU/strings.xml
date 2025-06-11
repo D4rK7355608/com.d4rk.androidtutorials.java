@@ -225,7 +225,6 @@
     <string name="language">Язык</string>
     <string name="notifications">Уведомления</string>
     <string name="notification_settings">Настройки уведомлений</string>
-    <string name="advanced">Дополнительно</string>
     <string name="firebase">Firebase</string>
     <string name="privacy_and_security">Конфиденциальность и безопасность</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
@@ -296,7 +295,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Позволяет приложению получать доступ и изменять политику уведомлений устройства, контролируя, как и когда уведомления отображаются пользователю, и предоставляя настраиваемые функции управления уведомлениями.</string>
     <string name="summary_preference_permissions_foreground_service">Позволяет приложению создавать и использовать службы, которые работают на переднем плане, предоставляя им приоритет над другими фоновыми процессами и улучшая производительность и надежность.</string>
     <string name="summary_preference_settings_language">Установить язык приложения.</string>
-    <string name="summary_preference_settings_firebase">Это позволяет нам собирать информацию о производительности приложения и журналах сбоев.</string>
     <string name="summary_preference_android_studio_start">Изучите основы того, как начать новый проект Android Studio, как его настроить, как установить пакет, уровни API и многое другое…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio включает в себя горячие клавиши для многих распространенных действий. Имейте в виду, что поскольку Android Studio основана на IntelliJ IDEA, вы можете найти дополнительные горячие клавиши в справочной документации по раскладке клавиатуры IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Узнайте об истории Android, от его бета-версии в 2007 году до того, как он стал самой популярной мобильной операционной системой в мире. Откройте для себя функции, которые делают Android уникальным, и преимущества использования Android Studio для разработки ваших приложений на Java.</string>

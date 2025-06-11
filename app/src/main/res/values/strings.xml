@@ -246,7 +246,6 @@
     <string name="language">Language</string>
     <string name="notifications">Notifications</string>
     <string name="notification_settings">Notification settings</string>
-    <string name="advanced">Advanced</string>
     <string name="firebase">Firebase</string>
     <string name="firebase_crashlytics">Firebase Crashlytics</string>
     <string name="firebase_analytics">Firebase Analytics</string>
@@ -318,7 +317,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
     <string name="summary_preference_settings_language">Set application language.</string>
-    <string name="summary_preference_settings_firebase">This let us collect information about app performance and crash logs.</string>
     <string name="summary_preference_settings_firebase_crashlytics">Collect crash reports to help fix issues.</string>
     <string name="summary_preference_settings_firebase_analytics">Gathers usage data for app improvement.</string>
     <string name="summary_preference_settings_firebase_performance">Measures app performance for optimization.</string>

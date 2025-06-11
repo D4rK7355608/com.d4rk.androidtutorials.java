@@ -245,7 +245,6 @@
     <string name="language">Език</string>
     <string name="notifications">Известия</string>
     <string name="notification_settings">Настройки на известията</string>
-    <string name="advanced">Разширени</string>
     <string name="firebase">Firebase</string>
     <string name="privacy_and_security">Поверителност и сигурност</string>
     <string name="privacy_policy">Политика за поверителност</string>
@@ -314,7 +313,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Позволява на приложението да осъществява достъп и да променя политиката за известия на устройството, контролирайки как и кога се показват известията на потребителя и предоставяйки персонализирани функции за управление на известията.</string>
     <string name="summary_preference_permissions_foreground_service">Позволява на приложението да създава и използва услуги, които се изпълняват на преден план, давайки им приоритет пред други фонови процеси и подобрявайки производителността и надеждността.</string>
     <string name="summary_preference_settings_language">Задаване на езика на приложението.</string>
-    <string name="summary_preference_settings_firebase">Това ни позволява да събираме информация за производителността на приложението и регистрационни файлове за сривове.</string>
     <string name="summary_preference_android_studio_start">Научете основите за това как да стартирате нов проект в Android Studio, как да го конфигурирате, как да зададете пакет, нива на API и много други…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio включва клавишни комбинации за много често срещани действия. Имайте предвид, че тъй като Android Studio е базирано на IntelliJ IDEA, можете да намерите допълнителни клавишни комбинации в справочната документация за клавиатурните карти на IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Научете за историята на Android, от бета версията му през 2007 г. до превръщането му в най-популярната мобилна операционна система в света. Открийте функциите, които правят Android уникален, и предимствата от използването на Android Studio за разработване на вашите приложения с Java.</string>

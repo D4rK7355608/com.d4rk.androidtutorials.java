@@ -245,7 +245,6 @@
     <string name="language">ভাষা</string>
     <string name="notifications">বিজ্ঞপ্তি</string>
     <string name="notification_settings">বিজ্ঞপ্তি সেটিংস</string>
-    <string name="advanced">উন্নত</string>
     <string name="firebase">ফায়ারবেস</string>
     <string name="privacy_and_security">গোপনীয়তা এবং নিরাপত্তা</string>
     <string name="privacy_policy">গোপনীয়তা নীতি</string>
@@ -314,7 +313,6 @@
     <string name="summary_preference_permissions_access_notification_policy">অ্যাপটিকে ডিভাইসের বিজ্ঞপ্তি নীতি অ্যাক্সেস এবং পরিবর্তন করার অনুমতি দেয়, ব্যবহারকারীকে কখন এবং কীভাবে বিজ্ঞপ্তিগুলি দেখানো হয় তা নিয়ন্ত্রণ করে এবং কাস্টম বিজ্ঞপ্তি পরিচালনার বৈশিষ্ট্যগুলি প্রদান করে।</string>
     <string name="summary_preference_permissions_foreground_service">অ্যাপটিকে ফোরগ্রাউন্ডে চলমান পরিষেবা তৈরি এবং ব্যবহার করার অনুমতি দেয়, অন্যান্য পটভূমি প্রক্রিয়াগুলির উপর তাদের অগ্রাধিকার দেয় এবং কর্মক্ষমতা এবং নির্ভরযোগ্যতা উন্নত করে।</string>
     <string name="summary_preference_settings_language">অ্যাপ্লিকেশন ভাষা সেট করুন।</string>
-    <string name="summary_preference_settings_firebase">এটি আমাদের অ্যাপের কর্মক্ষমতা এবং ক্র্যাশ লগ সম্পর্কে তথ্য সংগ্রহ করতে দেয়।</string>
     <string name="summary_preference_android_studio_start">একটি নতুন অ্যান্ড্রয়েড স্টুডিও প্রকল্প কীভাবে শুরু করতে হয়, কীভাবে কনফিগার করতে হয়, কীভাবে প্যাকেজ, API স্তর এবং আরও অনেক কিছু সেট করতে হয় তার ভিত্তি শিখুন…</string>
     <string name="summary_preference_android_studio_shortcuts">অ্যান্ড্রয়েড স্টুডিওতে অনেক সাধারণ কাজের জন্য কীবোর্ড শর্টকাট অন্তর্ভুক্ত রয়েছে। মনে রাখবেন, যেহেতু অ্যান্ড্রয়েড স্টুডিও ইন্টেলিজে আইডিয়ার উপর ভিত্তি করে তৈরি, তাই আপনি ইন্টেলিজে আইডিয়া কীম্যাপ রেফারেন্স ডকুমেন্টেশনে অতিরিক্ত শর্টকাট খুঁজে পেতে পারেন।</string>
     <string name="summary_preference_android_studio_history_of_android">২০০৭ সালে এর বিটা রিলিজ থেকে শুরু করে বিশ্বের সবচেয়ে জনপ্রিয় মোবাইল অপারেটিং সিস্টেম হয়ে ওঠা পর্যন্ত অ্যান্ড্রয়েডের ইতিহাস সম্পর্কে জানুন। অ্যান্ড্রয়েডকে অনন্য করে তোলে এমন বৈশিষ্ট্যগুলি এবং জাভা দিয়ে আপনার অ্যাপ তৈরি করতে অ্যান্ড্রয়েড স্টুডিও ব্যবহারের সুবিধাগুলি আবিষ্কার করুন।</string>

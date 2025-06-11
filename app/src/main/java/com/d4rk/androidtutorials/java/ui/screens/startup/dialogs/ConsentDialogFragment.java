@@ -1,14 +1,13 @@
 package com.d4rk.androidtutorials.java.ui.screens.startup.dialogs;
 
 import android.app.Dialog;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.content.SharedPreferences;
-import androidx.preference.PreferenceManager;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
@@ -30,7 +29,7 @@ public class ConsentDialogFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        DialogConsentBinding binding = DialogConsentBinding.inflate(LayoutInflater.from(requireContext()));
+        DialogConsentBinding binding = DialogConsentBinding.inflate(getLayoutInflater());
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         boolean defaultChecked = !BuildConfig.DEBUG;

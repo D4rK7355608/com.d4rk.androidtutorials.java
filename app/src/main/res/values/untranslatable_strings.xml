@@ -37,16 +37,11 @@
 
 
     <string name="eula_title" translatable="false">EULA</string>
-    <string name="changelog">CHANGELOG</string>
-    <string name="loading_eula">Loading EULA</string>
-    <string name="error_loading_eula">Error loading EULA</string>
-    <string name="loading_changelog">Loading changelog</string>
-    <string name="error_loading_changelog">Error loading changelog</string>
+    <string name="changelog" translatable="false">>CHANGELOG</string>
+    <string name="loading_eula" translatable="false">>Loading EULA</string>
+    <string name="error_loading_eula" translatable="false">>Error loading EULA</string>
+    <string name="loading_changelog" translatable="false">>Loading changelog</string>
+    <string name="error_loading_changelog" translatable="false">>Error loading changelog</string>
 
-    <string name="ad_banner_unit_id">ca-app-pub-5294151573817700/3821250346</string>
-    <string name="package_ast_kotlin" translatable="false">com.d4rk.androidtutorials</string>
-    <string name="package_cart_calculator" translatable="false">com.d4rk.cartcalculator</string>
-    <string name="package_cleaner_android" translatable="false">com.d4rk.cleaner</string>
-    <string name="package_apptoolkit_android" translatable="false">com.d4rk.apptoolkit</string>
-    <string name="package_qr_scanner" translatable="false">com.d4rk.qrscanner</string>
+    <string name="ad_banner_unit_id" translatable="false">>ca-app-pub-5294151573817700/3821250346</string>
 </resources>

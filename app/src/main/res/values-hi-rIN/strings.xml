@@ -225,7 +225,6 @@
     <string name="language">भाषा</string>
     <string name="notifications">सूचनाएं</string>
     <string name="notification_settings">सूचना सेटिंग्स</string>
-    <string name="advanced">उन्नत</string>
     <string name="firebase">फायरबेस</string>
     <string name="privacy_and_security">गोपनीयता और सुरक्षा</string>
     <string name="privacy_policy">गोपनीयता नीति</string>
@@ -296,7 +295,6 @@
     <string name="summary_preference_permissions_access_notification_policy">ऐप को डिवाइस की सूचना नीति तक पहुंचने और उसे संशोधित करने की अनुमति देता है, यह नियंत्रित करता है कि उपयोगकर्ता को सूचनाएं कैसे और कब प्रदर्शित की जाती हैं और कस्टम सूचना प्रबंधन सुविधाएँ प्रदान करता है।</string>
     <string name="summary_preference_permissions_foreground_service">ऐप को ऐसी सेवाएं बनाने और उपयोग करने की अनुमति देता है जो अग्रभूमि में चलती हैं, उन्हें अन्य पृष्ठभूमि प्रक्रियाओं पर प्राथमिकता देती हैं और प्रदर्शन व विश्वसनीयता में सुधार करती हैं।</string>
     <string name="summary_preference_settings_language">एप्लिकेशन भाषा सेट करें।</string>
-    <string name="summary_preference_settings_firebase">यह हमें ऐप प्रदर्शन और क्रैश लॉग के बारे में जानकारी एकत्र करने देता है।</string>
     <string name="summary_preference_android_studio_start">सीखें कि Android Studio में एक नया प्रोजेक्ट कैसे शुरू करें, कैसे कॉन्फ़िगर करें, पैकेज, API स्तर कैसे सेट करें और भी बहुत कुछ…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio में कई सामान्य कार्यों के लिए कीबोर्ड शॉर्टकट शामिल हैं। ध्यान रखें, क्योंकि Android Studio IntelliJ IDEA पर आधारित है, आप IntelliJ IDEA कीमैप संदर्भ दस्तावेज़ में अतिरिक्त शॉर्टकट पा सकते हैं।</string>
     <string name="summary_preference_android_studio_history_of_android">Android के इतिहास के बारे में जानें, 2007 में इसके बीटा रिलीज़ से लेकर दुनिया का सबसे लोकप्रिय मोबाइल ऑपरेटिंग सिस्टम बनने तक। उन विशेषताओं को जानें जो Android को अद्वितीय बनाती हैं और जावा के साथ अपने ऐप विकसित करने के लिए Android Studio का उपयोग करने के लाभों को जानें।</string>

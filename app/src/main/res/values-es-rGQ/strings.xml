@@ -245,7 +245,6 @@
     <string name="language">Idioma</string>
     <string name="notifications">Notificaciones</string>
     <string name="notification_settings">Configuración de notificaciones</string>
-    <string name="advanced">Avanzado</string>
     <string name="firebase">Firebase</string>
     <string name="privacy_and_security">Privacidad y seguridad</string>
     <string name="privacy_policy">Política de privacidad</string>
@@ -314,7 +313,6 @@
     <string name="summary_preference_permissions_access_notification_policy">Permite a la aplicación acceder y modificar la política de notificaciones del dispositivo, controlando cómo y cuándo se muestran las notificaciones al usuario y proporcionando funciones personalizadas de gestión de notificaciones.</string>
     <string name="summary_preference_permissions_foreground_service">Permite a la aplicación crear y usar servicios que se ejecutan en primer plano, dándoles prioridad sobre otros procesos en segundo plano y mejorando el rendimiento y la fiabilidad.</string>
     <string name="summary_preference_settings_language">Establecer el idioma de la aplicación.</string>
-    <string name="summary_preference_settings_firebase">Esto nos permite recopilar información sobre el rendimiento de la aplicación y los registros de fallos.</string>
     <string name="summary_preference_android_studio_start">Aprende la base de cómo iniciar un nuevo proyecto de Android Studio, cómo configurarlo, cómo establecer el paquete, los niveles de API y mucho más…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio incluye atajos de teclado para muchas acciones comunes. Ten en cuenta que, debido a que Android Studio se basa en IntelliJ IDEA, puedes encontrar atajos adicionales en la documentación de referencia del mapa de teclas de IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Aprende sobre la historia de Android, desde su lanzamiento beta en 2007 hasta convertirse en el sistema operativo móvil más popular del mundo. Descubre las características que hacen único a Android y los beneficios de usar Android Studio para desarrollar tus aplicaciones con Java.</string>
