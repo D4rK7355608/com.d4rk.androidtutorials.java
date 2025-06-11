@@ -30,6 +30,16 @@ public class HomeRepository {
     }
 
     /**
+     * Returns an Intent that opens the Google Play Store page for the provided package.
+     */
+    public Intent getAppPlayStoreIntent(String packageName) {
+        String url = "https://play.google.com/store/apps/details?id=" + packageName;
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        intent.setPackage("com.android.vending");
+        return intent;
+    }
+
+    /**
      * Returns a daily tip based on the current date.
      */
     public String getDailyTip() {

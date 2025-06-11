@@ -134,6 +134,35 @@
                 app:adSize="MEDIUM_RECTANGLE"
                 app:adUnitId="@string/ad_banner_unit_id" />
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/other_apps_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/other_apps_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_apps_title"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/promoted_apps_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/tip_card"
                 style="@style/Widget.Material3.CardView.Outlined"

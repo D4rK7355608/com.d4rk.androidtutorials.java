@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment {
             binding.tipText.setText(tip);
             binding.shareTipButton.setOnClickListener(v -> shareTip(tip));
         });
+        setupPromotions(LayoutInflater.from(requireContext()));
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
@@ -61,5 +62,18 @@ public class HomeFragment extends Fragment {
         shareIntent.setType("text/plain");
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, tip);
         startActivity(android.content.Intent.createChooser(shareIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
+    }
+
+    private void setupPromotions(LayoutInflater inflater) {
+        ViewGroup container = binding.promotedAppsContainer;
+        for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : homeViewModel.getPromotedApps()) {
+            com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
+                    com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, container, false);
+            itemBinding.appIcon.setImageResource(app.iconResId());
+            itemBinding.appName.setText(app.nameResId());
+            itemBinding.appDescription.setText(app.descriptionResId());
+            itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
+            container.addView(itemBinding.getRoot());
+        }
     }
 }
