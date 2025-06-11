@@ -2,10 +2,25 @@ package com.d4rk.androidtutorials.java.ui.screens.home.repository;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 /**
  * Repository for Home screen data/logic.
  * Here you can manage fetching or storing any data needed on the HomeFragment.
@@ -13,9 +28,13 @@ import com.d4rk.androidtutorials.java.R;
 public class HomeRepository {
 
     private final Context context;
+    private final RequestQueue requestQueue;
+    private static final String PROMOTED_APPS_URL =
+            "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.apis/refs/heads/main/App%20Toolkit/release/en/home/api_android_apps.json";
 
     public HomeRepository(Context context) {
         this.context = context.getApplicationContext();
+        this.requestQueue = Volley.newRequestQueue(this.context);
     }
 
     /**
@@ -47,5 +66,40 @@ public class HomeRepository {
         long daysSinceEpoch = System.currentTimeMillis() / (24L * 60 * 60 * 1000);
         int index = (int) (daysSinceEpoch % tips.length);
         return tips[index];
+    }
+
+    /** Callback used for delivering promoted apps. */
+    public interface PromotedAppsCallback {
+        void onResult(List<PromotedApp> apps);
+    }
+
+    /**
+     * Fetches the promoted apps list from the remote JSON API.
+     */
+    public void fetchPromotedApps(PromotedAppsCallback callback) {
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.GET,
+                PROMOTED_APPS_URL,
+                null,
+                response -> {
+                    List<PromotedApp> result = new ArrayList<>();
+                    try {
+                        JSONArray apps = response.getJSONObject("data").getJSONArray("apps");
+                        for (int i = 0; i < apps.length(); i++) {
+                            JSONObject obj = apps.getJSONObject(i);
+                            result.add(new PromotedApp(
+                                    obj.getString("name"),
+                                    obj.getString("packageName"),
+                                    obj.getString("iconLogo")
+                            ));
+                        }
+                    } catch (JSONException e) {
+                        result = Collections.emptyList();
+                    }
+                    callback.onResult(result);
+                },
+                error -> callback.onResult(Collections.emptyList())
+        );
+        requestQueue.add(request);
     }
 }

@@ -66,14 +66,29 @@ public class HomeFragment extends Fragment {
 
     private void setupPromotions(LayoutInflater inflater) {
         ViewGroup container = binding.promotedAppsContainer;
-        for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : homeViewModel.getPromotedApps()) {
-            com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
-                    com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, container, false);
-            itemBinding.appIcon.setImageResource(app.iconResId());
-            itemBinding.appName.setText(app.nameResId());
-            itemBinding.appDescription.setText(app.descriptionResId());
-            itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
-            container.addView(itemBinding.getRoot());
-        }
+        homeViewModel.getPromotedApps().observe(getViewLifecycleOwner(), apps -> {
+            container.removeAllViews();
+            for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : apps) {
+                com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
+                        com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, container, false);
+                loadImage(app.iconUrl, itemBinding.appIcon);
+                itemBinding.appName.setText(app.name);
+                itemBinding.appDescription.setVisibility(android.view.View.GONE);
+                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName)));
+                container.addView(itemBinding.getRoot());
+            }
+        });
+    }
+
+    private void loadImage(String url, android.widget.ImageView imageView) {
+        com.android.volley.toolbox.ImageRequest request = new com.android.volley.toolbox.ImageRequest(
+                url,
+                imageView::setImageBitmap,
+                0,
+                0,
+                android.widget.ImageView.ScaleType.CENTER_INSIDE,
+                android.graphics.Bitmap.Config.ARGB_8888,
+                error -> {});
+        com.android.volley.toolbox.Volley.newRequestQueue(requireContext()).add(request);
     }
 }

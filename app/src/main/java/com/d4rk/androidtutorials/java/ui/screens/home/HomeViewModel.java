@@ -23,7 +23,7 @@ public class HomeViewModel extends AndroidViewModel {
     private final MutableLiveData<String> announcementTitle = new MutableLiveData<>();
     private final MutableLiveData<String> announcementSubtitle = new MutableLiveData<>();
     private final MutableLiveData<String> dailyTip = new MutableLiveData<>();
-    private final List<PromotedApp> promotedApps = new ArrayList<>();
+    private final MutableLiveData<List<PromotedApp>> promotedApps = new MutableLiveData<>(new ArrayList<>());
 
     public HomeViewModel(@NonNull Application application) {
         super(application);
@@ -33,26 +33,18 @@ public class HomeViewModel extends AndroidViewModel {
         announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
         dailyTip.setValue(homeRepository.getDailyTip());
 
-        promotedApps.add(new PromotedApp(
-                R.drawable.ic_shop,
-                R.string.cart_calculator_name,
-                R.string.cart_calculator_description,
-                application.getString(R.string.package_cart_calculator)));
-        promotedApps.add(new PromotedApp(
-                R.drawable.ic_safety_check_tinted,
-                R.string.cleaner_android_name,
-                R.string.cleaner_android_description,
-                application.getString(R.string.package_cleaner_android)));
-        promotedApps.add(new PromotedApp(
-                R.drawable.ic_build_tinted,
-                R.string.apptoolkit_android_name,
-                R.string.apptoolkit_android_description,
-                application.getString(R.string.package_apptoolkit_android)));
-        promotedApps.add(new PromotedApp(
-                R.drawable.ic_code,
-                R.string.qr_scanner_name,
-                R.string.qr_scanner_description,
-                application.getString(R.string.package_qr_scanner)));
+        homeRepository.fetchPromotedApps(apps -> {
+            if (apps.isEmpty()) {
+                promotedApps.postValue(apps);
+                return;
+            }
+            int startIndex = (int) ((System.currentTimeMillis() / (24L * 60 * 60 * 1000)) % apps.size());
+            List<PromotedApp> rotated = new ArrayList<>();
+            for (int i = 0; i < Math.min(4, apps.size()); i++) {
+                rotated.add(apps.get((startIndex + i) % apps.size()));
+            }
+            promotedApps.postValue(rotated);
+        });
     }
 
     /**
@@ -87,7 +79,7 @@ public class HomeViewModel extends AndroidViewModel {
     /**
      * List of apps to promote on the Home screen.
      */
-    public List<PromotedApp> getPromotedApps() {
+    public LiveData<List<PromotedApp>> getPromotedApps() {
         return promotedApps;
     }
 

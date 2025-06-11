@@ -1,11 +1,17 @@
 package com.d4rk.androidtutorials.java.data.model;
 
-import androidx.annotation.DrawableRes;
-import androidx.annotation.StringRes;
+/**
+ * Model representing a promoted application fetched from the remote API.
+ */
+public class PromotedApp {
 
-public record PromotedApp(
-        @DrawableRes int iconResId,
-        @StringRes int nameResId,
-        @StringRes int descriptionResId,
-        String packageName
-) {}
+    public final String name;
+    public final String packageName;
+    public final String iconUrl;
+
+    public PromotedApp(String name, String packageName, String iconUrl) {
+        this.name = name;
+        this.packageName = packageName;
+        this.iconUrl = iconUrl;
+    }
+}
