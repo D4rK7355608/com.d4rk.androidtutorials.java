@@ -44,4 +44,7 @@
     <string name="error_loading_changelog">Error loading changelog</string>
 
     <string name="ad_banner_unit_id">ca-app-pub-5294151573817700/3821250346</string>
+    <string name="package_ast_kotlin" translatable="false">com.d4rk.androidtutorials</string>
+    <string name="package_cart_calculator" translatable="false">com.d4rk.cartcalculator</string>
+    <string name="package_cleaner_android" translatable="false">com.d4rk.cleaner</string>
 </resources>

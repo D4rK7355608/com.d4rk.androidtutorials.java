@@ -404,4 +404,11 @@
         <item>Use Material Design 3 components for a modern look.</item>
         <item>Profile your app regularly to track performance.</item>
     </string-array>
+    <string name="other_apps_title">More apps by the developer</string>
+    <string name="kotlin_edition_name">AST - Kotlin Edition</string>
+    <string name="kotlin_edition_description">Learn Android development with Kotlin.</string>
+    <string name="cart_calculator_name">Cart Calculator</string>
+    <string name="cart_calculator_description">Quickly total up your shopping cart.</string>
+    <string name="cleaner_android_name">Cleaner for Android</string>
+    <string name="cleaner_android_description">Free up space and optimize your device.</string>
 </resources>
