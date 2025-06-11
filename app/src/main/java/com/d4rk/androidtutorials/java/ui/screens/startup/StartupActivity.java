@@ -3,21 +3,22 @@ package com.d4rk.androidtutorials.java.ui.screens.startup;
 import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import androidx.preference.PreferenceManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.preference.PreferenceManager;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
+import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
 import com.google.android.ump.ConsentInformation;
 import com.google.android.ump.ConsentRequestParameters;
 import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
 
 import java.util.EnumMap;
 import java.util.Map;

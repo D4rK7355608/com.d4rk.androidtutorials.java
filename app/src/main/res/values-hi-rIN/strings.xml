@@ -167,7 +167,6 @@
     <string name="material_switch">मटेरियल स्विच</string>
     <string name="switch_material">स्विच मटेरियल</string>
     <string name="toggle_button">टॉगल बटन</string>
-    <string name="same_code_switches">सभी प्रकार के स्विचों के लिए इस जावा कोड का उपयोग करें।</string>
     <string name="clocks_and_timers">घड़ियां और टाइमर</string>
     <string name="clocks">घड़ियां</string>
     <string name="clock_analog">एनालॉग घड़ी</string>
