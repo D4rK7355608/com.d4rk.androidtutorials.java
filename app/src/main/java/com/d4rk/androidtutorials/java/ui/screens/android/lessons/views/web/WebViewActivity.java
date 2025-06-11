@@ -39,6 +39,8 @@ public class WebViewActivity extends AppCompatActivity {
         webView.loadUrl("https://d4rk7355608.github.io/profile/#home");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
     }
 
     private void setupFloatingButton() {
