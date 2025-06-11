@@ -48,6 +48,9 @@ public class HomeFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        if (binding != null) {
+            binding.scrollView.clearFocus();
+        }
         binding = null;
     }
 
@@ -67,6 +70,8 @@ public class HomeFragment extends Fragment {
     private void setupPromotions(LayoutInflater inflater) {
         ViewGroup container = binding.promotedAppsContainer;
         homeViewModel.getPromotedApps().observe(getViewLifecycleOwner(), apps -> {
+            binding.scrollView.clearFocus();
+            container.clearFocus();
             container.removeAllViews();
             for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : apps) {
                 com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
