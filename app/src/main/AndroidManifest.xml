@@ -115,6 +115,10 @@
             android:exported="false"
             android:label="@string/web_view"
             android:parentActivityName=".ui.screens.android.lessons.views.web.WebViewActivity" />
+        <activity-alias
+            android:name="com.d4rk.androidtutorials.java.ui.android.webviews.WebViewActivity"
+            android:exported="false"
+            android:targetActivity=".ui.screens.android.lessons.views.web.WebViewActivity" />
         <activity
             android:name=".ui.screens.android.lessons.progress.progressbar.ProgressBarActivity"
             android:exported="false"
