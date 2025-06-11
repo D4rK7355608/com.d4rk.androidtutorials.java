@@ -106,6 +106,25 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://www.gnu.org/licenses/gpl-3.0" />
         </androidx.preference.Preference>
+        <androidx.preference.PreferenceCategory
+            app:title="@string/consent_settings">
+            <androidx.preference.SwitchPreferenceCompat
+                app:defaultValue="true"
+                app:key="@string/key_consent_analytics"
+                app:title="@string/analytics_storage" />
+            <androidx.preference.SwitchPreferenceCompat
+                app:defaultValue="true"
+                app:key="@string/key_consent_ad_storage"
+                app:title="@string/ad_storage" />
+            <androidx.preference.SwitchPreferenceCompat
+                app:defaultValue="true"
+                app:key="@string/key_consent_ad_user_data"
+                app:title="@string/ad_user_data" />
+            <androidx.preference.SwitchPreferenceCompat
+                app:defaultValue="true"
+                app:key="@string/key_consent_ad_personalization"
+                app:title="@string/ad_personalization" />
+        </androidx.preference.PreferenceCategory>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_about"

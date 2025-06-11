@@ -6,6 +6,9 @@ import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 import androidx.preference.PreferenceManager;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import java.util.EnumMap;
+import java.util.Map;
 
 import com.d4rk.androidtutorials.java.R;
 
@@ -76,7 +79,37 @@ public class SettingsRepository {
             applyTheme();
         } else if (key.equals(context.getString(R.string.key_language))) {
             applyLanguage();
+        } else if (key.equals(context.getString(R.string.key_consent_analytics)) ||
+                key.equals(context.getString(R.string.key_consent_ad_storage)) ||
+                key.equals(context.getString(R.string.key_consent_ad_user_data)) ||
+                key.equals(context.getString(R.string.key_consent_ad_personalization))) {
+            applyConsent();
         }
+    }
+
+    /** Apply Firebase consent settings from preferences */
+    public void applyConsent() {
+        boolean analytics = sharedPreferences.getBoolean(
+                context.getString(R.string.key_consent_analytics), true);
+        boolean adStorage = sharedPreferences.getBoolean(
+                context.getString(R.string.key_consent_ad_storage), true);
+        boolean adUserData = sharedPreferences.getBoolean(
+                context.getString(R.string.key_consent_ad_user_data), true);
+        boolean adPersonalization = sharedPreferences.getBoolean(
+                context.getString(R.string.key_consent_ad_personalization), true);
+
+        Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> map =
+                new EnumMap<>(FirebaseAnalytics.ConsentType.class);
+        map.put(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE,
+                analytics ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        map.put(FirebaseAnalytics.ConsentType.AD_STORAGE,
+                adStorage ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        map.put(FirebaseAnalytics.ConsentType.AD_USER_DATA,
+                adUserData ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+        map.put(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION,
+                adPersonalization ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
+
+        FirebaseAnalytics.getInstance(context).setConsent(map);
     }
 
     public SharedPreferences getSharedPreferences() {
