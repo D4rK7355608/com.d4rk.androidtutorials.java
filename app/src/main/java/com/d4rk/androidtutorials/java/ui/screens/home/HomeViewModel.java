@@ -34,20 +34,25 @@ public class HomeViewModel extends AndroidViewModel {
         dailyTip.setValue(homeRepository.getDailyTip());
 
         promotedApps.add(new PromotedApp(
-                R.mipmap.ic_shortcut_kotlin_edition,
-                R.string.kotlin_edition_name,
-                R.string.kotlin_edition_description,
-                application.getString(R.string.package_ast_kotlin)));
-        promotedApps.add(new PromotedApp(
                 R.drawable.ic_shop,
                 R.string.cart_calculator_name,
                 R.string.cart_calculator_description,
-                application.getString(R.string.package_cart_calculator)));
+                application.getString(R.string.package_cart_calculator));
         promotedApps.add(new PromotedApp(
                 R.drawable.ic_safety_check_tinted,
                 R.string.cleaner_android_name,
                 R.string.cleaner_android_description,
-                application.getString(R.string.package_cleaner_android)));
+                application.getString(R.string.package_cleaner_android));
+        promotedApps.add(new PromotedApp(
+                R.drawable.ic_build_tinted,
+                R.string.apptoolkit_android_name,
+                R.string.apptoolkit_android_description,
+                application.getString(R.string.package_apptoolkit_android));
+        promotedApps.add(new PromotedApp(
+                R.drawable.ic_code,
+                R.string.qr_scanner_name,
+                R.string.qr_scanner_description,
+                application.getString(R.string.package_qr_scanner));
     }
 
     /**

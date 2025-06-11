@@ -47,4 +47,6 @@
     <string name="package_ast_kotlin" translatable="false">com.d4rk.androidtutorials</string>
     <string name="package_cart_calculator" translatable="false">com.d4rk.cartcalculator</string>
     <string name="package_cleaner_android" translatable="false">com.d4rk.cleaner</string>
+    <string name="package_apptoolkit_android" translatable="false">com.d4rk.apptoolkit</string>
+    <string name="package_qr_scanner" translatable="false">com.d4rk.qrscanner</string>
 </resources>

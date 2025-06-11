@@ -188,13 +188,21 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/share_tip_button"
-                        style="@style/Widget.Material3.Button.Icon"
+                        style="@style/Widget.Material3.Button.IconButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/share"
                         app:icon="@drawable/ic_share" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/small_banner_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:adSize="MEDIUM_RECTANGLE"
+                app:adUnitId="@string/ad_banner_unit_id" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/learningAnimation"
@@ -225,14 +233,6 @@
                     tools:ignore="ImageContrastCheck" />
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/small_banner_ad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="16dp"
-                app:adSize="MEDIUM_RECTANGLE"
-                app:adUnitId="@string/ad_banner_unit_id" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
