@@ -2,6 +2,8 @@ package com.d4rk.androidtutorials.java.ui.screens.startup;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,6 +35,8 @@ public class StartupActivity extends AppCompatActivity {
         com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding binding = ActivityStartupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        applyStoredConsent();
+
         startupViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
 
         consentInformation = UserMessagingPlatform.getConsentInformation(this);
@@ -50,7 +54,7 @@ public class StartupActivity extends AppCompatActivity {
                                 formError -> updateFirebaseConsent(false, false, false, false)
                         );
                     } else if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.OBTAINED) {
-                        updateFirebaseConsent(true, true, true, true);
+                        applyStoredConsent();
                     }
                 },
                 formError -> {}
@@ -82,6 +86,15 @@ public class StartupActivity extends AppCompatActivity {
     private void proceedToMainActivity() {
         startActivity(new Intent(this, MainActivity.class));
         finish();
+    }
+
+    private void applyStoredConsent() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean analytics = prefs.getBoolean(getString(R.string.key_consent_analytics), true);
+        boolean adStorage = prefs.getBoolean(getString(R.string.key_consent_ad_storage), true);
+        boolean adUserData = prefs.getBoolean(getString(R.string.key_consent_ad_user_data), true);
+        boolean adPersonalization = prefs.getBoolean(getString(R.string.key_consent_ad_personalization), true);
+        updateFirebaseConsent(analytics, adStorage, adUserData, adPersonalization);
     }
 
     private void updateFirebaseConsent(boolean analytics,

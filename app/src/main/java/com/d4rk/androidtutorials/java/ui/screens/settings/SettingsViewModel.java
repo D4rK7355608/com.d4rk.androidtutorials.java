@@ -35,4 +35,8 @@ public class SettingsViewModel extends AndroidViewModel {
     public SharedPreferences getSharedPreferences() {
         return settingsRepository.getSharedPreferences();
     }
+
+    public void applyConsent() {
+        settingsRepository.applyConsent();
+    }
 }

@@ -3,6 +3,8 @@ package com.d4rk.androidtutorials.java.ui.screens.startup.dialogs;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,11 +32,17 @@ public class ConsentDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         DialogConsentBinding binding = DialogConsentBinding.inflate(LayoutInflater.from(requireContext()));
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         boolean defaultChecked = !BuildConfig.DEBUG;
-        binding.checkAnalyticsStorage.setChecked(defaultChecked);
-        binding.checkAdStorage.setChecked(defaultChecked);
-        binding.checkAdUserData.setChecked(defaultChecked);
-        binding.checkAdPersonalization.setChecked(defaultChecked);
+        boolean analytics = prefs.getBoolean(getString(R.string.key_consent_analytics), defaultChecked);
+        boolean adStorage = prefs.getBoolean(getString(R.string.key_consent_ad_storage), defaultChecked);
+        boolean adUserData = prefs.getBoolean(getString(R.string.key_consent_ad_user_data), defaultChecked);
+        boolean adPersonalization = prefs.getBoolean(getString(R.string.key_consent_ad_personalization), defaultChecked);
+
+        binding.checkAnalyticsStorage.setChecked(analytics);
+        binding.checkAdStorage.setChecked(adStorage);
+        binding.checkAdUserData.setChecked(adUserData);
+        binding.checkAdPersonalization.setChecked(adPersonalization);
 
         setCancelable(false);
 
@@ -43,13 +51,20 @@ public class ConsentDialogFragment extends DialogFragment {
                 .setView(binding.getRoot())
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                    boolean a = binding.checkAnalyticsStorage.isChecked();
+                    boolean b = binding.checkAdStorage.isChecked();
+                    boolean c = binding.checkAdUserData.isChecked();
+                    boolean d = binding.checkAdPersonalization.isChecked();
+
+                    prefs.edit()
+                            .putBoolean(getString(R.string.key_consent_analytics), a)
+                            .putBoolean(getString(R.string.key_consent_ad_storage), b)
+                            .putBoolean(getString(R.string.key_consent_ad_user_data), c)
+                            .putBoolean(getString(R.string.key_consent_ad_personalization), d)
+                            .apply();
+
                     if (listener != null) {
-                        listener.onConsentSet(
-                                binding.checkAnalyticsStorage.isChecked(),
-                                binding.checkAdStorage.isChecked(),
-                                binding.checkAdUserData.isChecked(),
-                                binding.checkAdPersonalization.isChecked()
-                        );
+                        listener.onConsentSet(a, b, c, d);
                     }
                 })
                 .create();

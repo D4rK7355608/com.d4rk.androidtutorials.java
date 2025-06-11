@@ -396,6 +396,7 @@
     <string name="ad_storage">Ad storage</string>
     <string name="ad_user_data">Ad user data</string>
     <string name="ad_personalization">Ad personalization</string>
+    <string name="consent_settings">Consent settings</string>
     <string name="tip_of_the_day">Tip of the Day</string>
     <string-array name="daily_tips">
         <item>Use ConstraintLayout to create responsive UIs.</item>

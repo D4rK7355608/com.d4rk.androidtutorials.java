@@ -32,6 +32,7 @@ public class SettingsActivity extends AppCompatActivity
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
 
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
+        settingsViewModel.applyConsent();
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.settings, new SettingsFragment())
