@@ -16,7 +16,7 @@
     <string name="main_card_title">Discover Android Studio Tutorials</string>
     <string name="main_card_subtitle">Featuring Kotlin and Java Editions</string>
     <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development!</string>
-    <string name="get_on_google_play">Get it on Google Play</string>
+    <string name="get_on_google_play">Google Play</string>
 
     <string name="android_studio">Android Studio</string>
 
@@ -411,4 +411,8 @@
     <string name="cart_calculator_description">Quickly total up your shopping cart.</string>
     <string name="cleaner_android_name">Cleaner for Android</string>
     <string name="cleaner_android_description">Free up space and optimize your device.</string>
+    <string name="apptoolkit_android_name">AppToolkit for Android</string>
+    <string name="apptoolkit_android_description">Handy utilities for managing your apps.</string>
+    <string name="qr_scanner_name">QR &amp; Barcode Scanner</string>
+    <string name="qr_scanner_description">Fast and secure scanning.</string>
 </resources>
