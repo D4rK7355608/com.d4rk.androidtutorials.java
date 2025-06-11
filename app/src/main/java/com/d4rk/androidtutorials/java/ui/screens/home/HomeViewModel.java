@@ -2,10 +2,6 @@ package com.d4rk.androidtutorials.java.ui.screens.home;
 
 import android.app.Application;
 import android.content.Intent;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -13,7 +9,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.ui.screens.home.repository.HomeRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeViewModel extends AndroidViewModel {
@@ -37,22 +37,22 @@ public class HomeViewModel extends AndroidViewModel {
                 R.drawable.ic_shop,
                 R.string.cart_calculator_name,
                 R.string.cart_calculator_description,
-                application.getString(R.string.package_cart_calculator));
+                application.getString(R.string.package_cart_calculator)));
         promotedApps.add(new PromotedApp(
                 R.drawable.ic_safety_check_tinted,
                 R.string.cleaner_android_name,
                 R.string.cleaner_android_description,
-                application.getString(R.string.package_cleaner_android));
+                application.getString(R.string.package_cleaner_android)));
         promotedApps.add(new PromotedApp(
                 R.drawable.ic_build_tinted,
                 R.string.apptoolkit_android_name,
                 R.string.apptoolkit_android_description,
-                application.getString(R.string.package_apptoolkit_android));
+                application.getString(R.string.package_apptoolkit_android)));
         promotedApps.add(new PromotedApp(
                 R.drawable.ic_code,
                 R.string.qr_scanner_name,
                 R.string.qr_scanner_description,
-                application.getString(R.string.package_qr_scanner));
+                application.getString(R.string.package_qr_scanner)));
     }
 
     /**
