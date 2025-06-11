@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
@@ -35,6 +36,7 @@ import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -154,8 +156,13 @@ public class MainActivity extends AppCompatActivity {
 
                 ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(visibilityMode);
                 if (mBinding.adView != null) {
-                    MobileAds.initialize(this);
-                    mBinding.adView.loadAd(new AdRequest.Builder().build());
+                    if (ConsentUtils.canShowAds(this)) {
+                        MobileAds.initialize(this);
+                        mBinding.adView.setVisibility(View.VISIBLE);
+                        mBinding.adView.loadAd(new AdRequest.Builder().build());
+                    } else {
+                        mBinding.adView.setVisibility(View.GONE);
+                    }
                 }
             } else {
                 edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
@@ -237,6 +244,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        ConsentUtils.applyStoredConsent(this);
+        if (mBinding.adView != null) {
+            if (ConsentUtils.canShowAds(this)) {
+                if (mBinding.adView.getVisibility() != View.VISIBLE) {
+                    MobileAds.initialize(this);
+                    mBinding.adView.setVisibility(View.VISIBLE);
+                    mBinding.adView.loadAd(new AdRequest.Builder().build());
+                }
+            } else {
+                mBinding.adView.setVisibility(View.GONE);
+            }
+        }
         AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
         appUsageNotificationsManager.scheduleAppUsageCheck();
         appUpdateNotificationsManager.checkAndSendUpdateNotification();
