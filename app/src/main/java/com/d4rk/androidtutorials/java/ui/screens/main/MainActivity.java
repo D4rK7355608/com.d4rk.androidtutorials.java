@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
             if (navHostFragment != null) {
                 navController = navHostFragment.getNavController();
                 NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
-                navGraph.setStartDestination(R.id.navigation_home);
+                navGraph.setStartDestination(startFragmentId);
                 navController.setGraph(navGraph);
 
                 if (mBinding.navView instanceof BottomNavigationView bottomNav) {
