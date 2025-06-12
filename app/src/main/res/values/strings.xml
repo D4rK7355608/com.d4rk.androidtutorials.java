@@ -410,22 +410,5 @@
     <string name="summary_consent_ad_user_data">Allows sharing user data for ads.</string>
     <string name="summary_consent_ad_personalization">Enables personalized ad recommendations.</string>
     <string name="tip_of_the_day">Tip of the Day</string>
-    <string-array name="daily_tips">
-        <item>Use ConstraintLayout to create responsive UIs.</item>
-        <item>Leverage ViewBinding for safer UI code.</item>
-        <item>Implement RecyclerView for smooth scrolling lists.</item>
-        <item>Use Material Design 3 components for a modern look.</item>
-        <item>Profile your app regularly to track performance.</item>
-        <item>Keep layouts organized by extracting reusable components.</item>
-        <item>Use string resources for all text to simplify localization.</item>
-        <item>Optimize images with WebP to reduce APK size.</item>
-        <item>Enable ProGuard to shrink and obfuscate release builds.</item>
-        <item>Prefer Compose for new UI if targeting modern devices.</item>
-        <item>Take advantage of LiveData and ViewModel for reactive UIs.</item>
-        <item>Use WorkManager for reliable background tasks.</item>
-        <item>Utilize GitHub Actions for automated build checks.</item>
-        <item>Test your app on different screen sizes with the emulator.</item>
-        <item>Keep dependencies updated for the latest features and fixes.</item>
-    </string-array>
     <string name="other_apps_title">More apps by the developer</string>
 </resources>
