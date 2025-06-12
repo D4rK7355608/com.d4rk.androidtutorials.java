@@ -409,6 +409,25 @@
     <string name="summary_consent_ad_storage">Permits storing ad data on your device.</string>
     <string name="summary_consent_ad_user_data">Allows sharing user data for ads.</string>
     <string name="summary_consent_ad_personalization">Enables personalized ad recommendations.</string>
+    <string name="daily_tip_constraintlayout">Use ConstraintLayout to create responsive UIs.</string>
+    <string name="daily_tip_viewbinding">Leverage ViewBinding for safer UI code.</string>
+    <string name="daily_tip_recyclerview">Implement RecyclerView for smooth scrolling lists.</string>
+    <string name="daily_tip_material_design3">Use Material Design 3 components for a modern look.</string>
+    <string name="daily_tip_profile_app">Profile your app regularly to track performance.</string>
+    <string name="daily_tip_extract_components">Keep layouts organized by extracting reusable components.</string>
+    <string name="daily_tip_use_string_resources">Use string resources for all text to simplify localization.</string>
+    <string name="daily_tip_optimize_webp">Optimize images with WebP to reduce APK size.</string>
+    <string name="daily_tip_enable_proguard">Enable ProGuard to shrink and obfuscate release builds.</string>
+    <string name="daily_tip_prefer_compose">Prefer Compose for new UI if targeting modern devices.</string>
+    <string name="daily_tip_livedata_viewmodel">Take advantage of LiveData and ViewModel for reactive UIs.</string>
+    <string name="daily_tip_workmanager">Use WorkManager for reliable background tasks.</string>
+    <string name="daily_tip_github_actions">Utilize GitHub Actions for automated build checks.</string>
+    <string name="daily_tip_emulator_screen_sizes">Test your app on different screen sizes with the emulator.</string>
+    <string name="daily_tip_update_dependencies">Keep dependencies updated for the latest features and fixes.</string>
+    <string name="daily_tip_kotlin_coroutines">Leverage Kotlin Coroutines for asynchronous operations.</string>
+    <string name="daily_tip_hilt">Integrate Hilt for dependency injection.</string>
+    <string name="daily_tip_unit_tests">Write unit tests with JUnit and Espresso.</string>
+    <string name="daily_tip_mvvm">Follow the MVVM architecture for maintainable code.</string>
     <string name="tip_of_the_day">Tip of the Day</string>
     <string name="other_apps_title">More apps by the developer</string>
 </resources>

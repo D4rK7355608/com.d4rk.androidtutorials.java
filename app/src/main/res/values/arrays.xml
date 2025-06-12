@@ -83,20 +83,24 @@
         <item>about</item>
     </string-array>
     <string-array name="daily_tips">
-        <item>Use ConstraintLayout to create responsive UIs.</item>
-        <item>Leverage ViewBinding for safer UI code.</item>
-        <item>Implement RecyclerView for smooth scrolling lists.</item>
-        <item>Use Material Design 3 components for a modern look.</item>
-        <item>Profile your app regularly to track performance.</item>
-        <item>Keep layouts organized by extracting reusable components.</item>
-        <item>Use string resources for all text to simplify localization.</item>
-        <item>Optimize images with WebP to reduce APK size.</item>
-        <item>Enable ProGuard to shrink and obfuscate release builds.</item>
-        <item>Prefer Compose for new UI if targeting modern devices.</item>
-        <item>Take advantage of LiveData and ViewModel for reactive UIs.</item>
-        <item>Use WorkManager for reliable background tasks.</item>
-        <item>Utilize GitHub Actions for automated build checks.</item>
-        <item>Test your app on different screen sizes with the emulator.</item>
-        <item>Keep dependencies updated for the latest features and fixes.</item>
+        <item>@string/daily_tip_constraintlayout</item>
+        <item>@string/daily_tip_viewbinding</item>
+        <item>@string/daily_tip_recyclerview</item>
+        <item>@string/daily_tip_material_design3</item>
+        <item>@string/daily_tip_profile_app</item>
+        <item>@string/daily_tip_extract_components</item>
+        <item>@string/daily_tip_use_string_resources</item>
+        <item>@string/daily_tip_optimize_webp</item>
+        <item>@string/daily_tip_enable_proguard</item>
+        <item>@string/daily_tip_prefer_compose</item>
+        <item>@string/daily_tip_livedata_viewmodel</item>
+        <item>@string/daily_tip_workmanager</item>
+        <item>@string/daily_tip_github_actions</item>
+        <item>@string/daily_tip_emulator_screen_sizes</item>
+        <item>@string/daily_tip_update_dependencies</item>
+        <item>@string/daily_tip_kotlin_coroutines</item>
+        <item>@string/daily_tip_hilt</item>
+        <item>@string/daily_tip_unit_tests</item>
+        <item>@string/daily_tip_mvvm</item>
     </string-array>
 </resources>
