@@ -256,8 +256,11 @@
     <string name="code_of_conduct">Code of conduct</string>
     <string name="permissions">Permissions</string>
     <string name="normal">Normal</string>
+    <string name="special">Special</string>
     <string name="ad_id">Ad id [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
+    <string name="wake_lock">Keep device awake [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep (e.g., screen dimming or processor sleeping) during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Post notifications [POST_NOTIFICATIONS]</string>
     <string name="runtime">Runtime</string>
     <string name="access_network_state">Access network state [ACCESS_NETWORK_STATE]</string>

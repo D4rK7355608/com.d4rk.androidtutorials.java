@@ -5,30 +5,13 @@
         app:title="@string/normal">
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
-            app:summary="@string/summary_preference_permissions_ad_id"
-            app:title="@string/ad_id"
-            app:useSimpleSummaryProvider="true" />
-        <androidx.preference.Preference
-            app:iconSpaceReserved="false"
-            app:summary="@string/summary_preference_permissions_internet"
-            app:title="@string/internet"
-            app:useSimpleSummaryProvider="true" />
-        <androidx.preference.Preference
-            app:iconSpaceReserved="false"
-            app:summary="@string/summary_preference_permissions_post_notifications"
-            app:title="@string/post_notifications" />
-    </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory
-        app:iconSpaceReserved="false"
-        app:title="@string/runtime">
-        <androidx.preference.Preference
-            app:iconSpaceReserved="false"
             app:summary="@string/summary_preference_permissions_access_network_state"
             app:title="@string/access_network_state" />
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
-            app:summary="@string/summary_preference_permissions_access_notification_policy"
-            app:title="@string/access_notification_policy" />
+            app:summary="@string/summary_preference_permissions_ad_id"
+            app:title="@string/ad_id"
+            app:useSimpleSummaryProvider="true" />
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
             app:summary="@string/summary_preference_permissions_billing"
@@ -41,5 +24,31 @@
             app:iconSpaceReserved="false"
             app:summary="@string/summary_preference_permissions_foreground_service"
             app:title="@string/foreground_service" />
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:summary="@string/summary_preference_permissions_internet"
+            app:title="@string/internet"
+            app:useSimpleSummaryProvider="true" />
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:summary="@string/summary_preference_permissions_wake_lock"
+            app:title="@string/wake_lock"
+            app:useSimpleSummaryProvider="true" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/runtime">
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:summary="@string/summary_preference_permissions_post_notifications"
+            app:title="@string/post_notifications" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/special">
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:summary="@string/summary_preference_permissions_access_notification_policy"
+            app:title="@string/access_notification_policy" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

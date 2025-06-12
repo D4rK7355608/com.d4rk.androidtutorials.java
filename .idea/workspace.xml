@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYZE_INJECTED_CODE" value="false" />
-  </component>
   <component name="AndroidLayouts">
     <shared>
       <config>
@@ -13,6 +10,91 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_ad_units.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_code_of_conduct.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_data_thresholding.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_edit_notifications.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_firebase.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_font_download.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_home.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_label.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_language.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_libraries.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_license.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_perm_device_information.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_permissions.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_privacy_policy.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_signal_cellular.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_terms_of_service.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_theme.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml">
         <config>
           <theme>@style/AppThemeActionBar</theme>
@@ -289,6 +371,11 @@
           <theme>@style/AppThemeActionBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/promoted_app_item.xml">
+        <config>
+          <theme>@style/AppThemeActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml">
         <config>
           <theme>@style/AppThemeActionBar</theme>
@@ -331,6 +418,8 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/preferences_settings.xml">
         <config>
+          <state>Portrait</state>
+          <night>night</night>
           <theme>@style/AppThemeActionBar</theme>
         </config>
       </layout>
@@ -345,7 +434,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`.&#10;- Corrected a constructor call in `HomeViewModel.java`." />
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability.">
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -475,7 +566,7 @@
     "project.structure.last.edited": "Suggestions",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.language.Kotlin"
   },
   "keyToStringList": {
@@ -753,7 +844,31 @@
       <option name="project" value="LOCAL" />
       <updated>1749645689157</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="refactor: Improved startup activity and minor UI updates&#10;&#10;Significantly enhanced app stability and user experience:&#10;&#10;- Refactored the startup activity to ensure a smoother app launch.&#10;- Updated the &quot;Get on Google Play&quot; button text to &quot;Play Store&quot; for brevity.&#10;- Removed the &quot;same_code_switches&quot; string as it was no longer in use.">
+      <option name="closed" value="true" />
+      <created>1749659134502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1749659134502</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability.">
+      <option name="closed" value="true" />
+      <created>1749667982714</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1749667982714</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability.">
+      <option name="closed" value="true" />
+      <created>1749669488962</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1749669488962</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -801,19 +916,21 @@
     <MESSAGE value="refactor: Updated URLs for Privacy Policy, Terms of Service, and Code of Conduct and updated dependencies&#10;&#10;Updated the URLs for the Privacy Policy, Terms of Service, and Code of Conduct across various parts of the application and documentation.&#10;&#10;The old Google Sites URLs have been replaced with new GitHub Pages URLs to reflect the new location of these documents.&#10;&#10;- Updated links in `preferences_settings.xml`&#10;- Updated links in `StartupActivity.java`&#10;- Updated links in `WebViewActivity.java` and its corresponding raw text file&#10;- Updated links in `HelpActivity.java`&#10;- Updated links in `README.md`&#10;&#10;Additionally, the following dependencies and Gradle wrapper were updated:&#10;- `appcompat` to `1.7.1`&#10;- `firebaseBom` to `33.15.0`&#10;- `lifecycle` (livedata, runtime, viewmodel) to `2.9.1`&#10;- `playServicesAds` to `24.4.0`&#10;- Gradle wrapper to `8.14.2`" />
     <MESSAGE value="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`." />
     <MESSAGE value="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`.&#10;- Corrected a constructor call in `HomeViewModel.java`." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`.&#10;- Corrected a constructor call in `HomeViewModel.java`." />
+    <MESSAGE value="refactor: Improved startup activity and minor UI updates&#10;&#10;Significantly enhanced app stability and user experience:&#10;&#10;- Refactored the startup activity to ensure a smoother app launch.&#10;- Updated the &quot;Get on Google Play&quot; button text to &quot;Play Store&quot; for brevity.&#10;- Removed the &quot;same_code_switches&quot; string as it was no longer in use." />
+    <MESSAGE value="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.d4rk.androidtutorials.java">
           <value>
-            <CheckInfo lastCheckTimestamp="1749497817076" />
+            <CheckInfo lastCheckTimestamp="1749649826770" />
           </value>
         </entry>
         <entry key="com.d4rk.androidtutorials.java.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1749497817077" />
+            <CheckInfo lastCheckTimestamp="1749649826770" />
           </value>
         </entry>
       </map>
