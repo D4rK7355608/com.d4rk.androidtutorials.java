@@ -259,30 +259,33 @@ public class MainActivity extends AppCompatActivity {
         AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
         appUsageNotificationsManager.scheduleAppUsageCheck();
         appUpdateNotificationsManager.checkAndSendUpdateNotification();
-        checkForFlexibleOrImmediateUpdate();
+        checkForImmediateUpdate();
     }
 
-    private void checkForFlexibleOrImmediateUpdate() {
-        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
-                    boolean updateAvailable = appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
-                    if (updateAvailable) {
-                        int priority = appUpdateInfo.updatePriority();
-                        if (priority >= 3 && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-                            startImmediateUpdate(appUpdateInfo);
-                        } else if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                            startFlexibleUpdate(appUpdateInfo);
-                        }
-                    }
-                })
-                .addOnFailureListener(e -> {
-                    if (!BuildConfig.DEBUG) {
-                        Snackbar.make(
-                                findViewById(android.R.id.content),
-                                getString(R.string.snack_general_error),
-                                Snackbar.LENGTH_LONG
-                        ).show();
-                    }
-                });
+    private void checkForImmediateUpdate() {
+        appUpdateManager
+                .getAppUpdateInfo()
+                .addOnSuccessListener(
+                        appUpdateInfo -> {
+                            boolean updateAvailable =
+                                    appUpdateInfo.updateAvailability()
+                                            == UpdateAvailability.UPDATE_AVAILABLE;
+                            if (updateAvailable
+                                    && appUpdateInfo.isUpdateTypeAllowed(
+                                            AppUpdateType.IMMEDIATE)) {
+                                startImmediateUpdate(appUpdateInfo);
+                            }
+                        })
+                .addOnFailureListener(
+                        e -> {
+                            if (!BuildConfig.DEBUG) {
+                                Snackbar.make(
+                                                findViewById(android.R.id.content),
+                                                getString(R.string.snack_general_error),
+                                                Snackbar.LENGTH_LONG)
+                                        .show();
+                            }
+                        });
     }
 
     private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
@@ -290,14 +293,6 @@ public class MainActivity extends AppCompatActivity {
                 appUpdateInfo,
                 updateActivityResultLauncher,
                 AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
-        );
-    }
-
-    private void startFlexibleUpdate(AppUpdateInfo appUpdateInfo) {
-        appUpdateManager.startUpdateFlowForResult(
-                appUpdateInfo,
-                updateActivityResultLauncher,
-                AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build()
         );
     }
 
