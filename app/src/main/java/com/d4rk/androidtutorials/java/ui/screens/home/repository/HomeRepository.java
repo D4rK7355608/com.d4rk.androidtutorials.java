@@ -43,9 +43,7 @@ public class HomeRepository {
      */
     public Intent getPlayStoreIntent() {
         String playStoreUrl = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl));
-        intent.setPackage("com.android.vending");
-        return intent;
+        return buildPlayStoreIntent(playStoreUrl);
     }
 
     /**
@@ -53,9 +51,20 @@ public class HomeRepository {
      */
     public Intent getAppPlayStoreIntent(String packageName) {
         String url = "https://play.google.com/store/apps/details?id=" + packageName;
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        intent.setPackage("com.android.vending");
-        return intent;
+        return buildPlayStoreIntent(url);
+    }
+
+    /**
+     * Builds an intent that opens a Play Store url if the Google Play app is
+     * installed, otherwise falls back to a generic ACTION_VIEW intent.
+     */
+    private Intent buildPlayStoreIntent(String url) {
+        Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        playStoreIntent.setPackage("com.android.vending");
+        if (playStoreIntent.resolveActivity(context.getPackageManager()) != null) {
+            return playStoreIntent;
+        }
+        return new Intent(Intent.ACTION_VIEW, Uri.parse(url));
     }
 
     /**
