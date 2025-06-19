@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_short_description">اینڈرائیڈ اسٹوڈیو میں سادہ جاوا ایپس بنانا سیکھیں۔ 📱</string>
+    <string name="notification_update_title">ایک نئی اپڈیٹ دستیاب ہے!</string>
+    <string name="summary_notification_update">ایپ کا نیا ورژن دستیاب ہے۔ اپڈیٹ کرنے کے لیے کلک کریں!</string>
+    <string name="notification_last_time_used_title">کافی وقت ہو گیا ہے!</string>
+    <string name="summary_notification_last_time_used">ہمیں آپ کی کمی محسوس ہوئی! آئیے اینڈرائیڈ کے بارے میں کچھ نیا سیکھیں!</string>
+
+    <string name="welcome">خوش آمدید</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">جاری رکھنے کے لیے ہماری سروس کی شرائط اور رازداری کی پالیسی کو پڑھیں اور ان سے اتفاق کریں</string>
+    <string name="agree">اتفاق کریں</string>
+
+    <string name="home">ہوم</string>
+    <string name="announcement_title">ایک نئی ایپ آ گئی ہے!</string>
+    <string name="announcement_subtitle">اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز کی تازہ ترین ایپ دیکھیں۔ جیٹ پیک کمپوز، میٹیریل 3، اور بہت کچھ سیکھیں۔</string>
+    <string name="main_card_title">اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز دریافت کریں</string>
+    <string name="main_card_subtitle">کوٹلن اور جاوا ایڈیشنز کے ساتھ</string>
+    <string name="main_card_description">کوٹلن ایڈیشن کو ڈائنامک اسباق، AI اسسٹنٹ، اور بہت کچھ کے ساتھ اپ ڈیٹ کیا گیا ہے۔ اینڈرائیڈ ڈیولپمنٹ کے مستقبل کا تجربہ کریں!</string>
+    <string name="get_on_google_play">اسے گوگل پلے سے حاصل کریں</string>
+    <string name="play_store">پلے اسٹور</string>
+
+    <string name="android_studio">اینڈرائیڈ اسٹوڈیو</string>
+
+    <string name="android_start">نیا پروجیکٹ شروع کریں…</string>
+    <string name="step1">پہلا مرحلہ</string>
+    <string name="summary_first_step">اینڈرائیڈ اسٹوڈیو میں نیا پروجیکٹ بنانے کا پہلا مرحلہ تصویر میں دکھائے گئے <b>نیا پروجیکٹ</b> بٹن پر کلک کرنا اور اگلے مرحلے پر جانا ہے۔</string>
+    <string name="step2">دوسرا مرحلہ</string>
+    <string name="summary_second_step">دوسرا مرحلہ اپنی ایپ کے لیے موزوں ایکٹیویٹی کی قسم منتخب کرنا ہے۔ آپ کچھ پری سیٹس میں سے انتخاب کر سکتے ہیں جو آپ کے کام کو آسان بنا سکتے ہیں۔ ان میں سے ایک کو منتخب کریں اور <b>آگے</b> بٹن پر کلک کریں۔</string>
+    <string name="step3">تیسرا مرحلہ</string>
+    <string name="summary_third_step">تیسرا اور آخری مرحلہ اپنی ایپ کی سیٹنگز کو کنفیگر کرنا ہے، جیسے ایپ کا نام، <b>پیکیج کا نام</b>، ترجیحی <b>پروگرامنگ زبان</b> اور <b>کم از کم SDK</b>۔ آپ ان کے بارے میں مزید <a href="https://developer.android.com/">اینڈرائیڈ ڈیولپرز</a> پر جان سکتے ہیں۔</string>
+
+    <string name="basics">بنیادی باتیں</string>
+
+    <string name="shortcuts">اینڈرائیڈ اسٹوڈیو شارٹ کٹس</string>
+    <string name="shortcuts_title">شارٹ کٹس</string>
+    <string name="description">تفصیل</string>
+    <string name="general">عمومی</string>
+    <string name="save_all">سب محفوظ کریں</string>
+    <string name="synchronize">سنکرونائز کریں</string>
+    <string name="maximize">ایڈیٹر کو بڑا/چھوٹا کریں</string>
+    <string name="add_to_favorites">پسندیدہ میں شامل کریں</string>
+    <string name="file_inspect">موجودہ فائل کا موجودہ پروفائل کے ساتھ معائنہ کریں</string>
+    <string name="quick_switch_theme">جلدی سے تھیم تبدیل کریں</string>
+    <string name="open_settings">سیٹنگز ڈائیلاگ کھولیں</string>
+    <string name="open_project">پروجیکٹ اسٹرکچر ڈائیلاگ کھولیں</string>
+    <string name="switch_tabs">ٹیبز اور ٹول ونڈو کے درمیان سوئچ کریں</string>
+    <string name="refactoring">ریفیکٹرنگ</string>
+    <string name="move">منتقل کریں</string>
+    <string name="safe_delete">محفوظ طریقے سے حذف کریں</string>
+    <string name="rename">نام تبدیل کریں</string>
+    <string name="change_signature">سگنیچر تبدیل کریں</string>
+    <string name="inline">ان لائن</string>
+    <string name="extract_method">میتھڈ نکالیں</string>
+    <string name="extract_field">فیلڈ نکالیں</string>
+    <string name="extract_variable">ویری ایبل نکالیں</string>
+    <string name="extract_constant">کانسٹنٹ نکالیں</string>
+    <string name="build_and_run">بنائیں اور چلائیں</string>
+    <string name="build">بنائیں</string>
+    <string name="apply_changes">تبدیلیاں لاگو کریں (Instant Run کے ساتھ)</string>
+    <string name="debugging">ڈیبگنگ</string>
+    <string name="debug">ڈیبگ کریں</string>
+    <string name="step_over">اسٹیپ اوور</string>
+    <string name="step_into">اسٹیپ انٹو</string>
+    <string name="smart_step_into">اسمارٹ اسٹیپ انٹو</string>
+    <string name="step_out">اسٹیپ آؤٹ</string>
+    <string name="run_to_cursor">کرسر تک چلائیں</string>
+    <string name="evaluate_expression">ایکسپریشن کا جائزہ لیں</string>
+    <string name="resume_program">پروگرام دوبارہ شروع کریں</string>
+    <string name="toggle_breakpoint">بریک پوائنٹ ٹوگل کریں</string>
+    <string name="view_breakpoints">بریک پوائنٹس دیکھیں</string>
+    <string name="navigation_and_searching">نیویگیشن اور تلاش</string>
+    <string name="press_shift_twice">شفٹ کو دو بار دبائیں</string>
+    <string name="search_everything">سب کچھ تلاش کریں (بشمول کوڈ اور مینیو)</string>
+    <string name="find">تلاش کریں</string>
+    <string name="find_next">اگلا تلاش کریں</string>
+    <string name="find_previous">پچھلا تلاش کریں</string>
+    <string name="replace">تبدیل کریں</string>
+    <string name="find_action">ایکشن تلاش کریں</string>
+    <string name="search_by_symbol_name">علامت کے نام سے تلاش کریں</string>
+    <string name="find_class">کلاس تلاش کریں</string>
+    <string name="find_file">فائل تلاش کریں (کلاس کے بجائے)</string>
+    <string name="find_path">پاتھ تلاش کریں</string>
+    <string name="open_file_structure">فائل اسٹرکچر پاپ اپ کھولیں</string>
+    <string name="navigate_between_open_tabs">کھلے ایڈیٹر ٹیبز کے درمیان نیویگیٹ کریں</string>
+    <string name="jump_to_source">سورس پر جائیں</string>
+    <string name="open_current_editor_tab_in_new_window">موجودہ ایڈیٹر ٹیب کو نئی ونڈو میں کھولیں</string>
+    <string name="recently_opened_files">حال ہی میں کھولی گئی فائلوں کا پاپ اپ</string>
+    <string name="recently_edited_files">حال ہی میں ترمیم شدہ فائلوں کا پاپ اپ</string>
+    <string name="go_to_last_edit_location">آخری ترمیم کی جگہ پر جائیں</string>
+    <string name="close_active_editor_tabs">فعال ایڈیٹر ٹیب بند کریں</string>
+    <string name="return_to_editor_window">ٹول ونڈو سے ایڈیٹر ونڈو پر واپس جائیں</string>
+    <string name="hide_active_window">فعال یا آخری فعال ٹول ونڈو چھپائیں</string>
+    <string name="go_to_line">لائن پر جائیں</string>
+    <string name="open_type_hierarchy">ٹائپ ہائرارکی کھولیں</string>
+    <string name="open_v_hierarchy">میتھڈ ہائرارکی کھولیں</string>
+    <string name="open_call_hierarchy">کال ہائرارکی کھولیں</string>
+    <string name="writing_code">کوڈ لکھنا</string>
+    <string name="generate_code">کوڈ جنریٹ کریں (گیٹرز، سیٹرز، وغیرہ)</string>
+    <string name="override_methods">میتھڈز کو اوور رائیڈ کریں</string>
+    <string name="implement_methods">میتھڈز کو نافذ کریں</string>
+    <string name="surround">اس سے گھیریں (if…else / try…catch / وغیرہ)</string>
+    <string name="delete_line">کیرٹ پر لائن حذف کریں</string>
+    <string name="collapse_and_expand_code_block">موجودہ کوڈ بلاک کو سکیڑیں/پھیلائیں</string>
+    <string name="collapse_and_expand_all_code_block">تمام کوڈ بلاکس کو سکیڑیں/پھیلائیں</string>
+    <string name="duplicate_current_line">موجودہ لائن یا سلیکشن کی نقل بنائیں</string>
+    <string name="basic_code_completion">بنیادی کوڈ کی تکمیل</string>
+    <string name="smart_code_completion">اسمارٹ کوڈ کی تکمیل (متوقع قسم کے مطابق میتھڈز اور ویری ایبلز کی فہرست کو فلٹر کرتا ہے)</string>
+    <string name="version_control">ورژن کنٹرول اور مقامی ہسٹری</string>
+    <string name="commit_project">پروجیکٹ کو VCS میں کمٹ کریں</string>
+    <string name="update_project">پروجیکٹ کو VCS سے اپ ڈیٹ کریں</string>
+    <string name="view_recent_changes">حالیہ تبدیلیاں دیکھیں</string>
+    <string name="open_vcs_popup">VCS پاپ اپ کھولیں</string>
+    <string name="more_about_shortcuts">شارٹ کٹس کے بارے میں مزید</string>
+
+    <string name="history_of_android">اینڈرائیڈ کی تاریخ</string>
+    <string name="history">تاریخ</string>
+    <string name="features">خصوصیات</string>
+
+    <string name="android_sdk">اینڈرائیڈ SDKs</string>
+    <string name="android_versions">اینڈرائیڈ ورژنز</string>
+
+    <string name="view_binding">ویو بائنڈنگ</string>
+    <string name="setup_instructions">سیٹ اپ ہدایات</string>
+    <string name="use_view_binding_in_activities">ایکٹیویٹیز میں ویو بائنڈنگ کا استعمال</string>
+    <string name="use_view_binding_in_fragments">فریگمنٹس میں ویو بائنڈنگ کا استعمال</string>
+    <string name="more_about_view_binding">ویو بائنڈنگ کے بارے میں مزید</string>
+
+    <string name="permission_dialog_example">اجازت کے ڈائیلاگ کی مثال</string>
+    <string name="more_about_permissions">اجازتوں کے بارے میں مزید</string>
+
+    <string name="per_app_language_preferences">فی ایپ زبان کی ترجیحات</string>
+
+    <string name="predictive_back_gesture">پیش گوئی والا بیک اشارہ</string>
+
+    <string name="layouts">لے آؤٹس اور ویوز</string>
+
+    <string name="linear_layout">لینیئر لے آؤٹ</string>
+
+    <string name="vertical">عمودی</string>
+    <string name="horizontal">افقی</string>
+    <string name="layout_preview">لے آؤٹ کا پیش منظر</string>
+    <string name="no_java_code_needed">اس ایکٹیویٹی کے لیے کسی جاوا کوڈ کی ضرورت نہیں۔</string>
+
+    <string name="relative_layout">ریلیٹو لے آؤٹ</string>
+
+    <string name="table_layout">ٹیبل لے آؤٹ</string>
+
+    <string name="grid_view">گرڈ ویو</string>
+
+    <string name="image_view">امیج ویو</string>
+
+    <string name="web_view">ویب ویو</string>
+
+    <string name="buttons_and_switches">بٹنز اور سوئچز</string>
+    <string name="buttons">بٹنز</string>
+    <string name="button">بٹن</string>
+    <string name="button_normal">بٹن 1 (عام)</string>
+    <string name="button_outlined">بٹن 2 (آؤٹ لائن والا)</string>
+    <string name="button_elevated">بٹن 3 (ابھرا ہوا)</string>
+    <string name="button_normal_icon">بٹن 4 (عام آئیکن)</string>
+    <string name="button_outlined_icon">بٹن 5 (آؤٹ لائن آئیکن)</string>
+    <string name="button_elevated_icon">بٹن 6 (ابھرا ہوا آئیکن)</string>
+    <string name="extended_floating_button_primary">ایکسٹینڈڈ فلوٹنگ بٹن 1 (پرائمری)</string>
+    <string name="extended_floating_button_secondary">ایکسٹینڈڈ فلوٹنگ بٹن 2 (سیکنڈری)</string>
+    <string name="extended_floating_button_surface">ایکسٹینڈڈ فلوٹنگ بٹن 3 (سرفیس)</string>
+    <string name="extended_floating_button_tertiary">ایکسٹینڈڈ فلوٹنگ بٹن 4 (ٹرشیری)</string>
+    <string name="extended_floating_button_primary_icon">ایکسٹینڈڈ فلوٹنگ بٹن 5 (پرائمری آئیکن)</string>
+    <string name="extended_floating_button_secondary_icon">ایکسٹینڈڈ فلوٹنگ بٹن 6 (سیکنڈری آئیکن)</string>
+    <string name="extended_floating_button_surface_icon">ایکسٹینڈڈ فلوٹنگ بٹن 7 (سرفیس آئیکن)</string>
+    <string name="extended_floating_button_tertiary_icon">ایکسٹینڈڈ فلوٹنگ بٹن 8 (ٹرشیری آئیکن)</string>
+    <string name="floating_button_primary_icon">فلوٹنگ بٹن 1 (پرائمری)</string>
+    <string name="floating_button_secondary_icon">فلوٹنگ بٹن 2 (سیکنڈری)</string>
+    <string name="floating_button_surface_icon">فلوٹنگ بٹن 3 (سرفیس)</string>
+    <string name="floating_button_tertiary_icon">فلوٹنگ بٹن 4 (ٹرشیری)</string>
+    <string name="same_code_buttons">تمام قسم کے بٹنوں کے لیے یہ جاوا کوڈ استعمال کریں۔</string>
+
+    <string name="radio_buttons">ریڈیو بٹنز</string>
+    <string name="choose_your_option">اپنا آپشن منتخب کریں</string>
+    <string name="first_radio_option">آپشن 1</string>
+    <string name="second_radio_option">آپشن 2</string>
+    <string name="display_option">آپشن دکھائیں</string>
+
+    <string name="image_buttons">امیج بٹنز</string>
+
+    <string name="switches">سوئچز</string>
+    <string name="switch_me">مجھے سوئچ کریں</string>
+    <string name="material_switch_preference">مٹیریل سوئچ ترجیح</string>
+    <string name="material_switch">مٹیریل سوئچ</string>
+    <string name="switch_material">سوئچ مٹیریل</string>
+    <string name="toggle_button">ٹوگل بٹن</string>
+    <string name="clocks_and_timers">گھڑیاں اور ٹائمرز</string>
+    <string name="clocks">گھڑیاں</string>
+    <string name="clock_analog">اینالاگ گھڑی</string>
+    <string name="clock_text">ٹیکسٹ گھڑی</string>
+    <string name="clock_digital">ڈیجیٹل گھڑی</string>
+    <string name="timepicker">ٹائم پکر</string>
+    <string name="current_time">موجودہ وقت</string>
+    <string name="change_time">وقت تبدیل کریں</string>
+    <string name="datepicker">ڈیٹ پکر</string>
+    <string name="current_date">موجودہ تاریخ</string>
+    <string name="change_date">تاریخ تبدیل کریں</string>
+    <string name="chronometer">کرونومیٹر</string>
+    <string name="start">شروع کریں</string>
+    <string name="stop">روکیں</string>
+    <string name="reset">ری سیٹ کریں</string>
+    <string name="text_boxes">ٹیکسٹ باکسز</string>
+    <string name="textbox">ٹیکسٹ باکس</string>
+    <string name="print_text">ٹیکسٹ پرنٹ کریں۔</string>
+    <string name="password_box">پاس ورڈ باکس</string>
+    <string name="password_show">پاس ورڈ دکھائیں۔</string>
+    <string name="alerts">الرٹس</string>
+    <string name="alert_dialog">الرٹ ڈائیلاگ</string>
+    <string name="show_dialog">الرٹ ڈائیلاگ دکھائیں</string>
+    <string name="your_title">آپ کا عنوان</string>
+    <string name="snack_bar">اسنیک بار</string>
+    <string name="show_snack_bar">اسنیک بار دکھائیں</string>
+    <string name="toast">ٹوسٹ</string>
+    <string name="show_toast">ٹوسٹ دکھائیں</string>
+    <string name="tooltips">ٹول ٹپس</string>
+    <string name="reviews">جائزے</string>
+    <string name="rating_bar">ریٹنگ بار</string>
+    <string name="rate_us">ہماری ایپ کو ریٹ کریں!</string>
+    <string name="stars">%1$.1f ستارے!</string>
+    <string name="in_app_review">ان-ایپ جائزے</string>
+    <string name="progress_bars">پروگریس بارز</string>
+    <string name="progress_bar">پروگریس بار</string>
+    <string name="circular">گول</string>
+    <string name="download">ڈاؤن لوڈ کریں</string>
+    <string name="simple_notifications">سادہ نوٹیفکیشنز</string>
+    <string name="show_notification">نوٹیفکیشن دکھائیں</string>
+    <string name="inbox_notifications">ان باکس نوٹیفکیشنز</string>
+    <string name="show_code">کوڈ دکھائیں</string>
+    <string name="settings">سیٹنگز</string>
+    <string name="appearance">ظاہری شکل</string>
+    <string name="theme">تھیم</string>
+    <string name="follow_system">سسٹم موڈ فالو کریں</string>
+    <string name="light_mode">لائٹ موڈ</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="auto_battery_mode">آٹو بیٹری ڈارک موڈ</string>
+    <string name="default_tab">پہلے سے طے شدہ ٹیب</string>
+    <string name="bottom_navigation_bar_labels">نیچے نیویگیشن بار کے لیبلز</string>
+    <string name="labeled">لیبل شدہ</string>
+    <string name="selected">منتخب</string>
+    <string name="unlabeled">بغیر لیبل کے</string>
+    <string name="code_font">کوڈ فونٹ</string>
+    <string name="language">زبان</string>
+    <string name="notifications">نوٹیفکیشنز</string>
+    <string name="notification_settings">نوٹیفکیشن کی سیٹنگز</string>
+    <string name="firebase">Firebase</string>
+    <string name="firebase_crashlytics">Firebase Crashlytics</string>
+    <string name="firebase_analytics">Firebase Analytics</string>
+    <string name="firebase_performance">Firebase Performance</string>
+    <string name="privacy_and_security">رازداری اور سیکیورٹی</string>
+    <string name="privacy_policy">رازداری کی پالیسی</string>
+    <string name="terms_of_service">سروس کی شرائط</string>
+    <string name="code_of_conduct">ضابطہ اخلاق</string>
+    <string name="permissions">اجازتیں</string>
+    <string name="normal">عام</string>
+    <string name="special">خاص</string>
+    <string name="ad_id">اشتہاری آئی ڈی [AD_ID]</string>
+    <string name="internet">انٹرنیٹ [INTERNET]</string>
+    <string name="wake_lock">ڈیوائس کو جاگتا رکھیں [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">ایپ کو اہم کاموں کے دوران ڈیوائس کو سونے سے روکنے کی اجازت دیتا ہے (مثلاً، اسکرین کا مدھم ہونا یا پروسیسر کا سونا) تاکہ وہ بغیر کسی رکاوٹ کے مکمل ہوں۔ بیٹری بچانے کے لیے اسے کم استعمال کیا جاتا ہے۔</string>
+    <string name="post_notifications">نوٹیفکیشنز پوسٹ کریں [POST_NOTIFICATIONS]</string>
+    <string name="runtime">رن ٹائم</string>
+    <string name="access_network_state">نیٹ ورک کی حالت تک رسائی [ACCESS_NETWORK_STATE]</string>
+    <string name="access_notification_policy">نوٹیفکیشن پالیسی تک رسائی [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">بلنگ [BILLING]</string>
+    <string name="check_license">لائسنس چیک کریں [CHECK_LICENSE]</string>
+    <string name="foreground_service">فورگراؤنڈ سروس [FOREGROUND_SERVICE]</string>
+    <string name="help_and_feedback">مدد اور رائے</string>
+    <string name="help">مدد</string>
+    <string name="faq">اکثر پوچھے گئے سوالات</string>
+    <string name="send_feedback">رائے بھیجیں</string>
+    <string name="license">لائسنس</string>
+    <string name="share">شیئر کریں</string>
+    <string name="share_subject">اسے ابھی آزمائیں!!!</string>
+    <string name="share_using">اس کے ذریعے شیئر کریں…</string>
+    <string name="support_us">ہماری مدد کریں</string>
+    <string name="paid_support">ادائیگی والی سپورٹ</string>
+    <string name="non_paid_support">بغیر ادائیگی والی سپورٹ</string>
+    <string name="web_ad">ویب اشتہار</string>
+    <string name="info">معلومات</string>
+    <string name="device_info">ڈیوائس کی معلومات</string>
+    <string name="app_build">ایپ بلڈ: ریلیز\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="manufacturer">بنانے والا:</string>
+    <string name="device_model">ڈیوائس ماڈل:</string>
+    <string name="android_version">اینڈرائیڈ ورژن:</string>
+    <string name="api_level">API لیول:</string>
+    <string name="about">کے بارے میں</string>
+    <string name="app_version">ورژن %1$s (%2$d)</string>
+    <string name="music">موسیقی</string>
+    <string name="made_in">رومانیہ میں ❤ کے ساتھ بنایا گیا!</string>
+    <string name="alert_dialog_close">بند کریں؟</string>
+    <string name="alert_dialog_require_restart">دوبارہ شروع کرنے کی ضرورت ہے!</string>
+    <string name="question_1">اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کیا ہے؟</string>
+    <string name="question_2">میں اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کیسے ڈاؤن لوڈ کر سکتا ہوں؟</string>
+    <string name="question_3">کیا اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن iOS ڈیوائسز کے لیے دستیاب ہے؟</string>
+    <string name="question_4">کیا اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن نئے سیکھنے والوں کے لیے موزوں ہے؟</string>
+    <string name="question_5">کیا اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن باقاعدگی سے اپ ڈیٹ ہوتا ہے؟</string>
+    <string name="question_6">اگر مجھے اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کے ساتھ کوئی سوال یا مسئلہ ہو تو میں مدد کیسے حاصل کر سکتا ہوں؟</string>
+    <string name="question_7">میں اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن میں Firebase اینالیٹکس اور کریشلیٹکس کو کیسے غیر فعال کروں؟</string>
+    <string name="question_8">میں اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کے لیے اپڈیٹس کیسے چیک کروں؟</string>
+    <string name="question_9">میں اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کی ڈیولپمنٹ میں کیسے مدد کر سکتا ہوں؟</string>
+    <string name="summary_preference_faq_1">اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن ایک مفت اور اوپن سورس ایپ ہے جو اینڈرائیڈ اسٹوڈیو، اینڈرائیڈ ایپ ڈیولپمنٹ کے لیے آفیشل انٹیگریٹڈ ڈیولپمنٹ انوائرمنٹ (IDE)، کے استعمال پر ویڈیو ٹیوٹوریلز کا مجموعہ فراہم کرتی ہے۔</string>
+    <string name="summary_preference_faq_2">اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن گوگل پلے اسٹور پر ڈاؤن لوڈ کے لیے دستیاب ہے۔ بس اپنے اینڈرائیڈ ڈیوائس پر پلے اسٹور ایپ میں "Android Studio Tutorials" تلاش کریں اور ایپ کو ڈاؤن لوڈ اور انسٹال کرنے کے لیے "Install" پر ٹیپ کریں۔</string>
+    <string name="summary_preference_faq_3">نہیں، اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن فی الحال صرف اینڈرائیڈ ڈیوائسز کے لیے دستیاب ہے۔</string>
+    <string name="summary_preference_faq_4">جی ہاں، اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن ان نئے سیکھنے والوں کے لیے موزوں ہے جو اینڈرائیڈ ایپ ڈیولپمنٹ میں نئے ہیں اور اینڈرائیڈ اسٹوڈیو کا استعمال سیکھنا چاہتے ہیں۔ ایپ ویڈیو ٹیوٹوریلز کی ایک رینج فراہم کرتی ہے جو اینڈرائیڈ اسٹوڈیو کے استعمال کی بنیادی باتوں کا احاطہ کرتی ہے، IDE انسٹال کرنے سے لے کر اپنی پہلی ایپ بنانے اور تعینات کرنے تک۔</string>
+    <string name="summary_preference_faq_5">جی ہاں، اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کو باقاعدگی سے نئے ویڈیو ٹیوٹوریلز اور مواد کے ساتھ اپ ڈیٹ کیا جاتا ہے تاکہ صارفین کو اینڈرائیڈ اسٹوڈیو کی تازہ ترین خصوصیات اور تبدیلیوں سے آگاہ رکھا جا سکے۔</string>
+    <string name="summary_preference_faq_6">اگر آپ کو اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کے ساتھ کوئی سوال یا مسئلہ ہے، تو آپ ایپ کے سپورٹ پیج کے ذریعے یا d4rk7355608@gmail.com پر ای میل کے ذریعے ہم سے رابطہ کر سکتے ہیں۔ ہم آپ کو پیش آنے والے کسی بھی مسئلے کو حل کرنے میں مدد کرنے کی پوری کوشش کریں گے۔</string>
+    <string name="summary_preference_faq_7">آپ ایپ میں سیٹنگز مینیو میں جا کر اور ان خصوصیات کے لیے سوئچ کو ٹوگل کرکے Firebase اینالیٹکس اور کریشلیٹکس کو غیر فعال کر سکتے ہیں۔</string>
+    <string name="summary_preference_faq_8">آپ ایپ میں سیٹنگز مینیو میں جا کر اور "اپڈیٹس کے لیے چیک کریں" کا آپشن منتخب کر کے اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کے لیے اپڈیٹس چیک کر سکتے ہیں۔</string>
+    <string name="summary_preference_faq_9">آپ گوگل پلے اسٹور پر ایک مثبت جائزہ چھوڑ کر، دوستوں اور ساتھیوں کے ساتھ ایپ شیئر کر کے، اور سیٹنگز مینیو میں "شیئر کریں" آپشن کے ذریعے ڈیولپرز کی مدد کر کے اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کی ڈیولپمنٹ میں مدد کر سکتے ہیں۔</string>
+    <string name="summary_preference_permissions_ad_id">ایپ کو صارف کے ڈیوائس سے وابستہ اشتہاری شناخت کنندہ کو بازیافت کرنے اور استعمال کرنے کی اجازت دیتا ہے، ذاتی نوعیت کے اشتہارات فراہم کرتا ہے، اشتہار کی تاثیر کی پیمائش کرتا ہے، اور اینڈرائیڈ 13 یا بعد کے ڈیوائسز پر اشتہارات دکھاتا ہے۔</string>
+    <string name="summary_preference_permissions_internet">ایپ کو غلطی کی رپورٹس بھیجنے یا اپڈیٹس چیک کرنے کے لیے انٹرنیٹ کنکشن قائم کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_preference_permissions_post_notifications">ایپ کو اینڈرائیڈ 13 یا بعد کے ورژن والے ڈیوائسز پر نوٹیفکیشنز دکھانے کی اجازت دیتا ہے۔</string>
+    <string name="summary_preference_permissions_access_network_state">ایپ کو نیٹ ورک کنیکٹیویٹی چیک کرنے اور وائی فائی کے بارے میں معلومات حاصل کرنے کی اجازت دیتا ہے، بشمول فعال حیثیت اور منسلک وائی فائی ڈیوائس کے نام۔</string>
+    <string name="summary_preference_permissions_billing">ایپ کو ان-ایپ خریداریوں اور عطیات کو سنبھالنے کے لیے گوگل پلے بلنگ لائبریری استعمال کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_preference_permissions_check_license">ایپ کو لائسنس کے معاہدے کی تعمیل کی تصدیق کرنے اور دانشورانہ املاک کے تحفظ کے لیے لائسنسنگ کی شرائط کو نافذ کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_preference_permissions_access_notification_policy">ایپ کو ڈیوائس کی نوٹیفکیشن پالیسی تک رسائی اور اس میں ترمیم کرنے کی اجازت دیتا ہے، یہ کنٹرول کرتا ہے کہ نوٹیفکیشنز صارف کو کب اور کیسے دکھائی جاتی ہیں اور حسب ضرورت نوٹیفکیشن مینجمنٹ کی خصوصیات فراہم کرتی ہیں۔</string>
+    <string name="summary_preference_permissions_foreground_service">ایپ کو فورگراؤنڈ میں چلنے والی سروسز بنانے اور استعمال کرنے کی اجازت دیتا ہے، جس سے انہیں دیگر پس منظر کے عمل پر ترجیح ملتی ہے اور کارکردگی اور وشوسنییتا میں بہتری آتی ہے۔</string>
+    <string name="summary_preference_settings_language">ایپلیکیشن کی زبان سیٹ کریں۔</string>
+    <string name="summary_preference_settings_firebase_crashlytics">مسائل کو ٹھیک کرنے میں مدد کے لیے کریش رپورٹس جمع کریں۔</string>
+    <string name="summary_preference_settings_firebase_analytics">ایپ کی بہتری کے لیے استعمال کا ڈیٹا اکٹھا کرتا ہے۔</string>
+    <string name="summary_preference_settings_firebase_performance">بہتری کے لیے ایپ کی کارکردگی کی پیمائش کرتا ہے۔</string>
+    <string name="summary_preference_android_studio_start">نیا اینڈرائیڈ اسٹوڈیو پروجیکٹ شروع کرنے، کنفیگر کرنے، پیکیج سیٹ کرنے، API لیولز اور بہت کچھ کی بنیادی باتیں سیکھیں…</string>
+    <string name="summary_preference_android_studio_shortcuts">اینڈرائیڈ اسٹوڈیو میں بہت سے عام کاموں کے لیے کی بورڈ شارٹ کٹس شامل ہیں۔ یاد رکھیں، چونکہ اینڈرائیڈ اسٹوڈیو IntelliJ IDEA پر مبنی ہے، آپ IntelliJ IDEA کی میپ حوالہ جاتی دستاویزات میں اضافی شارٹ کٹس تلاش کر سکتے ہیں۔</string>
+    <string name="summary_preference_android_studio_history_of_android">اینڈرائیڈ کی تاریخ کے بارے میں جانیں، 2007 میں اس کی بیٹا ریلیز سے لے کر دنیا کا سب سے مقبول موبائل آپریٹنگ سسٹم بننے تک۔ وہ خصوصیات دریافت کریں جو اینڈرائیڈ کو منفرد بناتی ہیں اور جاوا کے ساتھ اپنی ایپس تیار کرنے کے لیے اینڈرائیڈ اسٹوڈیو استعمال کرنے کے فوائد۔</string>
+    <string name="summary_preference_android_studio_android_sdks">اینڈرائیڈ SDKs کو اینڈرائیڈ کے ہر ورژن کے لیے نمبروں کے ذریعے اینڈرائیڈ ورژنز کو پہچاننے کے لیے استعمال کیا جاتا ہے۔</string>
+    <string name="summary_preference_android_studio_view_binding">اینڈرائیڈ اسٹوڈیو 3.6 میں نیا، ویو بائنڈنگ آپ کو findViewById کو جنریٹڈ بائنڈنگ آبجیکٹس سے تبدیل کرنے کی صلاحیت دیتا ہے تاکہ کوڈ کو آسان بنایا جا سکے، بگس کو دور کیا جا سکے، اور findViewById کے تمام بوائلر پلیٹ سے بچا جا سکے۔</string>
+    <string name="summary_preference_android_studio_permissions">اینڈرائیڈ میں اجازتیں اہم ہیں کیونکہ آپ اجازتوں کی درخواست کیے بغیر وہ کام نہیں کر سکتے جن کے لیے اجازتوں کی ضرورت ہوتی ہے۔</string>
+    <string name="summary_preference_android_studio_per_app_language_preferences">فی ایپ زبانوں کا استعمال کرکے اپنی ایپ کو مزید قابل رسائی اور صارف دوست بنانے کا طریقہ سیکھیں۔ یہ خصوصیت آپ کو اپنے ڈیوائس پر ہر ایپ کے لیے ایک مختلف زبان منتخب کرنے دیتی ہے، بغیر صارف کے اپنے ڈیوائس کی زبان کو تبدیل کیے۔</string>
+    <string name="summary_preference_android_studio_predictive_back_gesture">اینڈرائیڈ 13 (API لیول 33) اینڈرائیڈ ڈیوائسز جیسے فونز، بڑی اسکرینوں، اور فولڈ ایبلز کے لیے ایک پیش گوئی والا بیک اشارہ متعارف کراتا ہے۔ یہ ایک کثیر سالہ ریلیز کا حصہ ہے؛ جب مکمل طور پر نافذ ہو جائے گا، تو یہ فیچر صارفین کو بیک اشارے کی منزل یا دیگر نتائج کا پیش منظر دیکھنے دے گا، اسے مکمل کرنے سے پہلے، جس سے وہ فیصلہ کر سکیں گے کہ آیا جاری رکھنا ہے یا موجودہ ویو میں رہنا ہے۔</string>
+    <string name="summary_preference_android_studio_linear_layout">لینیئر لے آؤٹ ایک ویو گروپ ہے جو اپنے بچوں کو ایک ہی، لکیری سمت میں، یا تو افقی یا عمودی طور پر ترتیب دیتا ہے۔ لے آؤٹ کی سمت بندی android:orientation وصف کا استعمال کرکے بیان کی جاسکتی ہے۔ لینیئر لے آؤٹ کا استعمال مختلف قسم کے یوزر انٹرفیس بنانے کے لیے کیا جاسکتا ہے، جیسے فہرستیں، بٹن، اور ٹیکسٹ فیلڈز۔</string>
+    <string name="summary_preference_android_studio_relative_layout">ریلیٹو لے آؤٹ اینڈرائیڈ میں ایک لے آؤٹ مینیجر ہے جو اپنے چائلڈ ویوز کو ایک دوسرے کے نسبت یا پیرنٹ لے آؤٹ کے نسبت پوزیشن کرتا ہے۔ یہ اسے ایک بہت ورسٹائل لے آؤٹ مینیجر بناتا ہے، کیونکہ اسے مختلف قسم کے لے آؤٹس بنانے کے لیے استعمال کیا جاسکتا ہے۔</string>
+    <string name="summary_preference_android_studio_table_layout">ٹیبل لے آؤٹ ایک ٹیبل کے سیلز، قطاروں، اور کالموں کو بصری طور پر دلکش اور فعال طریقے سے ترتیب دینے کا عمل ہے۔</string>
+    <string name="summary_preference_android_studio_gird_view">گرڈ ویو ایک ویو گروپ ہے جو آئٹمز کو دو جہتی اسکرولنگ گرڈ میں دکھاتا ہے۔ گرڈ ویوز اکثر تصاویر، فہرستیں، یا دیگر قسم کے ڈیٹا کو گرڈ جیسے فارمیٹ میں دکھانے کے لیے استعمال ہوتے ہیں۔</string>
+    <string name="summary_preference_android_studio_image_view">اینڈرائیڈ امیج ویو ایک ویو ہے جو تصاویر دکھانے کے لیے استعمال ہوتا ہے۔ یہ اینڈرائیڈ ویو کلاس کا ایک سب کلاس ہے اور اسے ایپلی کیشنز میں تصاویر دکھانے کے لیے استعمال کیا جاتا ہے۔ امیج ویوز کو تصاویر جیسے گرافکس یا تصاویر دکھانے کے لیے استعمال کیا جاتا ہے۔ انہیں جامد تصاویر دکھانے یا رن ٹائم پر اپ ڈیٹ ہونے والی تصاویر دکھانے کے لیے استعمال کیا جاسکتا ہے۔</string>
+    <string name="summary_preference_android_studio_web_view">ایک ویو جو ویب صفحات دکھاتا ہے۔ بنیادی استعمال۔ زیادہ تر معاملات میں، ہم صارف کو مواد پہنچانے کے لیے کروم جیسے معیاری ویب براؤزر استعمال کرنے کی تجویز کرتے ہیں۔</string>
+    <string name="summary_preference_android_studio_buttons">عمومی بٹنوں کے بارے میں مزید چیزیں دریافت کریں اور آپ ان کے ساتھ کیا کر سکتے ہیں۔ انہیں خوبصورت اور صاف ستھرا دکھانے کا طریقہ سیکھیں۔</string>
+    <string name="summary_preference_android_studio_radio_buttons">ریڈیو بٹن صارف کو ایک سیٹ سے ایک آپشن منتخب کرنے کی اجازت دیتے ہیں۔ آپ کو اختیاری سیٹس کے لیے ریڈیو بٹن استعمال کرنے چاہئیں جو باہمی طور پر خصوصی ہوں اگر آپ کو لگتا ہے کہ صارف کو تمام دستیاب آپشنز کو ساتھ ساتھ دیکھنے کی ضرورت ہے۔</string>
+    <string name="summary_preference_android_studio_image_buttons">ایک ایسا بٹن دکھاتا ہے جس میں متن کے بجائے ایک تصویر ہوتی ہے جسے صارف دبا یا کلک کرسکتا ہے۔ پہلے سے طے شدہ طور پر، ایک امیج بٹن ایک باقاعدہ بٹن کی طرح لگتا ہے، جس میں معیاری بٹن کا پس منظر ہوتا ہے جو مختلف بٹن حالتوں کے دوران رنگ بدلتا ہے۔ بٹن کی سطح پر تصویر یا تو ImageButton XML عنصر میں android:src وصف کے ذریعے یا ImageView.setImageResource(int) طریقہ کار کے ذریعے بیان کی جاتی ہے۔</string>
+    <string name="summary_preference_android_studio_switches">اینڈرائیڈ اسٹوڈیو میں سوئچز کی صلاحیتوں کو دریافت کریں اور اپنی ایپلی کیشنز میں انہیں مؤثر طریقے سے نافذ کرنے کا طریقہ سیکھیں۔ یہ سبق سوئچز کے استعمال کے لیے ایک جامع گائیڈ فراہم کرتا ہے، جس میں بصری طور پر دلکش اور صارف دوست انٹرفیس ڈیزائن کرنے کے بہترین طریقے شامل ہیں۔</string>
+    <string name="summary_preference_android_studio_clocks">اپنی اینڈرائیڈ ایپ میں ڈیجیٹل، اینالاگ یا ٹیکسٹ کلاک شامل کرنے کا ایک آسان طریقہ۔</string>
+    <string name="summary_preference_android_studio_time_picker">اینڈرائیڈ ٹائم پکر 24 گھنٹے کی شکل یا AM/PM موڈ میں وقت منتخب کرنے کے لیے ایک یوزر انٹرفیس کنٹرول ہے۔ اس کا استعمال اس بات کو یقینی بنانے کے لیے کیا جاتا ہے کہ صارفین ہماری ایپلی کیشن میں دن کے لیے درست وقت کا انتخاب کریں۔ ٹائم پکر انٹرفیس بنیادی طور پر دو طریقوں میں موجود ہے، ایک XML لے آؤٹ کے تحت اور دوسرا ایک ڈائیلاگ۔</string>
+    <string name="summary_preference_android_studio_date_picker">اینڈرائیڈ صارف کے لیے وقت چننے یا تاریخ چننے کے لیے تیار ڈائیلاگ کے طور پر کنٹرول فراہم کرتا ہے۔ ہر پکر وقت کے ہر حصے (گھنٹہ، منٹ، AM/PM) یا تاریخ (مہینہ، دن، سال) کو منتخب کرنے کے لیے کنٹرول فراہم کرتا ہے۔ ان پکرز کا استعمال اس بات کو یقینی بنانے میں مدد کرتا ہے کہ آپ کے صارفین ایک ایسا وقت یا تاریخ چن سکتے ہیں جو درست ہو، صحیح طریقے سے فارمیٹ کیا گیا ہو، اور صارف کے مقام کے مطابق ایڈجسٹ کیا گیا ہو۔</string>
+    <string name="summary_preference_android_studio_chronometer">اینڈرائیڈ میں کرونومیٹر ویجیٹ کی صلاحیتوں کو دریافت کریں، جو گزرے ہوئے وقت کو دکھانے کے لیے ایک طاقتور ٹول ہے۔ کرونومیٹر کو کنٹرول کرنے کے لیے بٹنوں کے لیے کلک لسنرز سیٹ اپ کرنے کا طریقہ سیکھیں اور اس کے رویے کو اپنی مرضی کے مطابق بنانے کے لیے دستیاب مختلف طریقوں کو دریافت کریں۔</string>
+    <string name="summary_preference_android_studio_text_box">متن داخل کرنے اور اس میں ترمیم کرنے کے لیے ایک یوزر انٹرفیس عنصر۔ جب آپ ایک ایڈٹ ٹیکسٹ ویجیٹ کی وضاحت کرتے ہیں، تو آپ کو R.styleable.TextView_inputType وصف کی وضاحت کرنی ہوگی…</string>
+    <string name="summary_preference_android_studio_password_text_box">متن کو چھپانے کی صلاحیت کے ساتھ ایک سادہ ٹیکسٹ باکس۔ پاس ورڈز کو محفوظ رکھنے کے لیے زیادہ تر ایپس کی لاگ ان اسکرینوں میں استعمال ہوتا ہے۔</string>
+    <string name="summary_preference_android_studio_alert_dialog">ڈائیلاگ ایک چھوٹی سی ونڈو ہے جو صارف کو کوئی فیصلہ کرنے یا اضافی معلومات داخل کرنے پر اکساتی ہے۔ ڈائیلاگ اسکرین کو نہیں بھرتا اور عام طور پر موڈل ایونٹس کے لیے استعمال ہوتا ہے جن کے لیے صارفین کو آگے بڑھنے سے پہلے کوئی کارروائی کرنے کی ضرورت ہوتی ہے۔</string>
+    <string name="summary_preference_android_studio_snack_bar">اسنیک بارز صارفین کو اس عمل کے بارے میں مطلع کرتے ہیں جو ایک ایپ نے انجام دیا ہے یا دے گی۔ وہ عارضی طور پر، اسکرین کے نیچے کی طرف ظاہر ہوتے ہیں۔ انہیں صارف کے تجربے میں خلل نہیں ڈالنا چاہیے، اور انہیں غائب ہونے کے لیے صارف کے ان پٹ کی ضرورت نہیں ہوتی۔</string>
+    <string name="summary_preference_android_studio_toast">ٹوسٹ ایک چھوٹے پاپ اپ میں کسی آپریشن کے بارے میں سادہ فیڈ بیک فراہم کرتا ہے۔ یہ صرف پیغام کے لیے درکار جگہ کو بھرتا ہے اور موجودہ ایکٹیویٹی نظر آتی اور انٹرایکٹو رہتی ہے۔</string>
+    <string name="summary_preference_android_studio_tooltip">ٹول ٹپ ایک چھوٹا سا وضاحتی پیغام ہے جو کسی ویو کے قریب ظاہر ہوتا ہے جب صارفین ویو کو دیر تک دباتے ہیں یا اس پر اپنا ماؤس ہوور کرتے ہیں۔ یہ اس وقت مفید ہوتا ہے جب آپ کی ایپ لے آؤٹ میں جگہ بچانے کے لیے کسی عمل یا معلومات کے ٹکڑے کی نمائندگی کرنے کے لیے ایک آئیکن کا استعمال کرتی ہے۔</string>
+    <string name="summary_preference_android_studio_rating_bar">ریٹنگ بار SeekBar اور ProgressBar کی ایک توسیع ہے جو ستاروں میں درجہ بندی دکھاتی ہے۔</string>
+    <string name="summary_preference_android_studio_in_app_review">گوگل پلے ان-ایپ ریویو API آپ کو صارفین کو اپنی ایپ یا گیم چھوڑنے کی تکلیف کے بغیر پلے اسٹور کی درجہ بندی اور جائزے جمع کروانے پر آمادہ کرنے دیتا ہے۔</string>
+    <string name="summary_preference_android_studio_progress_bar">پروگریس بار کسی کام کی پیشرفت کا ایک بصری اشارہ ہے۔ اس سبق میں، آپ اینڈرائیڈ میں افقی اور سرکلر دونوں پروگریس بار استعمال کرنا سیکھیں گے۔</string>
+    <string name="summary_preference_android_studio_simple_notifications">اس سبق کے ساتھ اپنی اینڈرائیڈ ایپ میں نوٹیفکیشنز کا استعمال سیکھیں۔ نوٹیفکیشن چینل اور بلڈر بنانے کا طریقہ، اور اپنے صارفین کو نوٹیفکیشنز دکھانے کا طریقہ دریافت کریں۔ اپنے نوٹیفکیشنز کو اپنی مرضی کے مطابق بنانے کے لیے دستیاب مختلف اختیارات دریافت کریں۔</string>
+    <string name="summary_preference_android_studio_inbox_notifications">اس سبق کے ساتھ اپنی اینڈرائیڈ ایپ میں ان باکس اسٹائل نوٹیفکیشنز کا استعمال سیکھیں۔ نوٹیفکیشن چینل اور بلڈر بنانے کا طریقہ، اور اپنے نوٹیفکیشنز کے اسٹائل کو متعدد لائنوں کے متن اور خلاصہ متن کے ساتھ ان باکس اسٹائل پر سیٹ کرنے کا طریقہ دریافت کریں۔ اپنے ان باکس اسٹائل نوٹیفکیشنز کو اپنی مرضی کے مطابق بنانے کے لیے دستیاب مختلف اختیارات دریافت کریں۔</string>
+    <string name="summary_alert_dialog_close">کیا آپ واقعی باہر نکلنا چاہتے ہیں؟</string>
+    <string name="summary_alert_dialog_message">یہ وہ پیغام ہوگا جو آپ اسکرین پر دیکھیں گے!</string>
+    <string name="summary_alert_dialog_require_restart">اثر انداز ہونے کے لیے براہ کرم ایپ کو دوبارہ شروع کریں!</string>
+    <string name="summary_sdk">اینڈرائیڈ سافٹ ویئر ڈیولپمنٹ کٹ (SDK) ٹولز کا ایک مجموعہ ہے جو ڈیولپرز کو اینڈرائیڈ ایپس بنانے کی اجازت دیتا ہے۔ اس میں لائبریریوں کا ایک سیٹ، ایک ڈیبگر، ایک ہینڈ سیٹ ایمولیٹر، اور دستاویزات شامل ہیں۔ SDK میں ایک API لائبریری اور API دستاویزات کا ایک سیٹ بھی شامل ہے۔ آپ جو پیکجز ڈاؤن لوڈ کرتے ہیں ان میں لائبریریاں ہوتی ہیں، جو آپ کو اپنی ایپ بنانے میں مدد کرتی ہیں۔\n\nیہ تمام اینڈرائیڈ ورژنز اور اینڈرائیڈ ڈیولپرز کے لیے ان کے متعلقہ شناخت کنندگان کا ایک جائزہ ہے۔ کوئی بھی مسئلہ یا پل کی درخواست کھولنے کا خیرمقدم ہے۔ خوشگوار ڈیولپنگ!</string>
+    <string name="summary_view_binding">ویو بائنڈنگ ایک ایسی خصوصیت ہے جو آپ کو زیادہ آسانی سے ایسا کوڈ لکھنے کی اجازت دیتی ہے جو ویوز کے ساتھ تعامل کرتا ہے۔ ایک بار جب کسی ماڈیول میں ویو بائنڈنگ فعال ہو جاتی ہے، تو یہ اس ماڈیول میں موجود ہر XML لے آؤٹ فائل کے لیے ایک بائنڈنگ کلاس بناتا ہے۔ بائنڈنگ کلاس کی ایک مثال میں ان تمام ویوز کے براہ راست حوالہ جات ہوتے ہیں جن کی متعلقہ لے آؤٹ میں ایک ID ہوتی ہے۔</string>
+    <string name="summary_enable_binding">ویو بائنڈنگ ماڈیول بہ ماڈیول کی بنیاد پر فعال ہوتی ہے۔ کسی ماڈیول میں ویو بائنڈنگ کو فعال کرنے کے لیے، ماڈیول-سطح کی build.gradle فائل میں viewBinding بلڈ آپشن کو true پر سیٹ کریں، جیسا کہ مندرجہ ذیل مثال میں دکھایا گیا ہے:</string>
+    <string name="summary_toggle">آپ ToggleButton آبجیکٹ کے ساتھ اپنے لے آؤٹ میں ایک بنیادی ٹوگل بٹن شامل کر سکتے ہیں۔ اینڈرائیڈ 4.0 (API لیول 14) ایک اور قسم کا ٹوگل بٹن متعارف کراتا ہے جسے سوئچ کہا جاتا ہے جو ایک سلائیڈر کنٹرول فراہم کرتا ہے، جسے آپ Switch آبجیکٹ کے ساتھ شامل کر سکتے ہیں۔ SwitchCompat سوئچ ویجیٹ کا ایک ورژن ہے جو API 7 تک کے ڈیوائسز پر چلتا ہے۔</string>
+    <string name="summary_clocks">اہم نوٹ: ڈیجیٹل کلاک ورژن API 17 میں متروک ہے۔ API لیول 17 سے آپ ڈیجیٹل کلاک کے بجائے ٹیکسٹ کلاک استعمال کر سکتے ہیں۔ ذیل میں اینڈرائیڈ میں ٹیکسٹ کلاک کی تفصیل ہے۔</string>
+    <string name="summary_buttons">بٹنز کسی بھی اینڈرائیڈ ایپ کا ایک لازمی عنصر ہیں۔ وہ صارفین کو ایپ کے ساتھ تعامل کرنے اور فارم جمع کروانے، نئی ایکٹیویٹی شروع کرنے، یا خریداری کرنے جیسے کام انجام دینے کی اجازت دیتے ہیں۔\n\nاینڈرائیڈ اسٹوڈیو میں، بٹنز Button کلاس کا استعمال کرتے ہوئے بنائے جاتے ہیں اور انہیں مختلف طریقوں سے اپنی مرضی کے مطابق بنایا جاسکتا ہے، بشمول ان کا متن، رنگ اور سائز سیٹ کرنا۔ انہیں کلک کرنے پر مختلف کاموں کو متحرک کرنے کے لیے بھی کنفیگر کیا جاسکتا ہے، جیسے کہ نئی ایکٹیویٹی شروع کرنا یا پاپ اپ پیغام دکھانا۔\n\nبٹنز کو ایپ کے لے آؤٹ میں کہیں بھی رکھا جاسکتا ہے اور مکمل طور پر فعال اور صارف دوست ایپ بنانے کے لیے دیگر UI عناصر جیسے ٹیکسٹ فیلڈز اور فہرستوں کے ساتھ مل کر استعمال کیا جاسکتا ہے۔\n\nمجموعی طور پر، بٹنز دلچسپ اور انٹرایکٹو اینڈرائیڈ ایپس بنانے کے لیے ایک سادہ لیکن طاقتور ٹول ہیں۔</string>
+    <string name="summary_permissions">مثال کے طور پر، اگر آپ کی ایپ کو کچھ ڈاؤن لوڈ کرنے کی ضرورت ہے، تو اسے انٹرنیٹ کی اجازت درکار ہوگی۔\n\nتمام اجازتوں اور سرکاری دستاویزات کے حوالے کے لیے اینڈرائیڈ ڈیولپرز کی ویب سائٹ پر ایک نظر ڈالیں!\n\nاینڈرائیڈ ایپس کو کسی ڈیوائس پر کچھ خصوصیات یا ڈیٹا تک رسائی کے لیے اجازت کی درخواست کرنی ہوگی۔ ان اجازتوں کا استعمال صارف اور ڈیوائس کی رازداری کے تحفظ کے لیے کیا جاتا ہے۔ جب کوئی ایپ انسٹال ہوتی ہے، تو صارف کو ایپ کو اس کی درخواست کردہ اجازتیں دینے یا نہ دینے کا کہا جاتا ہے۔ ایپ کو صرف ان خصوصیات یا ڈیٹا تک رسائی حاصل ہوگی جن کے لیے اس نے اجازت کی درخواست کی تھی۔\n\nدو قسم کی اجازتیں ہیں: عام اور خطرناک۔ عام اجازتیں صارف کی رازداری کے لیے کوئی خطرہ نہیں ہیں۔ ان میں انٹرنیٹ تک رسائی اور وائبریٹ جیسی چیزیں شامل ہیں۔ دوسری طرف، خطرناک اجازتیں ممکنہ طور پر حساس معلومات یا کاموں تک رسائی حاصل کرسکتی ہیں اور اس لیے زیادہ محدود ہیں۔ ان میں صارف کے مقام، کیمرہ، اور رابطوں تک رسائی جیسی اجازتیں شامل ہیں۔\n\nایپ ڈیولپرز کے لیے یہ ضروری ہے کہ وہ صرف ان اجازتوں کی درخواست کریں جو ان کی ایپ کے صحیح طریقے سے کام کرنے کے لیے بالکل ضروری ہیں۔ اس سے صارف کی رازداری کے تحفظ میں مدد ملتی ہے اور ایپ کو زیادہ صارف دوست بھی بناتا ہے۔</string>
+    <string name="summary_image_buttons">امیج بٹنز وہ بٹن ہیں جن میں متن کے بجائے ایک تصویر ہوتی ہے۔ انہیں اینڈرائیڈ میں زیادہ بصری طور پر دلکش اور انٹرایکٹو یوزر انٹرفیس فراہم کرنے کے لیے استعمال کیا جاسکتا ہے۔ امیج بٹنز کو کاموں کو متحرک کرنے، مختلف اسکرینوں پر نیویگیٹ کرنے، یا اضافی معلومات دکھانے کے لیے استعمال کیا جاسکتا ہے۔ انہیں اکثر متن کے لیبلز کے ساتھ مل کر استعمال کیا جاتا ہے تاکہ صارف کو بٹن کے مقصد کے بارے میں واضح مواصلات فراہم کی جاسکیں۔</string>
+    <string name="summary_image_view">AndroidX AppCompatImageView ImageView کا ایک سب کلاس ہے جسے ActionBar اور Material Design کی مختلف خصوصیات کو سپورٹ کرنے کے لیے ڈیزائن کیا گیا ہے۔ یہ AndroidX لائبریری کا حصہ ہے، جو سپورٹ لائبریریوں کا ایک سیٹ ہے جو اینڈرائیڈ فریم ورک APIs کے پسماندہ-مطابق ورژن کے ساتھ ساتھ ایسی خصوصیات بھی پیش کرتی ہے جو صرف لائبریری APIs کے ذریعے دستیاب ہیں۔\n\nAppCompatImageView کا مقصد ImageView کے ڈراپ-ان متبادل کے طور پر استعمال ہونا ہے، جس سے ڈیولپرز اینڈرائیڈ کے مختلف ورژنز میں ایک ہی کوڈ اور UI عناصر استعمال کرسکتے ہیں۔ اس میں مختلف خصوصیات کے لیے سپورٹ شامل ہے جیسے ٹنٹنگ، ویکٹر ڈراایبلز لوڈ کرنا، اور امیج اسکیلنگ کو سنبھالنا۔\n\nAppCompatImageView میں مٹیریل ڈیزائن کی خصوصیات جیسے ایلیویشن کے لیے بھی سپورٹ شامل ہے، جو امیج ویو کو سایہ ڈالنے اور لے آؤٹ کی سطح سے اوپر اٹھا ہوا نظر آنے کی اجازت دیتا ہے۔ اس میں مٹیریل ڈیزائن کے رپل اثر کے لیے بھی سپورٹ شامل ہے، جو ایک بصری اثر ہے جو امیج ویو کو چھونے پر لاگو ہوتا ہے۔\n\nخلاصہ یہ کہ، AndroidX AppCompatImageView ImageView کا ایک ورسٹائل اور فیچر سے بھرپور سب کلاس ہے جسے اینڈرائیڈ ایپس میں وسیع پیمانے پر خصوصیات اور ڈیزائن عناصر کو سپورٹ کرنے کے لیے ڈیزائن کیا گیا ہے۔</string>
+    <string name="summary_linear_layout_compat">لینیئر لے آؤٹ کامپیٹ اینڈرائیڈ سپورٹ لائبریری appCompat v7 میں ایک کلاس ہے۔ اسے پرانے API لیولز پر نئے API لیولز میں شامل کیے گئے طریقوں (جیسے ڈیوائیڈرز) کو سپورٹ کرنے کے لیے شامل کیا گیا تھا۔ اگر آپ LinearLayout اور LinearLayoutCompat میں طریقوں کا موازنہ کرتے ہیں، تو آپ دیکھ سکتے ہیں کہ Compat لے آؤٹ میں LinearLayout کے تمام طریقے بغیر کسی API لیول کی حد کے ہیں۔ مثال کے طور پر، setShowDividers کا طریقہ API لیول 11 پر متعارف کرایا گیا تھا۔ لہذا، اس صورت میں، setShowDividers (اور اس کے پیرامیٹرز) کو LinearLayout کے بجائے LinearLayoutCompat کا استعمال کرتے ہوئے کال کیا جانا چاہئے اگر آپ API لیول 11 سے نیچے کے پلیٹ فارم کو ہدف بنا رہے ہیں۔</string>
+    <string name="summary_donations">اس سے کوئی فرق نہیں پڑتا ہے کہ آپ کتنا عطیہ دیتے ہیں، آپ ہماری ایپ کو چلانے اور ہماری خصوصیات کو بہتر بنانے میں ہماری مدد کریں گے۔ ہم آپ کی سخاوت اور مہربانی کی تعریف کرتے ہیں!</string>
+    <string name="summary_progress_bar">اس انٹرایکٹو سبق کے ساتھ اینڈرائیڈ میں پروگریس بار استعمال کرنے کا طریقہ سیکھیں۔ اس سبق میں دو حصے شامل ہیں: ایک افقی پروگریس بار کے لیے اور ایک سرکلر پروگریس بار کے لیے۔ ہر حصے میں، آپ دیکھ سکتے ہیں کہ ڈاؤن لوڈ کے آگے بڑھنے کے ساتھ پروگریس بار کیسے اپ ڈیٹ ہوتا ہے۔ آپ اسکرین کے نیچے فلوٹنگ ایکشن بٹن پر کلک کرکے سبق کا کوڈ بھی دیکھ سکتے ہیں۔</string>
+    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">اینڈرائیڈ گوگل کا تیار کردہ ایک موبائل آپریٹنگ سسٹم ہے۔ یہ پہلی بار 5 نومبر 2007 کو بیٹا ورژن کے طور پر جاری کیا گیا تھا اور پہلا تجارتی ورژن، اینڈرائیڈ 1.0، 23 ستمبر 2008 کو لانچ کیا گیا تھا۔ اینڈرائیڈ لینکس کرنل کے ایک ترمیم شدہ ورژن اور دیگر اوپن سورس سافٹ ویئر پر مبنی ہے۔\n\nاینڈرائیڈ اسٹوڈیو اینڈرائیڈ ایپ ڈیولپمنٹ کے لیے آفیشل انٹیگریٹڈ ڈیولپمنٹ انوائرمنٹ (IDE) ہے۔ اس کا اعلان گوگل نے 15 مئی 2013 کو اپنی I/O کانفرنس میں کیا تھا اور 8 دسمبر 2014 کو عوامی استعمال کے لیے جاری کیا گیا تھا۔ اینڈرائیڈ اسٹوڈیو IntelliJ IDEA پر مبنی ہے، جو ایک مقبول جاوا IDE ہے۔\n\nکوٹلن ایک کراس پلیٹ فارم پروگرامنگ زبان ہے جو جاوا ورچوئل مشین (JVM)، اینڈرائیڈ، براؤزر اور مقامی پلیٹ فارمز پر چل سکتی ہے۔ اسے جیٹ برینز نے بنایا ہے، جو پراگ میں واقع ایک سافٹ ویئر کمپنی ہے۔ کوٹلن کا پہلی بار اعلان جولائی 2011 میں کیا گیا تھا اور فروری 2012 میں اوپن سورس پروجیکٹ کے طور پر جاری کیا گیا تھا۔\n\nگوگل نے 17 مئی 2017 کو اپنی I/O کانفرنس میں اینڈرائیڈ ایپ ڈیولپمنٹ کے لیے کوٹلن کو بطور آفیشل زبان سپورٹ کرنے کا اعلان کیا۔ تب سے، کوٹلن اینڈرائیڈ ڈیولپرز کے لیے سب سے مقبول زبانوں میں سے ایک بن گئی ہے۔ اکتوبر 2020 کے گوگل کے ڈیٹا کے مطابق، گوگل پلے پر ٹاپ 1000 ایپس میں سے 70% سے زیادہ کوٹلن استعمال کرتی ہیں۔</string>
+    <string name="summary_android_features">اینڈرائیڈ نہ صرف ایک آپریٹنگ سسٹم ہے، بلکہ ایک ایسا پلیٹ فارم بھی ہے جو صارفین اور ڈیولپرز کے لیے کئی خصوصیات اور صلاحیتیں پیش کرتا ہے۔ اینڈرائیڈ کی کچھ خصوصیات میں شامل ہیں:\n\n- نیئر فیلڈ کمیونیکیشن (NFC)، جو آپ کو ڈیٹا شیئر کرنے، ادائیگی کرنے، اور دیگر ڈیوائسز سے وائرلیس طور پر جڑنے کی اجازت دیتا ہے۔\n- متبادل کی بورڈز، جو آپ کو مختلف لے آؤٹس، زبانوں، اور تھیمز کے ساتھ اپنے ان پٹ میتھڈ کو اپنی مرضی کے مطابق بنانے دیتے ہیں۔\n- IR ٹرانسمیشن، جو آپ کو اپنے فون کو ٹی وی، ایئر کنڈیشنر، اور دیگر آلات کے لیے ریموٹ کنٹرول کے طور پر استعمال کرنے کے قابل بناتا ہے۔\n- نو-ٹچ کنٹرول، جو آپ کو اشاروں یا صوتی کمانڈز کا استعمال کرکے اسکرین کو چھوئے بغیر اپنے فون پر کام انجام دینے دیتا ہے۔\n- آٹومیشن، جو آپ کو اپنے فون کے لیے کچھ کام خود بخود انجام دینے کے لیے روٹینز اور ٹرگرز سیٹ اپ کرنے کی اجازت دیتا ہے۔\n- وائرلیس ایپ ڈاؤن لوڈز، جو آپ کو اپنے کمپیوٹر یا ویب براؤزر سے ایپس انسٹال کرنے دیتے ہیں بغیر اپنے فون کو کیبل سے جوڑے۔\n- اسٹوریج اور بیٹری کی تبدیلی، جو آپ کو اپنے فون کی میموری کو بڑھانے یا اس کی بیٹری کو آسانی سے تبدیل کرنے کا آپشن دیتا ہے۔\n- کسٹم ہوم اسکرین، جو آپ کو ویجیٹس، وال پیپرز، آئیکنز، اور لانچرز کے ساتھ اپنے فون کی ظاہری شکل کو ذاتی بنانے دیتا ہے۔\n\nاینڈرائیڈ اسٹوڈیو اینڈرائیڈ ایپس تیار کرنے کا بہترین ٹول ہے۔ یہ ڈیولپرز کے لیے بہت سی خصوصیات اور فوائد پیش کرتا ہے جیسے:\n\n- کوڈ ایڈیٹر جس میں سنٹیکس ہائی لائٹنگ، کوڈ کمپلیشن، ری فیکٹرنگ، ڈیبگنگ، ٹیسٹنگ، اور لنٹنگ ٹولز ہیں۔\n- یوزر انٹرفیس ڈیزائن کرنے کے لیے ڈریگ اینڈ ڈراپ انٹرفیس کے ساتھ لے آؤٹ ایڈیٹر۔\n- تیز بوٹ اور اسنیپ شاٹ سپورٹ کے ساتھ ایمولیٹر مختلف ڈیوائسز اور کنفیگریشنز پر ایپس کی جانچ کے لیے۔\n- فائر بیس انٹیگریشن جس میں سروسز جیسے کہ تصدیق، ڈیٹا بیس، اسٹوریج، اینالیٹکس، کریش رپورٹنگ وغیرہ شامل ہیں۔\n- گریڈل پر مبنی بلڈ سسٹم جس میں انحصار کا انتظام، کسٹمائزیشن، آپٹمائزیشن، سائننگ، تقسیم کے آپشنز وغیرہ شامل ہیں۔\n\nاینڈرائیڈ اسٹوڈیو کے ساتھ، آپ کوٹلن، ایک جدید پروگرامنگ زبان جو جامع، محفوظ، اظہار خیال، اور جاوا کے ساتھ باہمی طور پر کام کرنے کے قابل ہے، کا استعمال کرتے ہوئے اینڈرائیڈ ڈیوائسز کے لیے حیرت انگیز ایپس بنا سکتے ہیں۔</string>
+    <string name="summary_chronometer">کرونومیٹر اینڈرائیڈ فریم ورک میں ایک خصوصی ویجیٹ ہے جو گزرے ہوئے وقت کو دکھانے کے لیے ٹائمر جیسی فعالیت فراہم کرتا ہے۔ اسے اوپر یا نیچے گننے کے لیے کنفیگر کیا جاسکتا ہے، اور عام طور پر ان ایپلی کیشنز میں استعمال ہوتا ہے جن کے لیے ٹائم کیپنگ کی ضرورت ہوتی ہے، جیسے اسٹاپ واچ یا کاؤنٹ ڈاؤن ٹائمر ایپس۔ کرونومیٹر کلاس TextView کلاس سے اخذ کی گئی ہے، جس کا مطلب ہے کہ یہ TextView کی تمام خصوصیات اور طریقوں کو وراثت میں ملتی ہے۔ یہ ڈیولپرز کو کرونومیٹر کی ظاہری شکل کو آسانی سے اپنی مرضی کے مطابق بنانے کی اجازت دیتا ہے، بشمول اس کا ٹیکسٹ سائز، رنگ اور فونٹ۔</string>
+    <string name="snack_this_is_a_snackbar">یہ ایک اسنیک بار ہے!</string>
+    <string name="snack_bar_clicked">کلک کیا گیا</string>
+    <string name="snack_copied_to_clipboard">کلپ بورڈ پر کاپی ہو گیا! 📋</string>
+    <string name="snack_unable_to_open_google_play_store">گوگل پلے اسٹور کھولنے سے قاصر۔</string>
+    <string name="snack_rating">ہمیں %1$.1f ستاروں کے ساتھ ریٹ کرنے کا شکریہ! ❤️</string>
+    <string name="snack_image_button">امیج بٹن پر کلک کیا گیا!</string>
+    <string name="toast_this_is_a_toast">یہ ایک ٹوسٹ ہے!</string>
+    <string name="tooltip_show_code">کوڈ سنٹیکس دکھائیں</string>
+    <string name="tooltip_open_me">مجھے کھولو 🌐</string>
+    <string name="hint_type">یہاں ٹائپ کریں…</string>
+    <string name="hint_password">اپنا پاس ورڈ درج کریں…</string>
+
+    <string name="app_usage_notifications">ایپ کے استعمال کی نوٹیفکیشنز</string>
+    <string name="update_notifications">اپڈیٹ نوٹیفکیشنز</string>
+    <string name="browse_terms_of_service_and_privacy_policy"><i><u>سروس کی شرائط</u></i> اور <i><u>رازداری کی پالیسی</u></i> کو براؤز کریں</string>
+
+    <string name="update_downloaded">اپڈیٹ ڈاؤن لوڈ ہو گئی</string>
+    <string name="view_in_google_play">گوگل پلے اسٹور میں دیکھیں</string>
+    <string name="version_info">ورژن کی معلومات</string>
+    <string name="beta_program">بیٹا پروگرام</string>
+    <string name="open_source_licenses">اوپن سورس لائسنسز</string>
+    <string name="version">ورژن %1$s</string>
+    <string name="error_loading_layout">لے آؤٹ لوڈ کرنے میں خرابی</string>
+    <string name="error_loading_code">کوڈ لوڈ کرنے میں خرابی</string>
+    <string name="snack_general_error">اپڈیٹس چیک کرتے وقت ایک خرابی پیش آئی</string>
+    <string name="consent_dialog_title">ڈیٹا اور اشتہارات کی رضامندی</string>
+    <string name="analytics_storage">اینالیٹکس اسٹوریج</string>
+    <string name="ad_storage">اشتہارات کا اسٹوریج</string>
+    <string name="ad_user_data">صارف کا اشتہاری ڈیٹا</string>
+    <string name="ad_personalization">اشتہارات کی ذاتی نوعیت</string>
+    <string name="consent_settings">رضامندی کی سیٹنگز</string>
+    <string name="summary_consent_analytics_storage">گمنام استعمال کے اعداد و شمار جمع کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_consent_ad_storage">آپ کے ڈیوائس پر اشتہاری ڈیٹا ذخیرہ کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_consent_ad_user_data">صارف کا ڈیٹا اشتہارات کے لیے شیئر کرنے کی اجازت دیتا ہے۔</string>
+    <string name="summary_consent_ad_personalization">ذاتی نوعیت کی اشتہاری سفارشات کو فعال کرتا ہے۔</string>
+    <string name="daily_tip_constraintlayout">رسپانسیو UIs بنانے کے لیے ConstraintLayout استعمال کریں۔</string>
+    <string name="daily_tip_viewbinding">محفوظ UI کوڈ کے لیے ViewBinding کا فائدہ اٹھائیں۔</string>
+    <string name="daily_tip_recyclerview">ہموار اسکرولنگ لسٹوں کے لیے RecyclerView کو نافذ کریں۔</string>
+    <string name="daily_tip_material_design3">جدید شکل کے لیے میٹیریل ڈیزائن 3 کے اجزاء استعمال کریں۔</string>
+    <string name="daily_tip_profile_app">کارکردگی کو ٹریک کرنے کے لیے اپنی ایپ کو باقاعدگی سے پروفائل کریں۔</string>
+    <string name="daily_tip_extract_components">دوبارہ قابل استعمال اجزاء نکال کر لے آؤٹس کو منظم رکھیں۔</string>
+    <string name="daily_tip_use_string_resources">مقامیانے کو آسان بنانے کے لیے تمام متن کے لیے اسٹرنگ وسائل استعمال کریں۔</string>
+    <string name="daily_tip_optimize_webp">APK کا سائز کم کرنے کے لیے WebP کے ساتھ تصاویر کو بہتر بنائیں۔</string>
+    <string name="daily_tip_enable_proguard">ریلیز بلڈز کو سکڑانے اور مبہم کرنے کے لیے ProGuard کو فعال کریں۔</string>
+    <string name="daily_tip_prefer_compose">اگر جدید ڈیوائسز کو ہدف بنا رہے ہیں تو نئے UI کے لیے Compose کو ترجیح دیں۔</string>
+    <string name="daily_tip_livedata_viewmodel">ری ایکٹیو UIs کے لیے LiveData اور ViewModel کا فائدہ اٹھائیں۔</string>
+    <string name="daily_tip_workmanager">قابل اعتماد پس منظر کے کاموں کے لیے WorkManager استعمال کریں۔</string>
+    <string name="daily_tip_github_actions">خودکار بلڈ چیکس کے لیے GitHub Actions کا استعمال کریں۔</string>
+    <string name="daily_tip_emulator_screen_sizes">ایمولیٹر کے ساتھ اپنی ایپ کو مختلف اسکرین سائز پر ٹیسٹ کریں۔</string>
+    <string name="daily_tip_update_dependencies">تازہ ترین خصوصیات اور اصلاحات کے لیے انحصار کو اپ ڈیٹ رکھیں۔</string>
+    <string name="daily_tip_kotlin_coroutines">غیر مطابقت پذیر کارروائیوں کے لیے Kotlin Coroutines کا فائدہ اٹھائیں۔</string>
+    <string name="daily_tip_hilt">انحصار انجیکشن کے لیے Hilt کو مربوط کریں۔</string>
+    <string name="daily_tip_unit_tests">JUnit اور Espresso کے ساتھ یونٹ ٹیسٹ لکھیں۔</string>
+    <string name="daily_tip_mvvm">قابل دیکھ بھال کوڈ کے لیے MVVM آرکیٹیکچر کی پیروی کریں۔</string>
+    <string name="tip_of_the_day">آج کی ٹپ</string>
+    <string name="other_apps_title">ڈیولپر کی مزید ایپس</string>
+</resources>

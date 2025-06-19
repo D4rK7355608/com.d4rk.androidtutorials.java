@@ -2,15 +2,12 @@ package com.d4rk.androidtutorials.java.ui.screens.home.repository;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
@@ -42,7 +39,7 @@ public class HomeRepository {
      * You can change the package name or URL as needed.
      */
     public Intent getPlayStoreIntent() {
-        String playStoreUrl = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
+        String playStoreUrl = "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials";
         return buildPlayStoreIntent(playStoreUrl);
     }
 
@@ -97,7 +94,7 @@ public class HomeRepository {
                         for (int i = 0; i < apps.length(); i++) {
                             JSONObject obj = apps.getJSONObject(i);
                             String pkg = obj.getString("packageName");
-                            if (BuildConfig.APPLICATION_ID.equals(pkg)) {
+                            if (pkg.contains("com.d4rk.androidtutorials")) {
                                 continue;
                             }
                             result.add(new PromotedApp(

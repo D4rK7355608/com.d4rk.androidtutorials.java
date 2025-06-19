@@ -24,7 +24,18 @@
     <string name="russian" translatable="false">Русский</string>
     <string name="spanish" translatable="false">Español</string>
     <string name="turkish" translatable="false">Türkçe</string>
+    <string name="swedish" translatable="false">Svenska</string>"
     <string name="ukrainian" translatable="false">Українська</string>
+    <string name="traditional_chinese" translatable="false">中文</string>
+    <string name="thai" translatable="false">ไทย</string>
+    <string name="bengali" translatable="false">বাংলা</string>
+    <string name="korean" translatable="false">한국어</string>
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="vietnamese" translatable="false">Tiếng Việt</string>
+    <string name="filipino" translatable="false">Filipino</string>
+    <string name="spanish_mexico" translatable="false">Español (México)</string>
+    <string name="urdu" translatable="false">اردو</string>
+    <string name="brazilian_portuguese" translatable="false">Português (Brasil)</string>
     <string name="audiowide" translatable="false">Audiowide</string>
     <string name="fira_code" translatable="false">Fira Code</string>
     <string name="jetbrains_mono" translatable="false">JetBrains Mono</string>
@@ -43,5 +54,5 @@
     <string name="loading_changelog" translatable="false">>Loading changelog</string>
     <string name="error_loading_changelog" translatable="false">>Error loading changelog</string>
 
-    <string name="ad_banner_unit_id" translatable="false">>ca-app-pub-5294151573817700/3821250346</string>
+    <string name="ad_banner_unit_id" translatable="false">ca-app-pub-5294151573817700/3821250346</string>
 </resources>
