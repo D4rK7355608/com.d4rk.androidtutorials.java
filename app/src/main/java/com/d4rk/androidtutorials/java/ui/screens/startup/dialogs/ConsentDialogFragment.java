@@ -33,10 +33,18 @@ public class ConsentDialogFragment extends DialogFragment {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         boolean defaultChecked = !BuildConfig.DEBUG;
-        boolean analytics = prefs.getBoolean(getString(R.string.key_consent_analytics), defaultChecked);
-        boolean adStorage = prefs.getBoolean(getString(R.string.key_consent_ad_storage), defaultChecked);
-        boolean adUserData = prefs.getBoolean(getString(R.string.key_consent_ad_user_data), defaultChecked);
-        boolean adPersonalization = prefs.getBoolean(getString(R.string.key_consent_ad_personalization), defaultChecked);
+
+        // Cache preference keys early so the dialog can still operate safely if the
+        // fragment gets detached before the positive button callback runs.
+        String keyAnalytics = getString(R.string.key_consent_analytics);
+        String keyAdStorage = getString(R.string.key_consent_ad_storage);
+        String keyAdUserData = getString(R.string.key_consent_ad_user_data);
+        String keyAdPersonalization = getString(R.string.key_consent_ad_personalization);
+
+        boolean analytics = prefs.getBoolean(keyAnalytics, defaultChecked);
+        boolean adStorage = prefs.getBoolean(keyAdStorage, defaultChecked);
+        boolean adUserData = prefs.getBoolean(keyAdUserData, defaultChecked);
+        boolean adPersonalization = prefs.getBoolean(keyAdPersonalization, defaultChecked);
 
         binding.checkAnalyticsStorage.setChecked(analytics);
         binding.checkAdStorage.setChecked(adStorage);
@@ -56,10 +64,10 @@ public class ConsentDialogFragment extends DialogFragment {
                     boolean d = binding.checkAdPersonalization.isChecked();
 
                     prefs.edit()
-                            .putBoolean(getString(R.string.key_consent_analytics), a)
-                            .putBoolean(getString(R.string.key_consent_ad_storage), b)
-                            .putBoolean(getString(R.string.key_consent_ad_user_data), c)
-                            .putBoolean(getString(R.string.key_consent_ad_personalization), d)
+                            .putBoolean(keyAnalytics, a)
+                            .putBoolean(keyAdStorage, b)
+                            .putBoolean(keyAdUserData, c)
+                            .putBoolean(keyAdPersonalization, d)
                             .apply();
 
                     if (listener != null) {
