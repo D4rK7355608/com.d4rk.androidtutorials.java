@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentCodeBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import android.util.Log;
+import io.github.kbiakov.codeview.adapters.Options;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +41,10 @@ public class ProgressBarTabCodeFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            binding.textView.setText(builder.toString());
+            Options options = Options.Default.get(requireContext())
+                    .withLanguage("java")
+                    .withCode(builder.toString());
+            binding.codeView.setOptions(options);
         } catch (IOException e) {
             Log.e("ProgressBarTabCode", "Error reading code", e);
         }
@@ -52,6 +56,7 @@ public class ProgressBarTabCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textView.setTypeface(monospaceFont);
+        binding.codeView.getOptions().withFont(monospaceFont);
+        binding.codeView.updateOptions(binding.codeView.getOptions());
     }
 }
