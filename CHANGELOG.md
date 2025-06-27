@@ -1,3 +1,8 @@
+# Version 5.0.2:
+
+- Added new font style and visualization for the codes
+- Updated small components for better compatibiliy.
+
 # Version 5.0.1:
 
 - Core components and services are now on their latest versions for improved security and compatibility.

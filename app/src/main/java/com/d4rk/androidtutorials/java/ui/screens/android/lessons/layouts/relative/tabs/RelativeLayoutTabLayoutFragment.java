@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relati
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,8 @@ import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
-import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import android.util.Log;
+import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class RelativeLayoutTabLayoutFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            binding.textView.setText(builder.toString());
+            //binding.textView.setText(builder.toString()); // FIXME: Cannot resolve symbol 'textView'
         } catch (IOException e) {
             Log.e("RelativeLayoutTab", "Error reading layout text", e);
         }
@@ -52,6 +52,6 @@ public class RelativeLayoutTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textView.setTypeface(monospaceFont);
+        //binding.textView.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textView'
     }
 }
