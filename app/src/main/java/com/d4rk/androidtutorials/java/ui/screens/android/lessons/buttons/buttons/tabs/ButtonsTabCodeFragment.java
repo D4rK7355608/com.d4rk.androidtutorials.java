@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.button
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +15,9 @@ import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentSameCodeBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.d4rk.androidtutorials.java.utils.FontManager;
-import android.util.Log;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,7 +42,7 @@ public class ButtonsTabCodeFragment extends Fragment {
                 builder.append(line).append('\n');
             }
             binding.codeView.setText(builder.toString());
-            CodeHighlighter.applyJavaTheme(requireContext(), binding.codeView);
+            CodeHighlighter.applyJavaTheme(binding.codeView);
         } catch (IOException e) {
             Log.e("ButtonsTabCode", "Error reading code", e);
         }

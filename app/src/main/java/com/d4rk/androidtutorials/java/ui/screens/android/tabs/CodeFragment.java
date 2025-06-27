@@ -78,7 +78,7 @@ public class CodeFragment extends Fragment {
                 builder.append(line).append('\n');
             }
             binding.codeView.setText(builder.toString());
-            CodeHighlighter.applyJavaTheme(requireContext(), binding.codeView);
+            CodeHighlighter.applyJavaTheme(binding.codeView);
         } catch (IOException e) {
             Log.e("Android Code Fragment", "Error loading code from resource ID: " + codeResId, e);
             binding.codeView.setText(getString(R.string.error_loading_code));

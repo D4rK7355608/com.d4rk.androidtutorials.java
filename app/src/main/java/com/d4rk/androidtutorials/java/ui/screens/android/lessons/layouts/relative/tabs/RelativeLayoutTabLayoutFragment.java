@@ -42,7 +42,7 @@ public class RelativeLayoutTabLayoutFragment extends Fragment {
                 builder.append(line).append('\n');
             }
             binding.codeView.setText(builder.toString());
-            CodeHighlighter.applyXmlTheme(requireContext(), binding.codeView);
+            CodeHighlighter.applyXmlTheme(binding.codeView);
         } catch (IOException e) {
             Log.e("RelativeLayoutTab", "Error reading layout text", e);
         }

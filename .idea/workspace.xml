@@ -434,7 +434,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Removed custom font from code views&#10;&#10;This commit removes the custom font `font_audiowide` from the code views in `fragment_layout.xml`, `fragment_same_code.xml`, and `fragment_code.xml`. The default system font will now be used for displaying code." />
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/buttons/buttons/tabs/ButtonsTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/buttons/buttons/tabs/ButtonsTabCodeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/relative/tabs/RelativeLayoutTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/relative/tabs/RelativeLayoutTabLayoutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/table/tabs/TableLayoutTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/table/tabs/TableLayoutTabLayoutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabCodeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/views/images/tabs/ImagesTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/views/images/tabs/ImagesTabLayoutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/CodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/CodeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/LayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/LayoutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/utils/CodeHighlighter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/utils/CodeHighlighter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -916,7 +926,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751009258738</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting.">
+      <option name="closed" value="true" />
+      <created>1751009466665</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1751009466665</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -943,8 +961,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update 4.0_r1" />
-    <MESSAGE value="Refractored all app source code" />
     <MESSAGE value="Updated funding" />
     <MESSAGE value="Added the new nav drawer" />
     <MESSAGE value="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont" />
@@ -968,7 +984,9 @@
     <MESSAGE value="fix: Corrected Android 15 version information&#10;&#10;This commit addresses an issue with the displayed Android 15 version information:&#10;&#10;- The Android 15 codename was initially shown as &quot;Vanilla Ice Cream,&quot; which has been corrected to &quot;VanillaIceCream&quot; (without the space) to align with official naming.&#10;- The version code has been incremented to reflect this update." />
     <MESSAGE value="refactor: Updated Android Gradle Plugin and related dependencies&#10;&#10;This commit updates the Android Gradle Plugin and several related dependencies to their latest versions.&#10;&#10;- Updated Android Gradle Plugin from 8.2.0-rc03 to 8.2.1.&#10;- Updated various Kotlin and AndroidX library versions.&#10;- Incremented `versionCode` to 39 in `build.gradle`.&#10;- Added changelog entry for version 2.4.0." />
     <MESSAGE value="refactor: Removed custom font from code views&#10;&#10;This commit removes the custom font `font_audiowide` from the code views in `fragment_layout.xml`, `fragment_same_code.xml`, and `fragment_code.xml`. The default system font will now be used for displaying code." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Removed custom font from code views&#10;&#10;This commit removes the custom font `font_audiowide` from the code views in `fragment_layout.xml`, `fragment_same_code.xml`, and `fragment_code.xml`. The default system font will now be used for displaying code." />
+    <MESSAGE value="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting." />
+    <MESSAGE value="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

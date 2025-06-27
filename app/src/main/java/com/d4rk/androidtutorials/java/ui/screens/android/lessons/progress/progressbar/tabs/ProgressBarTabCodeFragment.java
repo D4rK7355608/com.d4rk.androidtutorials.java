@@ -42,7 +42,7 @@ public class ProgressBarTabCodeFragment extends Fragment {
                 builder.append(line).append('\n');
             }
             binding.codeView.setText(builder.toString());
-            CodeHighlighter.applyJavaTheme(requireContext(), binding.codeView);
+            CodeHighlighter.applyJavaTheme(binding.codeView);
         } catch (IOException e) {
             Log.e("ProgressBarTabCode", "Error reading code", e);
         }

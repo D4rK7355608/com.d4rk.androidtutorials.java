@@ -77,7 +77,7 @@ public class LayoutFragment extends Fragment {
                 builder.append(line).append('\n');
             }
             binding.codeView.setText(builder.toString());
-            CodeHighlighter.applyXmlTheme(requireContext(), binding.codeView);
+            CodeHighlighter.applyXmlTheme(binding.codeView);
         } catch (IOException e) {
             Log.e("LayoutFragment", "Error loading layout", e);
             binding.codeView.setText(getString(R.string.error_loading_layout));
