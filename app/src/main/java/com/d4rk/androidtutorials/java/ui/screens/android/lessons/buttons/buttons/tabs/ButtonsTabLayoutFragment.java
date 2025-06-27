@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentButtonsLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.amrdeveloper.codeview.CodeView;
 import android.util.Log;
 
@@ -78,13 +79,6 @@ public class ButtonsTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        for (CodeView codeView : buttonXMLResources.values()) {
-            codeView.setTypeface(monospaceFont);
-            codeView.setLineNumberTextSize(32f);
-            codeView.setHorizontallyScrolling(false);
-            codeView.setKeyListener(null);
-            codeView.setCursorVisible(false);
-            codeView.setTextIsSelectable(true);
-        }
+        CodeViewUtils.applyDefaults(monospaceFont, buttonXMLResources.values().toArray(new CodeView[0]));
     }
 }

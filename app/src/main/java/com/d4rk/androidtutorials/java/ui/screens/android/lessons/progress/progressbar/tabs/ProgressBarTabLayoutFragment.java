@@ -18,6 +18,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentLinearLayoutLayoutBind
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -63,18 +64,8 @@ public class ProgressBarTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeViewVerticalXml.setTypeface(monospaceFont);
-        binding.codeViewVerticalXml.setLineNumberTextSize(32f);
-        binding.codeViewVerticalXml.setHorizontallyScrolling(false);
-        binding.codeViewVerticalXml.setKeyListener(null);
-        binding.codeViewVerticalXml.setCursorVisible(false);
-        binding.codeViewVerticalXml.setTextIsSelectable(true);
-
-        binding.codeViewHorizontalXml.setTypeface(monospaceFont);
-        binding.codeViewHorizontalXml.setLineNumberTextSize(32f);
-        binding.codeViewHorizontalXml.setHorizontallyScrolling(false);
-        binding.codeViewHorizontalXml.setKeyListener(null);
-        binding.codeViewHorizontalXml.setCursorVisible(false);
-        binding.codeViewHorizontalXml.setTextIsSelectable(true);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewVerticalXml,
+                binding.codeViewHorizontalXml);
     }
 }
