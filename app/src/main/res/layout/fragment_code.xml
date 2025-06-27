@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <io.github.kbiakov.codeview.CodeView
+            <com.amrdeveloper.codeview.CodeView
                 android:id="@+id/code_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
