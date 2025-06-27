@@ -18,6 +18,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentClockLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
@@ -61,25 +62,9 @@ public class ClockTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeViewDigitalClockXml.setTypeface(monospaceFont);
-        binding.codeViewDigitalClockXml.setLineNumberTextSize(32f);
-        binding.codeViewDigitalClockXml.setHorizontallyScrolling(false);
-        binding.codeViewDigitalClockXml.setKeyListener(null);
-        binding.codeViewDigitalClockXml.setCursorVisible(false);
-        binding.codeViewDigitalClockXml.setTextIsSelectable(true);
-
-        binding.codeViewTextClockXml.setTypeface(monospaceFont);
-        binding.codeViewTextClockXml.setLineNumberTextSize(32f);
-        binding.codeViewTextClockXml.setHorizontallyScrolling(false);
-        binding.codeViewTextClockXml.setKeyListener(null);
-        binding.codeViewTextClockXml.setCursorVisible(false);
-        binding.codeViewTextClockXml.setTextIsSelectable(true);
-
-        binding.codeViewAnalogClockXml.setTypeface(monospaceFont);
-        binding.codeViewAnalogClockXml.setLineNumberTextSize(32f);
-        binding.codeViewAnalogClockXml.setHorizontallyScrolling(false);
-        binding.codeViewAnalogClockXml.setKeyListener(null);
-        binding.codeViewAnalogClockXml.setCursorVisible(false);
-        binding.codeViewAnalogClockXml.setTextIsSelectable(true);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewDigitalClockXml,
+                binding.codeViewTextClockXml,
+                binding.codeViewAnalogClockXml);
     }
 }

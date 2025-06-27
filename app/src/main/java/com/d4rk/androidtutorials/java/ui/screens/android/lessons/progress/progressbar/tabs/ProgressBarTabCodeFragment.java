@@ -18,6 +18,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import android.util.Log;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -54,11 +55,6 @@ public class ProgressBarTabCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeView.setTypeface(monospaceFont);
-        binding.codeView.setLineNumberTextSize(34f);
-        binding.codeView.setHorizontallyScrolling(false);
-        binding.codeView.setKeyListener(null);
-        binding.codeView.setCursorVisible(false);
-        binding.codeView.setTextIsSelectable(true);
+        CodeViewUtils.applyDefaults(monospaceFont, binding.codeView);
     }
 }

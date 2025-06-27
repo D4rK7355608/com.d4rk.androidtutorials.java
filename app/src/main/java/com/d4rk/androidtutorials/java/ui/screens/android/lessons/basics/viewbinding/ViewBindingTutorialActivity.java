@@ -15,6 +15,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -57,26 +58,10 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Typeface monospaceFont = FontManager.getMonospaceFont(this, prefs);
-        binding.codeViewBindingGradle.setTypeface(monospaceFont);
-        binding.codeViewBindingGradle.setLineNumberTextSize(32f);
-        binding.codeViewBindingGradle.setHorizontallyScrolling(false);
-        binding.codeViewBindingGradle.setKeyListener(null);
-        binding.codeViewBindingGradle.setCursorVisible(false);
-        binding.codeViewBindingGradle.setTextIsSelectable(true);
-
-        binding.codeViewBindingActivities.setTypeface(monospaceFont);
-        binding.codeViewBindingActivities.setLineNumberTextSize(32f);
-        binding.codeViewBindingActivities.setHorizontallyScrolling(false);
-        binding.codeViewBindingActivities.setKeyListener(null);
-        binding.codeViewBindingActivities.setCursorVisible(false);
-        binding.codeViewBindingActivities.setTextIsSelectable(true);
-
-        binding.codeViewBindingFragments.setTypeface(monospaceFont);
-        binding.codeViewBindingFragments.setLineNumberTextSize(32f);
-        binding.codeViewBindingFragments.setHorizontallyScrolling(false);
-        binding.codeViewBindingFragments.setKeyListener(null);
-        binding.codeViewBindingFragments.setCursorVisible(false);
-        binding.codeViewBindingFragments.setTextIsSelectable(true);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewBindingGradle,
+                binding.codeViewBindingActivities,
+                binding.codeViewBindingFragments);
     }
 
     private String readTextFromInputStream(InputStream inputStream) {

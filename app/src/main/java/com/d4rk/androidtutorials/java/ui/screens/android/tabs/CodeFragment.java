@@ -16,6 +16,7 @@ import androidx.preference.PreferenceManager;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentCodeBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
@@ -61,12 +62,7 @@ public class CodeFragment extends Fragment {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeView.setTypeface(monospaceFont);
-        binding.codeView.setLineNumberTextSize(34f);
-        binding.codeView.setHorizontallyScrolling(false);
-        binding.codeView.setKeyListener(null);
-        binding.codeView.setCursorVisible(false);
-        binding.codeView.setTextIsSelectable(true);
+        CodeViewUtils.applyDefaults(monospaceFont, binding.codeView);
     }
 
     private void loadCode() {
