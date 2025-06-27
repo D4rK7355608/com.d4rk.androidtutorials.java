@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import com.amrdeveloper.codeview.CodeView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentClockLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
@@ -33,13 +34,13 @@ public class ClockTabLayoutFragment extends Fragment {
         binding = FragmentClockLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
-        setTextView(binding.textViewDigitalClockXml, R.raw.text_clock_digital_xml);
-        setTextView(binding.textViewTextClockXml, R.raw.text_clock_xml);
-        setTextView(binding.textViewAnalogClockXml, R.raw.text_clock_analog_xml);
+        setCodeView(binding.codeViewDigitalClockXml, R.raw.text_clock_digital_xml);
+        setCodeView(binding.codeViewTextClockXml, R.raw.text_clock_xml);
+        setCodeView(binding.codeViewAnalogClockXml, R.raw.text_clock_analog_xml);
         return binding.getRoot();
     }
 
-    private void setTextView(TextView textView, int rawResource) {
+    private void setCodeView(CodeView codeView, int rawResource) {
         try (InputStream inputStream = getResources().openRawResource(rawResource)) {
             ByteArrayOutputStream result = new ByteArrayOutputStream();
             byte[] buffer = new byte[1024];
@@ -48,7 +49,8 @@ public class ClockTabLayoutFragment extends Fragment {
                 result.write(buffer, 0, length);
             }
             String text = result.toString();
-            textView.setText(text);
+            codeView.setText(text);
+            CodeHighlighter.applyXmlTheme(codeView);
         } catch (IOException e) {
             Log.e("ClockTab", "Error reading clock layout", e);
         }
@@ -59,8 +61,25 @@ public class ClockTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textViewDigitalClockXml.setTypeface(monospaceFont);
-        binding.textViewTextClockXml.setTypeface(monospaceFont);
-        binding.textViewAnalogClockXml.setTypeface(monospaceFont);
+        binding.codeViewDigitalClockXml.setTypeface(monospaceFont);
+        binding.codeViewDigitalClockXml.setLineNumberTextSize(32f);
+        binding.codeViewDigitalClockXml.setHorizontallyScrolling(false);
+        binding.codeViewDigitalClockXml.setKeyListener(null);
+        binding.codeViewDigitalClockXml.setCursorVisible(false);
+        binding.codeViewDigitalClockXml.setTextIsSelectable(true);
+
+        binding.codeViewTextClockXml.setTypeface(monospaceFont);
+        binding.codeViewTextClockXml.setLineNumberTextSize(32f);
+        binding.codeViewTextClockXml.setHorizontallyScrolling(false);
+        binding.codeViewTextClockXml.setKeyListener(null);
+        binding.codeViewTextClockXml.setCursorVisible(false);
+        binding.codeViewTextClockXml.setTextIsSelectable(true);
+
+        binding.codeViewAnalogClockXml.setTypeface(monospaceFont);
+        binding.codeViewAnalogClockXml.setLineNumberTextSize(32f);
+        binding.codeViewAnalogClockXml.setHorizontallyScrolling(false);
+        binding.codeViewAnalogClockXml.setKeyListener(null);
+        binding.codeViewAnalogClockXml.setCursorVisible(false);
+        binding.codeViewAnalogClockXml.setTextIsSelectable(true);
     }
 }
