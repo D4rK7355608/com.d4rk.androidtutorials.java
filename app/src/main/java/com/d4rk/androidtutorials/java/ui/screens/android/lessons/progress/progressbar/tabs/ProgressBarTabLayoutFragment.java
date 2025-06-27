@@ -38,7 +38,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             while ((line = readerVertical.readLine()) != null) {
                 verticalBuilder.append(line).append('\n');
             }
-            binding.textViewVerticalXml.setText(verticalBuilder.toString());
+            binding.textViewVerticalXml.setText(verticalBuilder.toString()); // FIXME: Cannot resolve symbol 'textViewVerticalXml'
         } catch (IOException e) {
             Log.e("ProgressBarTabLayout", "Error reading progress xml", e);
         }
@@ -48,7 +48,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             while ((line = readerHorizontal.readLine()) != null) {
                 horizontalBuilder.append(line).append('\n');
             }
-            binding.textViewHorizontalXml.setText(horizontalBuilder.toString());
+            binding.textViewHorizontalXml.setText(horizontalBuilder.toString());// FIXME: Cannot resolve symbol 'textViewVerticalXml'
         } catch (IOException e) {
             Log.e("ProgressBarTabLayout", "Error reading linear layout xml", e);
         }
@@ -60,7 +60,7 @@ public class ProgressBarTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textViewVerticalXml.setTypeface(monospaceFont);
-        binding.textViewHorizontalXml.setTypeface(monospaceFont);
+        binding.textViewVerticalXml.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textViewVerticalXml'
+        binding.textViewHorizontalXml.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textViewVerticalXml'
     }
 }
