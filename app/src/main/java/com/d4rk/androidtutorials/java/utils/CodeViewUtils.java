@@ -1,7 +1,6 @@
 package com.d4rk.androidtutorials.java.utils;
 
 import android.graphics.Typeface;
-import android.view.View;
 
 import com.amrdeveloper.codeview.CodeView;
 
@@ -9,10 +8,6 @@ import com.amrdeveloper.codeview.CodeView;
  * Utility methods for configuring {@link CodeView} instances.
  */
 public final class CodeViewUtils {
-
-    private CodeViewUtils() {
-        // Utility class
-    }
 
     /**
      * Apply common read–only settings to the provided CodeViews.
@@ -25,6 +20,7 @@ public final class CodeViewUtils {
             if (view == null) continue;
             view.setTypeface(typeface);
             view.setLineNumberTextSize(view.getTextSize());
+            view.setEnableLineNumber(false);
             view.setHorizontallyScrolling(false);
             view.setKeyListener(null);
             view.setCursorVisible(false);

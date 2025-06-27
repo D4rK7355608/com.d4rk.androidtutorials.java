@@ -28,7 +28,6 @@ public class CodeHighlighter {
         codeView.addSyntaxPattern(Pattern.compile("\\b(abstract|boolean|break|byte|case|catch|char|class|continue|default|do|double|else|enum|extends|final|finally|float|for|if|implements|import|instanceof|int|interface|long|native|new|null|package|private|protected|public|return|short|static|strictfp|super|switch|synchronized|this|throw|transient|try|void|volatile|while)\\b"), Color.parseColor("#569CD6"));
         codeView.addSyntaxPattern(Pattern.compile("\\b(\\d+[LFD]?|0x[0-9a-fA-F]+)\\b"), Color.parseColor("#B5CEA8"));
 
-        codeView.setEnableLineNumber(true);
         codeView.reHighlightSyntax();
     }
 
@@ -44,7 +43,6 @@ public class CodeHighlighter {
         codeView.addSyntaxPattern(Pattern.compile("\\b\\w+(?==)"), Color.parseColor("#795E26"));
         codeView.addSyntaxPattern(Pattern.compile("\".*?\"", Pattern.DOTALL), Color.parseColor("#CE9178"));
 
-        codeView.setEnableLineNumber(true);
         codeView.reHighlightSyntax();
     }
 }
