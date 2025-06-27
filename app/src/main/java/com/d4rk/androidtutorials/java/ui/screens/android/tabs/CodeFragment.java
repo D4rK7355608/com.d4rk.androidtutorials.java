@@ -18,8 +18,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentCodeBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import io.github.kbiakov.codeview.CodeView;
-import io.github.kbiakov.codeview.adapters.Options;
+import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -62,8 +61,7 @@ public class CodeFragment extends Fragment {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeView.getOptions().withFont(monospaceFont);
-        binding.codeView.updateOptions(binding.codeView.getOptions());
+        binding.codeView.setTypeface(monospaceFont);
     }
 
     private void loadCode() {
@@ -74,13 +72,11 @@ public class CodeFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            Options options = Options.Default.get(requireContext())
-                    .withLanguage("java")
-                    .withCode(builder.toString());
-            binding.codeView.setOptions(options);
+            binding.codeView.setText(builder.toString());
+            CodeHighlighter.applyJavaTheme(requireContext(), binding.codeView);
         } catch (IOException e) {
             Log.e("Android Code Fragment", "Error loading code from resource ID: " + codeResId, e);
-            binding.codeView.setCode(getString(R.string.error_loading_code));
+            binding.codeView.setText(getString(R.string.error_loading_code));
         }
     }
 }

@@ -17,7 +17,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
-import io.github.kbiakov.codeview.adapters.Options;
+import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,10 +41,8 @@ public class TableLayoutTabLayoutFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            Options options = Options.Default.get(requireContext())
-                    .withLanguage("xml")
-                    .withCode(builder.toString());
-            binding.codeView.setOptions(options);
+            binding.codeView.setText(builder.toString());
+            CodeHighlighter.applyXmlTheme(requireContext(), binding.codeView);
         } catch (IOException e) {
             Log.e("TableLayoutTab", "Error reading layout", e);
         }
@@ -56,7 +54,6 @@ public class TableLayoutTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.codeView.getOptions().withFont(monospaceFont);
-        binding.codeView.updateOptions(binding.codeView.getOptions());
+        binding.codeView.setTypeface(monospaceFont);
     }
 }
