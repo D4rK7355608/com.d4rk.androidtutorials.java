@@ -19,14 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/text_view"
+            <io.github.kbiakov.codeview.CodeView
+                android:id="@+id/code_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="16dp"
-                android:textIsSelectable="true"
-                app:fontFamily="@font/font_audiowide"
-                tools:ignore="SpeakableTextPresentCheck" />
+                app:fontFamily="@font/font_audiowide" />
         </me.zhanghai.android.fastscroll.FastScrollScrollView>
     </com.google.android.material.card.MaterialCardView>
 

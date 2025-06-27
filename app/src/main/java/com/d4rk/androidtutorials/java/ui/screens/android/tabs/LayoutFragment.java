@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
+import io.github.kbiakov.codeview.adapters.Options;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -59,7 +60,8 @@ public class LayoutFragment extends Fragment {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textView.setTypeface(monospaceFont);
+        binding.codeView.getOptions().withFont(monospaceFont);
+        binding.codeView.updateOptions(binding.codeView.getOptions());
     }
 
     private void loadLayout() {
@@ -70,10 +72,13 @@ public class LayoutFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            binding.textView.setText(builder.toString());
+            Options options = Options.Default.get(requireContext())
+                    .withLanguage("xml")
+                    .withCode(builder.toString());
+            binding.codeView.setOptions(options);
         } catch (IOException e) {
             Log.e("LayoutFragment", "Error loading layout", e);
-            binding.textView.setText(R.string.error_loading_layout);
+            binding.codeView.setCode(getString(R.string.error_loading_layout));
         }
     }
 }
