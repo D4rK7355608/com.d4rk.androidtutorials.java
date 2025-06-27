@@ -436,13 +436,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/buttons/buttons/tabs/ButtonsTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/buttons/buttons/tabs/ButtonsTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/relative/tabs/RelativeLayoutTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/relative/tabs/RelativeLayoutTabLayoutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/table/tabs/TableLayoutTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/layouts/table/tabs/TableLayoutTabLayoutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabCodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/views/images/tabs/ImagesTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/views/images/tabs/ImagesTabLayoutFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/CodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/CodeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/LayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/tabs/LayoutFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabLayoutFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/d4rk/androidtutorials/java/ui/screens/android/lessons/progress/progressbar/tabs/ProgressBarTabLayoutFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -941,7 +935,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751010642338</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter.">
+      <option name="closed" value="true" />
+      <created>1751012576138</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1751012576138</updated>
+    </task>
+    <task id="LOCAL-00035" summary="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter.">
+      <option name="closed" value="true" />
+      <created>1751012640021</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1751012640021</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
