@@ -11,10 +11,6 @@ import java.util.regex.Pattern;
  */
 public class CodeHighlighter {
 
-    private CodeHighlighter() {
-        // Utility class
-    }
-
     /**
      * Apply a basic Java highlighting theme to the given CodeView.
      */

@@ -19,7 +19,8 @@ public final class CodeViewUtils {
         for (CodeView view : views) {
             if (view == null) continue;
             view.setTypeface(typeface);
-            view.setLineNumberTextSize(view.getTextSize());
+            view.setTextSize(14f);
+            view.setLineNumberTextSize(14f);
             view.setEnableLineNumber(false);
             view.setHorizontallyScrolling(false);
             view.setKeyListener(null);
