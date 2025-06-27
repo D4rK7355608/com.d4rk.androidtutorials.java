@@ -16,6 +16,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLinearLayoutLayoutBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -38,7 +39,8 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             while ((line = readerVertical.readLine()) != null) {
                 verticalBuilder.append(line).append('\n');
             }
-            binding.textViewVerticalXml.setText(verticalBuilder.toString()); // FIXME: Cannot resolve symbol 'textViewVerticalXml'
+            binding.codeViewVerticalXml.setText(verticalBuilder.toString());
+            CodeHighlighter.applyXmlTheme(binding.codeViewVerticalXml);
         } catch (IOException e) {
             Log.e("ProgressBarTabLayout", "Error reading progress xml", e);
         }
@@ -48,7 +50,8 @@ public class ProgressBarTabLayoutFragment extends Fragment {
             while ((line = readerHorizontal.readLine()) != null) {
                 horizontalBuilder.append(line).append('\n');
             }
-            binding.textViewHorizontalXml.setText(horizontalBuilder.toString());// FIXME: Cannot resolve symbol 'textViewVerticalXml'
+            binding.codeViewHorizontalXml.setText(horizontalBuilder.toString());
+            CodeHighlighter.applyXmlTheme(binding.codeViewHorizontalXml);
         } catch (IOException e) {
             Log.e("ProgressBarTabLayout", "Error reading linear layout xml", e);
         }
@@ -60,7 +63,18 @@ public class ProgressBarTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        binding.textViewVerticalXml.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textViewVerticalXml'
-        binding.textViewHorizontalXml.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textViewVerticalXml'
+        binding.codeViewVerticalXml.setTypeface(monospaceFont);
+        binding.codeViewVerticalXml.setLineNumberTextSize(32f);
+        binding.codeViewVerticalXml.setHorizontallyScrolling(false);
+        binding.codeViewVerticalXml.setKeyListener(null);
+        binding.codeViewVerticalXml.setCursorVisible(false);
+        binding.codeViewVerticalXml.setTextIsSelectable(true);
+
+        binding.codeViewHorizontalXml.setTypeface(monospaceFont);
+        binding.codeViewHorizontalXml.setLineNumberTextSize(32f);
+        binding.codeViewHorizontalXml.setHorizontallyScrolling(false);
+        binding.codeViewHorizontalXml.setKeyListener(null);
+        binding.codeViewHorizontalXml.setCursorVisible(false);
+        binding.codeViewHorizontalXml.setTextIsSelectable(true);
     }
 }
