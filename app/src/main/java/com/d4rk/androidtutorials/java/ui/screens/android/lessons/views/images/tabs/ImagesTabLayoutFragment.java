@@ -35,6 +35,11 @@ public class ImagesTabLayoutFragment extends Fragment {
         binding = FragmentLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
+        CodeViewUtils.applyDefaults(monospaceFont, binding.codeView);
+
         StringBuilder builder = new StringBuilder();
         InputStream inputStream = getResources().openRawResource(R.raw.text_image_view_xml);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -50,11 +55,5 @@ public class ImagesTabLayoutFragment extends Fragment {
         return binding.getRoot();
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        CodeViewUtils.applyDefaults(monospaceFont, binding.codeView);
-    }
+
 }

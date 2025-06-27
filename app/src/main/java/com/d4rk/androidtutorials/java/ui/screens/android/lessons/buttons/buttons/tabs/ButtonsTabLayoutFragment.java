@@ -38,6 +38,10 @@ public class ButtonsTabLayoutFragment extends Fragment {
         binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
+        CodeViewUtils.applyDefaults(monospaceFont, buttonXMLResources.values().toArray(new CodeView[0]));
         buttonXMLResources.put(R.raw.text_button_normal_xml, binding.codeViewButtonNormalXml);
         buttonXMLResources.put(R.raw.text_button_outlined_xml, binding.codeViewButtonOutlinedXml);
         buttonXMLResources.put(R.raw.text_button_elevated_xml, binding.codeViewButtonElevatedXml);
@@ -74,11 +78,4 @@ public class ButtonsTabLayoutFragment extends Fragment {
         return binding.getRoot();
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        CodeViewUtils.applyDefaults(monospaceFont, buttonXMLResources.values().toArray(new CodeView[0]));
-    }
 }

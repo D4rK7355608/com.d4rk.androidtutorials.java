@@ -44,6 +44,13 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         binding.moreAboutViewBindingButton.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Typeface monospaceFont = FontManager.getMonospaceFont(this, prefs);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewBindingGradle,
+                binding.codeViewBindingActivities,
+                binding.codeViewBindingFragments);
+
         InputStream bindingGradle = getResources().openRawResource(R.raw.text_binding_gradle);
         binding.codeViewBindingGradle.setText(readTextFromInputStream(bindingGradle));
         CodeHighlighter.applyJavaTheme(binding.codeViewBindingGradle);
@@ -55,13 +62,6 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
         binding.codeViewBindingFragments.setText(readTextFromInputStream(bindingFragment));
         CodeHighlighter.applyJavaTheme(binding.codeViewBindingFragments);
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        Typeface monospaceFont = FontManager.getMonospaceFont(this, prefs);
-        CodeViewUtils.applyDefaults(monospaceFont,
-                binding.codeViewBindingGradle,
-                binding.codeViewBindingActivities,
-                binding.codeViewBindingFragments);
     }
 
     private String readTextFromInputStream(InputStream inputStream) {

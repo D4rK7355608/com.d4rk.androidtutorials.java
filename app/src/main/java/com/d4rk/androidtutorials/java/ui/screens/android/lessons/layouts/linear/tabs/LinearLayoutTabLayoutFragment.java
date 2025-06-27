@@ -34,6 +34,13 @@ public class LinearLayoutTabLayoutFragment extends Fragment {
         binding = FragmentLinearLayoutLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewVerticalXml,
+                binding.codeViewHorizontalXml);
+
         StringBuilder verticalBuilder = new StringBuilder();
         try (BufferedReader readerVertical = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_linear_layout_vertical_xml)))) {
             String line;
@@ -57,15 +64,5 @@ public class LinearLayoutTabLayoutFragment extends Fragment {
             Log.e("LinearLayoutTab", "Error reading horizontal layout", e);
         }
         return binding.getRoot();
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        CodeViewUtils.applyDefaults(monospaceFont,
-                binding.codeViewVerticalXml,
-                binding.codeViewHorizontalXml);
     }
 }
