@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
+import io.github.kbiakov.codeview.adapters.Options;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +41,10 @@ public class RelativeLayoutTabLayoutFragment extends Fragment {
             while ((line = reader.readLine()) != null) {
                 builder.append(line).append('\n');
             }
-            //binding.textView.setText(builder.toString()); // FIXME: Cannot resolve symbol 'textView'
+            Options options = Options.Default.get(requireContext())
+                    .withLanguage("xml")
+                    .withCode(builder.toString());
+            binding.codeView.setOptions(options);
         } catch (IOException e) {
             Log.e("RelativeLayoutTab", "Error reading layout text", e);
         }
@@ -52,6 +56,7 @@ public class RelativeLayoutTabLayoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        //binding.textView.setTypeface(monospaceFont);// FIXME: Cannot resolve symbol 'textView'
+        binding.codeView.getOptions().withFont(monospaceFont);
+        binding.codeView.updateOptions(binding.codeView.getOptions());
     }
 }
