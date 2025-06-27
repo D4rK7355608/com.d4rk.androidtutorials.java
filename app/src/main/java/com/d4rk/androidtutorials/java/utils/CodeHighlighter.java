@@ -20,7 +20,7 @@ public class CodeHighlighter {
     /**
      * Apply a basic Java highlighting theme to the given CodeView.
      */
-    public static void applyJavaTheme(Context context, CodeView codeView) {
+    public static void applyJavaTheme(Context context, CodeView codeView) { // FIXME: Parameter 'context' is never used
         codeView.resetSyntaxPatternList();
         codeView.resetHighlighter();
 
@@ -37,14 +37,14 @@ public class CodeHighlighter {
     /**
      * Apply a basic XML highlighting theme to the given CodeView.
      */
-    public static void applyXmlTheme(Context context, CodeView codeView) {
+    public static void applyXmlTheme(Context context, CodeView codeView) { // FIXME: Parameter 'context' is never used
         codeView.resetSyntaxPatternList();
         codeView.resetHighlighter();
 
         codeView.addSyntaxPattern(Pattern.compile("<!--.*?-->", Pattern.DOTALL), Color.parseColor("#808080"));
         codeView.addSyntaxPattern(Pattern.compile("</?[a-zA-Z0-9]+"), Color.parseColor("#800000"));
         codeView.addSyntaxPattern(Pattern.compile("\\b\\w+(?=\\=)"), Color.parseColor("#795E26"));
-        codeView.addSyntaxPattern(Pattern.compile("\".*?\""), Color.parseColor("#CE9178"));
+        codeView.addSyntaxPattern(Pattern.compile("\".*?\""), Color.parseColor("#CE9178")); // FIXME: Redundant character escape '\\=' in RegExp
 
         codeView.setEnableLineNumber(true);
         codeView.reHighlightSyntax();
