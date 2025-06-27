@@ -35,6 +35,13 @@ public class ClockTabLayoutFragment extends Fragment {
         binding = FragmentClockLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
+        CodeViewUtils.applyDefaults(monospaceFont,
+                binding.codeViewDigitalClockXml,
+                binding.codeViewTextClockXml,
+                binding.codeViewAnalogClockXml);
         setCodeView(binding.codeViewDigitalClockXml, R.raw.text_clock_digital_xml);
         setCodeView(binding.codeViewTextClockXml, R.raw.text_clock_xml);
         setCodeView(binding.codeViewAnalogClockXml, R.raw.text_clock_analog_xml);
@@ -55,16 +62,5 @@ public class ClockTabLayoutFragment extends Fragment {
         } catch (IOException e) {
             Log.e("ClockTab", "Error reading clock layout", e);
         }
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        CodeViewUtils.applyDefaults(monospaceFont,
-                binding.codeViewDigitalClockXml,
-                binding.codeViewTextClockXml,
-                binding.codeViewAnalogClockXml);
     }
 }
