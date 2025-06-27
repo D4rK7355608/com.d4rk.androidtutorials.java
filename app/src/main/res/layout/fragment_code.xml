@@ -23,8 +23,7 @@
                 android:id="@+id/code_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="16dp"
-                app:fontFamily="@font/font_audiowide" />
+                android:padding="16dp" />
         </me.zhanghai.android.fastscroll.FastScrollScrollView>
     </com.google.android.material.card.MaterialCardView>
 
