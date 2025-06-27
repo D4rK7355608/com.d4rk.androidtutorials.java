@@ -55,7 +55,7 @@ public class TableLayoutTabLayoutFragment extends Fragment {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
         binding.codeView.setTypeface(monospaceFont);
-        binding.codeView.setLineNumberTextSize(32f);
+        binding.codeView.setLineNumberTextSize(34f);
         binding.codeView.setHorizontallyScrolling(false);
         binding.codeView.setKeyListener(null);
         binding.codeView.setCursorVisible(false);
