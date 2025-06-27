@@ -31,13 +31,11 @@
                     android:padding="16dp"
                     android:text="@string/clock_analog" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_analog_clock_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_analog_clock_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/text_view_digital_clock"
@@ -47,13 +45,11 @@
                     android:padding="16dp"
                     android:text="@string/clock_digital" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_digital_clock_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_digital_clock_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/text_view_text_clock"
@@ -63,13 +59,11 @@
                     android:padding="16dp"
                     android:text="@string/clock_text" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_text_clock_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_text_clock_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
                     app:layout_constraintTop_toBottomOf="@id/text_view_text_clock" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </me.zhanghai.android.fastscroll.FastScrollScrollView>

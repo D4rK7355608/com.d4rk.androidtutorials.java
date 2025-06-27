@@ -62,15 +62,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ad_view">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/bindingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="48dp"
-                android:padding="16dp"
-                android:textIsSelectable="true"
-                app:fontFamily="@font/font_audiowide"
-                tools:ignore="SpeakableTextPresentCheck" />
+        <com.amrdeveloper.codeview.CodeView
+            android:id="@+id/code_view_binding_gradle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:padding="16dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
@@ -96,15 +93,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bindingActivitiesUseText">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/bindingActivitiesText"
-                android:layout_width="wrap_content"
+            <com.amrdeveloper.codeview.CodeView
+                android:id="@+id/code_view_binding_activities"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minWidth="48dp"
-                android:padding="16dp"
-                android:textIsSelectable="true"
-                app:fontFamily="@font/font_audiowide"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:padding="16dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
@@ -130,15 +124,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bindingFragmentsUseText">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/bindingFragmentsText"
-                android:layout_width="wrap_content"
+            <com.amrdeveloper.codeview.CodeView
+                android:id="@+id/code_view_binding_fragments"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minWidth="48dp"
-                android:padding="16dp"
-                android:textIsSelectable="true"
-                app:fontFamily="@font/font_audiowide"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:padding="16dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton

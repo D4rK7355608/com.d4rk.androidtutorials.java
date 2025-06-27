@@ -31,14 +31,11 @@
                     android:padding="16dp"
                     android:text="@string/button_normal" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_normal_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_normal_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -47,14 +44,11 @@
                     android:padding="16dp"
                     android:text="@string/button_outlined" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_outlined_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_outlined_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -63,14 +57,11 @@
                     android:padding="16dp"
                     android:text="@string/button_elevated" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_elevated_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_elevated_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -79,14 +70,11 @@
                     android:padding="16dp"
                     android:text="@string/button_normal_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_normal_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_normal_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -95,14 +83,11 @@
                     android:padding="16dp"
                     android:text="@string/button_outlined_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_outlined_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_outlined_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -111,14 +96,11 @@
                     android:padding="16dp"
                     android:text="@string/button_elevated_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_button_elevated_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_button_elevated_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -127,14 +109,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_primary" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_primary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_primary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -143,13 +122,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_secondary" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_secondary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_secondary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -158,13 +135,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_surface" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_surface_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_surface_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -173,13 +148,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_tertiary" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_tertiary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_tertiary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -188,13 +161,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_primary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_primary_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_primary_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
                     app:layout_constraintTop_toBottomOf="@id/text_view_extended_floating_button_primary_icon" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -204,13 +175,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_secondary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_secondary_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_secondary_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -219,13 +188,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_surface_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_surface_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_surface_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -234,13 +201,11 @@
                     android:padding="16dp"
                     android:text="@string/extended_floating_button_tertiary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_extended_floating_button_tertiary_icon_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_extended_floating_button_tertiary_icon_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -249,14 +214,11 @@
                     android:padding="16dp"
                     android:text="@string/floating_button_primary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_floating_button_primary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_floating_button_primary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -265,13 +227,11 @@
                     android:padding="16dp"
                     android:text="@string/floating_button_secondary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_floating_button_secondary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_floating_button_secondary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
                     app:layout_constraintTop_toBottomOf="@id/text_view_floating_button_secondary" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -281,13 +241,11 @@
                     android:padding="16dp"
                     android:text="@string/floating_button_surface_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_floating_button_surface_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_floating_button_surface_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -296,13 +254,11 @@
                     android:padding="16dp"
                     android:text="@string/floating_button_tertiary_icon" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_floating_button_tertiary_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_floating_button_tertiary_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide" />
+                    android:padding="16dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </me.zhanghai.android.fastscroll.FastScrollScrollView>
     </com.google.android.material.card.MaterialCardView>

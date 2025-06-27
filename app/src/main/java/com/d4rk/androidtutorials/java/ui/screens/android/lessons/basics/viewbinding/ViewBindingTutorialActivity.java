@@ -14,6 +14,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBin
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -43,19 +44,39 @@ public class ViewBindingTutorialActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
 
         InputStream bindingGradle = getResources().openRawResource(R.raw.text_binding_gradle);
-        binding.bindingText.setText(readTextFromInputStream(bindingGradle));
+        binding.codeViewBindingGradle.setText(readTextFromInputStream(bindingGradle));
+        CodeHighlighter.applyJavaTheme(binding.codeViewBindingGradle);
 
         InputStream bindingActivity = getResources().openRawResource(R.raw.text_binding_activity);
-        binding.bindingActivitiesText.setText(readTextFromInputStream(bindingActivity));
+        binding.codeViewBindingActivities.setText(readTextFromInputStream(bindingActivity));
+        CodeHighlighter.applyJavaTheme(binding.codeViewBindingActivities);
 
         InputStream bindingFragment = getResources().openRawResource(R.raw.text_binding_fragment);
-        binding.bindingFragmentsText.setText(readTextFromInputStream(bindingFragment));
+        binding.codeViewBindingFragments.setText(readTextFromInputStream(bindingFragment));
+        CodeHighlighter.applyJavaTheme(binding.codeViewBindingFragments);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Typeface monospaceFont = FontManager.getMonospaceFont(this, prefs);
-        binding.bindingText.setTypeface(monospaceFont);
-        binding.bindingActivitiesText.setTypeface(monospaceFont);
-        binding.bindingFragmentsText.setTypeface(monospaceFont);
+        binding.codeViewBindingGradle.setTypeface(monospaceFont);
+        binding.codeViewBindingGradle.setLineNumberTextSize(32f);
+        binding.codeViewBindingGradle.setHorizontallyScrolling(false);
+        binding.codeViewBindingGradle.setKeyListener(null);
+        binding.codeViewBindingGradle.setCursorVisible(false);
+        binding.codeViewBindingGradle.setTextIsSelectable(true);
+
+        binding.codeViewBindingActivities.setTypeface(monospaceFont);
+        binding.codeViewBindingActivities.setLineNumberTextSize(32f);
+        binding.codeViewBindingActivities.setHorizontallyScrolling(false);
+        binding.codeViewBindingActivities.setKeyListener(null);
+        binding.codeViewBindingActivities.setCursorVisible(false);
+        binding.codeViewBindingActivities.setTextIsSelectable(true);
+
+        binding.codeViewBindingFragments.setTypeface(monospaceFont);
+        binding.codeViewBindingFragments.setLineNumberTextSize(32f);
+        binding.codeViewBindingFragments.setHorizontallyScrolling(false);
+        binding.codeViewBindingFragments.setKeyListener(null);
+        binding.codeViewBindingFragments.setCursorVisible(false);
+        binding.codeViewBindingFragments.setTextIsSelectable(true);
     }
 
     private String readTextFromInputStream(InputStream inputStream) {

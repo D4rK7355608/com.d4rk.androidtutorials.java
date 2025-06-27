@@ -31,14 +31,11 @@
                     android:padding="16dp"
                     android:text="@string/vertical" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_vertical_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_vertical_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/TextAppearance.Material3.HeadlineSmall"
@@ -47,14 +44,11 @@
                     android:padding="16dp"
                     android:text="@string/horizontal" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_view_horizontal_xml"
+                <com.amrdeveloper.codeview.CodeView
+                    android:id="@+id/code_view_horizontal_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textIsSelectable="true"
-                    app:fontFamily="@font/font_audiowide"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:padding="16dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </me.zhanghai.android.fastscroll.FastScrollScrollView>
     </com.google.android.material.card.MaterialCardView>
