@@ -1,0 +1,23 @@
+// Import the necessary classes and libraries
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Inflate the layout and set it as the content view for this activity
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        // Update the text when a navigation item is selected
+        binding.bottomNav.setOnItemSelectedListener(item -> {
+            binding.textView.setText(item.getTitle());
+            return true;
+        });
+    }
+}
