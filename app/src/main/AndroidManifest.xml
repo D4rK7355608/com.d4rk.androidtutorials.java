@@ -316,6 +316,11 @@
             android:exported="false"
             android:label="@string/bottom_navigation"
             android:parentActivityName=".ui.screens.android.lessons.navigation.bottomnavigation.BottomNavigationActivity" />
+        <activity
+            android:name=".ui.screens.android.lessons.navigation.drawer.NavigationDrawerActivity"
+            android:exported="false"
+            android:label="@string/navigation_drawer"
+            android:parentActivityName=".ui.screens.android.lessons.navigation.drawer.NavigationDrawerActivity" />
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
