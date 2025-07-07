@@ -346,5 +346,14 @@
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.navigation.bottomnavigation.BottomNavigationActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_menu"
+            app:summary="@string/summary_preference_android_studio_navigation_drawer"
+            app:title="@string/navigation_drawer">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.navigation.drawer.NavigationDrawerActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -42,6 +42,8 @@ public class LessonRepository {
                     new Lesson(R.string.web_view, R.raw.text_webview_java, R.raw.text_webview_xml);
             case "BottomNavigation" ->
                     new Lesson(R.string.bottom_navigation, R.raw.text_bottom_navigation_java, R.raw.text_bottom_navigation_xml);
+            case "NavigationDrawer" ->
+                    new Lesson(R.string.navigation_drawer, R.raw.text_navigation_drawer_java, R.raw.text_navigation_drawer_xml);
             default -> throw new IllegalArgumentException("Unknown lesson: " + lessonName);
         };
     }
