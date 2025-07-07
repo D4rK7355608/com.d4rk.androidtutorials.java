@@ -338,7 +338,7 @@
         app:icon="@drawable/ic_category_navigation_tinted"
         app:title="@string/navigation">
         <androidx.preference.Preference
-            app:icon="@drawable/ic_menu"
+            app:icon="@drawable/ic_bottom_bar"
             app:summary="@string/summary_preference_android_studio_bottom_navigation"
             app:title="@string/bottom_navigation">
             <intent

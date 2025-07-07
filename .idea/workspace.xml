@@ -434,7 +434,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="refactor: Optimized imports&#10;&#10;Sorted imports in `ProgressBarTabLayoutFragment.java` for better organization and readability.">
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="feat: Update screenshots and add tablet screenshots&#10;&#10;This commit introduces updated screenshots for the Play Store listing and adds new tablet-specific screenshots.&#10;&#10;- Refreshed phone screenshots for main, tutorials, codes, and themes.&#10;- Added new tablet screenshots for main, tutorials, codes, and themes to enhance the Play Store listing for tablet users.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -448,7 +448,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\d4rk7\.android\avd\Pixel_9_Pro.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=3B230DLJG002U4)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -958,7 +958,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751014628999</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feat: Update screenshots and add tablet screenshots&#10;&#10;This commit introduces updated screenshots for the Play Store listing and adds new tablet-specific screenshots.&#10;&#10;- Refreshed phone screenshots for main, tutorials, codes, and themes.&#10;- Added new tablet screenshots for main, tutorials, codes, and themes to enhance the Play Store listing for tablet users.">
+      <option name="closed" value="true" />
+      <created>1751091727546</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1751091727546</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -985,7 +993,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the new nav drawer" />
     <MESSAGE value="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont" />
     <MESSAGE value="refactor: App architecture rework, UI improvements, and dependency updates (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Improved code stability by addressing the Help screen entry crash. &#10;Redesigned the app home and main screens for a better user experience. &#10;Added edge-to-edge compatibility to select screens. &#10;Updated all dependencies to the latest versions. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
     <MESSAGE value="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
@@ -1010,7 +1017,8 @@
     <MESSAGE value="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting." />
     <MESSAGE value="refactor: Cleaned up code highlighting logic&#10;&#10;This commit introduces minor improvements to the `CodeHighlighter` class:&#10;&#10;- Removed the unused `context` parameter from `applyJavaTheme` and `applyXmlTheme` methods.&#10;- Removed a redundant character escape `\\=` in the regular expression for XML attribute highlighting and added `Pattern.DOTALL` to allow multiline strings.&#10;- Updated calls to these methods in various fragments to reflect the removed `context` parameter." />
     <MESSAGE value="refactor: Optimized imports&#10;&#10;Sorted imports in `ProgressBarTabLayoutFragment.java` for better organization and readability." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Optimized imports&#10;&#10;Sorted imports in `ProgressBarTabLayoutFragment.java` for better organization and readability." />
+    <MESSAGE value="feat: Update screenshots and add tablet screenshots&#10;&#10;This commit introduces updated screenshots for the Play Store listing and adds new tablet-specific screenshots.&#10;&#10;- Refreshed phone screenshots for main, tutorials, codes, and themes.&#10;- Added new tablet screenshots for main, tutorials, codes, and themes to enhance the Play Store listing for tablet users." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Update screenshots and add tablet screenshots&#10;&#10;This commit introduces updated screenshots for the Play Store listing and adds new tablet-specific screenshots.&#10;&#10;- Refreshed phone screenshots for main, tutorials, codes, and themes.&#10;- Added new tablet screenshots for main, tutorials, codes, and themes to enhance the Play Store listing for tablet users." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
