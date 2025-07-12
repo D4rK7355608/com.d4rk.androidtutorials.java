@@ -435,5 +435,8 @@
     <string name="daily_tip_unit_tests">Write unit tests with JUnit and Espresso.</string>
     <string name="daily_tip_mvvm">Follow the MVVM architecture for maintainable code.</string>
     <string name="tip_of_the_day">Tip of the Day</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Next Question</string>
+    <string name="quiz_finished">Quiz complete! Your score: %1$d/%2$d</string>
     <string name="other_apps_title">More apps by the developer</string>
 </resources>
