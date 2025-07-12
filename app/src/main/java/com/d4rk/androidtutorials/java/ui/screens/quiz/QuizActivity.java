@@ -13,6 +13,10 @@ import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.databinding.ActivityQuizBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+import com.airbnb.lottie.LottieAnimationView;
 
 /**
  * Activity that displays a simple multiple-choice quiz.
@@ -37,6 +41,14 @@ public class QuizActivity extends AppCompatActivity {
         }
 
         viewModel = new ViewModelProvider(this).get(QuizViewModel.class);
+        if (viewModel.getTotalQuestions() == 0) {
+            new MaterialAlertDialogBuilder(this)
+                    .setMessage(R.string.quiz_no_more_questions)
+                    .setPositiveButton(android.R.string.ok, (d, w) -> finish())
+                    .setCancelable(false)
+                    .show();
+            return;
+        }
         showQuestion(viewModel.getCurrentQuestion());
 
         binding.buttonNext.setOnClickListener(v -> onNextClicked());
@@ -79,8 +91,13 @@ public class QuizActivity extends AppCompatActivity {
     private void showResult() {
         int score = viewModel.getScore().getValue();
         int total = viewModel.getTotalQuestions();
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_quiz_result, null, false);
+        TextView textResult = view.findViewById(R.id.text_result);
+        textResult.setText(getString(R.string.quiz_finished, score, total));
+        LottieAnimationView animationView = view.findViewById(R.id.animation_success);
+        animationView.playAnimation();
         new MaterialAlertDialogBuilder(this)
-                .setMessage(getString(R.string.quiz_finished, score, total))
+                .setView(view)
                 .setPositiveButton(android.R.string.ok, (d, w) -> finish())
                 .setCancelable(false)
                 .show();

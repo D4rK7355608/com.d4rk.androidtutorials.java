@@ -327,6 +327,10 @@
             android:label="@string/quiz_title"
             android:parentActivityName=".ui.screens.quiz.QuizActivity" />
 
+        <receiver
+            android:name=".notifications.receivers.QuizReminderReceiver"
+            android:exported="false" />
+
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
             android:enabled="false"
