@@ -1,0 +1,12 @@
+[
+  {
+    "question": "What language is primarily used for Android app development?",
+    "options": ["Python", "Java", "Swift", "Ruby"],
+    "answer": 1
+  },
+  {
+    "question": "Which file declares your app's activities?",
+    "options": ["build.gradle", "AndroidManifest.xml", "strings.xml", "MainActivity.java"],
+    "answer": 1
+  }
+]

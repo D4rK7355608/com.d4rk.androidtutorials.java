@@ -321,6 +321,11 @@
             android:exported="false"
             android:label="@string/navigation_drawer"
             android:parentActivityName=".ui.screens.android.lessons.navigation.drawer.NavigationDrawerActivity" />
+        <activity
+            android:name=".ui.screens.quiz.QuizActivity"
+            android:exported="false"
+            android:label="@string/quiz_title"
+            android:parentActivityName=".ui.screens.quiz.QuizActivity" />
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
