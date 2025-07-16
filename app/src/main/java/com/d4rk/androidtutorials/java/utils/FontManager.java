@@ -11,7 +11,15 @@ import com.d4rk.androidtutorials.java.R;
 public class FontManager {
 
     public static Typeface getMonospaceFont(Context context, SharedPreferences prefs) {
-        return switch (prefs.getString(context.getString(R.string.key_monospace_font), "0")) {
+        String key = context.getString(R.string.key_monospace_font);
+        String font;
+        try {
+            font = prefs.getString(key, "0");
+        } catch (ClassCastException e) {
+            prefs.edit().remove(key).apply();
+            font = "0";
+        }
+        return switch (font) {
             case "1" -> ResourcesCompat.getFont(context, R.font.font_fira_code);
             case "2" -> ResourcesCompat.getFont(context, R.font.font_jetbrains_mono);
             case "3" -> ResourcesCompat.getFont(context, R.font.font_noto_sans_mono);
