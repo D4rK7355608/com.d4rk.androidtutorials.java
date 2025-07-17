@@ -31,6 +31,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
+import com.d4rk.androidtutorials.java.notifications.managers.QuizReminderManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
@@ -258,6 +259,8 @@ public class MainActivity extends AppCompatActivity {
         }
         AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
         appUsageNotificationsManager.scheduleAppUsageCheck();
+        QuizReminderManager quizReminderManager = new QuizReminderManager(this);
+        quizReminderManager.scheduleDailyReminder();
         appUpdateNotificationsManager.checkAndSendUpdateNotification();
         checkForImmediateUpdate();
     }
